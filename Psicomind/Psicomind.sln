@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psicomind", "Psicomind\Psicomind.csproj", "{51B7059E-354B-4BD8-9476-093C04EAA52A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsicomindClass", "PsicomindClass\PsicomindClass.csproj", "{B7F29088-2D0E-49EF-9A33-C0A0050C4538}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51B7059E-354B-4BD8-9476-093C04EAA52A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B7059E-354B-4BD8-9476-093C04EAA52A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B7059E-354B-4BD8-9476-093C04EAA52A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B7059E-354B-4BD8-9476-093C04EAA52A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F29088-2D0E-49EF-9A33-C0A0050C4538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F29088-2D0E-49EF-9A33-C0A0050C4538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F29088-2D0E-49EF-9A33-C0A0050C4538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F29088-2D0E-49EF-9A33-C0A0050C4538}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B05C00CA-102E-4642-9BB4-CCFE0703E41E}
+	EndGlobalSection
+EndGlobal
