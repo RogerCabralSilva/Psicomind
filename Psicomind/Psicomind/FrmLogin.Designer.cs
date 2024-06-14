@@ -34,6 +34,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -43,6 +45,7 @@
             txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             label2 = new Label();
             btnLogin = new Guna.UI2.WinForms.Guna2Button();
+            btnSair = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -72,7 +75,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.mail;
-            pictureBox3.Location = new Point(516, 250);
+            pictureBox3.Location = new Point(516, 243);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(24, 23);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -95,7 +98,7 @@
             txtEmail.Font = new Font("Segoe UI", 9F);
             txtEmail.ForeColor = Color.Black;
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Location = new Point(543, 249);
+            txtEmail.Location = new Point(543, 242);
             txtEmail.Name = "txtEmail";
             txtEmail.PasswordChar = '\0';
             txtEmail.PlaceholderForeColor = Color.Silver;
@@ -110,7 +113,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(512, 223);
+            label1.Location = new Point(512, 216);
             label1.Name = "label1";
             label1.Size = new Size(103, 16);
             label1.TabIndex = 3;
@@ -119,7 +122,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.padlock;
-            pictureBox4.Location = new Point(516, 323);
+            pictureBox4.Location = new Point(516, 316);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(24, 23);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -142,7 +145,7 @@
             txtSenha.Font = new Font("Segoe UI", 9F);
             txtSenha.ForeColor = Color.Black;
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenha.Location = new Point(543, 321);
+            txtSenha.Location = new Point(543, 314);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '●';
             txtSenha.PlaceholderForeColor = Color.Silver;
@@ -158,7 +161,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(512, 297);
+            label2.Location = new Point(512, 290);
             label2.Name = "label2";
             label2.Size = new Size(108, 16);
             label2.TabIndex = 6;
@@ -174,12 +177,31 @@
             btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnLogin.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(516, 374);
+            btnLogin.Location = new Point(516, 367);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnLogin.Size = new Size(260, 33);
             btnLogin.TabIndex = 7;
             btnLogin.Text = "Login";
+            // 
+            // btnSair
+            // 
+            btnSair.Cursor = Cursors.Hand;
+            btnSair.CustomizableEdges = customizableEdges7;
+            btnSair.DisabledState.BorderColor = Color.DarkGray;
+            btnSair.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSair.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSair.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSair.FillColor = Color.FromArgb(224, 224, 224);
+            btnSair.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSair.ForeColor = Color.White;
+            btnSair.Location = new Point(827, 12);
+            btnSair.Name = "btnSair";
+            btnSair.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnSair.Size = new Size(35, 23);
+            btnSair.TabIndex = 8;
+            btnSair.Text = "X";
+            btnSair.Click += btnSair_Click;
             // 
             // FrmLogin
             // 
@@ -187,6 +209,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(874, 511);
+            Controls.Add(btnSair);
             Controls.Add(btnLogin);
             Controls.Add(label2);
             Controls.Add(txtSenha);
@@ -220,5 +243,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSenha;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private Guna.UI2.WinForms.Guna2Button btnSair;
     }
 }
