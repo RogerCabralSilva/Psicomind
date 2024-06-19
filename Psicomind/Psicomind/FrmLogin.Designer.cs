@@ -183,6 +183,7 @@
             btnLogin.Size = new Size(260, 33);
             btnLogin.TabIndex = 7;
             btnLogin.Text = "Login";
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnSair
             // 
