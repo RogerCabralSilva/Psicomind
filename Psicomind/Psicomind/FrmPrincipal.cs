@@ -10,31 +10,16 @@ using System.Windows.Forms;
 
 namespace Psicomind
 {
-    public partial class FrmLogin : Form
+    public partial class FrmPrincipal : Form
     {
-        public FrmLogin()
+        public FrmPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
