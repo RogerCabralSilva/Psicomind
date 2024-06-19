@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PsicomindClass
 {
-    internal class TelefoneCliente
+    public class TelefoneCliente
     {
     }
 }
