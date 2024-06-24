@@ -103,6 +103,36 @@ namespace Psicomind.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_20dp_FILL0_wght0_GRAD0_opsz20 {
+            get {
+                object obj = ResourceManager.GetObject("home_20dp_FILL0_wght0_GRAD0_opsz20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_40dp_FILL0_wght400_GRAD0_opsz40 {
+            get {
+                object obj = ResourceManager.GetObject("home_40dp_FILL0_wght400_GRAD0_opsz40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_40dp_FILL0_wght400_GRAD0_opsz40__1_ {
+            get {
+                object obj = ResourceManager.GetObject("home_40dp_FILL0_wght400_GRAD0_opsz40 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mail {
             get {
                 object obj = ResourceManager.GetObject("mail", resourceCulture);
@@ -116,6 +146,16 @@ namespace Psicomind.Properties {
         internal static System.Drawing.Bitmap mail_24dp_FILL0_wght400_GRAD0_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("mail_24dp_FILL0_wght400_GRAD0_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap manage_accounts_20dp_FILL0_wght100_GRAD_25_opsz20 {
+            get {
+                object obj = ResourceManager.GetObject("manage_accounts_20dp_FILL0_wght100_GRAD-25_opsz20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
