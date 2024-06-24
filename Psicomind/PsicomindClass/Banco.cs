@@ -13,7 +13,7 @@ namespace PsicomindClass
         {
             MySqlCommand cmd = new MySqlCommand();
             // Dados da Conexão
-            string strconn = @"server=127.0.0.1;database=ComercialDB;user id=root;password=";
+            string strconn = @"server=127.0.0.1;database=psicomindDB;user id=root;password=";
             MySqlConnection cn = new MySqlConnection(strconn);
             try
             {
