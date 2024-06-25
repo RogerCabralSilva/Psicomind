@@ -48,5 +48,10 @@ namespace Psicomind
         {
 
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

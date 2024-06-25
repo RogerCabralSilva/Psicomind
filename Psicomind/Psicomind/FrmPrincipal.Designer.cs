@@ -91,7 +91,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 43);
+            pictureBox1.Location = new Point(22, 38);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(198, 48);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -114,7 +114,7 @@
             btnAgendamento.Image = (Image)resources.GetObject("btnAgendamento.Image");
             btnAgendamento.ImageAlign = HorizontalAlignment.Left;
             btnAgendamento.ImageSize = new Size(25, 23);
-            btnAgendamento.Location = new Point(18, 410);
+            btnAgendamento.Location = new Point(12, 410);
             btnAgendamento.Name = "btnAgendamento";
             btnAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnAgendamento.Size = new Size(224, 45);
@@ -138,7 +138,7 @@
             btnClientes.Image = (Image)resources.GetObject("btnClientes.Image");
             btnClientes.ImageAlign = HorizontalAlignment.Left;
             btnClientes.ImageSize = new Size(25, 23);
-            btnClientes.Location = new Point(18, 359);
+            btnClientes.Location = new Point(12, 359);
             btnClientes.Name = "btnClientes";
             btnClientes.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnClientes.Size = new Size(224, 45);
@@ -162,7 +162,7 @@
             btnUsuarios.Image = (Image)resources.GetObject("btnUsuarios.Image");
             btnUsuarios.ImageAlign = HorizontalAlignment.Left;
             btnUsuarios.ImageSize = new Size(25, 23);
-            btnUsuarios.Location = new Point(18, 308);
+            btnUsuarios.Location = new Point(12, 308);
             btnUsuarios.Name = "btnUsuarios";
             btnUsuarios.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnUsuarios.Size = new Size(224, 45);
@@ -186,7 +186,7 @@
             btnProfissional.Image = (Image)resources.GetObject("btnProfissional.Image");
             btnProfissional.ImageAlign = HorizontalAlignment.Left;
             btnProfissional.ImageSize = new Size(25, 23);
-            btnProfissional.Location = new Point(18, 259);
+            btnProfissional.Location = new Point(12, 259);
             btnProfissional.Name = "btnProfissional";
             btnProfissional.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnProfissional.Size = new Size(224, 43);
@@ -209,13 +209,14 @@
             btnHome.Image = (Image)resources.GetObject("btnHome.Image");
             btnHome.ImageAlign = HorizontalAlignment.Left;
             btnHome.ImageSize = new Size(25, 23);
-            btnHome.Location = new Point(18, 197);
+            btnHome.Location = new Point(12, 197);
             btnHome.Name = "btnHome";
             btnHome.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnHome.Size = new Size(224, 56);
             btnHome.TabIndex = 13;
             btnHome.Text = "Home";
             btnHome.TextAlign = HorizontalAlignment.Left;
+            btnHome.Click += btnHome_Click;
             // 
             // ctrlPrincipal1
             // 
