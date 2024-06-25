@@ -17,9 +17,19 @@ namespace Psicomind
             InitializeComponent();
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            Application.Exit();
+            lblRelogio.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
+
+        private void CtrlPrincipal_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+
+            lblRelogio.Text = DateTime.Now.ToLongTimeString();
+
+            lblSemana.Text = DateTime.Now.ToLongDateString();
         }
     }
 }
