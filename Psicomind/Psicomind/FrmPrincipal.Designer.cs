@@ -41,6 +41,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnSair = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
@@ -50,6 +52,7 @@
             btnProfissional = new Guna.UI2.WinForms.Guna2Button();
             btnHome = new Guna.UI2.WinForms.Guna2Button();
             ctrlPrincipal1 = new CtrlPrincipal();
+            guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -71,7 +74,6 @@
             btnSair.Size = new Size(35, 23);
             btnSair.TabIndex = 9;
             btnSair.Text = "X";
-            btnSair.Click += btnSair_Click;
             // 
             // panel1
             // 
@@ -97,7 +99,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // btnAgendamento
             // 
@@ -121,7 +122,6 @@
             btnAgendamento.TabIndex = 13;
             btnAgendamento.Text = "Agendamentos";
             btnAgendamento.TextAlign = HorizontalAlignment.Left;
-            btnAgendamento.Click += btnClientes_Click;
             // 
             // btnClientes
             // 
@@ -145,7 +145,6 @@
             btnClientes.TabIndex = 13;
             btnClientes.Text = "Clientes";
             btnClientes.TextAlign = HorizontalAlignment.Left;
-            btnClientes.Click += btnClientes_Click;
             // 
             // btnUsuarios
             // 
@@ -169,7 +168,6 @@
             btnUsuarios.TabIndex = 13;
             btnUsuarios.Text = "Usuários";
             btnUsuarios.TextAlign = HorizontalAlignment.Left;
-            btnUsuarios.Click += btnUsuarios_Click;
             // 
             // btnProfissional
             // 
@@ -216,7 +214,6 @@
             btnHome.TabIndex = 13;
             btnHome.Text = "Home";
             btnHome.TextAlign = HorizontalAlignment.Left;
-            btnHome.Click += btnHome_Click;
             // 
             // ctrlPrincipal1
             // 
@@ -225,11 +222,24 @@
             ctrlPrincipal1.Size = new Size(834, 653);
             ctrlPrincipal1.TabIndex = 11;
             // 
+            // guna2ControlBox1
+            // 
+            guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox1.CustomizableEdges = customizableEdges13;
+            guna2ControlBox1.FillColor = Color.FromArgb(139, 152, 166);
+            guna2ControlBox1.IconColor = Color.White;
+            guna2ControlBox1.Location = new Point(1020, 12);
+            guna2ControlBox1.Name = "guna2ControlBox1";
+            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2ControlBox1.Size = new Size(45, 29);
+            guna2ControlBox1.TabIndex = 12;
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1088, 653);
+            Controls.Add(guna2ControlBox1);
             Controls.Add(ctrlPrincipal1);
             Controls.Add(panel1);
             Controls.Add(btnSair);
@@ -238,7 +248,8 @@
             Name = "FrmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmPrincipal";
-            Load += FrmPrincipal_Load;
+            WindowState = FormWindowState.Maximized;
+
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -255,5 +266,6 @@
         private Guna.UI2.WinForms.Guna2Button btnAgendamento;
         private CtrlPrincipal ctrlPrincipal1;
         private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }
