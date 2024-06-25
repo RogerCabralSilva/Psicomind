@@ -43,5 +43,10 @@ namespace Psicomind
         {
 
         }
+
+        private void ctrlPrincipal1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
