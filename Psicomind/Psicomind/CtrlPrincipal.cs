@@ -16,5 +16,10 @@ namespace Psicomind
         {
             InitializeComponent();
         }
+
+        private void lblBemVindo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

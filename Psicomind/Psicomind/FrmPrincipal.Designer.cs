@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -54,10 +53,9 @@
             btnProfissional = new Guna.UI2.WinForms.Guna2Button();
             btnHome = new Guna.UI2.WinForms.Guna2Button();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            timer1 = new System.Windows.Forms.Timer(components);
             ctrlPrincipal1 = new CtrlPrincipal();
+            guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -218,47 +216,47 @@
             guna2ControlBox1.Size = new Size(45, 29);
             guna2ControlBox1.TabIndex = 12;
             // 
-            // guna2ControlBox2
-            // 
-            guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox2.Animated = true;
-            guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            guna2ControlBox2.Cursor = Cursors.Hand;
-            guna2ControlBox2.CustomizableEdges = customizableEdges13;
-            guna2ControlBox2.FillColor = Color.Transparent;
-            guna2ControlBox2.HoverState.FillColor = SystemColors.Highlight;
-            guna2ControlBox2.HoverState.IconColor = Color.White;
-            guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(1193, 12);
-            guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2ControlBox2.Size = new Size(45, 29);
-            guna2ControlBox2.TabIndex = 12;
-            // 
             // guna2ControlBox3
             // 
             guna2ControlBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2ControlBox3.Animated = true;
             guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             guna2ControlBox3.Cursor = Cursors.Hand;
-            guna2ControlBox3.CustomizableEdges = customizableEdges15;
+            guna2ControlBox3.CustomizableEdges = customizableEdges13;
             guna2ControlBox3.FillColor = Color.Transparent;
             guna2ControlBox3.HoverState.FillColor = SystemColors.Highlight;
             guna2ControlBox3.HoverState.IconColor = Color.White;
             guna2ControlBox3.IconColor = Color.Black;
             guna2ControlBox3.Location = new Point(1142, 12);
             guna2ControlBox3.Name = "guna2ControlBox3";
-            guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2ControlBox3.Size = new Size(45, 29);
             guna2ControlBox3.TabIndex = 12;
             // 
             // ctrlPrincipal1
             // 
             ctrlPrincipal1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            ctrlPrincipal1.Location = new Point(253, 90);
+            ctrlPrincipal1.Location = new Point(253, 47);
             ctrlPrincipal1.Name = "ctrlPrincipal1";
-            ctrlPrincipal1.Size = new Size(1050, 650);
+            ctrlPrincipal1.Size = new Size(1050, 693);
             ctrlPrincipal1.TabIndex = 13;
+            // 
+            // guna2ControlBox2
+            // 
+            guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox2.Animated = true;
+            guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            guna2ControlBox2.Cursor = Cursors.Hand;
+            guna2ControlBox2.CustomizableEdges = customizableEdges15;
+            guna2ControlBox2.FillColor = Color.Transparent;
+            guna2ControlBox2.HoverState.FillColor = SystemColors.Highlight;
+            guna2ControlBox2.HoverState.IconColor = Color.White;
+            guna2ControlBox2.IconColor = Color.Black;
+            guna2ControlBox2.Location = new Point(1193, 12);
+            guna2ControlBox2.Name = "guna2ControlBox2";
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2ControlBox2.Size = new Size(45, 29);
+            guna2ControlBox2.TabIndex = 12;
             // 
             // FrmPrincipal
             // 
@@ -277,7 +275,6 @@
             Name = "FrmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
-            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -292,9 +289,8 @@
         private Guna.UI2.WinForms.Guna2Button btnAgendamento;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
-        private System.Windows.Forms.Timer timer1;
         private CtrlPrincipal ctrlPrincipal1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
     }
 }
