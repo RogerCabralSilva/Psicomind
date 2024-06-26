@@ -28,57 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            lblRelogio = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
-            lblSemana = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrlPrincipal));
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // lblRelogio
+            // pictureBox1
             // 
-            lblRelogio.AutoSize = true;
-            lblRelogio.Font = new Font("Tw Cen MT", 48F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblRelogio.ForeColor = Color.RoyalBlue;
-            lblRelogio.Location = new Point(28, 99);
-            lblRelogio.Name = "lblRelogio";
-            lblRelogio.Size = new Size(215, 74);
-            lblRelogio.TabIndex = 14;
-            lblRelogio.Text = "Horário";
-            // 
-            // timer1
-            // 
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
-            // 
-            // lblSemana
-            // 
-            lblSemana.AutoSize = true;
-            lblSemana.Font = new Font("Tw Cen MT", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblSemana.ForeColor = Color.RoyalBlue;
-            lblSemana.Location = new Point(43, 173);
-            lblSemana.Name = "lblSemana";
-            lblSemana.Size = new Size(34, 22);
-            lblSemana.TabIndex = 15;
-            lblSemana.Text = "Dia";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(770, 134);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(286, 519);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
             // 
             // CtrlPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(lblSemana);
-            Controls.Add(lblRelogio);
+            Controls.Add(pictureBox1);
             Name = "CtrlPrincipal";
             Size = new Size(1056, 653);
-            Load += CtrlPrincipal_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label lblRelogio;
-        private System.Windows.Forms.Timer timer1;
-        private Label lblSemana;
+        private PictureBox pictureBox1;
     }
 }

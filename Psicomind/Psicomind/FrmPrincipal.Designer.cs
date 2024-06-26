@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -55,6 +56,7 @@
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            timer1 = new System.Windows.Forms.Timer(components);
             ctrlPrincipal1 = new CtrlPrincipal();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -62,6 +64,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.BackColor = SystemColors.Window;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(btnAgendamento);
@@ -69,10 +72,9 @@
             panel1.Controls.Add(btnUsuarios);
             panel1.Controls.Add(btnProfissional);
             panel1.Controls.Add(btnHome);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
+            panel1.Location = new Point(-3, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 660);
+            panel1.Size = new Size(250, 740);
             panel1.TabIndex = 10;
             // 
             // pictureBox1
@@ -210,7 +212,7 @@
             guna2ControlBox1.HoverState.FillColor = SystemColors.Highlight;
             guna2ControlBox1.HoverState.IconColor = Color.White;
             guna2ControlBox1.IconColor = Color.Black;
-            guna2ControlBox1.Location = new Point(1238, 12);
+            guna2ControlBox1.Location = new Point(1244, 12);
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2ControlBox1.Size = new Size(45, 29);
@@ -227,7 +229,7 @@
             guna2ControlBox2.HoverState.FillColor = SystemColors.Highlight;
             guna2ControlBox2.HoverState.IconColor = Color.White;
             guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(1187, 12);
+            guna2ControlBox2.Location = new Point(1193, 12);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2ControlBox2.Size = new Size(45, 29);
@@ -244,7 +246,7 @@
             guna2ControlBox3.HoverState.FillColor = SystemColors.Highlight;
             guna2ControlBox3.HoverState.IconColor = Color.White;
             guna2ControlBox3.IconColor = Color.Black;
-            guna2ControlBox3.Location = new Point(1136, 12);
+            guna2ControlBox3.Location = new Point(1142, 12);
             guna2ControlBox3.Name = "guna2ControlBox3";
             guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2ControlBox3.Size = new Size(45, 29);
@@ -252,16 +254,17 @@
             // 
             // ctrlPrincipal1
             // 
-            ctrlPrincipal1.Location = new Point(354, 9);
+            ctrlPrincipal1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            ctrlPrincipal1.Location = new Point(253, 90);
             ctrlPrincipal1.Name = "ctrlPrincipal1";
-            ctrlPrincipal1.Size = new Size(776, 293);
+            ctrlPrincipal1.Size = new Size(1050, 650);
             ctrlPrincipal1.TabIndex = 13;
             // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1295, 660);
+            ClientSize = new Size(1301, 737);
             ControlBox = false;
             Controls.Add(ctrlPrincipal1);
             Controls.Add(guna2ControlBox3);
@@ -270,6 +273,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             MaximizeBox = false;
+            MinimumSize = new Size(1317, 735);
             Name = "FrmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
@@ -290,6 +294,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
+        private System.Windows.Forms.Timer timer1;
         private CtrlPrincipal ctrlPrincipal1;
     }
 }
