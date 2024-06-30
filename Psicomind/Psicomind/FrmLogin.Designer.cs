@@ -45,7 +45,7 @@
             txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             label2 = new Label();
             btnLogin = new Guna.UI2.WinForms.Guna2Button();
-            btnSair = new Guna.UI2.WinForms.Guna2Button();
+            guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -113,7 +113,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(512, 216);
+            label1.Location = new Point(512, 220);
             label1.Name = "label1";
             label1.Size = new Size(103, 16);
             label1.TabIndex = 3;
@@ -161,7 +161,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(512, 290);
+            label2.Location = new Point(512, 294);
             label2.Name = "label2";
             label2.Size = new Size(108, 16);
             label2.TabIndex = 6;
@@ -185,24 +185,21 @@
             btnLogin.Text = "Login";
             btnLogin.Click += btnLogin_Click;
             // 
-            // btnSair
+            // guna2ControlBox1
             // 
-            btnSair.Cursor = Cursors.Hand;
-            btnSair.CustomizableEdges = customizableEdges7;
-            btnSair.DisabledState.BorderColor = Color.DarkGray;
-            btnSair.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSair.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSair.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSair.FillColor = Color.FromArgb(224, 224, 224);
-            btnSair.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSair.ForeColor = Color.White;
-            btnSair.Location = new Point(827, 12);
-            btnSair.Name = "btnSair";
-            btnSair.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnSair.Size = new Size(35, 23);
-            btnSair.TabIndex = 8;
-            btnSair.Text = "X";
-            btnSair.Click += btnSair_Click;
+            guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox1.Animated = true;
+            guna2ControlBox1.Cursor = Cursors.Hand;
+            guna2ControlBox1.CustomizableEdges = customizableEdges7;
+            guna2ControlBox1.FillColor = Color.Transparent;
+            guna2ControlBox1.HoverState.FillColor = SystemColors.Highlight;
+            guna2ControlBox1.HoverState.IconColor = Color.White;
+            guna2ControlBox1.IconColor = Color.Black;
+            guna2ControlBox1.Location = new Point(812, 17);
+            guna2ControlBox1.Name = "guna2ControlBox1";
+            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2ControlBox1.Size = new Size(45, 29);
+            guna2ControlBox1.TabIndex = 15;
             // 
             // FrmLogin
             // 
@@ -210,7 +207,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(874, 511);
-            Controls.Add(btnSair);
+            Controls.Add(guna2ControlBox1);
             Controls.Add(btnLogin);
             Controls.Add(label2);
             Controls.Add(txtSenha);
@@ -244,6 +241,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSenha;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
-        private Guna.UI2.WinForms.Guna2Button btnSair;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }
