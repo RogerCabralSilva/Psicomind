@@ -293,7 +293,7 @@
             label8.BackColor = Color.White;
             label8.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.Black;
-            label8.Location = new Point(62, 60);
+            label8.Location = new Point(51, 59);
             label8.Name = "label8";
             label8.Size = new Size(65, 19);
             label8.TabIndex = 28;
@@ -305,7 +305,7 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Arial", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(58, 87);
+            label3.Location = new Point(47, 86);
             label3.Name = "label3";
             label3.Size = new Size(298, 32);
             label3.TabIndex = 27;
