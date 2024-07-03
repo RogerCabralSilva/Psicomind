@@ -17,13 +17,14 @@ namespace PsicomindClass
         public string Numero { get; set; }
         public string Bairro { get; set; }
         public string Uf { get; set; }
+        public TipoEndereco TipoEndereco { get; set; }
 
         public Endereco()
         {
 
         }
 
-        public Endereco(int id, int cliente_Id, string cep, string rua, string numero, string bairro, string uf)
+        public Endereco(int id, int cliente_Id, string cep, string rua, string numero, string bairro, string uf, TipoEndereco tipoEndereco)
         {
             Id = id;
             Cliente_Id = cliente_Id;
@@ -32,6 +33,7 @@ namespace PsicomindClass
             Numero = numero;
             Bairro = bairro;
             Uf = uf;
+            TipoEndereco = tipoEndereco;
         }
 
         public Endereco(int cliente_Id, string cep, string rua, string numero, string bairro, string uf)
@@ -55,6 +57,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spnumero", Numero);
             cmd.Parameters.AddWithValue("spbairro", Bairro);
             cmd.Parameters.AddWithValue("spuf", Uf);
+            cmd.Parameters.AddWithValue("sptipo_endereco", TipoEndereco.Id);
 
             Id = Convert.ToInt32(cmd.ExecuteScalar());
         }
@@ -71,6 +74,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spnumero", Numero);
             cmd.Parameters.AddWithValue("spbairro", Bairro);
             cmd.Parameters.AddWithValue("spuf", Uf);
+            cmd.Parameters.AddWithValue("sptipo_endereco", TipoEndereco.Id);
 
 
             return cmd.ExecuteNonQuery() > -1 ? true : false;
@@ -92,7 +96,8 @@ namespace PsicomindClass
                         dr.GetString(3),
                         dr.GetString(4),
                         dr.GetString(5),
-                        dr.GetString(6)
+                        dr.GetString(6),
+                        TipoEndereco.ObterPorId(dr.GetInt32(0))
                     );
             }
             return endereco;
@@ -114,7 +119,8 @@ namespace PsicomindClass
                         dr.GetString(3),
                         dr.GetString(4),
                         dr.GetString(5),
-                        dr.GetString(6)
+                        dr.GetString(6),
+                        TipoEndereco.ObterPorId(dr.GetInt32(0))
                         )
                     );
             }
