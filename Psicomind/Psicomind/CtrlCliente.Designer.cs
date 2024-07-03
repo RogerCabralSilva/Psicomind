@@ -48,8 +48,8 @@
             pictureBox5 = new PictureBox();
             label9 = new Label();
             label10 = new Label();
-            lblBemVindo = new Label();
-            lblUser = new Label();
+            txtTitulo = new Label();
+            txtPsicomind = new Label();
             btnPagInserirCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             btnPagConsultarCliente.SuspendLayout();
@@ -68,7 +68,7 @@
             btnPagInserirCliente.Cursor = Cursors.Hand;
             btnPagInserirCliente.CustomizableEdges = customizableEdges1;
             btnPagInserirCliente.FillColor = Color.LightGray;
-            btnPagInserirCliente.Location = new Point(240, 178);
+            btnPagInserirCliente.Location = new Point(239, 178);
             btnPagInserirCliente.Name = "btnPagInserirCliente";
             btnPagInserirCliente.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnPagInserirCliente.Size = new Size(212, 206);
@@ -80,9 +80,9 @@
             // 
             pictureBox1.BackColor = Color.LightGray;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(48, 108);
+            pictureBox1.Location = new Point(40, 104);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(114, 69);
+            pictureBox1.Size = new Size(131, 84);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 24;
             pictureBox1.TabStop = false;
@@ -122,7 +122,7 @@
             btnPagConsultarCliente.Cursor = Cursors.Hand;
             btnPagConsultarCliente.CustomizableEdges = customizableEdges3;
             btnPagConsultarCliente.FillColor = Color.LightGray;
-            btnPagConsultarCliente.Location = new Point(569, 178);
+            btnPagConsultarCliente.Location = new Point(568, 178);
             btnPagConsultarCliente.Name = "btnPagConsultarCliente";
             btnPagConsultarCliente.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnPagConsultarCliente.Size = new Size(212, 206);
@@ -186,7 +186,7 @@
             btnPagEditarCliente.Cursor = Cursors.Hand;
             btnPagEditarCliente.CustomizableEdges = customizableEdges5;
             btnPagEditarCliente.FillColor = Color.LightGray;
-            btnPagEditarCliente.Location = new Point(403, 409);
+            btnPagEditarCliente.Location = new Point(402, 409);
             btnPagEditarCliente.Name = "btnPagEditarCliente";
             btnPagEditarCliente.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnPagEditarCliente.Size = new Size(212, 197);
@@ -229,35 +229,35 @@
             label10.TabIndex = 26;
             label10.Text = "Clientes";
             // 
-            // lblBemVindo
+            // txtTitulo
             // 
-            lblBemVindo.AutoSize = true;
-            lblBemVindo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBemVindo.ForeColor = Color.Black;
-            lblBemVindo.Location = new Point(410, 66);
-            lblBemVindo.Name = "lblBemVindo";
-            lblBemVindo.Size = new Size(218, 60);
-            lblBemVindo.TabIndex = 29;
-            lblBemVindo.Text = "Clientes";
+            txtTitulo.AutoSize = true;
+            txtTitulo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTitulo.ForeColor = Color.Black;
+            txtTitulo.Location = new Point(409, 66);
+            txtTitulo.Name = "txtTitulo";
+            txtTitulo.Size = new Size(218, 60);
+            txtTitulo.TabIndex = 29;
+            txtTitulo.Text = "Clientes";
             // 
-            // lblUser
+            // txtPsicomind
             // 
-            lblUser.AutoSize = true;
-            lblUser.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUser.ForeColor = SystemColors.Highlight;
-            lblUser.Location = new Point(445, 52);
-            lblUser.Name = "lblUser";
-            lblUser.Size = new Size(141, 28);
-            lblUser.TabIndex = 30;
-            lblUser.Text = "PSICOMIND";
-            lblUser.Click += lblUser_Click;
+            txtPsicomind.AutoSize = true;
+            txtPsicomind.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtPsicomind.ForeColor = SystemColors.Highlight;
+            txtPsicomind.Location = new Point(444, 52);
+            txtPsicomind.Name = "txtPsicomind";
+            txtPsicomind.Size = new Size(141, 28);
+            txtPsicomind.TabIndex = 30;
+            txtPsicomind.Text = "PSICOMIND";
+            txtPsicomind.Click += lblUser_Click;
             // 
             // CtrlCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(lblUser);
-            Controls.Add(lblBemVindo);
+            Controls.Add(txtPsicomind);
+            Controls.Add(txtTitulo);
             Controls.Add(btnPagEditarCliente);
             Controls.Add(btnPagConsultarCliente);
             Controls.Add(btnPagInserirCliente);
@@ -291,7 +291,7 @@
         private Label label9;
         private Label label10;
         private PictureBox pictureBox3;
-        private Label lblBemVindo;
-        private Label lblUser;
+        private Label txtTitulo;
+        private Label txtPsicomind;
     }
 }
