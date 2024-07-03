@@ -314,8 +314,7 @@
             // 
             // CtrlPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             Controls.Add(guna2ContainerControl2);
             Controls.Add(lblBemVindo);
             Controls.Add(lblUser);

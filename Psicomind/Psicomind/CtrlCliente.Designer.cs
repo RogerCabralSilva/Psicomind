@@ -40,6 +40,7 @@
             label3 = new Label();
             label4 = new Label();
             btnPagConsultarCliente = new Guna.UI2.WinForms.Guna2ContainerControl();
+            pictureBox3 = new PictureBox();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
@@ -47,15 +48,14 @@
             pictureBox5 = new PictureBox();
             label9 = new Label();
             label10 = new Label();
-            pictureBox3 = new PictureBox();
             lblBemVindo = new Label();
             lblUser = new Label();
             btnPagInserirCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             btnPagConsultarCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             btnPagEditarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // btnPagInserirCliente
@@ -68,7 +68,7 @@
             btnPagInserirCliente.Cursor = Cursors.Hand;
             btnPagInserirCliente.CustomizableEdges = customizableEdges1;
             btnPagInserirCliente.FillColor = Color.LightGray;
-            btnPagInserirCliente.Location = new Point(264, 203);
+            btnPagInserirCliente.Location = new Point(240, 178);
             btnPagInserirCliente.Name = "btnPagInserirCliente";
             btnPagInserirCliente.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnPagInserirCliente.Size = new Size(212, 206);
@@ -122,12 +122,23 @@
             btnPagConsultarCliente.Cursor = Cursors.Hand;
             btnPagConsultarCliente.CustomizableEdges = customizableEdges3;
             btnPagConsultarCliente.FillColor = Color.LightGray;
-            btnPagConsultarCliente.Location = new Point(593, 203);
+            btnPagConsultarCliente.Location = new Point(569, 178);
             btnPagConsultarCliente.Name = "btnPagConsultarCliente";
             btnPagConsultarCliente.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnPagConsultarCliente.Size = new Size(212, 206);
             btnPagConsultarCliente.TabIndex = 27;
             btnPagConsultarCliente.Text = "guna2ContainerControl1";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.LightGray;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(58, 115);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(96, 60);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 24;
+            pictureBox3.TabStop = false;
             // 
             // label5
             // 
@@ -175,7 +186,7 @@
             btnPagEditarCliente.Cursor = Cursors.Hand;
             btnPagEditarCliente.CustomizableEdges = customizableEdges5;
             btnPagEditarCliente.FillColor = Color.LightGray;
-            btnPagEditarCliente.Location = new Point(427, 434);
+            btnPagEditarCliente.Location = new Point(403, 409);
             btnPagEditarCliente.Name = "btnPagEditarCliente";
             btnPagEditarCliente.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnPagEditarCliente.Size = new Size(212, 197);
@@ -186,7 +197,7 @@
             // 
             pictureBox5.BackColor = Color.LightGray;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(49, 93);
+            pictureBox5.Location = new Point(49, 97);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(114, 70);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -199,7 +210,7 @@
             label9.BackColor = Color.LightGray;
             label9.Font = new Font("Arial", 18F, FontStyle.Bold);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(64, 29);
+            label9.Location = new Point(64, 33);
             label9.Name = "label9";
             label9.Size = new Size(81, 29);
             label9.TabIndex = 25;
@@ -212,29 +223,18 @@
             label10.BackColor = Color.LightGray;
             label10.Font = new Font("Arial", 18F, FontStyle.Bold);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(52, 60);
+            label10.Location = new Point(52, 64);
             label10.Name = "label10";
             label10.Size = new Size(106, 29);
             label10.TabIndex = 26;
             label10.Text = "Clientes";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.LightGray;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(58, 115);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(96, 60);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 24;
-            pictureBox3.TabStop = false;
             // 
             // lblBemVindo
             // 
             lblBemVindo.AutoSize = true;
             lblBemVindo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBemVindo.ForeColor = Color.Black;
-            lblBemVindo.Location = new Point(434, 91);
+            lblBemVindo.Location = new Point(410, 66);
             lblBemVindo.Name = "lblBemVindo";
             lblBemVindo.Size = new Size(218, 60);
             lblBemVindo.TabIndex = 29;
@@ -245,7 +245,7 @@
             lblUser.AutoSize = true;
             lblUser.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUser.ForeColor = SystemColors.Highlight;
-            lblUser.Location = new Point(469, 77);
+            lblUser.Location = new Point(445, 52);
             lblUser.Name = "lblUser";
             lblUser.Size = new Size(141, 28);
             lblUser.TabIndex = 30;
@@ -268,10 +268,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             btnPagConsultarCliente.ResumeLayout(false);
             btnPagConsultarCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             btnPagEditarCliente.ResumeLayout(false);
             btnPagEditarCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

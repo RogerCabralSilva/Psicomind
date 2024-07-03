@@ -44,5 +44,10 @@ namespace Psicomind
             addUserControl(ctrlCliente);
 
         }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
