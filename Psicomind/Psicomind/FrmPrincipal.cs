@@ -17,13 +17,31 @@ namespace Psicomind
             InitializeComponent();
         }
 
-        private void lblUserLogado_Click(object sender, EventArgs e)
+
+        private void addUserControl(UserControl userControl)
         {
+
+            userControl.Dock = DockStyle.Fill;
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(userControl);
+            userControl.BringToFront();
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+
+        private void btnHome_Click(object sender, EventArgs e)
         {
+
+            CtrlPrincipal ctrlPrincipal = new();
+            addUserControl(ctrlPrincipal);
+
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+
+            CtrlCliente ctrlCliente = new();
+            addUserControl(ctrlCliente);
 
         }
     }
