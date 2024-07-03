@@ -247,6 +247,7 @@
             btnUsuarios.TabIndex = 13;
             btnUsuarios.Text = "Usuários";
             btnUsuarios.TextAlign = HorizontalAlignment.Left;
+            btnUsuarios.Click += btnUsuarios_Click;
             // 
             // btnProfissional
             // 
@@ -270,6 +271,7 @@
             btnProfissional.TabIndex = 13;
             btnProfissional.Text = "Profissionais";
             btnProfissional.TextAlign = HorizontalAlignment.Left;
+            btnProfissional.Click += btnProfissional_Click;
             // 
             // btnHome
             // 

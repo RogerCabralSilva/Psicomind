@@ -49,5 +49,21 @@ namespace Psicomind
         {
 
         }
+
+        private void btnProfissional_Click(object sender, EventArgs e)
+        {
+
+            CtrlProfissional ctrlProfissional = new();
+            addUserControl(ctrlProfissional);
+
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+
+            CtrlUsuario ctrlUsuario = new();
+            addUserControl(ctrlUsuario);
+
+        }
     }
 }
