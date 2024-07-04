@@ -33,7 +33,6 @@ namespace Psicomind
 
         private void btnPagInserirCliente_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("olá");
             CtrlClienteInserir CtrlClienteInserir = new();
             addUserControl(CtrlClienteInserir);
         }

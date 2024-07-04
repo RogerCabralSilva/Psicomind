@@ -99,8 +99,6 @@
             txtCep = new Guna.UI2.WinForms.Guna2TextBox();
             txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             txtNome = new Guna.UI2.WinForms.Guna2TextBox();
-            txtPsicomind = new Label();
-            txtBoxTitulo = new Label();
             guna2ContainerControl2.SuspendLayout();
             SuspendLayout();
             // 
@@ -142,7 +140,7 @@
             guna2ContainerControl2.Controls.Add(txtSenha);
             guna2ContainerControl2.Controls.Add(txtNome);
             guna2ContainerControl2.CustomizableEdges = customizableEdges35;
-            guna2ContainerControl2.Location = new Point(160, 74);
+            guna2ContainerControl2.Location = new Point(159, 37);
             guna2ContainerControl2.Name = "guna2ContainerControl2";
             guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges36;
             guna2ContainerControl2.Size = new Size(748, 624);
@@ -755,49 +753,22 @@
             txtNome.Size = new Size(233, 25);
             txtNome.TabIndex = 6;
             // 
-            // txtPsicomind
-            // 
-            txtPsicomind.AutoSize = true;
-            txtPsicomind.Font = new Font("Arial Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtPsicomind.ForeColor = SystemColors.Highlight;
-            txtPsicomind.Location = new Point(482, 23);
-            txtPsicomind.Name = "txtPsicomind";
-            txtPsicomind.Size = new Size(98, 19);
-            txtPsicomind.TabIndex = 37;
-            txtPsicomind.Text = "PSICOMIND";
-            // 
-            // txtBoxTitulo
-            // 
-            txtBoxTitulo.AutoSize = true;
-            txtBoxTitulo.Font = new Font("Arial Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtBoxTitulo.ForeColor = Color.Black;
-            txtBoxTitulo.Location = new Point(469, 33);
-            txtBoxTitulo.Name = "txtBoxTitulo";
-            txtBoxTitulo.Size = new Size(124, 33);
-            txtBoxTitulo.TabIndex = 36;
-            txtBoxTitulo.Text = "Clientes";
-            // 
             // CtrlClienteInserir
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(txtPsicomind);
-            Controls.Add(txtBoxTitulo);
             Controls.Add(guna2ContainerControl2);
             Name = "CtrlClienteInserir";
-            Size = new Size(1074, 729);
+            Size = new Size(1056, 693);
             Load += CtrlClienteInserir_Load;
             guna2ContainerControl2.ResumeLayout(false);
             guna2ContainerControl2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
-        private Label txtPsicomind;
-        private Label txtBoxTitulo;
         private Guna.UI2.WinForms.Guna2TextBox txtNome;
         private Label label3;
         private Label label2;
