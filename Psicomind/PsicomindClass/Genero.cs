@@ -17,10 +17,10 @@ namespace PsicomindClass
 
         }
 
-        public Genero(int id, string genero)
+        public Genero(int id, string genero_nome)
         {
             Id = id;
-            Genero_nome = genero;
+            Genero_nome = genero_nome;
         }
 
         public static Genero ObterPorId(int id)
@@ -38,5 +38,18 @@ namespace PsicomindClass
             return generoCliente;
         }
 
+        public static List<Genero> ObterLista()
+        {
+            List<Genero> genero = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from genero";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                genero.Add(new(dr.GetInt32(0), dr.GetString(1)));
+            }
+            return genero;
+        }
     }
 }

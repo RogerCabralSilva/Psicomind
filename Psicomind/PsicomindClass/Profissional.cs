@@ -106,9 +106,8 @@ namespace PsicomindClass
                 profissional.Especializacao = dr.GetString(5);
                 profissional.Data_contrato = dr.GetDateTime(6);
                 profissional.Data_cad = dr.GetDateTime(7);
-                profissional Genero.ObterPorId(dr.GetInt32(8));
 
-            }
+            };
 
             return profissional;
 

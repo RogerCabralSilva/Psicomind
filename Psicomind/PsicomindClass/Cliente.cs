@@ -27,7 +27,7 @@ namespace PsicomindClass
             
         }
 
-        public Cliente(int id, string nome, string cpf, string email, DateTime data_nasc, DateTime data_cad,GeneroCliente generoCliente, bool ativo, List<Endereco> enderecos)
+        public Cliente(int id, string nome, string cpf, string email, DateTime data_nasc, DateTime data_cad,Genero generoCliente, bool ativo, List<Endereco> enderecos)
         {
             Id = id;
             Nome = nome;
@@ -51,20 +51,43 @@ namespace PsicomindClass
             Ativo = ativo;
         }
 
-        public Cliente(string nome, string cpf , string email, DateTime data_nasc)
+        public Cliente(string nome, string cpf , string email, DateTime data_nasc, List<Endereco> enderecos)
         {
             Nome = nome;
             Cpf = cpf;
             Email = email;
             Data_nasc = data_nasc;
-            Ativo = ativo;
+            Enderecos = enderecos;
         }
 
-        public Cliente(string nome, string cpf, string email, string senha, DateTime data_nasc, GeneroCliente generoCliente,)
+        public Cliente(string nome, string cpf, string email, string senha, DateTime data_nasc)
         {
             Nome = nome;
             Cpf = cpf;
-            Telefone = telefone;
+            Email = email;
+            Senha = senha;
+            Data_nasc = data_nasc;
+            
+        }
+
+        public Cliente(int id, string nome, string cpf, string email, string senha, DateTime data_nasc, DateTime data_cad, bool ativo, Genero generoCliente, List<Endereco> enderecos)
+        {
+            Id = id;
+            Nome = nome;
+            Cpf = cpf;
+            Email = email;
+            Senha = senha;
+            Data_nasc = data_nasc;
+            Data_cad = data_cad;
+            Ativo = ativo;
+            GeneroCliente = generoCliente;
+            Enderecos = enderecos;
+        }
+
+        public Cliente(string nome, string cpf, string email, string senha, DateTime data_nasc, Genero generoCliente)
+        {
+            Nome = nome;
+            Cpf = cpf;
             Email = email;
             Senha = senha;
             Data_nasc = data_nasc;
@@ -110,11 +133,10 @@ namespace PsicomindClass
                     dr.GetString(1),
                     dr.GetString(2),
                     dr.GetString(3),
-                    dr.GetString(4),
+                    dr.GetDateTime(4),
                     dr.GetDateTime(5),
-                    dr.GetDateTime(6),
-                    Genero.ObterPorId(dr.GetInt32(7)),
-                    dr.GetBoolean(8),                    
+                    Genero.ObterPorId(dr.GetInt32(6)),
+                    dr.GetBoolean(7),                    
                     Endereco.ObterListaPorCliente(dr.GetInt32(0))
                     ));
             }
@@ -138,11 +160,10 @@ namespace PsicomindClass
                     dr.GetString(1),
                     dr.GetString(2),
                     dr.GetString(3),
-                    dr.GetString(4),
+                    dr.GetDateTime(4),
                     dr.GetDateTime(5),
-                    dr.GetDateTime(6),
-                    Genero.ObterPorId(dr.GetInt32(7)),
-                    dr.GetBoolean(8),
+                    Genero.ObterPorId(dr.GetInt32(6)),
+                    dr.GetBoolean(7),
                     Endereco.ObterListaPorCliente(dr.GetInt32(0))
                     ));
             }

@@ -21,6 +21,10 @@ namespace Psicomind
         private void CtrlClienteInserir_Load(object sender, EventArgs e)
         {
             
+            var genero = Genero.ObterLista();
+            cmbGenero.DataSource = genero;
+            cmbGenero.DisplayMember = "Genero_nome";
+            cmbGenero.ValueMember = "id";
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -48,14 +52,14 @@ namespace Psicomind
                 txtEmail.Text,
                 txtSenha.Text,
                 dptDataNascimento.Value,
-                cmbGenero.Items[cmbGenero.SelectedIndex].ToString()
-               
-                );
+                Genero.ObterPorId(Convert.ToInt32(cmbGenero.SelectedValue)
+
+                ));
             cliente.Inserir();
             if (cliente.Id > 0)
             {
-                txtClienteId.Text = cliente.Id.ToString(ToString);
-                MessageBox.Show($"Cliente {cliente.GetHashCode()} Cadastrado com sucesso!")
+                txtClienteId.Text = cliente.Id.ToString();
+                MessageBox.Show($"Cliente {cliente.GetHashCode()} Cadastrado com sucesso!");
             }
             Endereco endereco = new(
                 int.Parse(txtClienteId.Text),
@@ -63,9 +67,9 @@ namespace Psicomind
                 txtRua.Text,
                 txtNumero.Text,
                 txtBairro.Text,
-                txtUf.Text,
-                cmbTipoEndereco.Items[cmbGenero.SelectedIndex].ToString()
-                )
+                txtUf.Text
+                //cmbTipoEndereco.Items[cmbGenero.SelectedIndex].ToString()
+                );
 
 
         }
