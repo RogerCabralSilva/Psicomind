@@ -74,7 +74,7 @@
             btnPagInserirCliente.Size = new Size(212, 206);
             btnPagInserirCliente.TabIndex = 26;
             btnPagInserirCliente.Text = "guna2ContainerControl1";
-            btnPagInserirCliente.Click += txtAgndParticular_Click;
+            btnPagInserirCliente.Click += btnPagInserirCliente_Click;
             // 
             // pictureBox1
             // 
@@ -215,7 +215,6 @@
             label9.Size = new Size(81, 29);
             label9.TabIndex = 25;
             label9.Text = "Editar";
-            label9.Click += label9_Click;
             // 
             // label10
             // 
@@ -250,7 +249,6 @@
             txtPsicomind.Size = new Size(141, 28);
             txtPsicomind.TabIndex = 30;
             txtPsicomind.Text = "PSICOMIND";
-            txtPsicomind.Click += lblUser_Click;
             // 
             // CtrlCliente
             // 
