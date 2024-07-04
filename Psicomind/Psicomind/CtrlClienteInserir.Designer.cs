@@ -140,7 +140,7 @@
             guna2ContainerControl2.Controls.Add(txtSenha);
             guna2ContainerControl2.Controls.Add(txtNome);
             guna2ContainerControl2.CustomizableEdges = customizableEdges35;
-            guna2ContainerControl2.Location = new Point(159, 37);
+            guna2ContainerControl2.Location = new Point(159, 19);
             guna2ContainerControl2.Name = "guna2ContainerControl2";
             guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges36;
             guna2ContainerControl2.Size = new Size(748, 624);
@@ -158,7 +158,7 @@
             btnLimpar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnLimpar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLimpar.ForeColor = Color.White;
-            btnLimpar.Location = new Point(395, 548);
+            btnLimpar.Location = new Point(260, 557);
             btnLimpar.Name = "btnLimpar";
             btnLimpar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnLimpar.Size = new Size(126, 33);
@@ -176,7 +176,7 @@
             btnInserir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnInserir.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInserir.ForeColor = Color.White;
-            btnInserir.Location = new Point(546, 548);
+            btnInserir.Location = new Point(411, 557);
             btnInserir.Name = "btnInserir";
             btnInserir.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnInserir.Size = new Size(103, 33);
@@ -193,7 +193,7 @@
             dptDataNascimento.Font = new Font("Segoe UI", 9F);
             dptDataNascimento.Format = DateTimePickerFormat.Short;
             dptDataNascimento.Location = new Point(419, 274);
-            dptDataNascimento.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dptDataNascimento.MaxDate = new DateTime(2040, 12, 31, 0, 0, 0, 0);
             dptDataNascimento.MinDate = new DateTime(1920, 1, 1, 0, 0, 0, 0);
             dptDataNascimento.Name = "dptDataNascimento";
             dptDataNascimento.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -215,7 +215,7 @@
             cmbTipoEndereco.Font = new Font("Segoe UI", 10F);
             cmbTipoEndereco.ForeColor = Color.FromArgb(68, 88, 112);
             cmbTipoEndereco.ItemHeight = 20;
-            cmbTipoEndereco.Location = new Point(92, 555);
+            cmbTipoEndereco.Location = new Point(510, 498);
             cmbTipoEndereco.Name = "cmbTipoEndereco";
             cmbTipoEndereco.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cmbTipoEndereco.Size = new Size(139, 26);
@@ -267,7 +267,7 @@
             label17.BackColor = Color.White;
             label17.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label17.ForeColor = SystemColors.Highlight;
-            label17.Location = new Point(416, 479);
+            label17.Location = new Point(92, 479);
             label17.Name = "label17";
             label17.Size = new Size(51, 16);
             label17.TabIndex = 31;
@@ -337,14 +337,14 @@
             txtUf.Font = new Font("Segoe UI", 9F);
             txtUf.ForeColor = Color.Black;
             txtUf.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUf.Location = new Point(92, 498);
+            txtUf.Location = new Point(416, 498);
             txtUf.Name = "txtUf";
-            txtUf.PasswordChar = '●';
+            txtUf.PasswordChar = '\0';
             txtUf.PlaceholderForeColor = Color.Silver;
             txtUf.PlaceholderText = "";
             txtUf.SelectedText = "";
             txtUf.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtUf.Size = new Size(233, 25);
+            txtUf.Size = new Size(61, 25);
             txtUf.TabIndex = 30;
             // 
             // label2
@@ -375,9 +375,9 @@
             txtCidade.Font = new Font("Segoe UI", 9F);
             txtCidade.ForeColor = Color.Black;
             txtCidade.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCidade.Location = new Point(416, 498);
+            txtCidade.Location = new Point(92, 498);
             txtCidade.Name = "txtCidade";
-            txtCidade.PasswordChar = '●';
+            txtCidade.PasswordChar = '\0';
             txtCidade.PlaceholderForeColor = Color.Silver;
             txtCidade.PlaceholderText = "";
             txtCidade.SelectedText = "";
@@ -403,7 +403,7 @@
             txtBairro.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtBairro.Location = new Point(92, 440);
             txtBairro.Name = "txtBairro";
-            txtBairro.PasswordChar = '●';
+            txtBairro.PasswordChar = '\0';
             txtBairro.PlaceholderForeColor = Color.Silver;
             txtBairro.PlaceholderText = "";
             txtBairro.SelectedText = "";
@@ -429,7 +429,7 @@
             txtTelefone.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTelefone.Location = new Point(95, 217);
             txtTelefone.Name = "txtTelefone";
-            txtTelefone.PasswordChar = '●';
+            txtTelefone.PasswordChar = '\0';
             txtTelefone.PlaceholderForeColor = Color.Silver;
             txtTelefone.PlaceholderText = "";
             txtTelefone.SelectedText = "";
@@ -443,7 +443,7 @@
             label14.BackColor = Color.White;
             label14.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label14.ForeColor = SystemColors.Highlight;
-            label14.Location = new Point(92, 536);
+            label14.Location = new Point(510, 479);
             label14.Name = "label14";
             label14.Size = new Size(111, 16);
             label14.TabIndex = 29;
@@ -467,7 +467,7 @@
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Location = new Point(419, 162);
             guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '●';
+            guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderForeColor = Color.Silver;
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.SelectedText = "";
@@ -493,7 +493,7 @@
             txtRua.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtRua.Location = new Point(416, 387);
             txtRua.Name = "txtRua";
-            txtRua.PasswordChar = '●';
+            txtRua.PasswordChar = '\0';
             txtRua.PlaceholderForeColor = Color.Silver;
             txtRua.PlaceholderText = "";
             txtRua.SelectedText = "";
@@ -531,7 +531,7 @@
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmail.Location = new Point(419, 111);
             txtEmail.Name = "txtEmail";
-            txtEmail.PasswordChar = '●';
+            txtEmail.PasswordChar = '\0';
             txtEmail.PlaceholderForeColor = Color.Silver;
             txtEmail.PlaceholderText = "";
             txtEmail.SelectedText = "";
@@ -545,7 +545,7 @@
             label13.BackColor = Color.White;
             label13.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = SystemColors.Highlight;
-            label13.Location = new Point(92, 479);
+            label13.Location = new Point(416, 479);
             label13.Name = "label13";
             label13.Size = new Size(21, 16);
             label13.TabIndex = 29;
@@ -653,14 +653,13 @@
             txtNumero.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNumero.Location = new Point(416, 440);
             txtNumero.Name = "txtNumero";
-            txtNumero.PasswordChar = '●';
+            txtNumero.PasswordChar = '\0';
             txtNumero.PlaceholderForeColor = Color.Silver;
             txtNumero.PlaceholderText = "";
             txtNumero.SelectedText = "";
             txtNumero.ShadowDecoration.CustomizableEdges = customizableEdges28;
             txtNumero.Size = new Size(139, 25);
             txtNumero.TabIndex = 6;
-            txtNumero.UseSystemPasswordChar = true;
             // 
             // label3
             // 
