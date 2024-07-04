@@ -63,7 +63,7 @@
             txtPsicomind.AutoSize = true;
             txtPsicomind.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPsicomind.ForeColor = SystemColors.Highlight;
-            txtPsicomind.Location = new Point(443, 52);
+            txtPsicomind.Location = new Point(463, 69);
             txtPsicomind.Name = "txtPsicomind";
             txtPsicomind.Size = new Size(141, 28);
             txtPsicomind.TabIndex = 35;
@@ -74,7 +74,7 @@
             txtTitulo.AutoSize = true;
             txtTitulo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTitulo.ForeColor = Color.Black;
-            txtTitulo.Location = new Point(360, 67);
+            txtTitulo.Location = new Point(382, 83);
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(329, 60);
             txtTitulo.TabIndex = 34;
@@ -90,7 +90,7 @@
             btnPagEditarProfissionais.Cursor = Cursors.Hand;
             btnPagEditarProfissionais.CustomizableEdges = customizableEdges1;
             btnPagEditarProfissionais.FillColor = Color.LightGray;
-            btnPagEditarProfissionais.Location = new Point(401, 409);
+            btnPagEditarProfissionais.Location = new Point(421, 426);
             btnPagEditarProfissionais.Name = "btnPagEditarProfissionais";
             btnPagEditarProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnPagEditarProfissionais.Size = new Size(212, 197);
@@ -143,7 +143,7 @@
             btnPagConsultarProfissionais.Cursor = Cursors.Hand;
             btnPagConsultarProfissionais.CustomizableEdges = customizableEdges3;
             btnPagConsultarProfissionais.FillColor = Color.LightGray;
-            btnPagConsultarProfissionais.Location = new Point(567, 178);
+            btnPagConsultarProfissionais.Location = new Point(587, 195);
             btnPagConsultarProfissionais.Name = "btnPagConsultarProfissionais";
             btnPagConsultarProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnPagConsultarProfissionais.Size = new Size(212, 206);
@@ -207,7 +207,7 @@
             btnPagInserirProfissionais.Cursor = Cursors.Hand;
             btnPagInserirProfissionais.CustomizableEdges = customizableEdges5;
             btnPagInserirProfissionais.FillColor = Color.LightGray;
-            btnPagInserirProfissionais.Location = new Point(238, 178);
+            btnPagInserirProfissionais.Location = new Point(258, 195);
             btnPagInserirProfissionais.Name = "btnPagInserirProfissionais";
             btnPagInserirProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnPagInserirProfissionais.Size = new Size(212, 206);

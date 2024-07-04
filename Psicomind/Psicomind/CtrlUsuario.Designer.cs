@@ -63,7 +63,7 @@
             txtPsicomind.AutoSize = true;
             txtPsicomind.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPsicomind.ForeColor = SystemColors.Highlight;
-            txtPsicomind.Location = new Point(442, 51);
+            txtPsicomind.Location = new Point(463, 69);
             txtPsicomind.Name = "txtPsicomind";
             txtPsicomind.Size = new Size(141, 28);
             txtPsicomind.TabIndex = 40;
@@ -74,7 +74,7 @@
             txtTitulo.AutoSize = true;
             txtTitulo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTitulo.ForeColor = Color.Black;
-            txtTitulo.Location = new Point(399, 66);
+            txtTitulo.Location = new Point(422, 83);
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(233, 60);
             txtTitulo.TabIndex = 39;
@@ -90,7 +90,7 @@
             btnPagEditarUsuario.Cursor = Cursors.Hand;
             btnPagEditarUsuario.CustomizableEdges = customizableEdges1;
             btnPagEditarUsuario.FillColor = Color.LightGray;
-            btnPagEditarUsuario.Location = new Point(400, 408);
+            btnPagEditarUsuario.Location = new Point(421, 426);
             btnPagEditarUsuario.Name = "btnPagEditarUsuario";
             btnPagEditarUsuario.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnPagEditarUsuario.Size = new Size(212, 197);
@@ -143,7 +143,7 @@
             btnPagConsultarUsuario.Cursor = Cursors.Hand;
             btnPagConsultarUsuario.CustomizableEdges = customizableEdges3;
             btnPagConsultarUsuario.FillColor = Color.LightGray;
-            btnPagConsultarUsuario.Location = new Point(566, 177);
+            btnPagConsultarUsuario.Location = new Point(587, 195);
             btnPagConsultarUsuario.Name = "btnPagConsultarUsuario";
             btnPagConsultarUsuario.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnPagConsultarUsuario.Size = new Size(212, 206);
@@ -207,7 +207,7 @@
             btnPagInserirUsuario.Cursor = Cursors.Hand;
             btnPagInserirUsuario.CustomizableEdges = customizableEdges5;
             btnPagInserirUsuario.FillColor = Color.LightGray;
-            btnPagInserirUsuario.Location = new Point(237, 177);
+            btnPagInserirUsuario.Location = new Point(258, 195);
             btnPagInserirUsuario.Name = "btnPagInserirUsuario";
             btnPagInserirUsuario.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnPagInserirUsuario.Size = new Size(212, 206);

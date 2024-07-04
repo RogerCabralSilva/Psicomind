@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,11 @@ namespace Psicomind
         public CtrlClienteInserir()
         {
             InitializeComponent();
+
+
         }
+
+        private bool labelUnderline = false;
 
         private void CtrlClienteInserir_Load(object sender, EventArgs e)
         {
@@ -37,9 +42,9 @@ namespace Psicomind
             txtNome.Clear();
             txtEmail.Clear();
             txtSenha.Clear();
-            txtCpf.Clear();
-            txtTelefone.Clear();
-            txtCep.Clear();
+            mtxCpf.Clear();
+            mtxTelefone.Clear();
+            mtxCep.Clear();
             txtRua.Clear();
             txtBairro.Clear();
             txtNumero.Clear();
@@ -57,7 +62,7 @@ namespace Psicomind
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(txtCpf.Text))
+            if (string.IsNullOrWhiteSpace(mtxCpf.Text))
             {
                 MessageBox.Show("O CPF é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -82,7 +87,7 @@ namespace Psicomind
             }
 
             // Validações de campos obrigatórios do endereço
-            if (string.IsNullOrWhiteSpace(txtCep.Text))
+            if (string.IsNullOrWhiteSpace(mtxCep.Text))
             {
                 MessageBox.Show("O CEP é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -124,29 +129,33 @@ namespace Psicomind
                 return;
             }
 
-            
+            // Tirando os traços do maskedTexBox
+            mtxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            mtxTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            mtxCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
             Cliente cliente = new(
                 txtNome.Text,
-                txtCpf.Text,
+                mtxCpf.Text,
                 txtEmail.Text,
                 txtSenha.Text,
                 dptDataNascimento.Value,
                 Genero.ObterPorId(Convert.ToInt32(cmbGenero.SelectedValue))
             );
 
-           
+
             cliente.Inserir();
 
-           
+
             if (cliente.Id > 0)
             {
                 txtClienteId.Text = cliente.Id.ToString();
                 MessageBox.Show($"Cliente {cliente.Nome} cadastrado com sucesso!");
 
-               
+
                 Endereco endereco = new(
                     int.Parse(txtClienteId.Text),
-                    txtCep.Text,
+                    mtxCep.Text,
                     txtRua.Text,
                     txtNumero.Text,
                     txtBairro.Text,
@@ -154,10 +163,8 @@ namespace Psicomind
                     TipoEndereco.ObterPorId(Convert.ToInt32(cmbTipoEndereco.SelectedValue))
                 );
 
-                
-                endereco.Inserir();
 
-                MessageBox.Show("Endereço cadastrado com sucesso!");
+                endereco.Inserir();
             }
             else
             {
@@ -166,27 +173,59 @@ namespace Psicomind
         }
 
 
-        private void txtCep_TextChanged(object sender, EventArgs e)
+        private void mtxCep_TextChanged(object sender, EventArgs e)
         {
-            if (txtCep.Text.Length > 7)
+            if (mtxCep.Text.Length > 7)
             {
-                WebCEP webCep = new(txtCep.Text);
+                mtxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+                WebCEP webCep = new(mtxCep.Text);
                 txtBairro.Text = webCep.Bairro;
                 txtCidade.Text = webCep.Cidade;
                 txtUf.Text = webCep.UF;
                 txtRua.Text = webCep.Lagradouro;
-
+                txtNumero.Focus();
 
             }
 
-            if (txtCep.Text.Length < 8)
+            if (mtxCep.Text.Length < 8)
             {
+                mtxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                 txtBairro.Clear();
                 txtCidade.Clear();
                 txtUf.Clear();
-                txtRua.Clear(); 
+                txtRua.Clear();
 
             }
+
+        }
+
+
+
+        private void addUserControl(UserControl userControl)
+        {
+
+            CtrlCliente ctrlCliente = new();
+
+            userControl.Dock = DockStyle.Fill;
+            pnp.Controls.Clear();
+            pnp.Controls.Add(userControl);
+            userControl.BringToFront();
+
+        }
+
+        private void lblVoltar_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            // Muda o cursor para mãozinha ao passar o mouse sobre a label voltar
+            lblVoltar.Cursor = Cursors.Hand;
+
+            labelUnderline = true;
+            lblVoltar.Invalidate();
+        }
+
+        private void lblVoltar_Click(object sender, EventArgs e)
+        {
+            CtrlCliente CtrlCliente = new();
+            addUserControl(CtrlCliente);
         }
     }
 }

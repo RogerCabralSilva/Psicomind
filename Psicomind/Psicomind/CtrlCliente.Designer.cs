@@ -47,17 +47,17 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            pictureBox1 = new PictureBox();
             btnPagInserirCliente = new Guna.UI2.WinForms.Guna2ContainerControl();
+            pictureBox1 = new PictureBox();
+            label3 = new Label();
+            label4 = new Label();
             pnp.SuspendLayout();
             btnPagEditarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             btnPagConsultarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             btnPagInserirCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pnp
@@ -67,7 +67,7 @@
             pnp.Controls.Add(btnPagEditarCliente);
             pnp.Controls.Add(btnPagConsultarCliente);
             pnp.Controls.Add(btnPagInserirCliente);
-            pnp.Location = new Point(3, 3);
+            pnp.Location = new Point(0, 0);
             pnp.Name = "pnp";
             pnp.Size = new Size(1056, 693);
             pnp.TabIndex = 31;
@@ -211,41 +211,6 @@
             label7.TabIndex = 23;
             label7.Text = "Inserir";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.LightGray;
-            label4.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(54, 68);
-            label4.Name = "label4";
-            label4.Size = new Size(106, 29);
-            label4.TabIndex = 26;
-            label4.Text = "Clientes";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.LightGray;
-            label3.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(62, 38);
-            label3.Name = "label3";
-            label3.Size = new Size(86, 29);
-            label3.TabIndex = 25;
-            label3.Text = "Inserir";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.LightGray;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(48, 108);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(114, 69);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 24;
-            pictureBox1.TabStop = false;
-            // 
             // btnPagInserirCliente
             // 
             btnPagInserirCliente.BackColor = SystemColors.Control;
@@ -264,6 +229,41 @@
             btnPagInserirCliente.Text = "guna2ContainerControl1";
             btnPagInserirCliente.Click += btnPagInserirCliente_Click_1;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.LightGray;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(48, 108);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(114, 69);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 24;
+            pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.LightGray;
+            label3.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(62, 38);
+            label3.Name = "label3";
+            label3.Size = new Size(86, 29);
+            label3.TabIndex = 25;
+            label3.Text = "Inserir";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.LightGray;
+            label4.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(54, 68);
+            label4.Name = "label4";
+            label4.Size = new Size(106, 29);
+            label4.TabIndex = 26;
+            label4.Text = "Clientes";
+            // 
             // CtrlCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -279,9 +279,9 @@
             btnPagConsultarCliente.ResumeLayout(false);
             btnPagConsultarCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             btnPagInserirCliente.ResumeLayout(false);
             btnPagInserirCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
