@@ -38,9 +38,11 @@
             txtPsicomind = new Label();
             txtTitulo = new Label();
             btnPagEditarUsuario = new Guna.UI2.WinForms.Guna2ContainerControl();
+            label1 = new Label();
             pictureBox5 = new PictureBox();
             label9 = new Label();
             btnPagConsultarUsuario = new Guna.UI2.WinForms.Guna2ContainerControl();
+            label6 = new Label();
             pictureBox3 = new PictureBox();
             label5 = new Label();
             label7 = new Label();
@@ -48,8 +50,6 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
-            label6 = new Label();
-            label1 = new Label();
             btnPagEditarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             btnPagConsultarUsuario.SuspendLayout();
@@ -97,6 +97,18 @@
             btnPagEditarUsuario.TabIndex = 38;
             btnPagEditarUsuario.Text = "guna2ContainerControl1";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.LightGray;
+            label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(49, 59);
+            label1.Name = "label1";
+            label1.Size = new Size(115, 29);
+            label1.TabIndex = 28;
+            label1.Text = "Usuários";
+            // 
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.LightGray;
@@ -137,6 +149,18 @@
             btnPagConsultarUsuario.Size = new Size(212, 206);
             btnPagConsultarUsuario.TabIndex = 37;
             btnPagConsultarUsuario.Text = "guna2ContainerControl1";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.LightGray;
+            label6.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(49, 68);
+            label6.Name = "label6";
+            label6.Size = new Size(115, 29);
+            label6.TabIndex = 28;
+            label6.Text = "Usuários";
             // 
             // pictureBox3
             // 
@@ -189,6 +213,7 @@
             btnPagInserirUsuario.Size = new Size(212, 206);
             btnPagInserirUsuario.TabIndex = 36;
             btnPagInserirUsuario.Text = "guna2ContainerControl1";
+            btnPagInserirUsuario.Click += btnPagInserirUsuario_Click;
             // 
             // pictureBox1
             // 
@@ -224,30 +249,6 @@
             label4.Size = new Size(115, 29);
             label4.TabIndex = 26;
             label4.Text = "Usuários";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.LightGray;
-            label6.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(49, 68);
-            label6.Name = "label6";
-            label6.Size = new Size(115, 29);
-            label6.TabIndex = 28;
-            label6.Text = "Usuários";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.LightGray;
-            label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(49, 59);
-            label1.Name = "label1";
-            label1.Size = new Size(115, 29);
-            label1.TabIndex = 28;
-            label1.Text = "Usuários";
             // 
             // CtrlUsuario
             // 

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Psicomind
 {
-    public partial class CtrlProfissionais : UserControl
+    public partial class CtrlClienteInserir : UserControl
     {
-        public CtrlProfissionais()
+        public CtrlClienteInserir()
         {
             InitializeComponent();
+        }
+
+        private void CtrlClienteInserir_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

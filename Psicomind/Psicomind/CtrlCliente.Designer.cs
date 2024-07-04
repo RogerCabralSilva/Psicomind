@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrlCliente));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnPagInserirCliente = new Guna.UI2.WinForms.Guna2ContainerControl();
             pictureBox1 = new PictureBox();
             label3 = new Label();
@@ -66,15 +66,15 @@
             btnPagInserirCliente.Controls.Add(label3);
             btnPagInserirCliente.Controls.Add(label4);
             btnPagInserirCliente.Cursor = Cursors.Hand;
-            btnPagInserirCliente.CustomizableEdges = customizableEdges7;
+            btnPagInserirCliente.CustomizableEdges = customizableEdges1;
             btnPagInserirCliente.FillColor = Color.LightGray;
             btnPagInserirCliente.Location = new Point(240, 178);
             btnPagInserirCliente.Name = "btnPagInserirCliente";
-            btnPagInserirCliente.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnPagInserirCliente.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnPagInserirCliente.Size = new Size(212, 206);
             btnPagInserirCliente.TabIndex = 26;
             btnPagInserirCliente.Text = "guna2ContainerControl1";
-            btnPagInserirCliente.Click += txtAgndParticular_Click;
+            btnPagInserirCliente.Click += btnPagInserirCliente_Click;
             // 
             // pictureBox1
             // 
@@ -120,11 +120,11 @@
             btnPagConsultarCliente.Controls.Add(label6);
             btnPagConsultarCliente.Controls.Add(label7);
             btnPagConsultarCliente.Cursor = Cursors.Hand;
-            btnPagConsultarCliente.CustomizableEdges = customizableEdges9;
+            btnPagConsultarCliente.CustomizableEdges = customizableEdges3;
             btnPagConsultarCliente.FillColor = Color.LightGray;
             btnPagConsultarCliente.Location = new Point(569, 178);
             btnPagConsultarCliente.Name = "btnPagConsultarCliente";
-            btnPagConsultarCliente.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnPagConsultarCliente.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnPagConsultarCliente.Size = new Size(212, 206);
             btnPagConsultarCliente.TabIndex = 27;
             btnPagConsultarCliente.Text = "guna2ContainerControl1";
@@ -184,11 +184,11 @@
             btnPagEditarCliente.Controls.Add(label9);
             btnPagEditarCliente.Controls.Add(label10);
             btnPagEditarCliente.Cursor = Cursors.Hand;
-            btnPagEditarCliente.CustomizableEdges = customizableEdges11;
+            btnPagEditarCliente.CustomizableEdges = customizableEdges5;
             btnPagEditarCliente.FillColor = Color.LightGray;
             btnPagEditarCliente.Location = new Point(403, 409);
             btnPagEditarCliente.Name = "btnPagEditarCliente";
-            btnPagEditarCliente.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnPagEditarCliente.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnPagEditarCliente.Size = new Size(212, 197);
             btnPagEditarCliente.TabIndex = 28;
             btnPagEditarCliente.Text = "guna2ContainerControl1";
@@ -215,7 +215,6 @@
             label9.Size = new Size(81, 29);
             label9.TabIndex = 25;
             label9.Text = "Editar";
-            label9.Click += label9_Click;
             // 
             // label10
             // 
@@ -250,7 +249,6 @@
             txtPsicomind.Size = new Size(141, 28);
             txtPsicomind.TabIndex = 30;
             txtPsicomind.Text = "PSICOMIND";
-            txtPsicomind.Click += lblUser_Click;
             // 
             // CtrlCliente
             // 
@@ -263,6 +261,7 @@
             Controls.Add(btnPagInserirCliente);
             Name = "CtrlCliente";
             Size = new Size(1056, 693);
+            Load += CtrlCliente_Load;
             btnPagInserirCliente.ResumeLayout(false);
             btnPagInserirCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

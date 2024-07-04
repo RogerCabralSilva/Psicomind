@@ -16,5 +16,9 @@ namespace Psicomind
         {
             InitializeComponent();
         }
+
+        private void btnPagInserirUsuario_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
