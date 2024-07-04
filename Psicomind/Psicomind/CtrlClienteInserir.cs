@@ -21,5 +21,21 @@ namespace Psicomind
         {
 
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNome.Clear();
+            txtEmail.Clear();
+            txtSenha.Clear();
+            txtCpf.Clear();
+            txtTelefone.Clear();
+            txtCep.Clear();
+            txtRua.Clear();
+            txtBairro.Clear();
+            txtNumero.Clear();
+            txtCidade.Clear();
+            txtUf.Clear();
+
+        }
     }
 }

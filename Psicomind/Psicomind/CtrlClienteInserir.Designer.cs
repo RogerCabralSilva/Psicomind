@@ -82,7 +82,7 @@
             txtBairro = new Guna.UI2.WinForms.Guna2TextBox();
             txtTelefone = new Guna.UI2.WinForms.Guna2TextBox();
             label14 = new Label();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtCpf = new Guna.UI2.WinForms.Guna2TextBox();
             txtRua = new Guna.UI2.WinForms.Guna2TextBox();
             label9 = new Label();
             txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
@@ -122,7 +122,7 @@
             guna2ContainerControl2.Controls.Add(txtBairro);
             guna2ContainerControl2.Controls.Add(txtTelefone);
             guna2ContainerControl2.Controls.Add(label14);
-            guna2ContainerControl2.Controls.Add(guna2TextBox1);
+            guna2ContainerControl2.Controls.Add(txtCpf);
             guna2ContainerControl2.Controls.Add(txtRua);
             guna2ContainerControl2.Controls.Add(label9);
             guna2ContainerControl2.Controls.Add(txtEmail);
@@ -164,6 +164,7 @@
             btnLimpar.Size = new Size(126, 33);
             btnLimpar.TabIndex = 38;
             btnLimpar.Text = "Limpar os Dados";
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // btnInserir
             // 
@@ -449,31 +450,31 @@
             label14.TabIndex = 29;
             label14.Text = "Tipo de Endereço";
             // 
-            // guna2TextBox1
+            // txtCpf
             // 
-            guna2TextBox1.BackColor = SystemColors.ButtonHighlight;
-            guna2TextBox1.BorderColor = Color.White;
-            guna2TextBox1.BorderRadius = 5;
-            guna2TextBox1.CustomizableEdges = customizableEdges21;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FillColor = Color.FromArgb(224, 224, 224);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.ForeColor = Color.Black;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(419, 162);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderForeColor = Color.Silver;
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2TextBox1.Size = new Size(233, 25);
-            guna2TextBox1.TabIndex = 30;
+            txtCpf.BackColor = SystemColors.ButtonHighlight;
+            txtCpf.BorderColor = Color.White;
+            txtCpf.BorderRadius = 5;
+            txtCpf.CustomizableEdges = customizableEdges21;
+            txtCpf.DefaultText = "";
+            txtCpf.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtCpf.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtCpf.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtCpf.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCpf.FillColor = Color.FromArgb(224, 224, 224);
+            txtCpf.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCpf.Font = new Font("Segoe UI", 9F);
+            txtCpf.ForeColor = Color.Black;
+            txtCpf.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCpf.Location = new Point(419, 162);
+            txtCpf.Name = "txtCpf";
+            txtCpf.PasswordChar = '\0';
+            txtCpf.PlaceholderForeColor = Color.Silver;
+            txtCpf.PlaceholderText = "";
+            txtCpf.SelectedText = "";
+            txtCpf.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtCpf.Size = new Size(233, 25);
+            txtCpf.TabIndex = 30;
             // 
             // txtRua
             // 
@@ -777,7 +778,7 @@
         private Label label4;
         private Guna.UI2.WinForms.Guna2ComboBox cmbGenero;
         private Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtCpf;
         private Guna.UI2.WinForms.Guna2DateTimePicker dptDataNascimento;
         private Label label6;
         private Label label7;
