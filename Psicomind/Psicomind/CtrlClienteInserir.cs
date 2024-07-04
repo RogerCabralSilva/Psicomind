@@ -20,7 +20,7 @@ namespace Psicomind
 
         private void CtrlClienteInserir_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -43,10 +43,29 @@ namespace Psicomind
         {
 
             Cliente cliente = new(
-                
-                
-                
+                txtNome.Text,
+                txtCpf.Text,
+                txtEmail.Text,
+                txtSenha.Text,
+                dptDataNascimento.Value,
+                cmbGenero.Items[cmbGenero.SelectedIndex].ToString()
+               
                 );
+            cliente.Inserir();
+            if (cliente.Id > 0)
+            {
+                txtClienteId.Text = cliente.Id.ToString(ToString);
+                MessageBox.Show($"Cliente {cliente.GetHashCode()} Cadastrado com sucesso!")
+            }
+            Endereco endereco = new(
+                int.Parse(txtClienteId.Text),
+                txtCep.Text,
+                txtRua.Text,
+                txtNumero.Text,
+                txtBairro.Text,
+                txtUf.Text,
+                cmbTipoEndereco.Items[cmbGenero.SelectedIndex].ToString()
+                )
 
 
         }

@@ -13,7 +13,6 @@ namespace PsicomindClass
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
-        public string Telefone { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
         public DateTime Data_nasc { get; set; }
@@ -28,12 +27,11 @@ namespace PsicomindClass
             
         }
 
-        public Cliente(int id, string nome, string cpf, string telefone, string email, DateTime data_nasc, DateTime data_cad,GeneroCliente generoCliente, bool ativo, List<Endereco> enderecos)
+        public Cliente(int id, string nome, string cpf, string email, DateTime data_nasc, DateTime data_cad,GeneroCliente generoCliente, bool ativo, List<Endereco> enderecos)
         {
             Id = id;
             Nome = nome;
             Cpf = cpf;
-            Telefone = telefone;
             Email = email;
             Data_nasc = data_nasc;
             Data_cad = data_cad;
@@ -42,26 +40,35 @@ namespace PsicomindClass
             Enderecos = enderecos;
         }
 
-        public Cliente(int id, string nome, string cpf, string telefone, string email, DateTime data_nasc, DateTime data_cad, bool ativo)
+        public Cliente(int id, string nome, string cpf , string email, DateTime data_nasc, DateTime data_cad, bool ativo)
         {
             Id = id;
             Nome = nome;
             Cpf = cpf;
-            Telefone = telefone;
             Email = email;
             Data_nasc = data_nasc;
             Data_cad = data_cad;
             Ativo = ativo;
         }
 
-        public Cliente(string nome, string cpf, string telefone, string email, DateTime data_nasc, bool ativo)
+        public Cliente(string nome, string cpf , string email, DateTime data_nasc)
+        {
+            Nome = nome;
+            Cpf = cpf;
+            Email = email;
+            Data_nasc = data_nasc;
+            Ativo = ativo;
+        }
+
+        public Cliente(string nome, string cpf, string email, string senha, DateTime data_nasc, GeneroCliente generoCliente,)
         {
             Nome = nome;
             Cpf = cpf;
             Telefone = telefone;
             Email = email;
+            Senha = senha;
             Data_nasc = data_nasc;
-            Ativo = ativo;
+            GeneroCliente = generoCliente;
         }
 
         public void Inserir()

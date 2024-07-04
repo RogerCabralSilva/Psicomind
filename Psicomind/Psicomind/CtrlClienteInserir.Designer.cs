@@ -99,12 +99,14 @@
             txtCep = new Guna.UI2.WinForms.Guna2TextBox();
             txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             txtNome = new Guna.UI2.WinForms.Guna2TextBox();
+            txtClienteId = new TextBox();
             guna2ContainerControl2.SuspendLayout();
             SuspendLayout();
             // 
             // guna2ContainerControl2
             // 
             guna2ContainerControl2.BorderRadius = 30;
+            guna2ContainerControl2.Controls.Add(txtClienteId);
             guna2ContainerControl2.Controls.Add(btnLimpar);
             guna2ContainerControl2.Controls.Add(btnInserir);
             guna2ContainerControl2.Controls.Add(dptDataNascimento);
@@ -754,6 +756,15 @@
             txtNome.Size = new Size(233, 25);
             txtNome.TabIndex = 6;
             // 
+            // txtClienteId
+            // 
+            txtClienteId.Location = new Point(581, 25);
+            txtClienteId.Name = "txtClienteId";
+            txtClienteId.Size = new Size(100, 23);
+            txtClienteId.TabIndex = 39;
+            txtClienteId.Text = "0";
+            txtClienteId.Visible = false;
+            // 
             // CtrlClienteInserir
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -804,5 +815,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCidade;
         private Guna.UI2.WinForms.Guna2Button btnInserir;
         private Guna.UI2.WinForms.Guna2Button btnLimpar;
+        private TextBox txtClienteId;
     }
 }
