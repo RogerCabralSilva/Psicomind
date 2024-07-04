@@ -65,6 +65,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            txtClienteId = new TextBox();
             btnLimpar = new Guna.UI2.WinForms.Guna2Button();
             btnInserir = new Guna.UI2.WinForms.Guna2Button();
             dptDataNascimento = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -99,7 +100,6 @@
             txtCep = new Guna.UI2.WinForms.Guna2TextBox();
             txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             txtNome = new Guna.UI2.WinForms.Guna2TextBox();
-            txtClienteId = new TextBox();
             guna2ContainerControl2.SuspendLayout();
             SuspendLayout();
             // 
@@ -148,6 +148,15 @@
             guna2ContainerControl2.Size = new Size(748, 624);
             guna2ContainerControl2.TabIndex = 28;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
+            // 
+            // txtClienteId
+            // 
+            txtClienteId.Location = new Point(581, 25);
+            txtClienteId.Name = "txtClienteId";
+            txtClienteId.Size = new Size(100, 23);
+            txtClienteId.TabIndex = 39;
+            txtClienteId.Text = "0";
+            txtClienteId.Visible = false;
             // 
             // btnLimpar
             // 
@@ -262,7 +271,7 @@
             cmbGenero.Location = new Point(95, 276);
             cmbGenero.Name = "cmbGenero";
             cmbGenero.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            cmbGenero.Size = new Size(119, 26);
+            cmbGenero.Size = new Size(136, 26);
             cmbGenero.TabIndex = 32;
             // 
             // label17
@@ -755,15 +764,6 @@
             txtNome.ShadowDecoration.CustomizableEdges = customizableEdges34;
             txtNome.Size = new Size(233, 25);
             txtNome.TabIndex = 6;
-            // 
-            // txtClienteId
-            // 
-            txtClienteId.Location = new Point(581, 25);
-            txtClienteId.Name = "txtClienteId";
-            txtClienteId.Size = new Size(100, 23);
-            txtClienteId.TabIndex = 39;
-            txtClienteId.Text = "0";
-            txtClienteId.Visible = false;
             // 
             // CtrlClienteInserir
             // 
