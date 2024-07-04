@@ -17,18 +17,26 @@ namespace Psicomind
             InitializeComponent();
         }
 
-        private void CtrlCliente_Load(object sender, EventArgs e)
+
+        private void addUserControl(UserControl userControl)
         {
+
+            CtrlCliente ctrlCliente = new();
+
+            userControl.Dock = DockStyle.Fill;
+            ctrlCliente.Controls.Clear();
+            ctrlCliente.Controls.Add(userControl);
+            userControl.BringToFront();
 
         }
 
-        public void btnPagInserirCliente_Click(object sender, EventArgs e)
+
+        private void btnPagInserirCliente_Click(object sender, EventArgs e)
         {
-            FrmPrincipal frmPrincipal = new FrmPrincipal();
 
-            CtrlClienteInserir clienteInserir = new CtrlClienteInserir();
+            CtrlPrincipal ctrlPrincipal = new();
+            addUserControl(ctrlPrincipal);
 
-            frmPrincipal.addUserControl(clienteInserir);
         }
     }
 }
