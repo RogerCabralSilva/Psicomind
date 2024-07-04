@@ -36,16 +36,6 @@ namespace PsicomindClass
             TipoEndereco = tipoEndereco;
         }
 
-        public Endereco(int cliente_Id, string cep, string rua, string numero, string bairro, string uf)
-        {
-            Cliente_Id = cliente_Id;
-            Cep = cep;
-            Rua = rua;
-            Numero = numero;
-            Bairro = bairro;
-            Uf = uf;
-        }
-
         public Endereco(int cliente_Id, string cep, string rua, string numero, string bairro, string uf, TipoEndereco tipoEndereco)
         {
             Cliente_Id = cliente_Id;

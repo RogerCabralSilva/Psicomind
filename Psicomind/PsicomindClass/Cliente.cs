@@ -27,49 +27,6 @@ namespace PsicomindClass
             
         }
 
-        public Cliente(int id, string nome, string cpf, string email, DateTime data_nasc, DateTime data_cad,Genero generoCliente, bool ativo, List<Endereco> enderecos)
-        {
-            Id = id;
-            Nome = nome;
-            Cpf = cpf;
-            Email = email;
-            Data_nasc = data_nasc;
-            Data_cad = data_cad;
-            GeneroCliente = generoCliente;
-            Ativo = ativo;
-            Enderecos = enderecos;
-        }
-
-        public Cliente(int id, string nome, string cpf , string email, DateTime data_nasc, DateTime data_cad, bool ativo)
-        {
-            Id = id;
-            Nome = nome;
-            Cpf = cpf;
-            Email = email;
-            Data_nasc = data_nasc;
-            Data_cad = data_cad;
-            Ativo = ativo;
-        }
-
-        public Cliente(string nome, string cpf , string email, DateTime data_nasc, List<Endereco> enderecos)
-        {
-            Nome = nome;
-            Cpf = cpf;
-            Email = email;
-            Data_nasc = data_nasc;
-            Enderecos = enderecos;
-        }
-
-        public Cliente(string nome, string cpf, string email, string senha, DateTime data_nasc)
-        {
-            Nome = nome;
-            Cpf = cpf;
-            Email = email;
-            Senha = senha;
-            Data_nasc = data_nasc;
-            
-        }
-
         public Cliente(int id, string nome, string cpf, string email, string senha, DateTime data_nasc, DateTime data_cad, bool ativo, Genero generoCliente, List<Endereco> enderecos)
         {
             Id = id;
@@ -94,18 +51,31 @@ namespace PsicomindClass
             GeneroCliente = generoCliente;
         }
 
+        public Cliente(int id, string nome, string cpf, string email, string senha, DateTime data_nasc, DateTime data_cad, bool ativo, Genero generoCliente)
+        {
+            Id = id;
+            Nome = nome;
+            Cpf = cpf;
+            Email = email;
+            Senha = senha;
+            Data_nasc = data_nasc;
+            Data_cad = data_cad;
+            Ativo = ativo;
+            GeneroCliente = generoCliente;
+        }
+
         public void Inserir()
         {
             var cmd = Banco.Abrir();
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "sp_cliente_insert";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_clientes_insert";
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spemail", Email);
             cmd.Parameters.AddWithValue("spsenha", Senha);
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nasc", Data_nasc);
             cmd.Parameters.AddWithValue("spgenero_cliente", GeneroCliente.Id);
-            Id = Convert.ToInt32(cmd.ExecuteReader());
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
 
         }
 
@@ -133,10 +103,11 @@ namespace PsicomindClass
                     dr.GetString(1),
                     dr.GetString(2),
                     dr.GetString(3),
-                    dr.GetDateTime(4),
+                    dr.GetString(4),
                     dr.GetDateTime(5),
-                    Genero.ObterPorId(dr.GetInt32(6)),
-                    dr.GetBoolean(7),                    
+                    dr.GetDateTime(6),
+                    dr.GetBoolean(7),
+                    Genero.ObterPorId(dr.GetInt32(0)), 
                     Endereco.ObterListaPorCliente(dr.GetInt32(0))
                     ));
             }
@@ -160,10 +131,11 @@ namespace PsicomindClass
                     dr.GetString(1),
                     dr.GetString(2),
                     dr.GetString(3),
-                    dr.GetDateTime(4),
+                    dr.GetString(4),
                     dr.GetDateTime(5),
-                    Genero.ObterPorId(dr.GetInt32(6)),
+                    dr.GetDateTime(6),
                     dr.GetBoolean(7),
+                    Genero.ObterPorId(dr.GetInt32(0)),
                     Endereco.ObterListaPorCliente(dr.GetInt32(0))
                     ));
             }

@@ -28,7 +28,7 @@ namespace PsicomindClass
             Genero generoCliente = new();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"select * from genero_cliente where id = {id}";
+            cmd.CommandText = $"select * from genero where id = {id}";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
