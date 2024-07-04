@@ -10,14 +10,14 @@ namespace PsicomindClass
     public class Endereco
     {
 
-        public int Id { get; set; }
-        public int Cliente_Id { get; set; }
-        public string Cep { get; set; }
-        public string Rua { get; set; }
-        public string Numero { get; set; }
-        public string Bairro { get; set; }
-        public string Uf { get; set; }
-        public TipoEndereco TipoEndereco { get; set; }
+        public int? Id { get; set; }
+        public int? Cliente_Id { get; set; }
+        public string? Cep { get; set; }
+        public string? Rua { get; set; }
+        public string? Numero { get; set; }
+        public string? Bairro { get; set; }
+        public string? Uf { get; set; }
+        public TipoEndereco? TipoEndereco { get; set; }
 
         public Endereco()
         {
@@ -47,6 +47,9 @@ namespace PsicomindClass
             TipoEndereco = tipoEndereco;
         }
 
+        /// <summary>
+        /// Insere os dados de endereço no banco de dados.
+        /// </summary>
         public void Inserir()
         {
             var cmd = Banco.Abrir();
@@ -63,6 +66,9 @@ namespace PsicomindClass
             Id = Convert.ToInt32(cmd.ExecuteScalar());
         }
 
+        /// <summary>
+        /// Edita os dados dos endereços pelo id
+        /// </summary>
         public bool Editar(int id)
         {
             var cmd = Banco.Abrir();
@@ -81,6 +87,9 @@ namespace PsicomindClass
             return cmd.ExecuteNonQuery() > -1 ? true : false;
         }
 
+        /// <summary>
+        /// Obtem os dados de endereço pelo id
+        /// </summary>
         public static Endereco ObterPorId(int id)
         {
             Endereco endereco = new();
@@ -104,6 +113,9 @@ namespace PsicomindClass
             return endereco;
         }
 
+        /// <summary>
+        /// Obtem uma lista de dados de endereço pelo id do cliente
+        /// </summary>
         public static List<Endereco> ObterListaPorCliente(int clienteId)
         {
             List<Endereco> endereco = new();

@@ -711,6 +711,7 @@
             txtCep.ShadowDecoration.CustomizableEdges = customizableEdges30;
             txtCep.Size = new Size(139, 25);
             txtCep.TabIndex = 6;
+            txtCep.TextChanged += txtCep_TextChanged;
             // 
             // txtSenha
             // 
