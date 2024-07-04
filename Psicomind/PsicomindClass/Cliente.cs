@@ -19,7 +19,7 @@ namespace PsicomindClass
         public DateTime Data_nasc { get; set; }
         public DateTime Data_cad { get; set; }
         public bool Ativo { get; set; }
-        public GeneroCliente GeneroCliente { get; set; }
+        public Genero GeneroCliente { get; set; }
         public List<Endereco> Enderecos { get; set; }
 
 
@@ -28,7 +28,7 @@ namespace PsicomindClass
             
         }
 
-        public Cliente(int id, string nome, string cpf, string telefone, string email, DateTime data_nasc, DateTime data_cad,GeneroCliente generoCliente, bool ativo, List<Endereco> enderecos)
+        public Cliente(int id, string nome, string cpf, string telefone, string email, DateTime data_nasc, DateTime data_cad,Genero generoCliente, bool ativo, List<Endereco> enderecos)
         {
             Id = id;
             Nome = nome;
@@ -106,7 +106,7 @@ namespace PsicomindClass
                     dr.GetString(4),
                     dr.GetDateTime(5),
                     dr.GetDateTime(6),
-                    GeneroCliente.ObterPorId(dr.GetInt32(7)),
+                    Genero.ObterPorId(dr.GetInt32(7)),
                     dr.GetBoolean(8),                    
                     Endereco.ObterListaPorCliente(dr.GetInt32(0))
                     ));
@@ -134,7 +134,7 @@ namespace PsicomindClass
                     dr.GetString(4),
                     dr.GetDateTime(5),
                     dr.GetDateTime(6),
-                    GeneroCliente.ObterPorId(dr.GetInt32(7)),
+                    Genero.ObterPorId(dr.GetInt32(7)),
                     dr.GetBoolean(8),
                     Endereco.ObterListaPorCliente(dr.GetInt32(0))
                     ));
