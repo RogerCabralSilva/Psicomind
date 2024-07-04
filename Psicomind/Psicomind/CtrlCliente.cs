@@ -17,19 +17,18 @@ namespace Psicomind
             InitializeComponent();
         }
 
-        private void txtAgndParticular_Click(object sender, EventArgs e)
+        private void CtrlCliente_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        public void btnPagInserirCliente_Click(object sender, EventArgs e)
         {
+            FrmPrincipal frmPrincipal = new FrmPrincipal();
 
-        }
+            CtrlClienteInserir clienteInserir = new CtrlClienteInserir();
 
-        private void lblUser_Click(object sender, EventArgs e)
-        {
-
+            frmPrincipal.addUserControl(clienteInserir);
         }
     }
 }

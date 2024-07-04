@@ -17,7 +17,7 @@ namespace Psicomind
             InitializeComponent();
         }
 
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void CtrlClienteInserir_Load(object sender, EventArgs e)
         {
 
         }
