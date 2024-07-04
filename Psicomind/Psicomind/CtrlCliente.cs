@@ -24,19 +24,18 @@ namespace Psicomind
             CtrlCliente ctrlCliente = new();
 
             userControl.Dock = DockStyle.Fill;
-            ctrlCliente.Controls.Clear();
-            ctrlCliente.Controls.Add(userControl);
+            pnp.Controls.Clear();
+            pnp.Controls.Add(userControl);
             userControl.BringToFront();
 
         }
 
 
-        private void btnPagInserirCliente_Click(object sender, EventArgs e)
+        private void btnPagInserirCliente_Click_1(object sender, EventArgs e)
         {
-
-            CtrlPrincipal ctrlPrincipal = new();
-            addUserControl(ctrlPrincipal);
-
+            MessageBox.Show("olá");
+            CtrlClienteInserir CtrlClienteInserir = new();
+            addUserControl(CtrlClienteInserir);
         }
     }
 }
