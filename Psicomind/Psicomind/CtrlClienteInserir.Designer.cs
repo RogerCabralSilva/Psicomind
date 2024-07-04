@@ -183,6 +183,7 @@
             btnInserir.Size = new Size(103, 33);
             btnInserir.TabIndex = 38;
             btnInserir.Text = "Inserir";
+            btnInserir.Click += btnInserir_Click;
             // 
             // dptDataNascimento
             // 

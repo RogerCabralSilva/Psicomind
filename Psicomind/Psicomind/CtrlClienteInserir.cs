@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PsicomindClass;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,18 @@ namespace Psicomind
             txtNumero.Clear();
             txtCidade.Clear();
             txtUf.Clear();
+
+        }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+
+            Cliente cliente = new(
+                
+                
+                
+                );
+
 
         }
     }
