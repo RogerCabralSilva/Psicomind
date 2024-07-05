@@ -36,5 +36,18 @@ namespace Psicomind
             CtrlClienteInserir CtrlClienteInserir = new();
             addUserControl(CtrlClienteInserir);
         }
+
+        private void btnPagEditarCliente_Click(object sender, EventArgs e)
+        {
+            CtrlClienteEditar CtrlClienteEditar = new();
+            addUserControl(CtrlClienteEditar);
+        }
+
+        private void btnPagConsultarCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

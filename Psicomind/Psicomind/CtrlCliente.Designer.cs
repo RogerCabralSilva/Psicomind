@@ -110,6 +110,7 @@
             btnPagEditarCliente.Size = new Size(212, 197);
             btnPagEditarCliente.TabIndex = 33;
             btnPagEditarCliente.Text = "guna2ContainerControl1";
+            btnPagEditarCliente.Click += btnPagEditarCliente_Click;
             // 
             // pictureBox5
             // 
@@ -163,6 +164,7 @@
             btnPagConsultarCliente.Size = new Size(212, 206);
             btnPagConsultarCliente.TabIndex = 32;
             btnPagConsultarCliente.Text = "guna2ContainerControl1";
+            btnPagConsultarCliente.Click += btnPagConsultarCliente_Click;
             // 
             // pictureBox3
             // 

@@ -243,5 +243,10 @@ namespace Psicomind
             CtrlCliente CtrlCliente = new();
             addUserControl(CtrlCliente);
         }
+
+        private void pnp_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -55,17 +55,14 @@ namespace PsicomindClass
             GeneroCliente = generoCliente;
         }
 
-        public Cliente(int id, string nome, string cpf, string email, string senha, DateTime data_nasc, DateTime data_cad, bool ativo, Genero generoCliente)
+        public Cliente(string nome, string senha, DateTime data_nasc,Genero generoCliente, bool ativo)
         {
-            Id = id;
             Nome = nome;
-            Cpf = cpf;
-            Email = email;
             Senha = senha;
             Data_nasc = data_nasc;
-            Data_cad = data_cad;
-            Ativo = ativo;
             GeneroCliente = generoCliente;
+            Ativo = ativo;
+
         }
 
         public void Inserir()
@@ -151,7 +148,7 @@ namespace PsicomindClass
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "sp_cliente_update";
+            cmd.CommandText = "sp_clientes_update";
             cmd.Parameters.AddWithValue("spid", id);
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spsenha", Senha);
