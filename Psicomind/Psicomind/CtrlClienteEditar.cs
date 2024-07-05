@@ -23,7 +23,6 @@ namespace Psicomind
             // Tirando os traços do maskedTexBox
             mtxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             mtxTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            mtxCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
             Cliente cliente = new(
                 txtNome.Text,
