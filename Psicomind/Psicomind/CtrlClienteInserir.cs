@@ -213,16 +213,9 @@ namespace Psicomind
 
         }
 
-        private void lblVoltar_MouseMove_1(object sender, MouseEventArgs e)
-        {
-            // Muda o cursor para mãozinha ao passar o mouse sobre a label voltar
-            lblVoltar.Cursor = Cursors.Hand;
 
-            labelUnderline = true;
-            lblVoltar.Invalidate();
-        }
 
-        private void lblVoltar_Click(object sender, EventArgs e)
+        private void btnVoltar_Click(object sender, EventArgs e)
         {
             CtrlCliente CtrlCliente = new();
             addUserControl(CtrlCliente);
