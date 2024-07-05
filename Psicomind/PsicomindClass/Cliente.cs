@@ -10,7 +10,7 @@ namespace PsicomindClass
 {
     public class Cliente
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
         /// <summary>
         /// Nome do cliente
         /// </summary>
@@ -18,8 +18,8 @@ namespace PsicomindClass
         public string? Cpf { get; set; }
         public string? Email { get; set; }
         public string? Senha { get; set; }
-        public DateTime? Data_nasc { get; set; }
-        public DateTime? Data_cad { get; set; }
+        public DateTime Data_nasc { get; set; }
+        public DateTime Data_cad { get; set; }
         public bool? Ativo { get; set; }
         public Genero? GeneroCliente { get; set; }
         public List<Endereco>? Enderecos { get; set; }
@@ -65,6 +65,19 @@ namespace PsicomindClass
 
         }
 
+        public Cliente(int id,string? nome, string? cpf, string? email, string? senha, DateTime? data_nasc, DateTime? data_cad, bool? ativo, Genero? generoCliente)
+        {
+            Id = id;
+            Nome = nome;
+            Cpf = cpf;
+            Email = email;
+            Senha = senha;
+            Data_nasc = data_nasc;
+            Data_cad = data_cad;
+            Ativo = ativo;
+            GeneroCliente = generoCliente;
+        }
+
         public void Inserir()
         {
             var cmd = Banco.Abrir();
@@ -75,7 +88,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spsenha", Senha);
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nasc", Data_nasc);
-            cmd.Parameters.AddWithValue("spgenero_cliente", GeneroCliente.Id);
+            cmd.Parameters.AddWithValue("spgenero_id", GeneroCliente.Id);
             Id = Convert.ToInt32(cmd.ExecuteScalar());
 
         }
@@ -122,7 +135,7 @@ namespace PsicomindClass
             Cliente cliente = new ();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"SELECT * FROM clientes WHERE id = {id}";
+            cmd.CommandText = $"Select * from clientes where id = {id}";
             var dr = cmd.ExecuteReader();
 
             while (dr.Read())
@@ -136,8 +149,7 @@ namespace PsicomindClass
                     dr.GetDateTime(5),
                     dr.GetDateTime(6),
                     dr.GetBoolean(7),
-                    Genero.ObterPorId(dr.GetInt32(0)),
-                    Endereco.ObterListaPorCliente(dr.GetInt32(0))
+                    Genero.ObterPorId(dr.GetInt32(0))
                     ));
             }
 

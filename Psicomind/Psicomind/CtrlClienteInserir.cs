@@ -164,6 +164,7 @@ namespace Psicomind
                     txtRua.Text,
                     txtNumero.Text,
                     txtBairro.Text,
+                    txtCidade.Text,
                     txtUf.Text,
                     TipoEndereco.ObterPorId(Convert.ToInt32(cmbTipoEndereco.SelectedValue))
                 );
@@ -245,6 +246,11 @@ namespace Psicomind
         }
 
         private void pnp_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2ContainerControl2_Click(object sender, EventArgs e)
         {
 
         }

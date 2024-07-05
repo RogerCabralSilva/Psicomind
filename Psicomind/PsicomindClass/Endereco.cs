@@ -16,6 +16,7 @@ namespace PsicomindClass
         public string? Rua { get; set; }
         public string? Numero { get; set; }
         public string? Bairro { get; set; }
+        public string Cidade { get; set; }
         public string? Uf { get; set; }
         public TipoEndereco? TipoEndereco { get; set; }
 
@@ -24,7 +25,7 @@ namespace PsicomindClass
 
         }
 
-        public Endereco(int id, int cliente_Id, string cep, string rua, string numero, string bairro, string uf, TipoEndereco tipoEndereco)
+        public Endereco(int id, int cliente_Id, string cep, string rua, string numero, string bairro, string uf,string cidade, TipoEndereco tipoEndereco)
         {
             Id = id;
             Cliente_Id = cliente_Id;
@@ -32,17 +33,19 @@ namespace PsicomindClass
             Rua = rua;
             Numero = numero;
             Bairro = bairro;
+            Cidade = cidade;
             Uf = uf;
             TipoEndereco = tipoEndereco;
         }
 
-        public Endereco(int cliente_Id, string cep, string rua, string numero, string bairro, string uf, TipoEndereco tipoEndereco)
+        public Endereco(int cliente_Id, string cep, string rua, string numero, string bairro, string cidade, string uf, TipoEndereco tipoEndereco)
         {
             Cliente_Id = cliente_Id;
             Cep = cep;
             Rua = rua;
             Numero = numero;
             Bairro = bairro;
+            Cidade = cidade;
             Uf = uf;
             TipoEndereco = tipoEndereco;
         }
@@ -60,6 +63,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("sprua", Rua);
             cmd.Parameters.AddWithValue("spnumero", Numero);
             cmd.Parameters.AddWithValue("spbairro", Bairro);
+            cmd.Parameters.AddWithValue("spcidade", Cidade);
             cmd.Parameters.AddWithValue("spuf", Uf);
             cmd.Parameters.AddWithValue("sptipo_endereco", TipoEndereco.Id);
 
@@ -80,6 +84,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("sprua", Rua);
             cmd.Parameters.AddWithValue("spnumero", Numero);
             cmd.Parameters.AddWithValue("spbairro", Bairro);
+            cmd.Parameters.AddWithValue("spcidade", Cidade);
             cmd.Parameters.AddWithValue("spuf", Uf);
             cmd.Parameters.AddWithValue("sptipo_endereco", TipoEndereco.Id);
 
@@ -107,6 +112,7 @@ namespace PsicomindClass
                         dr.GetString(4),
                         dr.GetString(5),
                         dr.GetString(6),
+                        dr.GetString(7),
                         TipoEndereco.ObterPorId(dr.GetInt32(0))
                     );
             }
@@ -133,6 +139,7 @@ namespace PsicomindClass
                         dr.GetString(4),
                         dr.GetString(5),
                         dr.GetString(6),
+                        dr.GetString(7),
                         TipoEndereco.ObterPorId(dr.GetInt32(0))
                         )
                     );
