@@ -24,6 +24,7 @@ namespace Psicomind
             mtxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             mtxTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
+            //
             Cliente cliente = new(
             txtNome.Text,
                 txtSenha.Text,
@@ -86,7 +87,6 @@ namespace Psicomind
                 // Busca o telefone do cliente
                 TelefoneCliente telefone = TelefoneCliente.ObterPorId(int.Parse(txtClienteId.Text));
                 mtxTelefone.Text = telefone.Numero;
-                cmbTipoTelefone.SelectedIndex = telefone.TelefoneTipo_id.Id;
 
                 btnEditar.Enabled = true;
             }

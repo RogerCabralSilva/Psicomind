@@ -44,6 +44,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spnumero", Numero);
             cmd.Parameters.AddWithValue("spcliente_id", Cliente_id);
             cmd.Parameters.AddWithValue("sptelefone_tipo_id", TelefoneTipo_id);
+            cmd.ExecuteNonQuery();
 
         }
 
