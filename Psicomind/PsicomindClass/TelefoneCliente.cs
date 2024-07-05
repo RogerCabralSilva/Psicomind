@@ -11,7 +11,7 @@ namespace PsicomindClass
     {
         public int Id { get; set; }
         public string Numero { get; set; }
-        public Cliente Cliente_id { get; set; }
+        public int Cliente_id { get; set; }
         public TelefoneTipo TelefoneTipo_id { get; set; }
         
         public TelefoneCliente()
@@ -19,14 +19,14 @@ namespace PsicomindClass
 
         }
 
-        public TelefoneCliente(string numero, Cliente cliente_id, TelefoneTipo telefoneTipo_id)
+        public TelefoneCliente(string numero, int cliente_id, TelefoneTipo telefoneTipo_id)
         {
             Numero = numero;
             Cliente_id = cliente_id;
             TelefoneTipo_id = telefoneTipo_id;
         }
 
-        public TelefoneCliente(int id, string numero, Cliente cliente_id, TelefoneTipo telefoneTipo_id)
+        public TelefoneCliente(int id, string numero, int cliente_id, TelefoneTipo telefoneTipo_id)
         {
             Id = id;
             Numero = numero;
@@ -76,7 +76,7 @@ namespace PsicomindClass
 
                         dr.GetInt32(0),
                         dr.GetString(1),
-                        Cliente.ObterPorId(dr.GetInt32(2)),
+                        dr.GetInt32(2),
                         TelefoneTipo.ObterPorId(dr.GetInt32(3))
                     ));
 
@@ -102,7 +102,7 @@ namespace PsicomindClass
 
                         dr.GetInt32(0),
                         dr.GetString(1),
-                        Cliente.ObterPorId(dr.GetInt32(2)),
+                        dr.GetInt32(2),
                         TelefoneTipo.ObterPorId(dr.GetInt32(3))
                     ));
 

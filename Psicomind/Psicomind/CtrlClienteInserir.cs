@@ -35,6 +35,11 @@ namespace Psicomind
             cmbTipoEndereco.DataSource = tipoEndereco;
             cmbTipoEndereco.DisplayMember = "Nome";
             cmbTipoEndereco.ValueMember = "id";
+
+            var tipoTelefone = TelefoneTipo.ObterLista();
+            cmbTipoTelefone.DataSource = tipoTelefone;
+            cmbTipoTelefone.DisplayMember = "Tipo";
+            cmbTipoTelefone.ValueMember = "id";
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -169,6 +174,24 @@ namespace Psicomind
             else
             {
                 MessageBox.Show("Erro ao cadastrar cliente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (cliente.Id > 0)
+            {
+                txtClienteId.Text = cliente.Id.ToString();
+                MessageBox.Show($"Cliente {cliente.Nome} cadastrado com sucesso!");
+
+                TelefoneCliente telefone = new(
+                   mtxTelefone.Text,
+                   int.Parse(txtClienteId.Text),
+                   TelefoneTipo.ObterPorId(Convert.ToInt32(cmbTipoEndereco.SelectedValue))
+                    );
+
+                telefone.Inserir();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar cliente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

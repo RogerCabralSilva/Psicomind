@@ -23,6 +23,7 @@ namespace PsicomindClass
         public bool? Ativo { get; set; }
         public Genero? GeneroCliente { get; set; }
         public List<Endereco>? Enderecos { get; set; }
+        public List<TelefoneCliente>? Telefone { get; set; }
 
 
         public Cliente()

@@ -52,7 +52,7 @@ namespace PsicomindClass
 
         }
 
-        public List<TelefoneTipo> ObterLista()
+        public static List<TelefoneTipo> ObterLista()
         {
 
             List<TelefoneTipo> telefoneTipos = new();
