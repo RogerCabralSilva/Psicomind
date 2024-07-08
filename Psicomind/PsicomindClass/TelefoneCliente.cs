@@ -54,9 +54,9 @@ namespace PsicomindClass
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_telefone_cliente_update";
-            cmd.Parameters.AddWithValue("spid", Id);
+            cmd.Parameters.AddWithValue("spcliente_id", Cliente_id);
             cmd.Parameters.AddWithValue("spnumero", Numero);
-            cmd.Parameters.AddWithValue("sptelefone_tipo_id", TelefoneTipo_id);
+            cmd.Parameters.AddWithValue("sptelefone_tipo_id", TelefoneTipo_id.Id);
 
             return cmd.ExecuteNonQuery() > -1 ? true : false;
 

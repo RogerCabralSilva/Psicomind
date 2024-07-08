@@ -55,8 +55,9 @@ namespace PsicomindClass
             GeneroCliente = generoCliente;
         }
 
-        public Cliente(string nome, string senha, DateTime data_nasc,Genero generoCliente, bool ativo)
+        public Cliente(int id,string nome, string senha, DateTime data_nasc,Genero generoCliente, bool ativo)
         {
+            Id = id;
             Nome = nome;
             Senha = senha;
             Data_nasc = data_nasc;
@@ -165,7 +166,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spsenha", Senha);
             cmd.Parameters.AddWithValue("spdata_nasc", Data_nasc);
-            cmd.Parameters.AddWithValue("spgenero_cliente", GeneroCliente.Id);
+            cmd.Parameters.AddWithValue("spgenero_id", GeneroCliente.Id);
             cmd.Parameters.AddWithValue("spativo", Ativo);
 
             return cmd.ExecuteNonQuery() > -1 ? true : false;

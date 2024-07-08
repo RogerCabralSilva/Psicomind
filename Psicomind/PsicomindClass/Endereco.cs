@@ -25,7 +25,7 @@ namespace PsicomindClass
 
         }
 
-        public Endereco(int id, int cliente_Id, string cep, string rua, string numero, string bairro, string uf,string cidade, TipoEndereco tipoEndereco)
+        public Endereco(int id, int cliente_Id, string cep, string rua, string numero, string bairro,string cidade, string uf ,TipoEndereco tipoEndereco)
         {
             Id = id;
             Cliente_Id = cliente_Id;
@@ -78,7 +78,6 @@ namespace PsicomindClass
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_enderecos_update";
-            cmd.Parameters.AddWithValue("spid", id);
             cmd.Parameters.AddWithValue("spcliente_id", Cliente_Id);
             cmd.Parameters.AddWithValue("spcep", Cep);
             cmd.Parameters.AddWithValue("sprua", Rua);

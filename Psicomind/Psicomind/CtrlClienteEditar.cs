@@ -26,16 +26,52 @@ namespace Psicomind
 
             //
             Cliente cliente = new(
+                int.Parse(txtClienteId.Text),
             txtNome.Text,
                 txtSenha.Text,
                 dptDataNascimento.Value,
                 Genero.ObterPorId(Convert.ToInt32(cmbGenero.SelectedValue)),
                 chkAtivo.Checked
                 );
+
+            Endereco endereco = new(
+                    int.Parse(txtClienteId.Text),
+                    mtxCep.Text,
+                    txtRua.Text,
+                    txtNumero.Text,
+                    txtBairro.Text,
+                    txtCidade.Text,
+                    txtUf.Text,
+                    TipoEndereco.ObterPorId(Convert.ToInt32(cmbTipoEndereco.SelectedValue))
+                );
+
+            TelefoneCliente telefoneCliente = new(
+                    mtxTelefone.Text,
+                    int.Parse(txtClienteId.Text),
+                    TelefoneTipo.ObterPorId(Convert.ToInt32(cmbTipoTelefone.SelectedValue)));
+
             if (cliente.Editar(cliente.Id))
             {
                 CtrlClienteEditar_Load(sender, e);
-                MessageBox.Show($"O cliente {cliente.Nome} foi alterdo com sucesso!");
+                MessageBox.Show($"O cliente {cliente.Nome} foi alterado com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Falha ao alterar o usuário");
+            }
+
+            if (cliente.Editar(cliente.Id))
+            {
+                CtrlClienteEditar_Load(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Falha ao alterar o usuário");
+            }
+
+            if (telefoneCliente.Editar(cliente.Id))
+            {
+                CtrlClienteEditar_Load(sender, e);
             }
             else
             {
@@ -69,7 +105,7 @@ namespace Psicomind
                 Cliente cliente = Cliente.ObterPorId(int.Parse(txtClienteId.Text));
                 txtNome.Text = cliente.Nome;
                 txtSenha.Text = cliente.Senha;
-                cmbGenero.SelectedIndex = cliente.GeneroCliente.Id;
+                cmbGenero.SelectedValue = cliente.GeneroCliente.Id;
                 dptDataNascimento.Value = cliente.Data_nasc;
 
 
@@ -79,9 +115,10 @@ namespace Psicomind
                 txtRua.Text = endereco.Rua;
                 txtNumero.Text = endereco.Numero;
                 txtBairro.Text = endereco.Bairro;
-                txtUf.Text = endereco.Uf;
                 txtCidade.Text = endereco.Cidade;
-                cmbTipoEndereco.SelectedIndex = endereco.TipoEndereco.Id;
+                txtUf.Text = endereco.Uf;
+
+                cmbTipoEndereco.SelectedValue = endereco.TipoEndereco.Id;
 
 
                 // Busca o telefone do cliente
@@ -90,6 +127,11 @@ namespace Psicomind
 
                 btnEditar.Enabled = true;
             }
+        }
+
+        private void pnp_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
