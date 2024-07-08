@@ -112,7 +112,7 @@ namespace PsicomindClass
                         dr.GetString(5),
                         dr.GetString(6),
                         dr.GetString(7),
-                        TipoEndereco.ObterPorId(dr.GetInt32(0))
+                        TipoEndereco.ObterPorId(dr.GetInt32(8))
                     );
             }
             return endereco;

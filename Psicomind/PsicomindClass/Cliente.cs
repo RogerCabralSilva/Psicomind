@@ -28,7 +28,7 @@ namespace PsicomindClass
 
         public Cliente()
         {
-            
+
         }
 
         public Cliente(int id, string nome, string cpf, string email, string senha, DateTime data_nasc, DateTime data_cad, bool ativo, Genero generoCliente, List<Endereco> enderecos)
@@ -55,7 +55,7 @@ namespace PsicomindClass
             GeneroCliente = generoCliente;
         }
 
-        public Cliente(int id,string nome, string senha, DateTime data_nasc,Genero generoCliente, bool ativo)
+        public Cliente(int id, string nome, string senha, DateTime data_nasc, Genero generoCliente, bool ativo)
         {
             Id = id;
             Nome = nome;
@@ -66,7 +66,7 @@ namespace PsicomindClass
 
         }
 
-        public Cliente(int id,string? nome, string? cpf, string? email, string? senha, DateTime data_nasc, DateTime data_cad, bool ativo, Genero? generoCliente)
+        public Cliente(int id, string? nome, string? cpf, string? email, string? senha, DateTime data_nasc, DateTime data_cad, Genero generoCliente, bool ativo)
         {
             Id = id;
             Nome = nome;
@@ -75,8 +75,9 @@ namespace PsicomindClass
             Senha = senha;
             Data_nasc = data_nasc;
             Data_cad = data_cad;
-            Ativo = ativo;
             GeneroCliente = generoCliente;
+            Ativo = ativo;
+
         }
 
         public void Inserir()
@@ -122,7 +123,7 @@ namespace PsicomindClass
                     dr.GetDateTime(5),
                     dr.GetDateTime(6),
                     dr.GetBoolean(7),
-                    Genero.ObterPorId(dr.GetInt32(0)), 
+                    Genero.ObterPorId(dr.GetInt32(0)),
                     Endereco.ObterListaPorCliente(dr.GetInt32(0))
                     ));
             }
@@ -133,7 +134,7 @@ namespace PsicomindClass
 
         public static Cliente ObterPorId(int id)
         {
-            Cliente cliente = new ();
+            Cliente cliente = new();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = $"Select * from clientes where id = {id}";
@@ -149,8 +150,9 @@ namespace PsicomindClass
                     dr.GetString(4),
                     dr.GetDateTime(5),
                     dr.GetDateTime(6),
-                    dr.GetBoolean(7),
-                    Genero.ObterPorId(dr.GetInt32(0))
+                    Genero.ObterPorId(dr.GetInt32(7)),
+                    dr.GetBoolean(8)
+
                     ));
             }
 

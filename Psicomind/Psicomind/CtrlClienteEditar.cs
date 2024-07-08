@@ -117,15 +117,55 @@ namespace Psicomind
 
             if (txtClienteId.Text.Length != 0)
             {
-
-                
-                    Cliente ze = Cliente.ObterPorId(int.Parse(txtClienteId.Text));
-
+                Cliente cliente = Cliente.ObterPorId(int.Parse(txtClienteId.Text));
+                if (cliente.Id != 0) { 
                     // Busca o cliente
-                    txtNome.Text = ze.Nome;
-                    txtSenha.Text = ze.Senha;
-                    cmbGenero.SelectedValue = ze.GeneroCliente.Id;
-                    dptDataNascimento.Value = ze.Data_nasc;
+                    txtNome.Text = cliente.Nome;
+                    txtSenha.Text = cliente.Senha;
+                    cmbGenero.SelectedValue = cliente.GeneroCliente.Id;
+                    dptDataNascimento.Value = cliente.Data_nasc;
+                    chkAtivo.Checked = cliente.Ativo;
+
+
+                    // Busca o Endereço
+                    Endereco endereco = Endereco.ObterPorId(int.Parse(txtClienteId.Text));
+                    mtxCep.Text = endereco.Cep;
+                    txtRua.Text = endereco.Rua;
+                    txtNumero.Text = endereco.Numero;
+                    txtBairro.Text = endereco.Bairro;
+                    txtCidade.Text = endereco.Cidade;
+                    txtUf.Text = endereco.Uf;
+                    cmbTipoEndereco.SelectedValue = endereco.TipoEndereco.Id;
+
+                    // Busca o telefone do cliente
+                    TelefoneCliente telefone = TelefoneCliente.ObterPorId(int.Parse(txtClienteId.Text));
+                    mtxTelefone.Text = telefone.Numero;
+                    cmbTipoTelefone.SelectedValue = telefone.TelefoneTipo_id.Id;
+
+                    btnEditar.Enabled = true;
+                }
+                else
+                {
+                    // Cliente não encontrado, exibe mensagem de erro e limpa os campos
+                    MessageBox.Show("Cliente não encontrado.");
+                    btnEditar.Enabled = false;
+
+                    // Limpa os campos do formulário
+                    txtNome.Clear();
+                    txtSenha.Clear();
+                    mtxTelefone.Clear();
+                    mtxCep.Clear();
+                    txtRua.Clear();
+                    txtBairro.Clear();
+                    txtNumero.Clear();
+                    txtCidade.Clear();
+                    txtUf.Clear();
+                    cmbGenero.SelectedIndex = -1;
+                    cmbTipoEndereco.SelectedIndex = -1;
+                    cmbTipoTelefone.SelectedIndex = -1;
+                    dptDataNascimento.Value = DateTime.Today; // Define uma data válida
+                    chkAtivo.Checked = false;
+                }
             }
 
 

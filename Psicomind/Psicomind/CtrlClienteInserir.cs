@@ -190,7 +190,7 @@ namespace Psicomind
                 TelefoneCliente telefone = new(
                    mtxTelefone.Text,
                    int.Parse(txtClienteId.Text),
-                   TelefoneTipo.ObterPorId(Convert.ToInt32(cmbTipoEndereco.SelectedValue))
+                   TelefoneTipo.ObterPorId(Convert.ToInt32(cmbTipoTelefone.SelectedValue))
                     );
 
                 telefone.Inserir();
