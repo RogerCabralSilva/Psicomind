@@ -195,6 +195,7 @@
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnVoltar.TabIndex = 41;
             btnVoltar.TabStop = false;
+            btnVoltar.Click += btnVoltar_Click_1;
             // 
             // guna2ContainerControl4
             // 
@@ -281,6 +282,7 @@
             btnLimpar.Size = new Size(126, 33);
             btnLimpar.TabIndex = 38;
             btnLimpar.Text = "Limpar os Dados";
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // btnConsultar
             // 
@@ -787,6 +789,7 @@
             txtClienteId.ShadowDecoration.CustomizableEdges = customizableEdges34;
             txtClienteId.Size = new Size(81, 25);
             txtClienteId.TabIndex = 6;
+            txtClienteId.TextChanged += txtClienteId_TextChanged;
             // 
             // txtNome
             // 
@@ -821,7 +824,6 @@
             pnp.Name = "pnp";
             pnp.Size = new Size(1053, 693);
             pnp.TabIndex = 33;
-            pnp.Paint += pnp_Paint;
             // 
             // CtrlClienteEditar
             // 

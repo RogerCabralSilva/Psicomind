@@ -25,7 +25,7 @@ namespace Psicomind
 
         private void CtrlClienteInserir_Load(object sender, EventArgs e)
         {
-
+            // Preenche os combo box
             var genero = Genero.ObterLista();
             cmbGenero.DataSource = genero;
             cmbGenero.DisplayMember = "Genero_nome";
@@ -44,6 +44,8 @@ namespace Psicomind
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            // Limpa os campos do formulário
+
             txtNome.Clear();
             txtEmail.Clear();
             txtSenha.Clear();
@@ -139,6 +141,7 @@ namespace Psicomind
             mtxTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             mtxCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
+            // Inserir Cliente
             Cliente cliente = new(
                 txtNome.Text,
                 mtxCpf.Text,
@@ -148,14 +151,14 @@ namespace Psicomind
                 Genero.ObterPorId(Convert.ToInt32(cmbGenero.SelectedValue))
             );
 
-
             cliente.Inserir();
 
+            // Se cliente tiver id mostre isso
 
             if (cliente.Id > 0)
             {
                 txtClienteId.Text = cliente.Id.ToString();
-                MessageBox.Show($"Cliente {cliente.Nome} cadastrado com sucesso!");
+
 
 
                 Endereco endereco = new(
@@ -176,6 +179,8 @@ namespace Psicomind
             {
                 MessageBox.Show("Erro ao cadastrar cliente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            // Se cliente tiver id mostre isso
 
             if (cliente.Id > 0)
             {
@@ -199,6 +204,8 @@ namespace Psicomind
 
         private void mtxCep_TextChanged(object sender, EventArgs e)
         {
+
+            // Preenche as informações com os dados do cep
             if (mtxCep.Text.Length > 7)
             {
                 mtxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
@@ -211,6 +218,7 @@ namespace Psicomind
 
             }
 
+            // Se tiver menos que 8 apaga as informações
             if (mtxCep.Text.Length < 8)
             {
                 mtxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
@@ -227,6 +235,7 @@ namespace Psicomind
 
         private void addUserControl(UserControl userControl)
         {
+            // Responsável por trocar as telas
 
             CtrlCliente ctrlCliente = new();
 
@@ -243,16 +252,6 @@ namespace Psicomind
         {
             CtrlCliente CtrlCliente = new();
             addUserControl(CtrlCliente);
-        }
-
-        private void pnp_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2ContainerControl2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

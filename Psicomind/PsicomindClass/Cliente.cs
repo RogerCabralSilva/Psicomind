@@ -20,8 +20,8 @@ namespace PsicomindClass
         public string? Senha { get; set; }
         public DateTime Data_nasc { get; set; }
         public DateTime Data_cad { get; set; }
-        public bool? Ativo { get; set; }
-        public Genero? GeneroCliente { get; set; }
+        public bool Ativo { get; set; }
+        public Genero GeneroCliente { get; set; }
         public List<Endereco>? Enderecos { get; set; }
         public List<TelefoneCliente>? Telefone { get; set; }
 
@@ -66,7 +66,7 @@ namespace PsicomindClass
 
         }
 
-        public Cliente(int id,string? nome, string? cpf, string? email, string? senha, DateTime data_nasc, DateTime data_cad, bool? ativo, Genero? generoCliente)
+        public Cliente(int id,string? nome, string? cpf, string? email, string? senha, DateTime data_nasc, DateTime data_cad, bool ativo, Genero? generoCliente)
         {
             Id = id;
             Nome = nome;

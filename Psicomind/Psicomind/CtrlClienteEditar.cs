@@ -24,15 +24,18 @@ namespace Psicomind
             mtxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             mtxTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
-            //
+            // Editar Cliente
+
             Cliente cliente = new(
                 int.Parse(txtClienteId.Text),
-            txtNome.Text,
+                txtNome.Text,
                 txtSenha.Text,
                 dptDataNascimento.Value,
                 Genero.ObterPorId(Convert.ToInt32(cmbGenero.SelectedValue)),
                 chkAtivo.Checked
                 );
+
+            // Editar Endereço
 
             Endereco endereco = new(
                     int.Parse(txtClienteId.Text),
@@ -45,20 +48,26 @@ namespace Psicomind
                     TipoEndereco.ObterPorId(Convert.ToInt32(cmbTipoEndereco.SelectedValue))
                 );
 
+            // Editar Telefone
+
             TelefoneCliente telefoneCliente = new(
                     mtxTelefone.Text,
                     int.Parse(txtClienteId.Text),
                     TelefoneTipo.ObterPorId(Convert.ToInt32(cmbTipoTelefone.SelectedValue)));
 
+            // Retorna True ou false e roda o que tiver dentro do if
+
             if (cliente.Editar(cliente.Id))
             {
                 CtrlClienteEditar_Load(sender, e);
-                MessageBox.Show($"O cliente {cliente.Nome} foi alterado com sucesso!");
+                MessageBox.Show($"O Cliente {cliente.Nome} foi alterado com sucesso!");
             }
             else
             {
-                MessageBox.Show("Falha ao alterar o usuário");
+                MessageBox.Show("Falha ao alterar o Cliente");
             }
+
+            // Retorna True ou false e roda o que tiver dentro do if
 
             if (cliente.Editar(cliente.Id))
             {
@@ -66,8 +75,10 @@ namespace Psicomind
             }
             else
             {
-                MessageBox.Show("Falha ao alterar o usuário");
+                MessageBox.Show("Falha ao alterar o Cliente");
             }
+
+            // Retorna True ou false e roda o que tiver dentro do if
 
             if (telefoneCliente.Editar(cliente.Id))
             {
@@ -75,12 +86,15 @@ namespace Psicomind
             }
             else
             {
-                MessageBox.Show("Falha ao alterar o usuário");
+                MessageBox.Show("Falha ao alterar o Cliente");
             }
+
         }
 
         private void CtrlClienteEditar_Load(object sender, EventArgs e)
         {
+            // Preenche os combos box
+
             var genero = Genero.ObterLista();
             cmbGenero.DataSource = genero;
             cmbGenero.DisplayMember = "Genero_nome";
@@ -99,39 +113,68 @@ namespace Psicomind
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (txtClienteId.Text.Length > 0)
+            // Se o ClienteId for maior que 0 faça isso
+
+            if (txtClienteId.Text.Length != 0)
             {
-                // Busca o cliente
-                Cliente cliente = Cliente.ObterPorId(int.Parse(txtClienteId.Text));
-                txtNome.Text = cliente.Nome;
-                txtSenha.Text = cliente.Senha;
-                cmbGenero.SelectedValue = cliente.GeneroCliente.Id;
-                dptDataNascimento.Value = cliente.Data_nasc;
+
+                
+                    Cliente ze = Cliente.ObterPorId(int.Parse(txtClienteId.Text));
+
+                    // Busca o cliente
+                    txtNome.Text = ze.Nome;
+                    txtSenha.Text = ze.Senha;
+                    cmbGenero.SelectedValue = ze.GeneroCliente.Id;
+                    dptDataNascimento.Value = ze.Data_nasc;
+            }
 
 
-                // Busca o Endereço
-                Endereco endereco = Endereco.ObterPorId(int.Parse(txtClienteId.Text));
-                mtxCep.Text = endereco.Cep;
-                txtRua.Text = endereco.Rua;
-                txtNumero.Text = endereco.Numero;
-                txtBairro.Text = endereco.Bairro;
-                txtCidade.Text = endereco.Cidade;
-                txtUf.Text = endereco.Uf;
+        }
+  
 
-                cmbTipoEndereco.SelectedValue = endereco.TipoEndereco.Id;
+        private void txtClienteId_TextChanged(object sender, EventArgs e)
+        {
+            // Verifica se há valor no campo ClienteId
 
-
-                // Busca o telefone do cliente
-                TelefoneCliente telefone = TelefoneCliente.ObterPorId(int.Parse(txtClienteId.Text));
-                mtxTelefone.Text = telefone.Numero;
-
-                btnEditar.Enabled = true;
+            if (txtClienteId.Text.Length == 0)
+            {
+                btnEditar.Enabled = false;
             }
         }
 
-        private void pnp_Paint(object sender, PaintEventArgs e)
+        private void btnLimpar_Click(object sender, EventArgs e)
         {
 
+            // Limpa os campos do formulário
+            txtNome.Clear();
+            txtSenha.Clear();
+            mtxTelefone.Clear();
+            mtxCep.Clear();
+            txtRua.Clear();
+            txtBairro.Clear();
+            txtNumero.Clear();
+            txtCidade.Clear();
+            txtUf.Clear();
+        }
+
+        private void addUserControl(UserControl userControl)
+        {
+            // Responsável por trocar as telas
+
+            CtrlCliente ctrlCliente = new();
+
+            userControl.Dock = DockStyle.Fill;
+            pnp.Controls.Clear();
+            pnp.Controls.Add(userControl);
+            userControl.BringToFront();
+
+        }
+
+
+        private void btnVoltar_Click_1(object sender, EventArgs e)
+        {
+            CtrlCliente CtrlCliente = new();
+            addUserControl(CtrlCliente);
         }
     }
 }
