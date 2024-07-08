@@ -45,7 +45,8 @@ namespace Psicomind
 
         private void btnPagConsultarCliente_Click(object sender, EventArgs e)
         {
-
+            CrtlClienteConsulta CrtlClienteConsulta = new();
+            addUserControl(CrtlClienteConsulta);
         }
 
 
