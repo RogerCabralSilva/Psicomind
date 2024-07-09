@@ -17,9 +17,22 @@ namespace Psicomind
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void AddUserControl(UserControl userControl)
         {
 
+            CtrlProfissional ctrlProfissional = new();
+
+            userControl.Dock = DockStyle.Fill;
+            pnpProfissionais.Controls.Clear();
+            pnpProfissionais.Controls.Add(userControl);
+            userControl.BringToFront();
+
+        }
+
+        private void btnPagInserirProfissionais_Click(object sender, EventArgs e)
+        {
+            CtrlProfissionaisInserir ctrlProfissionaisInserir = new();
+            AddUserControl(ctrlProfissionaisInserir);
         }
     }
 }

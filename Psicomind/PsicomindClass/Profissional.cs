@@ -18,6 +18,7 @@ namespace PsicomindClass
         public string Especializacao { get; set; }
         public DateTime Data_contrato { get; set; }
         public DateTime Data_cad { get; set; }
+        public DateTime Data_nasc { get; set; }
         public Genero Genero { get; set; }
         public bool Ativo { get; set; }
 
@@ -26,7 +27,7 @@ namespace PsicomindClass
 
         }
 
-        public Profissional(int id, string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_cad, Genero genero, bool ativo)
+        public Profissional(int id, string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_cad, DateTime data_nasc, Genero genero, bool ativo)
         {
             Id = id;
             Nome = nome;
@@ -36,11 +37,12 @@ namespace PsicomindClass
             Especializacao = especializacao;
             Data_contrato = data_contrato;
             Data_cad = data_cad;
+            Data_nasc = data_nasc;
             Genero = genero;
             Ativo = ativo;
         }
 
-        public Profissional(string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, Genero genero, bool ativo)
+        public Profissional(string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_nasc, Genero genero, bool ativo)
         {
             Nome = nome;
             Email = email;
@@ -48,11 +50,12 @@ namespace PsicomindClass
             Cpf = cpf;
             Especializacao = especializacao;
             Data_contrato = data_contrato;
+            Data_nasc = data_nasc;
             Genero = genero;
             Ativo = ativo;
         }
 
-        public Profissional(string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_cad, Genero genero, bool ativo)
+        public Profissional(string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_cad, DateTime data_nasc, Genero genero, bool ativo)
         {
             Nome = nome;
             Email = email;
@@ -61,6 +64,7 @@ namespace PsicomindClass
             Especializacao = especializacao;
             Data_contrato = data_contrato;
             Data_cad = data_cad;
+            Data_nasc = data_nasc;
             Genero = genero;
             Ativo = ativo;
         }
@@ -80,8 +84,10 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spespecializacao", Especializacao);
             cmd.Parameters.AddWithValue("spdata_contrato", Data_contrato);
+            cmd.Parameters.AddWithValue("spdata_nasc", Data_nasc);
             cmd.Parameters.AddWithValue("spgenero_id", Genero.Id);
 
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
 
         }
         
@@ -107,8 +113,9 @@ namespace PsicomindClass
                 dr.GetString(5),
                 dr.GetDateTime(6),
                 dr.GetDateTime(7),
-                Genero.ObterPorId(dr.GetInt32(8)),
-                dr.GetBoolean(9)
+                dr.GetDateTime(8),
+                Genero.ObterPorId(dr.GetInt32(9)),
+                dr.GetBoolean(10)
                 ));
             }
 
@@ -128,6 +135,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spsenha", Senha);
             cmd.Parameters.AddWithValue("spespecializacao", Especializacao);
             cmd.Parameters.AddWithValue("spdata_contrato", Data_contrato);
+            cmd.Parameters.AddWithValue("spdata_nasc", Data_nasc);
             cmd.Parameters.AddWithValue("spgenero_id", Genero.Id);
             cmd.Parameters.AddWithValue("spativo", Ativo);
 
@@ -167,8 +175,9 @@ namespace PsicomindClass
                 dr.GetString(5),
                 dr.GetDateTime(6),
                 dr.GetDateTime(7),
-                Genero.ObterPorId(dr.GetInt32(8)),
-                dr.GetBoolean(9)
+                dr.GetDateTime(8),
+                Genero.ObterPorId(dr.GetInt32(9)),
+                dr.GetBoolean(10)
                 ));
 
             }

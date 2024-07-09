@@ -30,6 +30,7 @@ namespace PsicomindClass
         public Cliente()
         {
 
+
         }
 
         public Cliente(int id, string nome, string cpf, string email, string senha, DateTime data_nasc, DateTime data_cad, bool ativo, Genero generoCliente, List<Endereco> enderecos)
@@ -92,6 +93,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spcpf", Cpf);
             cmd.Parameters.AddWithValue("spdata_nasc", Data_nasc);
             cmd.Parameters.AddWithValue("spgenero_id", GeneroCliente.Id);
+
             Id = Convert.ToInt32(cmd.ExecuteScalar());
 
         }
@@ -123,8 +125,9 @@ namespace PsicomindClass
                     dr.GetString(4),
                     dr.GetDateTime(5),
                     dr.GetDateTime(6),
-                    Genero.ObterPorId(dr.GetInt32(0)),
-                    dr.GetBoolean(7)
+                    Genero.ObterPorId(dr.GetInt32(7)),
+                    dr.GetBoolean(8)
+
                     ));
             }
 

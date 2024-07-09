@@ -253,5 +253,15 @@ namespace Psicomind
             CtrlCliente CtrlCliente = new();
             addUserControl(CtrlCliente);
         }
+
+        private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ContainerControl2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

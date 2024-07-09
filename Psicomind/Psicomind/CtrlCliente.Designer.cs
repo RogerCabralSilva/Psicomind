@@ -71,6 +71,7 @@
             pnp.Name = "pnp";
             pnp.Size = new Size(1056, 693);
             pnp.TabIndex = 31;
+            pnp.Paint += pnp_Paint;
             // 
             // txtPsicomind
             // 

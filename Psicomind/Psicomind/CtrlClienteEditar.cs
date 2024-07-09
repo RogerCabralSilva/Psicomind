@@ -118,7 +118,8 @@ namespace Psicomind
             if (txtClienteId.Text.Length != 0)
             {
                 Cliente cliente = Cliente.ObterPorId(int.Parse(txtClienteId.Text));
-                if (cliente.Id != 0) { 
+                if (cliente.Id != 0)
+                {
                     // Busca o cliente
                     txtNome.Text = cliente.Nome;
                     txtSenha.Text = cliente.Senha;
@@ -170,7 +171,7 @@ namespace Psicomind
 
 
         }
-  
+
 
         private void txtClienteId_TextChanged(object sender, EventArgs e)
         {
@@ -215,6 +216,17 @@ namespace Psicomind
         {
             CtrlCliente CtrlCliente = new();
             addUserControl(CtrlCliente);
+        }
+
+        private void guna2ContainerControl2_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void pnp_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

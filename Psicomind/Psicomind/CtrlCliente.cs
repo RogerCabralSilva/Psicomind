@@ -49,6 +49,9 @@ namespace Psicomind
             addUserControl(CrtlClienteConsulta);
         }
 
+        private void pnp_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

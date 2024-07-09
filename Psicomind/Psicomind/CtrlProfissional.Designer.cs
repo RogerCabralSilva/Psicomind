@@ -50,12 +50,14 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
+            pnpProfissionais = new Panel();
             btnPagEditarProfissionais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             btnPagConsultarProfissionais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             btnPagInserirProfissionais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pnpProfissionais.SuspendLayout();
             SuspendLayout();
             // 
             // txtPsicomind
@@ -213,6 +215,7 @@
             btnPagInserirProfissionais.Size = new Size(212, 206);
             btnPagInserirProfissionais.TabIndex = 31;
             btnPagInserirProfissionais.Text = "guna2ContainerControl1";
+            btnPagInserirProfissionais.Click += btnPagInserirProfissionais_Click;
             // 
             // pictureBox1
             // 
@@ -249,15 +252,23 @@
             label4.TabIndex = 26;
             label4.Text = "Profissionais";
             // 
+            // pnpProfissionais
+            // 
+            pnpProfissionais.Controls.Add(btnPagInserirProfissionais);
+            pnpProfissionais.Controls.Add(txtPsicomind);
+            pnpProfissionais.Controls.Add(btnPagConsultarProfissionais);
+            pnpProfissionais.Controls.Add(txtTitulo);
+            pnpProfissionais.Controls.Add(btnPagEditarProfissionais);
+            pnpProfissionais.Location = new Point(0, 0);
+            pnpProfissionais.Name = "pnpProfissionais";
+            pnpProfissionais.Size = new Size(1056, 693);
+            pnpProfissionais.TabIndex = 36;
+            // 
             // CtrlProfissional
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(txtPsicomind);
-            Controls.Add(txtTitulo);
-            Controls.Add(btnPagEditarProfissionais);
-            Controls.Add(btnPagConsultarProfissionais);
-            Controls.Add(btnPagInserirProfissionais);
+            Controls.Add(pnpProfissionais);
             Name = "CtrlProfissional";
             Size = new Size(1056, 693);
             btnPagEditarProfissionais.ResumeLayout(false);
@@ -269,8 +280,9 @@
             btnPagInserirProfissionais.ResumeLayout(false);
             btnPagInserirProfissionais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            pnpProfissionais.ResumeLayout(false);
+            pnpProfissionais.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -290,5 +302,6 @@
         private Label label3;
         private Label label4;
         private Label label7;
+        private Panel pnpProfissionais;
     }
 }

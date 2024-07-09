@@ -163,6 +163,7 @@
             guna2ContainerControl2.Size = new Size(748, 624);
             guna2ContainerControl2.TabIndex = 28;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
+            guna2ContainerControl2.Click += guna2ContainerControl2_Click;
             // 
             // btnVoltar
             // 
@@ -189,7 +190,7 @@
             guna2ContainerControl3.Name = "guna2ContainerControl3";
             guna2ContainerControl3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ContainerControl3.Size = new Size(96, 25);
-            guna2ContainerControl3.TabIndex = 29;
+            guna2ContainerControl3.TabIndex = 3;
             guna2ContainerControl3.Text = "guna2ContainerControl1";
             // 
             // textBox2
@@ -209,7 +210,7 @@
             mtxCpf.Mask = "000.000.000-00";
             mtxCpf.Name = "mtxCpf";
             mtxCpf.Size = new Size(100, 16);
-            mtxCpf.TabIndex = 40;
+            mtxCpf.TabIndex = 3;
             // 
             // guna2ContainerControl4
             // 
@@ -243,7 +244,7 @@
             mtxCep.Mask = "00000-000";
             mtxCep.Name = "mtxCep";
             mtxCep.Size = new Size(100, 16);
-            mtxCep.TabIndex = 40;
+            mtxCep.TabIndex = 8;
             mtxCep.TextChanged += mtxCep_TextChanged;
             // 
             // guna2ContainerControl1
@@ -258,7 +259,7 @@
             guna2ContainerControl1.Name = "guna2ContainerControl1";
             guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2ContainerControl1.Size = new Size(96, 25);
-            guna2ContainerControl1.TabIndex = 29;
+            guna2ContainerControl1.TabIndex = 4;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
             // textBox1
@@ -278,7 +279,7 @@
             mtxTelefone.Mask = "(00) 00000-9999";
             mtxTelefone.Name = "mtxTelefone";
             mtxTelefone.Size = new Size(100, 16);
-            mtxTelefone.TabIndex = 40;
+            mtxTelefone.TabIndex = 4;
             // 
             // txtClienteId
             // 
@@ -304,7 +305,7 @@
             btnLimpar.Name = "btnLimpar";
             btnLimpar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnLimpar.Size = new Size(126, 33);
-            btnLimpar.TabIndex = 38;
+            btnLimpar.TabIndex = 15;
             btnLimpar.Text = "Limpar os Dados";
             btnLimpar.Click += btnLimpar_Click;
             // 
@@ -323,7 +324,7 @@
             btnInserir.Name = "btnInserir";
             btnInserir.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnInserir.Size = new Size(103, 33);
-            btnInserir.TabIndex = 38;
+            btnInserir.TabIndex = 16;
             btnInserir.Text = "Inserir";
             btnInserir.Click += btnInserir_Click;
             // 
@@ -342,7 +343,7 @@
             dptDataNascimento.Name = "dptDataNascimento";
             dptDataNascimento.ShadowDecoration.CustomizableEdges = customizableEdges12;
             dptDataNascimento.Size = new Size(190, 28);
-            dptDataNascimento.TabIndex = 33;
+            dptDataNascimento.TabIndex = 7;
             dptDataNascimento.Value = new DateTime(2024, 7, 3, 20, 8, 0, 460);
             // 
             // cmbTipoEndereco
@@ -363,7 +364,7 @@
             cmbTipoEndereco.Name = "cmbTipoEndereco";
             cmbTipoEndereco.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cmbTipoEndereco.Size = new Size(139, 26);
-            cmbTipoEndereco.TabIndex = 32;
+            cmbTipoEndereco.TabIndex = 14;
             // 
             // cmbTipoTelefone
             // 
@@ -383,7 +384,7 @@
             cmbTipoTelefone.Name = "cmbTipoTelefone";
             cmbTipoTelefone.ShadowDecoration.CustomizableEdges = customizableEdges16;
             cmbTipoTelefone.Size = new Size(119, 26);
-            cmbTipoTelefone.TabIndex = 32;
+            cmbTipoTelefone.TabIndex = 5;
             // 
             // cmbGenero
             // 
@@ -403,7 +404,8 @@
             cmbGenero.Name = "cmbGenero";
             cmbGenero.ShadowDecoration.CustomizableEdges = customizableEdges18;
             cmbGenero.Size = new Size(230, 26);
-            cmbGenero.TabIndex = 32;
+            cmbGenero.TabIndex = 6;
+            cmbGenero.SelectedIndexChanged += cmbGenero_SelectedIndexChanged;
             // 
             // label17
             // 
@@ -489,7 +491,7 @@
             txtUf.SelectedText = "";
             txtUf.ShadowDecoration.CustomizableEdges = customizableEdges20;
             txtUf.Size = new Size(61, 25);
-            txtUf.TabIndex = 30;
+            txtUf.TabIndex = 13;
             // 
             // label2
             // 
@@ -527,7 +529,7 @@
             txtCidade.SelectedText = "";
             txtCidade.ShadowDecoration.CustomizableEdges = customizableEdges22;
             txtCidade.Size = new Size(233, 25);
-            txtCidade.TabIndex = 30;
+            txtCidade.TabIndex = 12;
             // 
             // txtBairro
             // 
@@ -553,7 +555,7 @@
             txtBairro.SelectedText = "";
             txtBairro.ShadowDecoration.CustomizableEdges = customizableEdges24;
             txtBairro.Size = new Size(233, 25);
-            txtBairro.TabIndex = 30;
+            txtBairro.TabIndex = 10;
             // 
             // label14
             // 
@@ -591,7 +593,7 @@
             txtRua.SelectedText = "";
             txtRua.ShadowDecoration.CustomizableEdges = customizableEdges26;
             txtRua.Size = new Size(233, 25);
-            txtRua.TabIndex = 30;
+            txtRua.TabIndex = 9;
             // 
             // label9
             // 
@@ -629,7 +631,7 @@
             txtEmail.SelectedText = "";
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges28;
             txtEmail.Size = new Size(233, 25);
-            txtEmail.TabIndex = 30;
+            txtEmail.TabIndex = 1;
             // 
             // label13
             // 
@@ -751,7 +753,7 @@
             txtNumero.SelectedText = "";
             txtNumero.ShadowDecoration.CustomizableEdges = customizableEdges30;
             txtNumero.Size = new Size(139, 25);
-            txtNumero.TabIndex = 6;
+            txtNumero.TabIndex = 11;
             // 
             // label3
             // 
@@ -789,7 +791,7 @@
             txtSenha.SelectedText = "";
             txtSenha.ShadowDecoration.CustomizableEdges = customizableEdges32;
             txtSenha.Size = new Size(233, 25);
-            txtSenha.TabIndex = 6;
+            txtSenha.TabIndex = 2;
             txtSenha.UseSystemPasswordChar = true;
             // 
             // txtNome
@@ -816,7 +818,7 @@
             txtNome.SelectedText = "";
             txtNome.ShadowDecoration.CustomizableEdges = customizableEdges34;
             txtNome.Size = new Size(233, 25);
-            txtNome.TabIndex = 6;
+            txtNome.TabIndex = 0;
             // 
             // pnp
             // 
