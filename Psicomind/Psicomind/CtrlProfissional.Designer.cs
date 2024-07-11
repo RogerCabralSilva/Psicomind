@@ -98,6 +98,7 @@
             btnPagEditarProfissionais.Size = new Size(212, 197);
             btnPagEditarProfissionais.TabIndex = 33;
             btnPagEditarProfissionais.Text = "guna2ContainerControl1";
+            btnPagEditarProfissionais.Click += btnPagEditarProfissionais_Click;
             // 
             // label2
             // 

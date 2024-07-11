@@ -37,6 +37,11 @@ namespace Psicomind
 
         private void btnPagConsultarProfissionais_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnPagEditarProfissionais_Click(object sender, EventArgs e)
+        {
             CtrlProfissionalEditar ctrlProfissionalEditar = new();
             AddUserControl(ctrlProfissionalEditar);
         }

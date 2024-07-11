@@ -136,6 +136,7 @@
             guna2ContainerControl2.Size = new Size(748, 624);
             guna2ContainerControl2.TabIndex = 28;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
+            guna2ContainerControl2.Click += guna2ContainerControl2_Click;
             // 
             // txtEspecializaçãoProfissional
             // 
@@ -172,7 +173,7 @@
             dptDataContrato.FocusedColor = Color.Gainsboro;
             dptDataContrato.Font = new Font("Segoe UI", 9F);
             dptDataContrato.Format = DateTimePickerFormat.Short;
-            dptDataContrato.Location = new Point(95, 461);
+            dptDataContrato.Location = new Point(95, 456);
             dptDataContrato.MaxDate = new DateTime(2040, 12, 31, 0, 0, 0, 0);
             dptDataContrato.MinDate = new DateTime(1920, 1, 1, 0, 0, 0, 0);
             dptDataContrato.Name = "dptDataContrato";
@@ -187,7 +188,7 @@
             label11.BackColor = Color.White;
             label11.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = SystemColors.Highlight;
-            label11.Location = new Point(95, 444);
+            label11.Location = new Point(95, 439);
             label11.Name = "label11";
             label11.Size = new Size(106, 16);
             label11.TabIndex = 45;
