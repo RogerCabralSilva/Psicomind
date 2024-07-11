@@ -1,4 +1,5 @@
-﻿using PsicomindClass;
+﻿using MySqlX.XDevAPI;
+using PsicomindClass;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,6 +70,44 @@ namespace Psicomind
             {
                 MessageBox.Show("O gênero é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            // Inserindo Profissional
+
+            Profissional profissional = new(
+
+                txtNomeProfissional.Text,
+                txtEmailProfissional.Text,
+                txtSenhaProfissional.Text,
+                mtxCpfProfissional.Text,
+                txtEspecializaçãoProfissional.Text,
+                dptDataContrato.Value,
+                dptDataNascimentoProfissional.Value,
+                Genero.ObterPorId(Convert.ToInt32(cmbGeneroProfissional.SelectedValue))
+
+            // Indicando os campos de coleta de dados e seguindo a ordem das respectivas propriedades da classe
+
+                );
+
+            profissional.Inserir();
+
+
+            // Se o profissional for inserido e consequentemente seu ID for atribuído, mostre:
+
+            if (profissional.Id > 0)
+            {
+
+                txtProfissionalId.Text = profissional.Id.ToString();
+                MessageBox.Show($"Profissional {profissional.Nome} cadastrado com sucesso!");
+
+                TelefoneCliente telefone = new(
+                   mtxTelefoneProfissional.Text,
+                   int.Parse(txtProfissionalId.Text),
+                   TelefoneTipo.ObterPorId(Convert.ToInt32(cmbTipoTelefoneProfissional.SelectedValue))
+                    );
+
+                telefone.Inserir();
+
             }
 
         }

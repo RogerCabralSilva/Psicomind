@@ -294,6 +294,7 @@
             // 
             btnLimpar.BackColor = Color.White;
             btnLimpar.BorderRadius = 10;
+            btnLimpar.Cursor = Cursors.Hand;
             btnLimpar.CustomizableEdges = customizableEdges7;
             btnLimpar.DisabledState.BorderColor = Color.DarkGray;
             btnLimpar.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -313,6 +314,7 @@
             // 
             btnInserir.BackColor = Color.White;
             btnInserir.BorderRadius = 10;
+            btnInserir.Cursor = Cursors.Hand;
             btnInserir.CustomizableEdges = customizableEdges9;
             btnInserir.DisabledState.BorderColor = Color.DarkGray;
             btnInserir.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -332,6 +334,7 @@
             // 
             dptDataNascimento.BorderRadius = 5;
             dptDataNascimento.Checked = true;
+            dptDataNascimento.Cursor = Cursors.Hand;
             dptDataNascimento.CustomizableEdges = customizableEdges11;
             dptDataNascimento.FillColor = Color.Gainsboro;
             dptDataNascimento.FocusedColor = Color.Gainsboro;
@@ -391,6 +394,7 @@
             cmbGenero.BackColor = SystemColors.ButtonHighlight;
             cmbGenero.BorderColor = Color.White;
             cmbGenero.BorderRadius = 5;
+            cmbGenero.Cursor = Cursors.Hand;
             cmbGenero.CustomizableEdges = customizableEdges17;
             cmbGenero.DrawMode = DrawMode.OwnerDrawFixed;
             cmbGenero.DropDownStyle = ComboBoxStyle.DropDownList;

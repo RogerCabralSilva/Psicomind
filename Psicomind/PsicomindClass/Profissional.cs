@@ -69,6 +69,18 @@ namespace PsicomindClass
             Ativo = ativo;
         }
 
+        public Profissional(string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_nasc, Genero genero)
+        {
+            Nome = nome;
+            Email = email;
+            Senha = senha;
+            Cpf = cpf;
+            Especializacao = especializacao;
+            Data_contrato = data_contrato;
+            Data_nasc = data_nasc;
+            Genero = genero;
+        }
+
 
         // Inserindo Profissional
 

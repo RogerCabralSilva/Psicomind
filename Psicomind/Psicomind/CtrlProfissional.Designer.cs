@@ -151,6 +151,7 @@
             btnPagConsultarProfissionais.Size = new Size(212, 206);
             btnPagConsultarProfissionais.TabIndex = 32;
             btnPagConsultarProfissionais.Text = "guna2ContainerControl1";
+            btnPagConsultarProfissionais.Click += btnPagConsultarProfissionais_Click;
             // 
             // label1
             // 
