@@ -295,6 +295,7 @@
             txtProfissionalId.TabIndex = 39;
             txtProfissionalId.Text = "0";
             txtProfissionalId.Visible = false;
+            txtProfissionalId.TextChanged += txtProfissionalId_TextChanged;
             // 
             // btnLimpar
             // 
