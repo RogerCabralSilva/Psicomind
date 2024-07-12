@@ -136,6 +136,7 @@
             guna2ContainerControl2.Size = new Size(748, 624);
             guna2ContainerControl2.TabIndex = 28;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
+            guna2ContainerControl2.Click += guna2ContainerControl2_Click;
             // 
             // txtEspecializaçãoProfissional
             // 
@@ -294,6 +295,7 @@
             txtProfissionalId.TabIndex = 39;
             txtProfissionalId.Text = "0";
             txtProfissionalId.Visible = false;
+            txtProfissionalId.TextChanged += txtProfissionalId_TextChanged;
             // 
             // btnLimpar
             // 

@@ -12,7 +12,7 @@ namespace PsicomindClass
         
         public int Id { get; set; }
         public string Numero { get; set; }
-        public Profissional Profissional_id { get; set; }
+        public int Profissional_id { get; set; }
         public TelefoneTipo Telefonetipo_id { get; set; }
 
         public TelefoneProfissional()
@@ -20,14 +20,14 @@ namespace PsicomindClass
 
         }
 
-        public TelefoneProfissional(string numero, Profissional profissional_id, TelefoneTipo telefonetipo_id)
+        public TelefoneProfissional(string numero, int profissional_id, TelefoneTipo telefonetipo_id)
         {
             Numero = numero;
             Profissional_id = profissional_id;
             Telefonetipo_id = telefonetipo_id;
         }
 
-        public TelefoneProfissional(int id, string numero, Profissional profissional_id, TelefoneTipo telefonetipo_id)
+        public TelefoneProfissional(int id, string numero, int profissional_id, TelefoneTipo telefonetipo_id)
         {
             Id = id;
             Numero = numero;
@@ -45,7 +45,8 @@ namespace PsicomindClass
             cmd.CommandText = "sp_telefone_profissional_insert";
             cmd.Parameters.AddWithValue("spnumero", Numero);
             cmd.Parameters.AddWithValue("spprofissional_id", Profissional_id);
-            cmd.Parameters.AddWithValue("sptelefone_tipo_id", Telefonetipo_id);
+            cmd.Parameters.AddWithValue("sptelefone_tipo_id", Telefonetipo_id.Id);
+            cmd.ExecuteNonQuery();
 
         }
 
@@ -57,7 +58,7 @@ namespace PsicomindClass
             cmd.CommandText = "sp_telefone_profissional_update";
             cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("spnumero", Numero);
-            cmd.Parameters.AddWithValue("sptelefone_tipo_id", Telefonetipo_id);
+            cmd.Parameters.AddWithValue("sptelefone_tipo_id", Telefonetipo_id.Id);
 
             return cmd.ExecuteNonQuery() > -1 ? true : false;
 
@@ -78,7 +79,7 @@ namespace PsicomindClass
 
                         dr.GetInt32(0),
                         dr.GetString(1),
-                        Profissional.ObterPorId(dr.GetInt32(2)),
+                        dr.GetInt32(2),
                         TelefoneTipo.ObterPorId(dr.GetInt32(3))
                     ));
 
@@ -104,7 +105,7 @@ namespace PsicomindClass
 
                         dr.GetInt32(0),
                         dr.GetString(1),
-                        Profissional.ObterPorId(dr.GetInt32(2)),
+                        dr.GetInt32(2),
                         TelefoneTipo.ObterPorId(dr.GetInt32(3))
                     ));
 

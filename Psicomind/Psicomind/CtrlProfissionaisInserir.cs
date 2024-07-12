@@ -98,9 +98,10 @@ namespace Psicomind
             {
 
                 txtProfissionalId.Text = profissional.Id.ToString();
+
                 MessageBox.Show($"Profissional {profissional.Nome} cadastrado com sucesso!");
 
-                TelefoneCliente telefone = new(
+                TelefoneProfissional telefone = new(
                    mtxTelefoneProfissional.Text,
                    int.Parse(txtProfissionalId.Text),
                    TelefoneTipo.ObterPorId(Convert.ToInt32(cmbTipoTelefoneProfissional.SelectedValue))
@@ -108,6 +109,10 @@ namespace Psicomind
 
                 telefone.Inserir();
 
+            }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar profissional", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -126,6 +131,16 @@ namespace Psicomind
             cmbTipoTelefoneProfissional.DataSource = tipoTelefone;
             cmbTipoTelefoneProfissional.DisplayMember = "tipo";
             cmbTipoTelefoneProfissional.ValueMember = "id";
+
+        }
+
+        private void guna2ContainerControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtProfissionalId_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
