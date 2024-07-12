@@ -69,17 +69,18 @@
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             panelContainer = new Panel();
             ctrlPrincipal1 = new CtrlPrincipal();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             btnPerfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelContainer.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.BackColor = SystemColors.Window;
             panel1.Controls.Add(btnPerfil);
             panel1.Controls.Add(guna2ContainerControl1);
@@ -89,9 +90,10 @@
             panel1.Controls.Add(btnUsuarios);
             panel1.Controls.Add(btnProfissional);
             panel1.Controls.Add(btnHome);
-            panel1.Location = new Point(-3, 0);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 743);
+            panel1.Size = new Size(250, 740);
             panel1.TabIndex = 10;
             // 
             // btnPerfil
@@ -307,7 +309,7 @@
             guna2ControlBox1.HoverState.FillColor = SystemColors.Highlight;
             guna2ControlBox1.HoverState.IconColor = Color.White;
             guna2ControlBox1.IconColor = Color.Black;
-            guna2ControlBox1.Location = new Point(1260, 12);
+            guna2ControlBox1.Location = new Point(1010, 12);
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2ControlBox1.Size = new Size(45, 29);
@@ -324,7 +326,7 @@
             guna2ControlBox3.HoverState.FillColor = SystemColors.Highlight;
             guna2ControlBox3.HoverState.IconColor = Color.White;
             guna2ControlBox3.IconColor = Color.Black;
-            guna2ControlBox3.Location = new Point(1158, 12);
+            guna2ControlBox3.Location = new Point(908, 12);
             guna2ControlBox3.Name = "guna2ControlBox3";
             guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2ControlBox3.Size = new Size(45, 29);
@@ -341,7 +343,7 @@
             guna2ControlBox2.HoverState.FillColor = SystemColors.Highlight;
             guna2ControlBox2.HoverState.IconColor = Color.White;
             guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(1209, 12);
+            guna2ControlBox2.Location = new Point(959, 12);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2ControlBox2.Size = new Size(45, 29);
@@ -350,9 +352,10 @@
             // panelContainer
             // 
             panelContainer.Controls.Add(ctrlPrincipal1);
-            panelContainer.Location = new Point(247, 47);
+            panelContainer.Dock = DockStyle.Fill;
+            panelContainer.Location = new Point(250, 0);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(1379, 802);
+            panelContainer.Size = new Size(1067, 740);
             panelContainer.TabIndex = 13;
             // 
             // ctrlPrincipal1
@@ -360,8 +363,19 @@
             ctrlPrincipal1.Dock = DockStyle.Fill;
             ctrlPrincipal1.Location = new Point(0, 0);
             ctrlPrincipal1.Name = "ctrlPrincipal1";
-            ctrlPrincipal1.Size = new Size(1379, 802);
+            ctrlPrincipal1.Size = new Size(1067, 740);
             ctrlPrincipal1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(guna2ControlBox1);
+            panel2.Controls.Add(guna2ControlBox2);
+            panel2.Controls.Add(guna2ControlBox3);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(250, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1067, 48);
+            panel2.TabIndex = 14;
             // 
             // FrmPrincipal
             // 
@@ -369,17 +383,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1317, 740);
             ControlBox = false;
+            Controls.Add(panel2);
             Controls.Add(panelContainer);
-            Controls.Add(guna2ControlBox3);
-            Controls.Add(guna2ControlBox2);
-            Controls.Add(guna2ControlBox1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             MaximizeBox = false;
-            MinimumSize = new Size(1317, 718);
+            MinimumSize = new Size(1200, 740);
             Name = "FrmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
+            WindowState = FormWindowState.Maximized;
             Load += FrmPrincipal_Load;
             panel1.ResumeLayout(false);
             btnPerfil.ResumeLayout(false);
@@ -388,6 +401,7 @@
             guna2ContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelContainer.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -410,5 +424,6 @@
         private Guna.UI2.WinForms.Guna2ContainerControl btnPerfil;
         private Panel panelContainer;
         private CtrlPrincipal ctrlPrincipal1;
+        private Panel panel2;
     }
 }

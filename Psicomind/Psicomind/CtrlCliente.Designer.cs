@@ -67,6 +67,7 @@
             pnp.Controls.Add(btnPagEditarCliente);
             pnp.Controls.Add(btnPagConsultarCliente);
             pnp.Controls.Add(btnPagInserirCliente);
+            pnp.Dock = DockStyle.Fill;
             pnp.Location = new Point(0, 0);
             pnp.Name = "pnp";
             pnp.Size = new Size(1056, 693);
@@ -75,6 +76,7 @@
             // 
             // txtPsicomind
             // 
+            txtPsicomind.Anchor = AnchorStyles.None;
             txtPsicomind.AutoSize = true;
             txtPsicomind.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPsicomind.ForeColor = SystemColors.Highlight;
@@ -86,6 +88,7 @@
             // 
             // txtBoxTitulo
             // 
+            txtBoxTitulo.Anchor = AnchorStyles.None;
             txtBoxTitulo.AutoSize = true;
             txtBoxTitulo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtBoxTitulo.ForeColor = Color.Black;
@@ -97,6 +100,7 @@
             // 
             // btnPagEditarCliente
             // 
+            btnPagEditarCliente.Anchor = AnchorStyles.None;
             btnPagEditarCliente.BackColor = SystemColors.Control;
             btnPagEditarCliente.BorderRadius = 40;
             btnPagEditarCliente.Controls.Add(pictureBox5);
@@ -150,6 +154,7 @@
             // 
             // btnPagConsultarCliente
             // 
+            btnPagConsultarCliente.Anchor = AnchorStyles.None;
             btnPagConsultarCliente.BackColor = SystemColors.Control;
             btnPagConsultarCliente.BorderRadius = 40;
             btnPagConsultarCliente.Controls.Add(pictureBox3);
@@ -216,6 +221,7 @@
             // 
             // btnPagInserirCliente
             // 
+            btnPagInserirCliente.Anchor = AnchorStyles.None;
             btnPagInserirCliente.BackColor = SystemColors.Control;
             btnPagInserirCliente.BorderRadius = 40;
             btnPagInserirCliente.Controls.Add(pictureBox1);
