@@ -256,6 +256,7 @@
             // 
             // pnpProfissionais
             // 
+            pnpProfissionais.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnpProfissionais.Controls.Add(btnPagInserirProfissionais);
             pnpProfissionais.Controls.Add(txtPsicomind);
             pnpProfissionais.Controls.Add(btnPagConsultarProfissionais);

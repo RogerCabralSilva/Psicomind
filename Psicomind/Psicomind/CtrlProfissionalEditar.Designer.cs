@@ -30,6 +30,10 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrlProfissionalEditar));
@@ -53,12 +57,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnp = new Panel();
             guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            txtEspecializaçãoProfissional = new Guna.UI2.WinForms.Guna2TextBox();
+            dptDataContrato = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            label11 = new Label();
+            label10 = new Label();
             chkAtivoProfissional = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             btnVoltar = new PictureBox();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -82,10 +86,6 @@
             txtSenhaProfissional = new Guna.UI2.WinForms.Guna2TextBox();
             txtClienteId = new Guna.UI2.WinForms.Guna2TextBox();
             txtNomeProfissional = new Guna.UI2.WinForms.Guna2TextBox();
-            txtEspecializaçãoProfissional = new Guna.UI2.WinForms.Guna2TextBox();
-            dptDataContrato = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            label11 = new Label();
-            label10 = new Label();
             pnp.SuspendLayout();
             guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
@@ -94,6 +94,7 @@
             // 
             // pnp
             // 
+            pnp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnp.Controls.Add(guna2ContainerControl2);
             pnp.Location = new Point(3, 0);
             pnp.Name = "pnp";
@@ -135,6 +136,74 @@
             guna2ContainerControl2.Size = new Size(748, 624);
             guna2ContainerControl2.TabIndex = 28;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
+            // 
+            // txtEspecializaçãoProfissional
+            // 
+            txtEspecializaçãoProfissional.BackColor = SystemColors.ButtonHighlight;
+            txtEspecializaçãoProfissional.BorderColor = Color.White;
+            txtEspecializaçãoProfissional.BorderRadius = 5;
+            txtEspecializaçãoProfissional.CustomizableEdges = customizableEdges1;
+            txtEspecializaçãoProfissional.DefaultText = "";
+            txtEspecializaçãoProfissional.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEspecializaçãoProfissional.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEspecializaçãoProfissional.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEspecializaçãoProfissional.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEspecializaçãoProfissional.FillColor = Color.FromArgb(224, 224, 224);
+            txtEspecializaçãoProfissional.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEspecializaçãoProfissional.Font = new Font("Segoe UI", 9F);
+            txtEspecializaçãoProfissional.ForeColor = Color.Black;
+            txtEspecializaçãoProfissional.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEspecializaçãoProfissional.Location = new Point(97, 371);
+            txtEspecializaçãoProfissional.Name = "txtEspecializaçãoProfissional";
+            txtEspecializaçãoProfissional.PasswordChar = '\0';
+            txtEspecializaçãoProfissional.PlaceholderForeColor = Color.Silver;
+            txtEspecializaçãoProfissional.PlaceholderText = "";
+            txtEspecializaçãoProfissional.SelectedText = "";
+            txtEspecializaçãoProfissional.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtEspecializaçãoProfissional.Size = new Size(560, 25);
+            txtEspecializaçãoProfissional.TabIndex = 50;
+            // 
+            // dptDataContrato
+            // 
+            dptDataContrato.BorderRadius = 5;
+            dptDataContrato.Checked = true;
+            dptDataContrato.CustomizableEdges = customizableEdges3;
+            dptDataContrato.FillColor = Color.Gainsboro;
+            dptDataContrato.FocusedColor = Color.Gainsboro;
+            dptDataContrato.Font = new Font("Segoe UI", 9F);
+            dptDataContrato.Format = DateTimePickerFormat.Short;
+            dptDataContrato.Location = new Point(97, 436);
+            dptDataContrato.MaxDate = new DateTime(2040, 12, 31, 0, 0, 0, 0);
+            dptDataContrato.MinDate = new DateTime(1920, 1, 1, 0, 0, 0, 0);
+            dptDataContrato.Name = "dptDataContrato";
+            dptDataContrato.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            dptDataContrato.Size = new Size(190, 28);
+            dptDataContrato.TabIndex = 48;
+            dptDataContrato.Value = new DateTime(2024, 7, 3, 20, 8, 0, 460);
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = Color.White;
+            label11.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = SystemColors.Highlight;
+            label11.Location = new Point(97, 419);
+            label11.Name = "label11";
+            label11.Size = new Size(106, 16);
+            label11.TabIndex = 49;
+            label11.Text = "Data de Contrato";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.White;
+            label10.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = SystemColors.Highlight;
+            label10.Location = new Point(97, 352);
+            label10.Name = "label10";
+            label10.Size = new Size(97, 16);
+            label10.TabIndex = 47;
+            label10.Text = "Especialização";
             // 
             // chkAtivoProfissional
             // 
@@ -504,74 +573,6 @@
             txtNomeProfissional.ShadowDecoration.CustomizableEdges = customizableEdges26;
             txtNomeProfissional.Size = new Size(233, 25);
             txtNomeProfissional.TabIndex = 1;
-            // 
-            // txtEspecializaçãoProfissional
-            // 
-            txtEspecializaçãoProfissional.BackColor = SystemColors.ButtonHighlight;
-            txtEspecializaçãoProfissional.BorderColor = Color.White;
-            txtEspecializaçãoProfissional.BorderRadius = 5;
-            txtEspecializaçãoProfissional.CustomizableEdges = customizableEdges1;
-            txtEspecializaçãoProfissional.DefaultText = "";
-            txtEspecializaçãoProfissional.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtEspecializaçãoProfissional.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtEspecializaçãoProfissional.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtEspecializaçãoProfissional.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtEspecializaçãoProfissional.FillColor = Color.FromArgb(224, 224, 224);
-            txtEspecializaçãoProfissional.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEspecializaçãoProfissional.Font = new Font("Segoe UI", 9F);
-            txtEspecializaçãoProfissional.ForeColor = Color.Black;
-            txtEspecializaçãoProfissional.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEspecializaçãoProfissional.Location = new Point(97, 371);
-            txtEspecializaçãoProfissional.Name = "txtEspecializaçãoProfissional";
-            txtEspecializaçãoProfissional.PasswordChar = '\0';
-            txtEspecializaçãoProfissional.PlaceholderForeColor = Color.Silver;
-            txtEspecializaçãoProfissional.PlaceholderText = "";
-            txtEspecializaçãoProfissional.SelectedText = "";
-            txtEspecializaçãoProfissional.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtEspecializaçãoProfissional.Size = new Size(560, 25);
-            txtEspecializaçãoProfissional.TabIndex = 50;
-            // 
-            // dptDataContrato
-            // 
-            dptDataContrato.BorderRadius = 5;
-            dptDataContrato.Checked = true;
-            dptDataContrato.CustomizableEdges = customizableEdges3;
-            dptDataContrato.FillColor = Color.Gainsboro;
-            dptDataContrato.FocusedColor = Color.Gainsboro;
-            dptDataContrato.Font = new Font("Segoe UI", 9F);
-            dptDataContrato.Format = DateTimePickerFormat.Short;
-            dptDataContrato.Location = new Point(97, 436);
-            dptDataContrato.MaxDate = new DateTime(2040, 12, 31, 0, 0, 0, 0);
-            dptDataContrato.MinDate = new DateTime(1920, 1, 1, 0, 0, 0, 0);
-            dptDataContrato.Name = "dptDataContrato";
-            dptDataContrato.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            dptDataContrato.Size = new Size(190, 28);
-            dptDataContrato.TabIndex = 48;
-            dptDataContrato.Value = new DateTime(2024, 7, 3, 20, 8, 0, 460);
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.White;
-            label11.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = SystemColors.Highlight;
-            label11.Location = new Point(97, 419);
-            label11.Name = "label11";
-            label11.Size = new Size(106, 16);
-            label11.TabIndex = 49;
-            label11.Text = "Data de Contrato";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.White;
-            label10.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = SystemColors.Highlight;
-            label10.Location = new Point(97, 352);
-            label10.Name = "label10";
-            label10.Size = new Size(97, 16);
-            label10.TabIndex = 47;
-            label10.Text = "Especialização";
             // 
             // CtrlProfissionalEditar
             // 

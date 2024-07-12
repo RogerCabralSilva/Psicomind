@@ -95,6 +95,7 @@
             // 
             // pnp
             // 
+            pnp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnp.Controls.Add(guna2ContainerControl2);
             pnp.Location = new Point(0, 0);
             pnp.Name = "pnp";
@@ -103,6 +104,7 @@
             // 
             // guna2ContainerControl2
             // 
+            guna2ContainerControl2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2ContainerControl2.BorderRadius = 30;
             guna2ContainerControl2.Controls.Add(txtEspecializaçãoProfissional);
             guna2ContainerControl2.Controls.Add(dptDataContrato);
@@ -140,6 +142,7 @@
             // 
             // txtEspecializaçãoProfissional
             // 
+            txtEspecializaçãoProfissional.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtEspecializaçãoProfissional.BackColor = SystemColors.ButtonHighlight;
             txtEspecializaçãoProfissional.BorderColor = Color.White;
             txtEspecializaçãoProfissional.BorderRadius = 5;
@@ -166,6 +169,7 @@
             // 
             // dptDataContrato
             // 
+            dptDataContrato.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dptDataContrato.BorderRadius = 5;
             dptDataContrato.Checked = true;
             dptDataContrato.CustomizableEdges = customizableEdges3;
@@ -221,6 +225,7 @@
             // 
             // guna2ContainerControl3
             // 
+            guna2ContainerControl3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2ContainerControl3.BackColor = Color.Transparent;
             guna2ContainerControl3.BorderRadius = 5;
             guna2ContainerControl3.Controls.Add(textBox2);
@@ -245,6 +250,7 @@
             // 
             // mtxCpfProfissional
             // 
+            mtxCpfProfissional.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             mtxCpfProfissional.BackColor = Color.FromArgb(224, 224, 224);
             mtxCpfProfissional.BorderStyle = BorderStyle.None;
             mtxCpfProfissional.Location = new Point(6, 5);
@@ -255,6 +261,7 @@
             // 
             // guna2ContainerControl1
             // 
+            guna2ContainerControl1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2ContainerControl1.BackColor = Color.Transparent;
             guna2ContainerControl1.BorderRadius = 5;
             guna2ContainerControl1.Controls.Add(textBox1);
@@ -279,6 +286,7 @@
             // 
             // mtxTelefoneProfissional
             // 
+            mtxTelefoneProfissional.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             mtxTelefoneProfissional.BackColor = Color.FromArgb(224, 224, 224);
             mtxTelefoneProfissional.BorderStyle = BorderStyle.None;
             mtxTelefoneProfissional.Location = new Point(6, 5);
@@ -299,6 +307,7 @@
             // 
             // btnLimpar
             // 
+            btnLimpar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnLimpar.BackColor = Color.White;
             btnLimpar.BorderRadius = 10;
             btnLimpar.Cursor = Cursors.Hand;
@@ -319,6 +328,7 @@
             // 
             // btnInserirProfissional
             // 
+            btnInserirProfissional.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnInserirProfissional.BackColor = Color.White;
             btnInserirProfissional.BorderRadius = 10;
             btnInserirProfissional.Cursor = Cursors.Hand;
@@ -339,6 +349,7 @@
             // 
             // dptDataNascimentoProfissional
             // 
+            dptDataNascimentoProfissional.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dptDataNascimentoProfissional.BorderRadius = 5;
             dptDataNascimentoProfissional.Checked = true;
             dptDataNascimentoProfissional.Cursor = Cursors.Hand;
@@ -358,6 +369,7 @@
             // 
             // cmbTipoTelefoneProfissional
             // 
+            cmbTipoTelefoneProfissional.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cmbTipoTelefoneProfissional.BackColor = SystemColors.ButtonHighlight;
             cmbTipoTelefoneProfissional.BorderColor = Color.White;
             cmbTipoTelefoneProfissional.BorderRadius = 5;
@@ -378,6 +390,7 @@
             // 
             // cmbGeneroProfissional
             // 
+            cmbGeneroProfissional.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cmbGeneroProfissional.BackColor = SystemColors.ButtonHighlight;
             cmbGeneroProfissional.BorderColor = Color.White;
             cmbGeneroProfissional.BorderRadius = 5;
@@ -447,6 +460,7 @@
             // 
             // txtEmailProfissional
             // 
+            txtEmailProfissional.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtEmailProfissional.BackColor = SystemColors.ButtonHighlight;
             txtEmailProfissional.BorderColor = Color.White;
             txtEmailProfissional.BorderRadius = 5;
@@ -533,6 +547,7 @@
             // 
             // txtSenhaProfissional
             // 
+            txtSenhaProfissional.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtSenhaProfissional.BackColor = SystemColors.ButtonHighlight;
             txtSenhaProfissional.BorderColor = Color.White;
             txtSenhaProfissional.BorderRadius = 5;
@@ -560,6 +575,7 @@
             // 
             // txtNomeProfissional
             // 
+            txtNomeProfissional.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtNomeProfissional.BackColor = SystemColors.ButtonHighlight;
             txtNomeProfissional.BorderColor = Color.White;
             txtNomeProfissional.BorderRadius = 5;

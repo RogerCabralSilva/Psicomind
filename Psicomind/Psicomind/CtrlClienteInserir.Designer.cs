@@ -826,6 +826,7 @@
             // 
             // pnp
             // 
+            pnp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnp.Controls.Add(guna2ContainerControl2);
             pnp.Location = new Point(2, 0);
             pnp.Name = "pnp";
