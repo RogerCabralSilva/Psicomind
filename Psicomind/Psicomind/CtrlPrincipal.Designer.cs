@@ -66,8 +66,9 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(794, 174);
+            pictureBox1.Location = new Point(805, 221);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(286, 519);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -251,10 +252,11 @@
             // 
             // lblUser
             // 
+            lblUser.Anchor = AnchorStyles.None;
             lblUser.AutoSize = true;
             lblUser.Font = new Font("Arial Black", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUser.ForeColor = SystemColors.Highlight;
-            lblUser.Location = new Point(46, 50);
+            lblUser.Location = new Point(51, 100);
             lblUser.Name = "lblUser";
             lblUser.Size = new Size(360, 45);
             lblUser.TabIndex = 19;
@@ -262,10 +264,11 @@
             // 
             // lblBemVindo
             // 
+            lblBemVindo.Anchor = AnchorStyles.None;
             lblBemVindo.AutoSize = true;
             lblBemVindo.Font = new Font("Arial Black", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBemVindo.ForeColor = Color.Black;
-            lblBemVindo.Location = new Point(46, 18);
+            lblBemVindo.Location = new Point(51, 68);
             lblBemVindo.Name = "lblBemVindo";
             lblBemVindo.Size = new Size(209, 45);
             lblBemVindo.TabIndex = 18;
@@ -274,13 +277,14 @@
             // 
             // guna2ContainerControl2
             // 
+            guna2ContainerControl2.Anchor = AnchorStyles.None;
             guna2ContainerControl2.BorderRadius = 30;
             guna2ContainerControl2.Controls.Add(label8);
             guna2ContainerControl2.Controls.Add(label3);
             guna2ContainerControl2.Controls.Add(txtAgndParticular);
             guna2ContainerControl2.Controls.Add(textAgendGroup);
             guna2ContainerControl2.CustomizableEdges = customizableEdges5;
-            guna2ContainerControl2.Location = new Point(46, 151);
+            guna2ContainerControl2.Location = new Point(57, 187);
             guna2ContainerControl2.Name = "guna2ContainerControl2";
             guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2ContainerControl2.Size = new Size(727, 442);
@@ -320,7 +324,7 @@
             Controls.Add(lblUser);
             Controls.Add(pictureBox1);
             Name = "CtrlPrincipal";
-            Size = new Size(1056, 693);
+            Size = new Size(1067, 740);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             txtAgndParticular.ResumeLayout(false);

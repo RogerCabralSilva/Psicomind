@@ -119,6 +119,7 @@
             // 
             // guna2ContainerControl2
             // 
+            guna2ContainerControl2.Anchor = AnchorStyles.None;
             guna2ContainerControl2.BorderRadius = 30;
             guna2ContainerControl2.Controls.Add(btnVoltar);
             guna2ContainerControl2.Controls.Add(guna2ContainerControl3);
@@ -826,9 +827,9 @@
             // 
             // pnp
             // 
-            pnp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnp.Controls.Add(guna2ContainerControl2);
-            pnp.Location = new Point(2, 0);
+            pnp.Dock = DockStyle.Fill;
+            pnp.Location = new Point(0, 0);
             pnp.Name = "pnp";
             pnp.Size = new Size(1056, 693);
             pnp.TabIndex = 32;
