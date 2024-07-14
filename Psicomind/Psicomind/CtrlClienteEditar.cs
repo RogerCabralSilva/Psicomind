@@ -61,6 +61,20 @@ namespace Psicomind
             {
                 CtrlClienteEditar_Load(sender, e);
                 MessageBox.Show($"O Cliente {cliente.Nome} foi alterado com sucesso!");
+
+                // Limpando os campos após editar o Cliente
+
+                txtClienteId.Clear();
+                txtNome.Clear();
+                txtSenha.Clear();
+                mtxTelefone.Clear();
+                mtxCep.Clear();
+                txtRua.Clear();
+                txtBairro.Clear();
+                txtNumero.Clear();
+                txtCidade.Clear();
+                txtUf.Clear();
+
             }
             else
             {
@@ -118,6 +132,8 @@ namespace Psicomind
             if (txtClienteId.Text.Length != 0)
             {
                 Cliente cliente = Cliente.ObterPorId(int.Parse(txtClienteId.Text));
+                TelefoneCliente telefone = TelefoneCliente.ObterPorId(int.Parse(txtClienteId.Text));
+
                 if (cliente.Id != 0)
                 {
                     // Busca o cliente
@@ -139,11 +155,19 @@ namespace Psicomind
                     cmbTipoEndereco.SelectedValue = endereco.TipoEndereco.Id;
 
                     // Busca o telefone do cliente
-                    TelefoneCliente telefone = TelefoneCliente.ObterPorId(int.Parse(txtClienteId.Text));
-                    mtxTelefone.Text = telefone.Numero;
-                    cmbTipoTelefone.SelectedValue = telefone.TelefoneTipo_id.Id;
 
-                    btnEditar.Enabled = true;
+                    if(telefone.Id != 0) 
+                    {
+                        
+                        // Verificando se o cliente possui telefone
+
+                        mtxTelefone.Text = telefone.Numero;
+                        cmbTipoTelefone.SelectedValue = telefone.TelefoneTipo_id.Id;
+
+                    }
+
+                    btnEditar.Enabled = true; 
+
                 }
                 else
                 {
@@ -152,6 +176,7 @@ namespace Psicomind
                     btnEditar.Enabled = false;
 
                     // Limpa os campos do formulário
+                    txtClienteId.Clear();
                     txtNome.Clear();
                     txtSenha.Clear();
                     mtxTelefone.Clear();
@@ -187,6 +212,8 @@ namespace Psicomind
         {
 
             // Limpa os campos do formulário
+
+            txtClienteId.Clear();
             txtNome.Clear();
             txtSenha.Clear();
             mtxTelefone.Clear();

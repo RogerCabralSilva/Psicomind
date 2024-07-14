@@ -59,7 +59,7 @@ namespace Psicomind
 
             // Editando telefone Profissional
 
-            TelefoneProfissional telefone = new(
+            TelefoneProfissional telefoneProfissional = new(
                    mtxTelefoneProfissional.Text,
                    int.Parse(txtProfissionalId.Text),
                    TelefoneTipo.ObterPorId(Convert.ToInt32(cmbTipoTelefoneProfissional.SelectedValue))
@@ -70,13 +70,26 @@ namespace Psicomind
             {
                 CtrlProfissionalEditar_Load(sender, e);
                 MessageBox.Show($"O Profissional {profissional.Nome} foi alterado com sucesso!");
+
+                //Limpando após editar Profissional
+
+                txtProfissionalId.Clear();
+                txtNomeProfissional.Clear();
+                txtSenhaProfissional.Clear();
+                txtEspecializaçãoProfissional.Clear();
+                cmbGeneroProfissional.SelectedIndex = -1;
+                cmbTipoTelefoneProfissional.SelectedIndex = -1;
+                mtxTelefoneProfissional.Clear();
+                dptDataContrato.Value = DateTime.Today;
+                dptDataNascimentoProfissional.Value = DateTime.Today;
+                chkAtivoProfissional.Checked = false;
+
             }
             else
             {
                 MessageBox.Show("Falha ao alterar o Profissional");
             }
 
-            // Retorna True ou false e roda o que tiver dentro do if
 
             if (profissional.Editar(profissional.Id))
             {
@@ -84,20 +97,20 @@ namespace Psicomind
             }
             else
             {
-                MessageBox.Show("Falha ao alterar o Cliente");
+                MessageBox.Show("Falha ao alterar o Profissional");
             }
+
 
             // Retorna True ou false e roda o que tiver dentro do if
 
-            if (telefone.Editar(profissional.Id))
+            if (telefoneProfissional.Editar(profissional.Id))
             {
                 CtrlProfissionalEditar_Load(sender, e);
             }
             else
             {
-                MessageBox.Show("Falha ao alterar o Profissional");
+                MessageBox.Show("Falha ao alterar o Cliente");
             }
-
 
         }
 
@@ -129,8 +142,8 @@ namespace Psicomind
 
             if (txtProfissionalId.Text.Length != 0)
             {
-
                 Profissional profissional = Profissional.ObterPorId(int.Parse(txtProfissionalId.Text));
+                TelefoneProfissional telefoneProfissional = TelefoneProfissional.ObterPorId(int.Parse(txtProfissionalId.Text));
 
                 if (profissional.Id != 0)
                 {
@@ -138,21 +151,29 @@ namespace Psicomind
                     // Buscando Profissional
 
                     txtNomeProfissional.Text = profissional.Nome;
-                    txtSenhaProfissional.Text = profissional.Senha;
+                    txtSenhaProfissional.PlaceholderText = "Insira sua nova senha";
+                    //txtSenhaProfissional.Text = profissional.Senha;
                     txtEspecializaçãoProfissional.Text = profissional.Especializacao;
                     cmbGeneroProfissional.SelectedValue = profissional.Genero.Id;
                     chkAtivoProfissional.Checked = profissional.Ativo;
                     dptDataContrato.Value = profissional.Data_contrato;
                     dptDataNascimentoProfissional.Value = profissional.Data_nasc;
 
+
                     // Buscando telefone Profissional
 
-                    TelefoneProfissional telefoneProfissional = TelefoneProfissional.ObterPorId(int.Parse(txtProfissionalId.Text));
-                    mtxTelefoneProfissional.Text = telefoneProfissional.Numero;
-                    cmbTipoTelefoneProfissional.SelectedValue = telefoneProfissional.Telefonetipo_id.Id;
+                    if (telefoneProfissional.Id != 0)
+                    {
+
+                        // Verificando se o cliente possui telefone
+
+                        mtxTelefoneProfissional.Text = telefoneProfissional.Numero;
+                        cmbTipoTelefoneProfissional.SelectedValue = telefoneProfissional.Telefonetipo_id.Id;
+
+                        
+                    }
 
                     btnEditar.Enabled = true;
-
 
                 }
                 else
@@ -163,6 +184,7 @@ namespace Psicomind
 
                     // Limpando campos do formulário
 
+                    txtProfissionalId.Clear();
                     txtNomeProfissional.Clear();
                     txtSenhaProfissional.Clear();
                     txtEspecializaçãoProfissional.Clear();
@@ -200,6 +222,7 @@ namespace Psicomind
 
             // Limpando campos do formulário
 
+            txtProfissionalId.Clear();
             txtNomeProfissional.Clear();
             txtSenhaProfissional.Clear();
             txtEspecializaçãoProfissional.Clear();

@@ -93,6 +93,14 @@ namespace Psicomind
                 return;
             }
 
+            if (string.IsNullOrWhiteSpace(mtxTelefone.Text))
+            {
+
+                MessageBox.Show("O número de telefone é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
             // Validações de campos obrigatórios do endereço
             if (string.IsNullOrWhiteSpace(mtxCep.Text))
             {

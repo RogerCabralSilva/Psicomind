@@ -56,7 +56,7 @@ namespace PsicomindClass
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_telefone_profissional_update";
-            cmd.Parameters.AddWithValue("spid", Id);
+            cmd.Parameters.AddWithValue("spprofissional_id", Profissional_id);
             cmd.Parameters.AddWithValue("spnumero", Numero);
             cmd.Parameters.AddWithValue("sptelefone_tipo_id", Telefonetipo_id.Id);
 
@@ -69,7 +69,7 @@ namespace PsicomindClass
 
             TelefoneProfissional telefoneProfissional = new();
             var cmd = Banco.Abrir();
-            cmd.CommandText = $"SELECT * FROM telefone_cliente WHERE id = {id}";
+            cmd.CommandText = $"SELECT * FROM telefone_profissional WHERE id = {id}";
             var dr = cmd.ExecuteReader();
 
             while (dr.Read())
