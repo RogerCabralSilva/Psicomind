@@ -72,6 +72,20 @@ namespace Psicomind
                 return;
             }
 
+            if (string.IsNullOrWhiteSpace(mtxTelefoneProfissional.Text))
+            {
+
+                MessageBox.Show("O número de telefone é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
+            if (string.IsNullOrWhiteSpace(mtxCpfProfissional.Text))
+            {
+                MessageBox.Show("O CPF é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Inserindo Profissional
 
             Profissional profissional = new(
