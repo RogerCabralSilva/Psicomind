@@ -84,7 +84,7 @@
             label1 = new Label();
             label3 = new Label();
             txtSenhaProfissional = new Guna.UI2.WinForms.Guna2TextBox();
-            txtClienteId = new Guna.UI2.WinForms.Guna2TextBox();
+            txtProfissionalId = new Guna.UI2.WinForms.Guna2TextBox();
             txtNomeProfissional = new Guna.UI2.WinForms.Guna2TextBox();
             pnp.SuspendLayout();
             guna2ContainerControl2.SuspendLayout();
@@ -96,13 +96,14 @@
             // 
             pnp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnp.Controls.Add(guna2ContainerControl2);
-            pnp.Location = new Point(3, 0);
+            pnp.Location = new Point(1, 1);
             pnp.Name = "pnp";
             pnp.Size = new Size(1054, 696);
             pnp.TabIndex = 34;
             // 
             // guna2ContainerControl2
             // 
+            guna2ContainerControl2.Anchor = AnchorStyles.None;
             guna2ContainerControl2.BorderRadius = 30;
             guna2ContainerControl2.Controls.Add(txtEspecializaçãoProfissional);
             guna2ContainerControl2.Controls.Add(dptDataContrato);
@@ -127,7 +128,7 @@
             guna2ContainerControl2.Controls.Add(label1);
             guna2ContainerControl2.Controls.Add(label3);
             guna2ContainerControl2.Controls.Add(txtSenhaProfissional);
-            guna2ContainerControl2.Controls.Add(txtClienteId);
+            guna2ContainerControl2.Controls.Add(txtProfissionalId);
             guna2ContainerControl2.Controls.Add(txtNomeProfissional);
             guna2ContainerControl2.CustomizableEdges = customizableEdges27;
             guna2ContainerControl2.Location = new Point(142, 35);
@@ -290,6 +291,7 @@
             btnLimpar.Size = new Size(126, 33);
             btnLimpar.TabIndex = 15;
             btnLimpar.Text = "Limpar os Dados";
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // btnConsultar
             // 
@@ -308,6 +310,7 @@
             btnConsultar.Size = new Size(122, 33);
             btnConsultar.TabIndex = 14;
             btnConsultar.Text = "Consultar por Id";
+            btnConsultar.Click += btnConsultar_Click;
             // 
             // btnEditar
             // 
@@ -322,12 +325,13 @@
             btnEditar.Enabled = false;
             btnEditar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(184, 531);
+            btnEditar.Location = new Point(196, 531);
             btnEditar.Name = "btnEditar";
             btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnEditar.Size = new Size(103, 33);
             btnEditar.TabIndex = 13;
             btnEditar.Text = "Editar";
+            btnEditar.Click += btnEditar_Click;
             // 
             // dptDataNascimentoProfissional
             // 
@@ -522,31 +526,32 @@
             txtSenhaProfissional.TabIndex = 2;
             txtSenhaProfissional.UseSystemPasswordChar = true;
             // 
-            // txtClienteId
+            // txtProfissionalId
             // 
-            txtClienteId.BackColor = SystemColors.ButtonHighlight;
-            txtClienteId.BorderColor = Color.White;
-            txtClienteId.BorderRadius = 5;
-            txtClienteId.CustomizableEdges = customizableEdges23;
-            txtClienteId.DefaultText = "";
-            txtClienteId.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtClienteId.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtClienteId.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtClienteId.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtClienteId.FillColor = Color.FromArgb(224, 224, 224);
-            txtClienteId.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClienteId.Font = new Font("Segoe UI", 9F);
-            txtClienteId.ForeColor = Color.Black;
-            txtClienteId.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClienteId.Location = new Point(333, 111);
-            txtClienteId.Name = "txtClienteId";
-            txtClienteId.PasswordChar = '\0';
-            txtClienteId.PlaceholderForeColor = Color.Silver;
-            txtClienteId.PlaceholderText = "";
-            txtClienteId.SelectedText = "";
-            txtClienteId.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            txtClienteId.Size = new Size(81, 25);
-            txtClienteId.TabIndex = 0;
+            txtProfissionalId.BackColor = SystemColors.ButtonHighlight;
+            txtProfissionalId.BorderColor = Color.White;
+            txtProfissionalId.BorderRadius = 5;
+            txtProfissionalId.CustomizableEdges = customizableEdges23;
+            txtProfissionalId.DefaultText = "";
+            txtProfissionalId.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtProfissionalId.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtProfissionalId.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtProfissionalId.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtProfissionalId.FillColor = Color.FromArgb(224, 224, 224);
+            txtProfissionalId.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtProfissionalId.Font = new Font("Segoe UI", 9F);
+            txtProfissionalId.ForeColor = Color.Black;
+            txtProfissionalId.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtProfissionalId.Location = new Point(333, 111);
+            txtProfissionalId.Name = "txtProfissionalId";
+            txtProfissionalId.PasswordChar = '\0';
+            txtProfissionalId.PlaceholderForeColor = Color.Silver;
+            txtProfissionalId.PlaceholderText = "";
+            txtProfissionalId.SelectedText = "";
+            txtProfissionalId.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            txtProfissionalId.Size = new Size(81, 25);
+            txtProfissionalId.TabIndex = 0;
+            txtProfissionalId.TextChanged += txtProfissionalId_TextChanged;
             // 
             // txtNomeProfissional
             // 
@@ -581,6 +586,7 @@
             Controls.Add(pnp);
             Name = "CtrlProfissionalEditar";
             Size = new Size(1054, 696);
+            Load += CtrlProfissionalEditar_Load;
             pnp.ResumeLayout(false);
             guna2ContainerControl2.ResumeLayout(false);
             guna2ContainerControl2.PerformLayout();
@@ -615,7 +621,7 @@
         private Label label1;
         private Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtSenhaProfissional;
-        private Guna.UI2.WinForms.Guna2TextBox txtClienteId;
+        private Guna.UI2.WinForms.Guna2TextBox txtProfissionalId;
         private Guna.UI2.WinForms.Guna2TextBox txtNomeProfissional;
         private Guna.UI2.WinForms.Guna2TextBox txtEspecializaçãoProfissional;
         private Guna.UI2.WinForms.Guna2DateTimePicker dptDataContrato;

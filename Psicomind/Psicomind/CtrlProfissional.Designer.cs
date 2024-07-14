@@ -62,6 +62,7 @@
             // 
             // txtPsicomind
             // 
+            txtPsicomind.Anchor = AnchorStyles.None;
             txtPsicomind.AutoSize = true;
             txtPsicomind.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPsicomind.ForeColor = SystemColors.Highlight;
@@ -73,6 +74,7 @@
             // 
             // txtTitulo
             // 
+            txtTitulo.Anchor = AnchorStyles.None;
             txtTitulo.AutoSize = true;
             txtTitulo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTitulo.ForeColor = Color.Black;
@@ -84,6 +86,7 @@
             // 
             // btnPagEditarProfissionais
             // 
+            btnPagEditarProfissionais.Anchor = AnchorStyles.None;
             btnPagEditarProfissionais.BackColor = SystemColors.Control;
             btnPagEditarProfissionais.BorderRadius = 40;
             btnPagEditarProfissionais.Controls.Add(label2);
@@ -137,6 +140,7 @@
             // 
             // btnPagConsultarProfissionais
             // 
+            btnPagConsultarProfissionais.Anchor = AnchorStyles.None;
             btnPagConsultarProfissionais.BackColor = SystemColors.Control;
             btnPagConsultarProfissionais.BorderRadius = 40;
             btnPagConsultarProfissionais.Controls.Add(label1);
@@ -203,6 +207,7 @@
             // 
             // btnPagInserirProfissionais
             // 
+            btnPagInserirProfissionais.Anchor = AnchorStyles.None;
             btnPagInserirProfissionais.BackColor = SystemColors.Control;
             btnPagInserirProfissionais.BorderRadius = 40;
             btnPagInserirProfissionais.Controls.Add(pictureBox1);

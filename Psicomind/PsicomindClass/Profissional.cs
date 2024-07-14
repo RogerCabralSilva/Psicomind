@@ -25,6 +25,7 @@ namespace PsicomindClass
         public Profissional()
         {
 
+
         }
 
         public Profissional(int id, string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_cad, DateTime data_nasc, Genero genero, bool ativo)
@@ -37,6 +38,18 @@ namespace PsicomindClass
             Especializacao = especializacao;
             Data_contrato = data_contrato;
             Data_cad = data_cad;
+            Data_nasc = data_nasc;
+            Genero = genero;
+            Ativo = ativo;
+        }
+
+        public Profissional(int id, string nome, string senha, string especializacao, DateTime data_contrato, DateTime data_nasc, Genero genero, bool ativo)
+        {
+            Id = id;
+            Nome = nome;
+            Senha = senha;
+            Especializacao = especializacao;
+            Data_contrato = data_contrato;
             Data_nasc = data_nasc;
             Genero = genero;
             Ativo = ativo;
@@ -133,6 +146,7 @@ namespace PsicomindClass
 
             return profissional;
 
+
         }
 
         public bool Editar(int id)
@@ -196,5 +210,7 @@ namespace PsicomindClass
 
             return lista;
         }
+
+
     }
 }

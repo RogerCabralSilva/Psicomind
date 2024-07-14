@@ -104,6 +104,7 @@
             // 
             // guna2ContainerControl2
             // 
+            guna2ContainerControl2.Anchor = AnchorStyles.None;
             guna2ContainerControl2.BorderRadius = 30;
             guna2ContainerControl2.Controls.Add(txtEspecializaçãoProfissional);
             guna2ContainerControl2.Controls.Add(dptDataContrato);

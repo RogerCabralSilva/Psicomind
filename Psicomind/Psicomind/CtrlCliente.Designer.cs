@@ -62,12 +62,12 @@
             // 
             // pnp
             // 
+            pnp.Anchor = AnchorStyles.None;
             pnp.Controls.Add(txtPsicomind);
             pnp.Controls.Add(txtBoxTitulo);
             pnp.Controls.Add(btnPagEditarCliente);
             pnp.Controls.Add(btnPagConsultarCliente);
             pnp.Controls.Add(btnPagInserirCliente);
-            pnp.Dock = DockStyle.Fill;
             pnp.Location = new Point(0, 0);
             pnp.Name = "pnp";
             pnp.Size = new Size(1056, 693);

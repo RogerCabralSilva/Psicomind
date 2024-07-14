@@ -118,6 +118,7 @@
             // 
             // guna2ContainerControl2
             // 
+            guna2ContainerControl2.Anchor = AnchorStyles.None;
             guna2ContainerControl2.BorderRadius = 30;
             guna2ContainerControl2.Controls.Add(chkAtivo);
             guna2ContainerControl2.Controls.Add(btnVoltar);
@@ -317,7 +318,7 @@
             btnEditar.Enabled = false;
             btnEditar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(180, 569);
+            btnEditar.Location = new Point(194, 569);
             btnEditar.Name = "btnEditar";
             btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnEditar.Size = new Size(103, 33);
