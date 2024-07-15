@@ -62,6 +62,12 @@ namespace Psicomind
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
+
+            // Tirando os traços do maskedTexBox
+            mtxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            mtxTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            mtxCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
             // Validações de campos obrigatórios do cliente
             if (string.IsNullOrWhiteSpace(txtNome.Text))
             {
@@ -144,10 +150,7 @@ namespace Psicomind
                 return;
             }
 
-            // Tirando os traços do maskedTexBox
-            mtxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            mtxTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            mtxCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
 
             // Inserir Cliente
             Cliente cliente = new(

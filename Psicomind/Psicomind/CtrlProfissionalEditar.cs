@@ -151,8 +151,8 @@ namespace Psicomind
                     // Buscando Profissional
 
                     txtNomeProfissional.Text = profissional.Nome;
-                    txtSenhaProfissional.PlaceholderText = "Insira sua nova senha";
-                    //txtSenhaProfissional.Text = profissional.Senha;
+                    //txtSenhaProfissional.PlaceholderText = "Insira sua nova senha";
+                    txtSenhaProfissional.Text = profissional.Senha;
                     txtEspecializaçãoProfissional.Text = profissional.Especializacao;
                     cmbGeneroProfissional.SelectedValue = profissional.Genero.Id;
                     chkAtivoProfissional.Checked = profissional.Ativo;

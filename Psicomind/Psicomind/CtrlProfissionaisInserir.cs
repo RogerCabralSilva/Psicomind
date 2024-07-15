@@ -50,6 +50,10 @@ namespace Psicomind
 
         private void btnInserirProfissional_Click(object sender, EventArgs e)
         {
+            
+            // Tirando os traços do maskedTexBox
+            mtxTelefoneProfissional.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            mtxCpfProfissional.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
             if (string.IsNullOrWhiteSpace(txtNomeProfissional.Text))
             {

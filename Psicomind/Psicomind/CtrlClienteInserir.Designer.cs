@@ -313,6 +313,7 @@
             // 
             // btnInserir
             // 
+            btnInserir.Animated = true;
             btnInserir.BackColor = Color.White;
             btnInserir.BorderRadius = 10;
             btnInserir.Cursor = Cursors.Hand;

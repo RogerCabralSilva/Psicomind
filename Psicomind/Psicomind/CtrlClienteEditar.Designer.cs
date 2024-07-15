@@ -175,7 +175,7 @@
             chkAtivo.CheckMarkColor = Color.Black;
             chkAtivo.CustomizableEdges = customizableEdges1;
             chkAtivo.ForeColor = SystemColors.ControlDarkDark;
-            chkAtivo.Location = new Point(584, 459);
+            chkAtivo.Location = new Point(581, 441);
             chkAtivo.Name = "chkAtivo";
             chkAtivo.ShadowDecoration.CustomizableEdges = customizableEdges2;
             chkAtivo.Size = new Size(20, 20);
@@ -207,7 +207,7 @@
             guna2ContainerControl4.Controls.Add(mtxCep);
             guna2ContainerControl4.CustomizableEdges = customizableEdges3;
             guna2ContainerControl4.FillColor = Color.FromArgb(224, 224, 224);
-            guna2ContainerControl4.Location = new Point(97, 406);
+            guna2ContainerControl4.Location = new Point(94, 388);
             guna2ContainerControl4.Name = "guna2ContainerControl4";
             guna2ContainerControl4.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2ContainerControl4.Size = new Size(96, 25);
@@ -241,7 +241,7 @@
             guna2ContainerControl1.Controls.Add(mtxTelefone);
             guna2ContainerControl1.CustomizableEdges = customizableEdges5;
             guna2ContainerControl1.FillColor = Color.FromArgb(224, 224, 224);
-            guna2ContainerControl1.Location = new Point(97, 236);
+            guna2ContainerControl1.Location = new Point(94, 218);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
             guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2ContainerControl1.Size = new Size(96, 25);
@@ -278,7 +278,7 @@
             btnLimpar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnLimpar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLimpar.ForeColor = Color.White;
-            btnLimpar.Location = new Point(458, 569);
+            btnLimpar.Location = new Point(458, 553);
             btnLimpar.Name = "btnLimpar";
             btnLimpar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnLimpar.Size = new Size(126, 33);
@@ -297,7 +297,7 @@
             btnConsultar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnConsultar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConsultar.ForeColor = Color.White;
-            btnConsultar.Location = new Point(317, 569);
+            btnConsultar.Location = new Point(317, 553);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnConsultar.Size = new Size(122, 33);
@@ -318,7 +318,7 @@
             btnEditar.Enabled = false;
             btnEditar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(194, 569);
+            btnEditar.Location = new Point(194, 553);
             btnEditar.Name = "btnEditar";
             btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnEditar.Size = new Size(103, 33);
@@ -335,7 +335,7 @@
             dptDataNascimento.FocusedColor = Color.Gainsboro;
             dptDataNascimento.Font = new Font("Segoe UI", 9F);
             dptDataNascimento.Format = DateTimePickerFormat.Short;
-            dptDataNascimento.Location = new Point(421, 293);
+            dptDataNascimento.Location = new Point(418, 275);
             dptDataNascimento.MaxDate = new DateTime(2040, 12, 31, 0, 0, 0, 0);
             dptDataNascimento.MinDate = new DateTime(1920, 1, 1, 0, 0, 0, 0);
             dptDataNascimento.Name = "dptDataNascimento";
@@ -358,7 +358,7 @@
             cmbTipoEndereco.Font = new Font("Segoe UI", 10F);
             cmbTipoEndereco.ForeColor = Color.FromArgb(68, 88, 112);
             cmbTipoEndereco.ItemHeight = 20;
-            cmbTipoEndereco.Location = new Point(512, 517);
+            cmbTipoEndereco.Location = new Point(509, 499);
             cmbTipoEndereco.Name = "cmbTipoEndereco";
             cmbTipoEndereco.ShadowDecoration.CustomizableEdges = customizableEdges16;
             cmbTipoEndereco.Size = new Size(139, 26);
@@ -378,7 +378,7 @@
             cmbTipoTelefone.Font = new Font("Segoe UI", 10F);
             cmbTipoTelefone.ForeColor = Color.FromArgb(68, 88, 112);
             cmbTipoTelefone.ItemHeight = 20;
-            cmbTipoTelefone.Location = new Point(421, 235);
+            cmbTipoTelefone.Location = new Point(418, 217);
             cmbTipoTelefone.Name = "cmbTipoTelefone";
             cmbTipoTelefone.ShadowDecoration.CustomizableEdges = customizableEdges18;
             cmbTipoTelefone.Size = new Size(119, 26);
@@ -398,7 +398,7 @@
             cmbGenero.Font = new Font("Segoe UI", 10F);
             cmbGenero.ForeColor = Color.FromArgb(68, 88, 112);
             cmbGenero.ItemHeight = 20;
-            cmbGenero.Location = new Point(97, 295);
+            cmbGenero.Location = new Point(94, 277);
             cmbGenero.Name = "cmbGenero";
             cmbGenero.ShadowDecoration.CustomizableEdges = customizableEdges20;
             cmbGenero.Size = new Size(230, 26);
@@ -410,7 +410,7 @@
             label17.BackColor = Color.White;
             label17.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label17.ForeColor = SystemColors.Highlight;
-            label17.Location = new Point(94, 498);
+            label17.Location = new Point(91, 480);
             label17.Name = "label17";
             label17.Size = new Size(51, 16);
             label17.TabIndex = 31;
@@ -422,7 +422,7 @@
             label16.BackColor = Color.White;
             label16.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label16.ForeColor = SystemColors.Highlight;
-            label16.Location = new Point(94, 440);
+            label16.Location = new Point(91, 422);
             label16.Name = "label16";
             label16.Size = new Size(41, 16);
             label16.TabIndex = 31;
@@ -434,7 +434,7 @@
             label7.BackColor = Color.White;
             label7.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.Highlight;
-            label7.Location = new Point(421, 276);
+            label7.Location = new Point(418, 258);
             label7.Name = "label7";
             label7.Size = new Size(126, 16);
             label7.TabIndex = 31;
@@ -446,7 +446,7 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(609, 460);
+            label2.Location = new Point(606, 442);
             label2.Name = "label2";
             label2.Size = new Size(45, 18);
             label2.TabIndex = 31;
@@ -458,7 +458,7 @@
             label15.BackColor = Color.White;
             label15.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = SystemColors.Highlight;
-            label15.Location = new Point(418, 387);
+            label15.Location = new Point(415, 369);
             label15.Name = "label15";
             label15.Size = new Size(29, 16);
             label15.TabIndex = 31;
@@ -480,7 +480,7 @@
             txtUf.Font = new Font("Segoe UI", 9F);
             txtUf.ForeColor = Color.Black;
             txtUf.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUf.Location = new Point(418, 517);
+            txtUf.Location = new Point(415, 499);
             txtUf.Name = "txtUf";
             txtUf.PasswordChar = '\0';
             txtUf.PlaceholderForeColor = Color.Silver;
@@ -506,7 +506,7 @@
             txtCidade.Font = new Font("Segoe UI", 9F);
             txtCidade.ForeColor = Color.Black;
             txtCidade.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCidade.Location = new Point(94, 517);
+            txtCidade.Location = new Point(91, 499);
             txtCidade.Name = "txtCidade";
             txtCidade.PasswordChar = '\0';
             txtCidade.PlaceholderForeColor = Color.Silver;
@@ -532,7 +532,7 @@
             txtBairro.Font = new Font("Segoe UI", 9F);
             txtBairro.ForeColor = Color.Black;
             txtBairro.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtBairro.Location = new Point(94, 459);
+            txtBairro.Location = new Point(91, 441);
             txtBairro.Name = "txtBairro";
             txtBairro.PasswordChar = '\0';
             txtBairro.PlaceholderForeColor = Color.Silver;
@@ -548,7 +548,7 @@
             label14.BackColor = Color.White;
             label14.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label14.ForeColor = SystemColors.Highlight;
-            label14.Location = new Point(512, 498);
+            label14.Location = new Point(509, 480);
             label14.Name = "label14";
             label14.Size = new Size(111, 16);
             label14.TabIndex = 29;
@@ -571,7 +571,7 @@
             txtRua.Font = new Font("Segoe UI", 9F);
             txtRua.ForeColor = Color.Black;
             txtRua.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtRua.Location = new Point(418, 406);
+            txtRua.Location = new Point(415, 388);
             txtRua.Name = "txtRua";
             txtRua.PasswordChar = '\0';
             txtRua.PlaceholderForeColor = Color.Silver;
@@ -587,7 +587,7 @@
             label9.BackColor = Color.White;
             label9.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = SystemColors.Highlight;
-            label9.Location = new Point(421, 217);
+            label9.Location = new Point(418, 199);
             label9.Name = "label9";
             label9.Size = new Size(105, 16);
             label9.TabIndex = 29;
@@ -599,7 +599,7 @@
             label13.BackColor = Color.White;
             label13.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = SystemColors.Highlight;
-            label13.Location = new Point(418, 498);
+            label13.Location = new Point(415, 480);
             label13.Name = "label13";
             label13.Size = new Size(21, 16);
             label13.TabIndex = 29;
@@ -611,7 +611,7 @@
             label6.BackColor = Color.White;
             label6.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.Highlight;
-            label6.Location = new Point(97, 276);
+            label6.Location = new Point(94, 258);
             label6.Name = "label6";
             label6.Size = new Size(52, 16);
             label6.TabIndex = 29;
@@ -623,7 +623,7 @@
             label12.BackColor = Color.White;
             label12.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label12.ForeColor = SystemColors.Highlight;
-            label12.Location = new Point(418, 440);
+            label12.Location = new Point(415, 422);
             label12.Name = "label12";
             label12.Size = new Size(54, 16);
             label12.TabIndex = 29;
@@ -635,7 +635,7 @@
             label8.BackColor = Color.White;
             label8.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = SystemColors.Highlight;
-            label8.Location = new Point(97, 217);
+            label8.Location = new Point(94, 199);
             label8.Name = "label8";
             label8.Size = new Size(58, 16);
             label8.TabIndex = 29;
@@ -647,7 +647,7 @@
             label11.BackColor = Color.White;
             label11.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = SystemColors.Highlight;
-            label11.Location = new Point(94, 387);
+            label11.Location = new Point(91, 369);
             label11.Name = "label11";
             label11.Size = new Size(29, 16);
             label11.TabIndex = 29;
@@ -659,7 +659,7 @@
             label4.BackColor = Color.White;
             label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.Highlight;
-            label4.Location = new Point(421, 162);
+            label4.Location = new Point(418, 144);
             label4.Name = "label4";
             label4.Size = new Size(43, 16);
             label4.TabIndex = 29;
@@ -671,7 +671,7 @@
             label10.BackColor = Color.White;
             label10.Font = new Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(94, 348);
+            label10.Location = new Point(91, 330);
             label10.Name = "label10";
             label10.Size = new Size(100, 24);
             label10.TabIndex = 28;
@@ -683,7 +683,7 @@
             label18.BackColor = Color.White;
             label18.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = SystemColors.Highlight;
-            label18.Location = new Point(333, 92);
+            label18.Location = new Point(326, 91);
             label18.Name = "label18";
             label18.Size = new Size(82, 16);
             label18.TabIndex = 29;
@@ -695,7 +695,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(97, 162);
+            label1.Location = new Point(94, 144);
             label1.Name = "label1";
             label1.Size = new Size(43, 16);
             label1.TabIndex = 29;
@@ -717,7 +717,7 @@
             txtNumero.Font = new Font("Segoe UI", 9F);
             txtNumero.ForeColor = Color.Black;
             txtNumero.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNumero.Location = new Point(418, 459);
+            txtNumero.Location = new Point(415, 441);
             txtNumero.Name = "txtNumero";
             txtNumero.PasswordChar = '\0';
             txtNumero.PlaceholderForeColor = Color.Silver;
@@ -755,7 +755,7 @@
             txtSenha.Font = new Font("Segoe UI", 9F);
             txtSenha.ForeColor = Color.Black;
             txtSenha.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenha.Location = new Point(421, 181);
+            txtSenha.Location = new Point(418, 163);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '●';
             txtSenha.PlaceholderForeColor = Color.Silver;
@@ -782,7 +782,7 @@
             txtClienteId.Font = new Font("Segoe UI", 9F);
             txtClienteId.ForeColor = Color.Black;
             txtClienteId.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClienteId.Location = new Point(333, 111);
+            txtClienteId.Location = new Point(326, 110);
             txtClienteId.Name = "txtClienteId";
             txtClienteId.PasswordChar = '\0';
             txtClienteId.PlaceholderForeColor = Color.Silver;
@@ -809,7 +809,7 @@
             txtNome.Font = new Font("Segoe UI", 9F);
             txtNome.ForeColor = Color.Black;
             txtNome.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNome.Location = new Point(97, 181);
+            txtNome.Location = new Point(94, 163);
             txtNome.Name = "txtNome";
             txtNome.PasswordChar = '\0';
             txtNome.PlaceholderForeColor = Color.Silver;
