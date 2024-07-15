@@ -164,7 +164,6 @@
             guna2ContainerControl2.Size = new Size(748, 624);
             guna2ContainerControl2.TabIndex = 28;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
-            guna2ContainerControl2.Click += guna2ContainerControl2_Click;
             // 
             // btnVoltar
             // 
@@ -177,7 +176,6 @@
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnVoltar.TabIndex = 41;
             btnVoltar.TabStop = false;
-            btnVoltar.Click += btnVoltar_Click;
             // 
             // guna2ContainerControl3
             // 
@@ -410,7 +408,6 @@
             cmbGenero.ShadowDecoration.CustomizableEdges = customizableEdges18;
             cmbGenero.Size = new Size(230, 26);
             cmbGenero.TabIndex = 6;
-            cmbGenero.SelectedIndexChanged += cmbGenero_SelectedIndexChanged;
             // 
             // label17
             // 

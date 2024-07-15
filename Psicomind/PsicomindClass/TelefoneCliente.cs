@@ -7,11 +7,29 @@ using System.Data;
 
 namespace PsicomindClass
 {
+    /// <summary>
+    /// Classe telefone do cliente
+    /// </summary>
     public class TelefoneCliente
     {
+        /// <summary>
+        /// Id do telefone
+        /// </summary>
         public int Id { get; set; }
+
+        /// <summary>
+        /// Numero do telefone
+        /// </summary>
         public string Numero { get; set; }
+
+        /// <summary>
+        /// Id do cliente associado ao telefone
+        /// </summary>
         public int Cliente_id { get; set; }
+
+        /// <summary>
+        /// Tipo do telefone
+        /// </summary>
         public TelefoneTipo TelefoneTipo_id { get; set; }
         
         public TelefoneCliente()
@@ -35,6 +53,10 @@ namespace PsicomindClass
         }
 
         
+        /// <summary>
+        /// insere um telefone
+        ///
+        /// </summary>
         public void Inserir()
         {
 
@@ -48,6 +70,11 @@ namespace PsicomindClass
 
         }
 
+        /// <summary>
+        /// Edita telefone
+        /// </summary>
+        /// <param name="id">ID como parâmetro para editar</param>
+        /// <returns></returns>
         public bool Editar(int id)
         {
 
@@ -87,6 +114,11 @@ namespace PsicomindClass
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cliente_id"></param>
+        /// <returns></returns>
         public static List<TelefoneCliente> ObterListaPorCliente(int cliente_id)
         {
 
