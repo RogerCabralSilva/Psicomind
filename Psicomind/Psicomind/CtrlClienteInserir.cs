@@ -183,7 +183,7 @@ namespace Psicomind
                     TipoEndereco.ObterPorId(Convert.ToInt32(cmbTipoEndereco.SelectedValue))
                 );
 
-
+                
                 endereco.Inserir();
             }
             else
@@ -257,22 +257,5 @@ namespace Psicomind
 
         }
 
-
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            CtrlCliente CtrlCliente = new();
-            addUserControl(CtrlCliente);
-        }
-
-        private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ContainerControl2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
