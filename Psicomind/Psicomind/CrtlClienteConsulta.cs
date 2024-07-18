@@ -55,5 +55,10 @@ namespace Psicomind
 
             }
         }
+
+        private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

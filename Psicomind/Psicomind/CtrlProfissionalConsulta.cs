@@ -16,5 +16,34 @@ namespace Psicomind
         {
             InitializeComponent();
         }
+
+        private void dgvProfissional_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void addUserControl(UserControl userControl)
+        {
+
+            CtrlProfissional ctrlProfissional = new();
+
+            userControl.Dock = DockStyle.Fill;
+            pnp.Controls.Clear();
+            pnp.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
+        private void CtrlProfissionalConsulta_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+
+            CtrlProfissional ctrlProfissional = new();
+            addUserControl(ctrlProfissional);
+
+        }
     }
 }
