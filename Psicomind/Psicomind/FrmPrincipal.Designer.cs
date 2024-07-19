@@ -93,7 +93,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 740);
+            panel1.Size = new Size(202, 740);
             panel1.TabIndex = 10;
             // 
             // btnPerfil
@@ -103,10 +103,10 @@
             btnPerfil.Controls.Add(lblUserCargo);
             btnPerfil.Cursor = Cursors.Hand;
             btnPerfil.CustomizableEdges = customizableEdges1;
-            btnPerfil.Location = new Point(22, 129);
+            btnPerfil.Location = new Point(3, 129);
             btnPerfil.Name = "btnPerfil";
             btnPerfil.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnPerfil.Size = new Size(215, 47);
+            btnPerfil.Size = new Size(171, 47);
             btnPerfil.TabIndex = 33;
             btnPerfil.Text = " ";
             // 
@@ -114,9 +114,9 @@
             // 
             pictureBox5.BackColor = SystemColors.Window;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(3, 3);
+            pictureBox5.Location = new Point(15, 5);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(40, 40);
+            pictureBox5.Size = new Size(30, 30);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 32;
             pictureBox5.TabStop = false;
@@ -127,7 +127,7 @@
             lblUserLogado.BackColor = SystemColors.Window;
             lblUserLogado.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUserLogado.ForeColor = Color.Black;
-            lblUserLogado.Location = new Point(49, 7);
+            lblUserLogado.Location = new Point(52, 3);
             lblUserLogado.Name = "lblUserLogado";
             lblUserLogado.Size = new Size(92, 16);
             lblUserLogado.TabIndex = 31;
@@ -139,7 +139,7 @@
             lblUserCargo.BackColor = SystemColors.Window;
             lblUserCargo.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUserCargo.ForeColor = SystemColors.Highlight;
-            lblUserCargo.Location = new Point(49, 23);
+            lblUserCargo.Location = new Point(52, 19);
             lblUserCargo.Name = "lblUserCargo";
             lblUserCargo.Size = new Size(49, 16);
             lblUserCargo.TabIndex = 30;
@@ -151,10 +151,10 @@
             guna2ContainerControl1.Controls.Add(guna2ContainerControl2);
             guna2ContainerControl1.CustomizableEdges = customizableEdges5;
             guna2ContainerControl1.FillColor = Color.WhiteSmoke;
-            guna2ContainerControl1.Location = new Point(13, 111);
+            guna2ContainerControl1.Location = new Point(10, 107);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
             guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2ContainerControl1.Size = new Size(230, 3);
+            guna2ContainerControl1.Size = new Size(180, 3);
             guna2ContainerControl1.TabIndex = 14;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
@@ -173,12 +173,13 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(22, 38);
+            pictureBox1.Location = new Point(13, 50);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(198, 48);
+            pictureBox1.Size = new Size(177, 44);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // btnAgendamento
             // 
@@ -195,10 +196,10 @@
             btnAgendamento.Image = (Image)resources.GetObject("btnAgendamento.Image");
             btnAgendamento.ImageAlign = HorizontalAlignment.Left;
             btnAgendamento.ImageSize = new Size(25, 23);
-            btnAgendamento.Location = new Point(13, 442);
+            btnAgendamento.Location = new Point(9, 438);
             btnAgendamento.Name = "btnAgendamento";
             btnAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnAgendamento.Size = new Size(224, 45);
+            btnAgendamento.Size = new Size(165, 45);
             btnAgendamento.TabIndex = 13;
             btnAgendamento.Text = "Agendamentos";
             btnAgendamento.TextAlign = HorizontalAlignment.Left;
@@ -218,10 +219,10 @@
             btnClientes.Image = (Image)resources.GetObject("btnClientes.Image");
             btnClientes.ImageAlign = HorizontalAlignment.Left;
             btnClientes.ImageSize = new Size(25, 23);
-            btnClientes.Location = new Point(13, 391);
+            btnClientes.Location = new Point(9, 387);
             btnClientes.Name = "btnClientes";
             btnClientes.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnClientes.Size = new Size(224, 45);
+            btnClientes.Size = new Size(165, 45);
             btnClientes.TabIndex = 13;
             btnClientes.Text = "Clientes";
             btnClientes.TextAlign = HorizontalAlignment.Left;
@@ -242,10 +243,10 @@
             btnUsuarios.Image = (Image)resources.GetObject("btnUsuarios.Image");
             btnUsuarios.ImageAlign = HorizontalAlignment.Left;
             btnUsuarios.ImageSize = new Size(25, 23);
-            btnUsuarios.Location = new Point(13, 340);
+            btnUsuarios.Location = new Point(9, 336);
             btnUsuarios.Name = "btnUsuarios";
             btnUsuarios.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnUsuarios.Size = new Size(224, 45);
+            btnUsuarios.Size = new Size(165, 45);
             btnUsuarios.TabIndex = 13;
             btnUsuarios.Text = "Usuários";
             btnUsuarios.TextAlign = HorizontalAlignment.Left;
@@ -266,10 +267,10 @@
             btnProfissional.Image = (Image)resources.GetObject("btnProfissional.Image");
             btnProfissional.ImageAlign = HorizontalAlignment.Left;
             btnProfissional.ImageSize = new Size(25, 23);
-            btnProfissional.Location = new Point(13, 291);
+            btnProfissional.Location = new Point(9, 287);
             btnProfissional.Name = "btnProfissional";
             btnProfissional.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnProfissional.Size = new Size(224, 43);
+            btnProfissional.Size = new Size(165, 43);
             btnProfissional.TabIndex = 13;
             btnProfissional.Text = "Profissionais";
             btnProfissional.TextAlign = HorizontalAlignment.Left;
@@ -290,10 +291,10 @@
             btnHome.Image = (Image)resources.GetObject("btnHome.Image");
             btnHome.ImageAlign = HorizontalAlignment.Left;
             btnHome.ImageSize = new Size(25, 23);
-            btnHome.Location = new Point(13, 229);
+            btnHome.Location = new Point(9, 225);
             btnHome.Name = "btnHome";
             btnHome.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnHome.Size = new Size(224, 56);
+            btnHome.Size = new Size(165, 56);
             btnHome.TabIndex = 13;
             btnHome.Text = "Home";
             btnHome.TextAlign = HorizontalAlignment.Left;
@@ -309,7 +310,7 @@
             guna2ControlBox1.HoverState.FillColor = SystemColors.Highlight;
             guna2ControlBox1.HoverState.IconColor = Color.White;
             guna2ControlBox1.IconColor = Color.Black;
-            guna2ControlBox1.Location = new Point(1010, 12);
+            guna2ControlBox1.Location = new Point(1058, 12);
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2ControlBox1.Size = new Size(45, 29);
@@ -326,7 +327,7 @@
             guna2ControlBox3.HoverState.FillColor = SystemColors.Highlight;
             guna2ControlBox3.HoverState.IconColor = Color.White;
             guna2ControlBox3.IconColor = Color.Black;
-            guna2ControlBox3.Location = new Point(908, 12);
+            guna2ControlBox3.Location = new Point(956, 12);
             guna2ControlBox3.Name = "guna2ControlBox3";
             guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2ControlBox3.Size = new Size(45, 29);
@@ -343,7 +344,7 @@
             guna2ControlBox2.HoverState.FillColor = SystemColors.Highlight;
             guna2ControlBox2.HoverState.IconColor = Color.White;
             guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(959, 12);
+            guna2ControlBox2.Location = new Point(1007, 12);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2ControlBox2.Size = new Size(45, 29);
@@ -353,9 +354,9 @@
             // 
             panelContainer.Controls.Add(ctrlPrincipal1);
             panelContainer.Dock = DockStyle.Fill;
-            panelContainer.Location = new Point(250, 0);
+            panelContainer.Location = new Point(202, 0);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(1067, 740);
+            panelContainer.Size = new Size(1115, 740);
             panelContainer.TabIndex = 13;
             // 
             // ctrlPrincipal1
@@ -363,7 +364,7 @@
             ctrlPrincipal1.Dock = DockStyle.Fill;
             ctrlPrincipal1.Location = new Point(0, 0);
             ctrlPrincipal1.Name = "ctrlPrincipal1";
-            ctrlPrincipal1.Size = new Size(1067, 740);
+            ctrlPrincipal1.Size = new Size(1115, 740);
             ctrlPrincipal1.TabIndex = 0;
             // 
             // panel2
@@ -372,9 +373,9 @@
             panel2.Controls.Add(guna2ControlBox2);
             panel2.Controls.Add(guna2ControlBox3);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(250, 0);
+            panel2.Location = new Point(202, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1067, 48);
+            panel2.Size = new Size(1115, 48);
             panel2.TabIndex = 14;
             // 
             // FrmPrincipal
