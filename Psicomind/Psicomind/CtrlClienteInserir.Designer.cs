@@ -176,6 +176,7 @@
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnVoltar.TabIndex = 41;
             btnVoltar.TabStop = false;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // guna2ContainerControl3
             // 

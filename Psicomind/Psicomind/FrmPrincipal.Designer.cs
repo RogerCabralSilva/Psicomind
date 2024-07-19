@@ -28,403 +28,383 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            panel1 = new Panel();
-            btnPerfil = new Guna.UI2.WinForms.Guna2ContainerControl();
-            pictureBox5 = new PictureBox();
-            lblUserLogado = new Label();
-            lblUserCargo = new Label();
-            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             pictureBox1 = new PictureBox();
-            btnAgendamento = new Guna.UI2.WinForms.Guna2Button();
-            btnClientes = new Guna.UI2.WinForms.Guna2Button();
-            btnUsuarios = new Guna.UI2.WinForms.Guna2Button();
-            btnProfissional = new Guna.UI2.WinForms.Guna2Button();
-            btnHome = new Guna.UI2.WinForms.Guna2Button();
-            guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            panelContainer = new Panel();
-            ctrlPrincipal1 = new CtrlPrincipal();
-            panel2 = new Panel();
-            panel1.SuspendLayout();
-            btnPerfil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            guna2ContainerControl1.SuspendLayout();
+            guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            lblCargoUser = new Label();
+            lblUsername = new Label();
+            pictureBox2 = new PictureBox();
+            btnAbrirProfissional = new Guna.UI2.WinForms.Guna2ContainerControl();
+            label2 = new Label();
+            label1 = new Label();
+            pictureBox3 = new PictureBox();
+            btnAbrirCliente = new Guna.UI2.WinForms.Guna2ContainerControl();
+            label3 = new Label();
+            label4 = new Label();
+            pictureBox5 = new PictureBox();
+            btnAbrirUsuario = new Guna.UI2.WinForms.Guna2ContainerControl();
+            label5 = new Label();
+            label6 = new Label();
+            pictureBox4 = new PictureBox();
+            btnAbrirAgendamento = new Guna.UI2.WinForms.Guna2ContainerControl();
+            label7 = new Label();
+            label8 = new Label();
+            pictureBox6 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panelContainer.SuspendLayout();
-            panel2.SuspendLayout();
+            guna2ContainerControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            btnAbrirProfissional.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            btnAbrirCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            btnAbrirUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            btnAbrirAgendamento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.Window;
-            panel1.Controls.Add(btnPerfil);
-            panel1.Controls.Add(guna2ContainerControl1);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(btnAgendamento);
-            panel1.Controls.Add(btnClientes);
-            panel1.Controls.Add(btnUsuarios);
-            panel1.Controls.Add(btnProfissional);
-            panel1.Controls.Add(btnHome);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(209, 740);
-            panel1.TabIndex = 10;
-            // 
-            // btnPerfil
-            // 
-            btnPerfil.Controls.Add(pictureBox5);
-            btnPerfil.Controls.Add(lblUserLogado);
-            btnPerfil.Controls.Add(lblUserCargo);
-            btnPerfil.Cursor = Cursors.Hand;
-            btnPerfil.CustomizableEdges = customizableEdges1;
-            btnPerfil.Location = new Point(3, 129);
-            btnPerfil.Name = "btnPerfil";
-            btnPerfil.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnPerfil.Size = new Size(171, 47);
-            btnPerfil.TabIndex = 33;
-            btnPerfil.Text = " ";
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.BackColor = SystemColors.Window;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(15, 5);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(30, 30);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 32;
-            pictureBox5.TabStop = false;
-            // 
-            // lblUserLogado
-            // 
-            lblUserLogado.AutoSize = true;
-            lblUserLogado.BackColor = SystemColors.Window;
-            lblUserLogado.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUserLogado.ForeColor = Color.Black;
-            lblUserLogado.Location = new Point(52, 3);
-            lblUserLogado.Name = "lblUserLogado";
-            lblUserLogado.Size = new Size(92, 16);
-            lblUserLogado.TabIndex = 31;
-            lblUserLogado.Text = "UserLogado";
-            // 
-            // lblUserCargo
-            // 
-            lblUserCargo.AutoSize = true;
-            lblUserCargo.BackColor = SystemColors.Window;
-            lblUserCargo.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUserCargo.ForeColor = SystemColors.Highlight;
-            lblUserCargo.Location = new Point(52, 19);
-            lblUserCargo.Name = "lblUserCargo";
-            lblUserCargo.Size = new Size(49, 16);
-            lblUserCargo.TabIndex = 30;
-            lblUserCargo.Text = "Cargo";
-            // 
-            // guna2ContainerControl1
-            // 
-            guna2ContainerControl1.BorderRadius = 5;
-            guna2ContainerControl1.Controls.Add(guna2ContainerControl2);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges5;
-            guna2ContainerControl1.FillColor = Color.WhiteSmoke;
-            guna2ContainerControl1.Location = new Point(10, 107);
-            guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2ContainerControl1.Size = new Size(190, 3);
-            guna2ContainerControl1.TabIndex = 14;
-            guna2ContainerControl1.Text = "guna2ContainerControl1";
-            // 
-            // guna2ContainerControl2
-            // 
-            guna2ContainerControl2.BorderRadius = 5;
-            guna2ContainerControl2.CustomizableEdges = customizableEdges3;
-            guna2ContainerControl2.FillColor = Color.WhiteSmoke;
-            guna2ContainerControl2.Location = new Point(0, -73);
-            guna2ContainerControl2.Name = "guna2ContainerControl2";
-            guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ContainerControl2.Size = new Size(230, 3);
-            guna2ContainerControl2.TabIndex = 15;
-            guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(13, 50);
+            pictureBox1.Location = new Point(25, -2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(177, 44);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 11;
+            pictureBox1.Size = new Size(187, 121);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
-            // btnAgendamento
+            // guna2ContainerControl2
             // 
-            btnAgendamento.BorderRadius = 12;
-            btnAgendamento.Cursor = Cursors.Hand;
-            btnAgendamento.CustomizableEdges = customizableEdges7;
-            btnAgendamento.DisabledState.BorderColor = Color.DarkGray;
-            btnAgendamento.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAgendamento.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAgendamento.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAgendamento.FillColor = Color.White;
-            btnAgendamento.Font = new Font("Segoe UI", 9.75F);
-            btnAgendamento.ForeColor = SystemColors.GrayText;
-            btnAgendamento.Image = (Image)resources.GetObject("btnAgendamento.Image");
-            btnAgendamento.ImageAlign = HorizontalAlignment.Left;
-            btnAgendamento.ImageSize = new Size(25, 23);
-            btnAgendamento.Location = new Point(9, 438);
-            btnAgendamento.Name = "btnAgendamento";
-            btnAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnAgendamento.Size = new Size(165, 45);
-            btnAgendamento.TabIndex = 13;
-            btnAgendamento.Text = "Agendamentos";
-            btnAgendamento.TextAlign = HorizontalAlignment.Left;
+            guna2ContainerControl2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ContainerControl2.BackColor = SystemColors.Control;
+            guna2ContainerControl2.BorderRadius = 10;
+            guna2ContainerControl2.Controls.Add(lblCargoUser);
+            guna2ContainerControl2.Controls.Add(lblUsername);
+            guna2ContainerControl2.Controls.Add(pictureBox2);
+            guna2ContainerControl2.CustomizableEdges = customizableEdges1;
+            guna2ContainerControl2.FillColor = SystemColors.Control;
+            guna2ContainerControl2.Location = new Point(977, 45);
+            guna2ContainerControl2.Name = "guna2ContainerControl2";
+            guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2ContainerControl2.Size = new Size(176, 44);
+            guna2ContainerControl2.TabIndex = 2;
+            guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
-            // btnClientes
+            // lblCargoUser
             // 
-            btnClientes.BorderRadius = 12;
-            btnClientes.Cursor = Cursors.Hand;
-            btnClientes.CustomizableEdges = customizableEdges9;
-            btnClientes.DisabledState.BorderColor = Color.DarkGray;
-            btnClientes.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnClientes.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnClientes.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnClientes.FillColor = Color.White;
-            btnClientes.Font = new Font("Segoe UI", 9.75F);
-            btnClientes.ForeColor = SystemColors.GrayText;
-            btnClientes.Image = (Image)resources.GetObject("btnClientes.Image");
-            btnClientes.ImageAlign = HorizontalAlignment.Left;
-            btnClientes.ImageSize = new Size(25, 23);
-            btnClientes.Location = new Point(9, 387);
-            btnClientes.Name = "btnClientes";
-            btnClientes.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnClientes.Size = new Size(165, 45);
-            btnClientes.TabIndex = 13;
-            btnClientes.Text = "Clientes";
-            btnClientes.TextAlign = HorizontalAlignment.Left;
-            btnClientes.Click += btnClientes_Click;
+            lblCargoUser.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblCargoUser.AutoSize = true;
+            lblCargoUser.BackColor = SystemColors.Control;
+            lblCargoUser.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCargoUser.ForeColor = SystemColors.Highlight;
+            lblCargoUser.Location = new Point(74, 22);
+            lblCargoUser.Name = "lblCargoUser";
+            lblCargoUser.Size = new Size(49, 16);
+            lblCargoUser.TabIndex = 29;
+            lblCargoUser.Text = "Cargo";
+            lblCargoUser.Click += label3_Click;
             // 
-            // btnUsuarios
+            // lblUsername
             // 
-            btnUsuarios.BorderRadius = 12;
-            btnUsuarios.Cursor = Cursors.Hand;
-            btnUsuarios.CustomizableEdges = customizableEdges11;
-            btnUsuarios.DisabledState.BorderColor = Color.DarkGray;
-            btnUsuarios.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnUsuarios.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnUsuarios.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnUsuarios.FillColor = Color.White;
-            btnUsuarios.Font = new Font("Segoe UI", 9.75F);
-            btnUsuarios.ForeColor = SystemColors.GrayText;
-            btnUsuarios.Image = (Image)resources.GetObject("btnUsuarios.Image");
-            btnUsuarios.ImageAlign = HorizontalAlignment.Left;
-            btnUsuarios.ImageSize = new Size(25, 23);
-            btnUsuarios.Location = new Point(9, 336);
-            btnUsuarios.Name = "btnUsuarios";
-            btnUsuarios.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnUsuarios.Size = new Size(165, 45);
-            btnUsuarios.TabIndex = 13;
-            btnUsuarios.Text = "Usuários";
-            btnUsuarios.TextAlign = HorizontalAlignment.Left;
-            btnUsuarios.Click += btnUsuarios_Click;
+            lblUsername.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblUsername.AutoSize = true;
+            lblUsername.BackColor = SystemColors.Control;
+            lblUsername.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsername.ForeColor = Color.Black;
+            lblUsername.Location = new Point(18, 6);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(105, 16);
+            lblUsername.TabIndex = 29;
+            lblUsername.Text = "Nome Usuário";
+            lblUsername.Click += label3_Click;
             // 
-            // btnProfissional
+            // pictureBox2
             // 
-            btnProfissional.BorderRadius = 12;
-            btnProfissional.Cursor = Cursors.Hand;
-            btnProfissional.CustomizableEdges = customizableEdges13;
-            btnProfissional.DisabledState.BorderColor = Color.DarkGray;
-            btnProfissional.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnProfissional.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnProfissional.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnProfissional.FillColor = Color.White;
-            btnProfissional.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnProfissional.ForeColor = SystemColors.GrayText;
-            btnProfissional.Image = (Image)resources.GetObject("btnProfissional.Image");
-            btnProfissional.ImageAlign = HorizontalAlignment.Left;
-            btnProfissional.ImageSize = new Size(25, 23);
-            btnProfissional.Location = new Point(9, 287);
-            btnProfissional.Name = "btnProfissional";
-            btnProfissional.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnProfissional.Size = new Size(165, 43);
-            btnProfissional.TabIndex = 13;
-            btnProfissional.Text = "Profissionais";
-            btnProfissional.TextAlign = HorizontalAlignment.Left;
-            btnProfissional.Click += btnProfissional_Click;
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(129, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(40, 40);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
             // 
-            // btnHome
+            // btnAbrirProfissional
             // 
-            btnHome.BorderRadius = 12;
-            btnHome.Cursor = Cursors.Hand;
-            btnHome.CustomizableEdges = customizableEdges15;
-            btnHome.DisabledState.BorderColor = Color.DarkGray;
-            btnHome.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnHome.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnHome.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnHome.FillColor = Color.White;
-            btnHome.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnHome.ForeColor = SystemColors.GrayText;
-            btnHome.Image = (Image)resources.GetObject("btnHome.Image");
-            btnHome.ImageAlign = HorizontalAlignment.Left;
-            btnHome.ImageSize = new Size(25, 23);
-            btnHome.Location = new Point(9, 225);
-            btnHome.Name = "btnHome";
-            btnHome.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnHome.Size = new Size(165, 56);
-            btnHome.TabIndex = 13;
-            btnHome.Text = "Home";
-            btnHome.TextAlign = HorizontalAlignment.Left;
-            btnHome.Click += btnHome_Click;
+            btnAbrirProfissional.Anchor = AnchorStyles.None;
+            btnAbrirProfissional.BackColor = SystemColors.Control;
+            btnAbrirProfissional.BorderRadius = 10;
+            btnAbrirProfissional.Controls.Add(label2);
+            btnAbrirProfissional.Controls.Add(label1);
+            btnAbrirProfissional.Controls.Add(pictureBox3);
+            btnAbrirProfissional.Cursor = Cursors.Hand;
+            btnAbrirProfissional.CustomizableEdges = customizableEdges3;
+            btnAbrirProfissional.FillColor = SystemColors.HighlightText;
+            btnAbrirProfissional.Location = new Point(255, 154);
+            btnAbrirProfissional.Name = "btnAbrirProfissional";
+            btnAbrirProfissional.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnAbrirProfissional.Size = new Size(316, 192);
+            btnAbrirProfissional.TabIndex = 32;
+            btnAbrirProfissional.Text = "guna2ContainerControl1";
             // 
-            // guna2ControlBox1
+            // label2
             // 
-            guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox1.Animated = true;
-            guna2ControlBox1.Cursor = Cursors.Hand;
-            guna2ControlBox1.CustomizableEdges = customizableEdges17;
-            guna2ControlBox1.FillColor = Color.Transparent;
-            guna2ControlBox1.HoverState.FillColor = SystemColors.Highlight;
-            guna2ControlBox1.HoverState.IconColor = Color.White;
-            guna2ControlBox1.IconColor = Color.Black;
-            guna2ControlBox1.Location = new Point(1051, 12);
-            guna2ControlBox1.Name = "guna2ControlBox1";
-            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2ControlBox1.Size = new Size(45, 29);
-            guna2ControlBox1.TabIndex = 12;
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Silver;
+            label2.Location = new Point(50, 104);
+            label2.Name = "label2";
+            label2.Size = new Size(105, 16);
+            label2.TabIndex = 30;
+            label2.Text = "Inserir | Editar";
             // 
-            // guna2ControlBox3
+            // label1
             // 
-            guna2ControlBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox3.Animated = true;
-            guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            guna2ControlBox3.Cursor = Cursors.Hand;
-            guna2ControlBox3.CustomizableEdges = customizableEdges19;
-            guna2ControlBox3.FillColor = Color.Transparent;
-            guna2ControlBox3.HoverState.FillColor = SystemColors.Highlight;
-            guna2ControlBox3.HoverState.IconColor = Color.White;
-            guna2ControlBox3.IconColor = Color.Black;
-            guna2ControlBox3.Location = new Point(949, 12);
-            guna2ControlBox3.Name = "guna2ControlBox3";
-            guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2ControlBox3.Size = new Size(45, 29);
-            guna2ControlBox3.TabIndex = 12;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Arial Black", 17.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.WindowFrame;
+            label1.Location = new Point(29, 71);
+            label1.Name = "label1";
+            label1.Size = new Size(162, 32);
+            label1.TabIndex = 30;
+            label1.Text = "Profissional";
             // 
-            // guna2ControlBox2
+            // pictureBox3
             // 
-            guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox2.Animated = true;
-            guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            guna2ControlBox2.Cursor = Cursors.Hand;
-            guna2ControlBox2.CustomizableEdges = customizableEdges21;
-            guna2ControlBox2.FillColor = Color.Transparent;
-            guna2ControlBox2.HoverState.FillColor = SystemColors.Highlight;
-            guna2ControlBox2.HoverState.IconColor = Color.White;
-            guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(1000, 12);
-            guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2ControlBox2.Size = new Size(45, 29);
-            guna2ControlBox2.TabIndex = 12;
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(175, 48);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(162, 99);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 0;
+            pictureBox3.TabStop = false;
             // 
-            // panelContainer
+            // btnAbrirCliente
             // 
-            panelContainer.Controls.Add(ctrlPrincipal1);
-            panelContainer.Dock = DockStyle.Fill;
-            panelContainer.Location = new Point(209, 0);
-            panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(1108, 740);
-            panelContainer.TabIndex = 13;
+            btnAbrirCliente.Anchor = AnchorStyles.None;
+            btnAbrirCliente.BackColor = SystemColors.Control;
+            btnAbrirCliente.BorderRadius = 10;
+            btnAbrirCliente.Controls.Add(label3);
+            btnAbrirCliente.Controls.Add(label4);
+            btnAbrirCliente.Controls.Add(pictureBox5);
+            btnAbrirCliente.Cursor = Cursors.Hand;
+            btnAbrirCliente.CustomizableEdges = customizableEdges5;
+            btnAbrirCliente.FillColor = SystemColors.HighlightText;
+            btnAbrirCliente.Location = new Point(255, 368);
+            btnAbrirCliente.Name = "btnAbrirCliente";
+            btnAbrirCliente.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnAbrirCliente.Size = new Size(316, 192);
+            btnAbrirCliente.TabIndex = 32;
+            btnAbrirCliente.Text = "guna2ContainerControl1";
             // 
-            // ctrlPrincipal1
+            // label3
             // 
-            ctrlPrincipal1.Dock = DockStyle.Fill;
-            ctrlPrincipal1.Location = new Point(0, 0);
-            ctrlPrincipal1.Name = "ctrlPrincipal1";
-            ctrlPrincipal1.Size = new Size(1108, 740);
-            ctrlPrincipal1.TabIndex = 0;
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Silver;
+            label3.Location = new Point(47, 110);
+            label3.Name = "label3";
+            label3.Size = new Size(105, 16);
+            label3.TabIndex = 31;
+            label3.Text = "Inserir | Editar";
             // 
-            // panel2
+            // label4
             // 
-            panel2.Controls.Add(guna2ControlBox1);
-            panel2.Controls.Add(guna2ControlBox2);
-            panel2.Controls.Add(guna2ControlBox3);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(209, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1108, 48);
-            panel2.TabIndex = 14;
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Arial Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.WindowFrame;
+            label4.Location = new Point(29, 72);
+            label4.Name = "label4";
+            label4.Size = new Size(139, 38);
+            label4.TabIndex = 32;
+            label4.Text = "Clientes";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = Color.Transparent;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(156, 55);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(160, 91);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 0;
+            pictureBox5.TabStop = false;
+            // 
+            // btnAbrirUsuario
+            // 
+            btnAbrirUsuario.Anchor = AnchorStyles.None;
+            btnAbrirUsuario.BackColor = SystemColors.Control;
+            btnAbrirUsuario.BorderRadius = 10;
+            btnAbrirUsuario.Controls.Add(label5);
+            btnAbrirUsuario.Controls.Add(label6);
+            btnAbrirUsuario.Controls.Add(pictureBox4);
+            btnAbrirUsuario.Cursor = Cursors.Hand;
+            btnAbrirUsuario.CustomizableEdges = customizableEdges7;
+            btnAbrirUsuario.FillColor = SystemColors.HighlightText;
+            btnAbrirUsuario.Location = new Point(610, 154);
+            btnAbrirUsuario.Name = "btnAbrirUsuario";
+            btnAbrirUsuario.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnAbrirUsuario.Size = new Size(316, 192);
+            btnAbrirUsuario.TabIndex = 32;
+            btnAbrirUsuario.Text = "guna2ContainerControl1";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Silver;
+            label5.Location = new Point(49, 111);
+            label5.Name = "label5";
+            label5.Size = new Size(105, 16);
+            label5.TabIndex = 33;
+            label5.Text = "Inserir | Editar";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Arial Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.WindowFrame;
+            label6.Location = new Point(37, 74);
+            label6.Name = "label6";
+            label6.Size = new Size(131, 38);
+            label6.TabIndex = 34;
+            label6.Text = "Usuário";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(162, 48);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(170, 109);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 0;
+            pictureBox4.TabStop = false;
+            // 
+            // btnAbrirAgendamento
+            // 
+            btnAbrirAgendamento.Anchor = AnchorStyles.None;
+            btnAbrirAgendamento.BackColor = SystemColors.Control;
+            btnAbrirAgendamento.BorderRadius = 10;
+            btnAbrirAgendamento.Controls.Add(label7);
+            btnAbrirAgendamento.Controls.Add(label8);
+            btnAbrirAgendamento.Controls.Add(pictureBox6);
+            btnAbrirAgendamento.Cursor = Cursors.Hand;
+            btnAbrirAgendamento.CustomizableEdges = customizableEdges9;
+            btnAbrirAgendamento.FillColor = SystemColors.HighlightText;
+            btnAbrirAgendamento.Location = new Point(610, 368);
+            btnAbrirAgendamento.Name = "btnAbrirAgendamento";
+            btnAbrirAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAbrirAgendamento.Size = new Size(316, 192);
+            btnAbrirAgendamento.TabIndex = 32;
+            btnAbrirAgendamento.Text = "guna2ContainerControl1";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Silver;
+            label7.Location = new Point(63, 103);
+            label7.Name = "label7";
+            label7.Size = new Size(105, 16);
+            label7.TabIndex = 35;
+            label7.Text = "Inserir | Editar";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = SystemColors.WindowFrame;
+            label8.Location = new Point(25, 72);
+            label8.Name = "label8";
+            label8.Size = new Size(173, 28);
+            label8.TabIndex = 36;
+            label8.Text = "Agendamentos";
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = Color.Transparent;
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(197, 55);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(120, 80);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 0;
+            pictureBox6.TabStop = false;
             // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1317, 740);
-            ControlBox = false;
-            Controls.Add(panel2);
-            Controls.Add(panelContainer);
-            Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            MaximizeBox = false;
-            MinimumSize = new Size(1200, 740);
+            ClientSize = new Size(1184, 661);
+            Controls.Add(btnAbrirAgendamento);
+            Controls.Add(btnAbrirCliente);
+            Controls.Add(btnAbrirUsuario);
+            Controls.Add(btnAbrirProfissional);
+            Controls.Add(guna2ContainerControl2);
+            Controls.Add(pictureBox1);
             Name = "FrmPrincipal";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = " ";
-            WindowState = FormWindowState.Maximized;
-            Load += FrmPrincipal_Load;
-            panel1.ResumeLayout(false);
-            btnPerfil.ResumeLayout(false);
-            btnPerfil.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            guna2ContainerControl1.ResumeLayout(false);
+            Text = "FrmPrincipal";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panelContainer.ResumeLayout(false);
-            panel2.ResumeLayout(false);
+            guna2ContainerControl2.ResumeLayout(false);
+            guna2ContainerControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            btnAbrirProfissional.ResumeLayout(false);
+            btnAbrirProfissional.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            btnAbrirCliente.ResumeLayout(false);
+            btnAbrirCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            btnAbrirUsuario.ResumeLayout(false);
+            btnAbrirUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            btnAbrirAgendamento.ResumeLayout(false);
+            btnAbrirAgendamento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button btnUsuarios;
-        private Guna.UI2.WinForms.Guna2Button btnClientes;
-        private Guna.UI2.WinForms.Guna2Button btnHome;
-        private Guna.UI2.WinForms.Guna2Button btnProfissional;
-        private Guna.UI2.WinForms.Guna2Button btnAgendamento;
+
         private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private PictureBox pictureBox5;
-        private Label lblUserCargo;
-        private Label lblUserLogado;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
-        private Guna.UI2.WinForms.Guna2ContainerControl btnPerfil;
-        private Panel panelContainer;
-        private CtrlPrincipal ctrlPrincipal1;
-        private Panel panel2;
+        private PictureBox pictureBox2;
+        private Label lblUsername;
+        private Label lblCargoUser;
+        private Guna.UI2.WinForms.Guna2ContainerControl btnAbrirProfissional;
+        private Guna.UI2.WinForms.Guna2ContainerControl btnAbrirCliente;
+        private Guna.UI2.WinForms.Guna2ContainerControl btnAbrirUsuario;
+        private Guna.UI2.WinForms.Guna2ContainerControl btnAbrirAgendamento;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox6;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Label label8;
     }
 }
