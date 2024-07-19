@@ -266,9 +266,10 @@ namespace Psicomind
 
         }
 
-        private void pnp_Paint(object sender, PaintEventArgs e)
+        private void btnVoltar_Click(object sender, EventArgs e)
         {
-
+            CtrlCliente ctrlCliente = new();
+            addUserControl(ctrlCliente);
         }
     }
 }
