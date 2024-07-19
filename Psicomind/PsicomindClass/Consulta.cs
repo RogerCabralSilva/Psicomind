@@ -8,5 +8,11 @@ namespace PsicomindClass
 {
     public class Consulta
     {
+        public int Id { get; set; }
+        public int Agendamento_id { get; set; }
+        public DateTime Data_consulta { get; set; }
+        public DateTime Horarios_consulta { get; set; }
+        public string Motivos_consultas { get; set; }
+
     }
 }
