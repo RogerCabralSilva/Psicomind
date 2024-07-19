@@ -142,20 +142,25 @@
             // btnAbrirProfissional
             // 
             btnAbrirProfissional.Anchor = AnchorStyles.None;
-            btnAbrirProfissional.BackColor = SystemColors.Control;
+            btnAbrirProfissional.BackColor = Color.Transparent;
             btnAbrirProfissional.BorderRadius = 10;
             btnAbrirProfissional.Controls.Add(label2);
             btnAbrirProfissional.Controls.Add(label1);
             btnAbrirProfissional.Controls.Add(pictureBox3);
             btnAbrirProfissional.Cursor = Cursors.Hand;
             btnAbrirProfissional.CustomizableEdges = customizableEdges3;
-            btnAbrirProfissional.FillColor = SystemColors.HighlightText;
             btnAbrirProfissional.Location = new Point(255, 154);
             btnAbrirProfissional.Name = "btnAbrirProfissional";
+            btnAbrirProfissional.ShadowDecoration.BorderRadius = 10;
+            btnAbrirProfissional.ShadowDecoration.Color = Color.DarkGray;
             btnAbrirProfissional.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnAbrirProfissional.ShadowDecoration.Depth = 60;
+            btnAbrirProfissional.ShadowDecoration.Enabled = true;
+            btnAbrirProfissional.ShadowDecoration.Shadow = new Padding(5, 5, 2, 5);
             btnAbrirProfissional.Size = new Size(316, 192);
             btnAbrirProfissional.TabIndex = 32;
             btnAbrirProfissional.Text = "guna2ContainerControl1";
+            btnAbrirProfissional.MouseMove += btnAbrirProfissional_MouseMove;
             // 
             // label2
             // 

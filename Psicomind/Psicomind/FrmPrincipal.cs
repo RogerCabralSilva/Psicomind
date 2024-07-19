@@ -26,5 +26,10 @@ namespace Psicomind
         {
 
         }
+
+        private void btnAbrirProfissional_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnAbrirProfissional.Size = new Size(133, 222);
+        }
     }
 }

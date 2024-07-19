@@ -832,7 +832,6 @@
             pnp.Name = "pnp";
             pnp.Size = new Size(1056, 693);
             pnp.TabIndex = 32;
-            pnp.Paint += pnp_Paint;
             // 
             // CtrlClienteInserir
             // 
