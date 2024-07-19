@@ -162,7 +162,16 @@ namespace Psicomind
                 Genero.ObterPorId(Convert.ToInt32(cmbGenero.SelectedValue))
             );
 
-            cliente.Inserir();
+            try 
+            {
+                cliente.Inserir();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex) 
+            {
+                MessageBox.Show($"Já existe alguma informação inserida !!!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
 
             // Se cliente tiver id mostre isso
 
@@ -183,12 +192,12 @@ namespace Psicomind
                     TipoEndereco.ObterPorId(Convert.ToInt32(cmbTipoEndereco.SelectedValue))
                 );
 
-                
+
                 endereco.Inserir();
             }
             else
             {
-                MessageBox.Show("Erro ao cadastrar cliente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao cadastrar endereço.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             // Se cliente tiver id mostre isso
@@ -208,7 +217,7 @@ namespace Psicomind
             }
             else
             {
-                MessageBox.Show("Erro ao cadastrar cliente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao cadastrar telefone", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -257,5 +266,9 @@ namespace Psicomind
 
         }
 
+        private void pnp_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
