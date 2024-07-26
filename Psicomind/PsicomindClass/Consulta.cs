@@ -13,6 +13,8 @@ namespace PsicomindClass
         public DateTime Data_consulta { get; set; }
         public DateTime Horarios_consulta { get; set; }
         public string Motivos_consultas { get; set; }
+        public string Observacoes_consulta { get; set; }
+        public bool Status_pagamento { get; set; }
 
     }
 }
