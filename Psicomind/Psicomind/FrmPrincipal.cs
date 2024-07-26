@@ -17,19 +17,30 @@ namespace Psicomind
             InitializeComponent();
         }
 
-        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        private void btnAbrirProfissional_MouseLeave(object sender, EventArgs e)
         {
+            btnAbrirProfissional.ShadowDecoration.Enabled = false;
+        }
+
+        private void btnAbrirProfissional_MouseHover(object sender, EventArgs e)
+        {
+            btnAbrirProfissional.ShadowDecoration.Enabled = true;
+        }
+
+        private void btnAbrirProfissional_Click(object sender, EventArgs e)
+        {
+            FrmClientesMenu frmClientesMenu = new FrmClientesMenu();
+            frmClientesMenu.StartPosition = FormStartPosition.CenterParent;
+            frmClientesMenu.Show();
+
+           this.Hide();
+            frmClientesMenu.FormClosed += (s, args) => this.Close();
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnAbrirProfissional_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnAbrirProfissional.Size = new Size(133, 222);
+            
         }
     }
 }

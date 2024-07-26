@@ -112,7 +112,6 @@
             lblCargoUser.Size = new Size(49, 16);
             lblCargoUser.TabIndex = 29;
             lblCargoUser.Text = "Cargo";
-            lblCargoUser.Click += label3_Click;
             // 
             // lblUsername
             // 
@@ -126,7 +125,6 @@
             lblUsername.Size = new Size(105, 16);
             lblUsername.TabIndex = 29;
             lblUsername.Text = "Nome Usuário";
-            lblUsername.Click += label3_Click;
             // 
             // pictureBox2
             // 
@@ -155,17 +153,18 @@
             btnAbrirProfissional.ShadowDecoration.Color = Color.DarkGray;
             btnAbrirProfissional.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnAbrirProfissional.ShadowDecoration.Depth = 60;
-            btnAbrirProfissional.ShadowDecoration.Enabled = true;
-            btnAbrirProfissional.ShadowDecoration.Shadow = new Padding(5, 5, 2, 5);
             btnAbrirProfissional.Size = new Size(316, 192);
             btnAbrirProfissional.TabIndex = 32;
             btnAbrirProfissional.Text = "guna2ContainerControl1";
-            btnAbrirProfissional.MouseMove += btnAbrirProfissional_MouseMove;
+            btnAbrirProfissional.Click += btnAbrirProfissional_Click;
+            btnAbrirProfissional.MouseLeave += btnAbrirProfissional_MouseLeave;
+            btnAbrirProfissional.MouseHover += btnAbrirProfissional_MouseHover;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
+            label2.Enabled = false;
             label2.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Silver;
             label2.Location = new Point(50, 104);
@@ -178,6 +177,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
+            label1.Enabled = false;
             label1.Font = new Font("Arial Black", 17.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.WindowFrame;
             label1.Location = new Point(29, 71);
@@ -189,6 +189,7 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Enabled = false;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(175, 48);
             pictureBox3.Name = "pictureBox3";
@@ -369,6 +370,7 @@
             Controls.Add(pictureBox1);
             Name = "FrmPrincipal";
             Text = "FrmPrincipal";
+            Load += FrmPrincipal_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2ContainerControl2.ResumeLayout(false);
             guna2ContainerControl2.PerformLayout();
