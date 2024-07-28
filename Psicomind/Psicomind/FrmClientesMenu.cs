@@ -30,7 +30,7 @@ namespace Psicomind
 
             clienteInserir.Show();
 
-            this.Close();
+            
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -48,13 +48,19 @@ namespace Psicomind
             FrmClienteConsultar clienteConsultar = new FrmClienteConsultar();
 
             clienteConsultar.StartPosition = FormStartPosition.CenterScreen;
+            clienteConsultar.Show();
 
-           
+            this.Close();
         }
 
         private void btnPagEditarCliente_Click(object sender, EventArgs e)
         {
+            FrmClienteEditar FrmClienteEditar = new FrmClienteEditar();
 
+            FrmClienteEditar.StartPosition = FormStartPosition.CenterScreen;
+            FrmClienteEditar.Show();
+
+            this.Close();
         }
     }
 }

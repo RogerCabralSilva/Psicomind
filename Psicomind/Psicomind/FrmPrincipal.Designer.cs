@@ -397,6 +397,7 @@
             Name = "FrmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmPrincipal";
+            WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2ContainerControl2.ResumeLayout(false);
             guna2ContainerControl2.PerformLayout();

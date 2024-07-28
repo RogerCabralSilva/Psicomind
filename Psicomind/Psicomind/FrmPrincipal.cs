@@ -70,6 +70,11 @@ namespace Psicomind
 
         private void btnAbrirCliente_Click(object sender, EventArgs e)
         {
+            FrmClientesMenu FrmClientesMenu = new FrmClientesMenu();
+
+            FrmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
+
+            FrmClientesMenu.Show();
         }
     }
 }
