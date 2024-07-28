@@ -1,16 +1,16 @@
 ﻿namespace Psicomind
 {
-    partial class CtrlClienteInserir
+    partial class FrmClientesInserir
     {
-        /// <summary> 
-        /// Variável de designer necessária.
+        /// <summary>
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Limpar os recursos que estão sendo usados.
+        /// <summary>
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,17 +20,17 @@
             base.Dispose(disposing);
         }
 
-        #region Código gerado pelo Designer de Componentes
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrlClienteInserir));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClientesInserir));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -108,13 +108,11 @@
             label3 = new Label();
             txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             txtNome = new Guna.UI2.WinForms.Guna2TextBox();
-            pnp = new Panel();
             guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             guna2ContainerControl3.SuspendLayout();
             guna2ContainerControl4.SuspendLayout();
             guna2ContainerControl1.SuspendLayout();
-            pnp.SuspendLayout();
             SuspendLayout();
             // 
             // guna2ContainerControl2
@@ -158,13 +156,12 @@
             guna2ContainerControl2.Controls.Add(txtSenha);
             guna2ContainerControl2.Controls.Add(txtNome);
             guna2ContainerControl2.CustomizableEdges = customizableEdges35;
-            guna2ContainerControl2.Location = new Point(142, 35);
+            guna2ContainerControl2.Location = new Point(153, 12);
             guna2ContainerControl2.Name = "guna2ContainerControl2";
             guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges36;
             guna2ContainerControl2.Size = new Size(748, 624);
-            guna2ContainerControl2.TabIndex = 28;
+            guna2ContainerControl2.TabIndex = 29;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
-            guna2ContainerControl2.Click += guna2ContainerControl2_Click;
             // 
             // btnVoltar
             // 
@@ -177,7 +174,6 @@
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnVoltar.TabIndex = 41;
             btnVoltar.TabStop = false;
-            btnVoltar.Click += btnVoltar_Click;
             // 
             // guna2ContainerControl3
             // 
@@ -246,7 +242,7 @@
             mtxCep.Name = "mtxCep";
             mtxCep.Size = new Size(100, 16);
             mtxCep.TabIndex = 8;
-            mtxCep.TextChanged += mtxCep_TextChanged;
+            mtxCep.TextChanged += mtxCep_TextChanged_1;
             // 
             // guna2ContainerControl1
             // 
@@ -293,7 +289,6 @@
             // 
             // btnLimpar
             // 
-            btnLimpar.Animated = true;
             btnLimpar.BackColor = Color.White;
             btnLimpar.BorderRadius = 10;
             btnLimpar.Cursor = Cursors.Hand;
@@ -826,23 +821,15 @@
             txtNome.Size = new Size(233, 25);
             txtNome.TabIndex = 0;
             // 
-            // pnp
-            // 
-            pnp.Controls.Add(guna2ContainerControl2);
-            pnp.Dock = DockStyle.Fill;
-            pnp.Location = new Point(0, 0);
-            pnp.Name = "pnp";
-            pnp.Size = new Size(1056, 693);
-            pnp.TabIndex = 32;
-            // 
-            // CtrlClienteInserir
+            // FrmClientesInserir
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(pnp);
-            Name = "CtrlClienteInserir";
-            Size = new Size(1056, 693);
-            Load += CtrlClienteInserir_Load;
+            ClientSize = new Size(1040, 654);
+            Controls.Add(guna2ContainerControl2);
+            Name = "FrmClientesInserir";
+            Text = "FrmClientesAdicionar";
+            Load += FrmClientesInserir_Load;
             guna2ContainerControl2.ResumeLayout(false);
             guna2ContainerControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).EndInit();
@@ -852,55 +839,53 @@
             guna2ContainerControl4.PerformLayout();
             guna2ContainerControl1.ResumeLayout(false);
             guna2ContainerControl1.PerformLayout();
-            pnp.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
-        private Guna.UI2.WinForms.Guna2TextBox txtNome;
-        private Label label3;
-        private Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txtSenha;
-        private Label label4;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbGenero;
-        private Label label5;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dptDataNascimento;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbTipoTelefone;
-        private Label label9;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbTipoEndereco;
-        private Label label16;
-        private Label label15;
-        private Guna.UI2.WinForms.Guna2TextBox txtUf;
-        private Guna.UI2.WinForms.Guna2TextBox txtBairro;
-        private Label label14;
-        private Guna.UI2.WinForms.Guna2TextBox txtRua;
-        private Label label13;
-        private Label label12;
-        private Label label11;
-        private Label label10;
-        private Guna.UI2.WinForms.Guna2TextBox txtNumero;
-        private Label label17;
-        private Guna.UI2.WinForms.Guna2TextBox txtCidade;
-        private Guna.UI2.WinForms.Guna2Button btnInserir;
-        private Guna.UI2.WinForms.Guna2Button btnLimpar;
-        private TextBox txtClienteId;
-        private MaskedTextBox mtxTelefone;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
-        private TextBox textBox1;
+        private PictureBox btnVoltar;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl3;
         private TextBox textBox2;
         private MaskedTextBox mtxCpf;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl4;
         private TextBox textBox3;
         private MaskedTextBox mtxCep;
-        private Panel pnp;
-        private PictureBox btnVoltar;
+        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
+        private TextBox textBox1;
+        private MaskedTextBox mtxTelefone;
+        private TextBox txtClienteId;
+        private Guna.UI2.WinForms.Guna2Button btnLimpar;
+        private Guna.UI2.WinForms.Guna2Button btnInserir;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dptDataNascimento;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbTipoEndereco;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbTipoTelefone;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbGenero;
+        private Label label17;
+        private Label label16;
+        private Label label7;
+        private Label label15;
+        private Label label5;
+        private Guna.UI2.WinForms.Guna2TextBox txtUf;
+        private Label label2;
+        private Guna.UI2.WinForms.Guna2TextBox txtCidade;
+        private Guna.UI2.WinForms.Guna2TextBox txtBairro;
+        private Label label14;
+        private Guna.UI2.WinForms.Guna2TextBox txtRua;
+        private Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private Label label13;
+        private Label label6;
+        private Label label12;
+        private Label label8;
+        private Label label11;
+        private Label label4;
+        private Label label10;
+        private Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox txtNumero;
+        private Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txtSenha;
+        private Guna.UI2.WinForms.Guna2TextBox txtNome;
     }
 }

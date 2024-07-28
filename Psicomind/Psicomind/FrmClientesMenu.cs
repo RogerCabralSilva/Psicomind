@@ -21,5 +21,17 @@ namespace Psicomind
         {
 
         }
+
+        private void btnPagInserirCliente_Click(object sender, EventArgs e)
+        {
+            FrmClientesInserir clienteInserir = new FrmClientesInserir();
+
+            clienteInserir.StartPosition = FormStartPosition.CenterScreen;
+
+            clienteInserir.Show();
+
+            this.Hide();
+            clienteInserir.FormClosed += (s, args) => this.Close();
+        }
     }
 }

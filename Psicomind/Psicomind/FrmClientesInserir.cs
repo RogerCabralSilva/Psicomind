@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,34 +11,11 @@ using System.Windows.Forms;
 
 namespace Psicomind
 {
-    public partial class CtrlClienteInserir : UserControl
+    public partial class FrmClientesInserir : Form
     {
-        public CtrlClienteInserir()
+        public FrmClientesInserir()
         {
             InitializeComponent();
-
-
-        }
-
-        private bool labelUnderline = false;
-
-        private void CtrlClienteInserir_Load(object sender, EventArgs e)
-        {
-            // Preenche os combo box
-            var genero = Genero.ObterLista();
-            cmbGenero.DataSource = genero;
-            cmbGenero.DisplayMember = "Genero_nome";
-            cmbGenero.ValueMember = "id";
-
-            var tipoEndereco = TipoEndereco.ObterLista();
-            cmbTipoEndereco.DataSource = tipoEndereco;
-            cmbTipoEndereco.DisplayMember = "Nome";
-            cmbTipoEndereco.ValueMember = "id";
-
-            var tipoTelefone = TelefoneTipo.ObterLista();
-            cmbTipoTelefone.DataSource = tipoTelefone;
-            cmbTipoTelefone.DisplayMember = "Tipo";
-            cmbTipoTelefone.ValueMember = "id";
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -57,12 +33,10 @@ namespace Psicomind
             txtNumero.Clear();
             txtCidade.Clear();
             txtUf.Clear();
-
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-
             // Tirando os traços do maskedTexBox
             mtxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             mtxTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
@@ -221,10 +195,27 @@ namespace Psicomind
             }
         }
 
-
-        private void mtxCep_TextChanged(object sender, EventArgs e)
+        private void FrmClientesInserir_Load(object sender, EventArgs e)
         {
+            // Preenche os combo box
+            var genero = Genero.ObterLista();
+            cmbGenero.DataSource = genero;
+            cmbGenero.DisplayMember = "Genero_nome";
+            cmbGenero.ValueMember = "id";
 
+            var tipoEndereco = TipoEndereco.ObterLista();
+            cmbTipoEndereco.DataSource = tipoEndereco;
+            cmbTipoEndereco.DisplayMember = "Nome";
+            cmbTipoEndereco.ValueMember = "id";
+
+            var tipoTelefone = TelefoneTipo.ObterLista();
+            cmbTipoTelefone.DataSource = tipoTelefone;
+            cmbTipoTelefone.DisplayMember = "Tipo";
+            cmbTipoTelefone.ValueMember = "id";
+        }
+
+        private void mtxCep_TextChanged_1(object sender, EventArgs e)
+        {
             // Preenche as informações com os dados do cep
             if (mtxCep.Text.Length > 7)
             {
@@ -248,33 +239,6 @@ namespace Psicomind
                 txtRua.Clear();
 
             }
-
-        }
-
-
-
-        private void addUserControl(UserControl userControl)
-        {
-            // Responsável por trocar as telas
-
-            CtrlCliente ctrlCliente = new();
-
-            userControl.Dock = DockStyle.Fill;
-            pnp.Controls.Clear();
-            pnp.Controls.Add(userControl);
-            userControl.BringToFront();
-
-        }
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            CtrlCliente ctrlCliente = new();
-            addUserControl(ctrlCliente);
-        }
-
-        private void guna2ContainerControl2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -224,6 +224,7 @@
             btnPagInserirCliente.Size = new Size(212, 206);
             btnPagInserirCliente.TabIndex = 36;
             btnPagInserirCliente.Text = "guna2ContainerControl1";
+            btnPagInserirCliente.Click += btnPagInserirCliente_Click;
             // 
             // pictureBox1
             // 

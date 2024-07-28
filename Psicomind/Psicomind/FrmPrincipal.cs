@@ -30,7 +30,7 @@ namespace Psicomind
         private void btnAbrirProfissional_Click(object sender, EventArgs e)
         {
             FrmClientesMenu frmClientesMenu = new FrmClientesMenu();
-            frmClientesMenu.StartPosition = FormStartPosition.CenterParent;
+            frmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
             frmClientesMenu.Show();
 
            this.Hide();

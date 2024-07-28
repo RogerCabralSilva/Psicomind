@@ -369,6 +369,7 @@
             Controls.Add(guna2ContainerControl2);
             Controls.Add(pictureBox1);
             Name = "FrmPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmPrincipal";
             Load += FrmPrincipal_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
