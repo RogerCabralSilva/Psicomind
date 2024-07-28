@@ -211,15 +211,22 @@
             btnAbrirCliente.FillColor = SystemColors.HighlightText;
             btnAbrirCliente.Location = new Point(255, 368);
             btnAbrirCliente.Name = "btnAbrirCliente";
+            btnAbrirCliente.ShadowDecoration.BorderRadius = 10;
+            btnAbrirCliente.ShadowDecoration.Color = Color.DarkGray;
             btnAbrirCliente.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnAbrirCliente.ShadowDecoration.Depth = 60;
             btnAbrirCliente.Size = new Size(316, 192);
             btnAbrirCliente.TabIndex = 32;
             btnAbrirCliente.Text = "guna2ContainerControl1";
+            btnAbrirCliente.Click += btnAbrirCliente_Click;
+            btnAbrirCliente.MouseLeave += btnAbrirCliente_MouseLeave;
+            btnAbrirCliente.MouseHover += btnAbrirCliente_MouseHover;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
+            label3.Enabled = false;
             label3.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Silver;
             label3.Location = new Point(47, 110);
@@ -232,6 +239,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
+            label4.Enabled = false;
             label4.Font = new Font("Arial Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.WindowFrame;
             label4.Location = new Point(29, 72);
@@ -243,6 +251,7 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.Transparent;
+            pictureBox5.Enabled = false;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(156, 55);
             pictureBox5.Name = "pictureBox5";
@@ -264,15 +273,22 @@
             btnAbrirUsuario.FillColor = SystemColors.HighlightText;
             btnAbrirUsuario.Location = new Point(610, 154);
             btnAbrirUsuario.Name = "btnAbrirUsuario";
+            btnAbrirUsuario.ShadowDecoration.BorderRadius = 10;
+            btnAbrirUsuario.ShadowDecoration.Color = Color.DarkGray;
             btnAbrirUsuario.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnAbrirUsuario.ShadowDecoration.Depth = 60;
             btnAbrirUsuario.Size = new Size(316, 192);
             btnAbrirUsuario.TabIndex = 32;
             btnAbrirUsuario.Text = "guna2ContainerControl1";
+            btnAbrirUsuario.Click += btnAbrirUsuario_Click;
+            btnAbrirUsuario.MouseLeave += btnAbrirUsuario_MouseLeave;
+            btnAbrirUsuario.MouseHover += btnAbrirUsuario_MouseHover;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
+            label5.Enabled = false;
             label5.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Silver;
             label5.Location = new Point(49, 111);
@@ -285,6 +301,7 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
+            label6.Enabled = false;
             label6.Font = new Font("Arial Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.WindowFrame;
             label6.Location = new Point(37, 74);
@@ -296,6 +313,7 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.Enabled = false;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(162, 48);
             pictureBox4.Name = "pictureBox4";
@@ -317,15 +335,21 @@
             btnAbrirAgendamento.FillColor = SystemColors.HighlightText;
             btnAbrirAgendamento.Location = new Point(610, 368);
             btnAbrirAgendamento.Name = "btnAbrirAgendamento";
+            btnAbrirAgendamento.ShadowDecoration.BorderRadius = 10;
+            btnAbrirAgendamento.ShadowDecoration.Color = Color.DarkGray;
             btnAbrirAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAbrirAgendamento.ShadowDecoration.Depth = 60;
             btnAbrirAgendamento.Size = new Size(316, 192);
             btnAbrirAgendamento.TabIndex = 32;
             btnAbrirAgendamento.Text = "guna2ContainerControl1";
+            btnAbrirAgendamento.MouseLeave += btnAbrirAgendamento_MouseLeave;
+            btnAbrirAgendamento.MouseHover += btnAbrirAgendamento_MouseHover;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
+            label7.Enabled = false;
             label7.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Silver;
             label7.Location = new Point(63, 103);
@@ -338,6 +362,7 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
+            label8.Enabled = false;
             label8.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = SystemColors.WindowFrame;
             label8.Location = new Point(25, 72);
@@ -349,6 +374,7 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.Transparent;
+            pictureBox6.Enabled = false;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(197, 55);
             pictureBox6.Name = "pictureBox6";
@@ -371,7 +397,6 @@
             Name = "FrmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmPrincipal";
-            Load += FrmPrincipal_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2ContainerControl2.ResumeLayout(false);
             guna2ContainerControl2.PerformLayout();

@@ -30,8 +30,31 @@ namespace Psicomind
 
             clienteInserir.Show();
 
-            this.Hide();
-            clienteInserir.FormClosed += (s, args) => this.Close();
+            this.Close();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            FrmPrincipal FrmPrincipal = new FrmPrincipal();
+
+            FrmPrincipal.StartPosition = FormStartPosition.CenterScreen;
+            FrmPrincipal.Show();
+
+            this.Close();
+        }
+
+        private void btnPagConsultarCliente_Click(object sender, EventArgs e)
+        {
+            FrmClienteConsultar clienteConsultar = new FrmClienteConsultar();
+
+            clienteConsultar.StartPosition = FormStartPosition.CenterScreen;
+
+           
+        }
+
+        private void btnPagEditarCliente_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

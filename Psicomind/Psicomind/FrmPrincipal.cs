@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Psicomind
 {
@@ -29,18 +30,46 @@ namespace Psicomind
 
         private void btnAbrirProfissional_Click(object sender, EventArgs e)
         {
-            FrmClientesMenu frmClientesMenu = new FrmClientesMenu();
-            frmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
-            frmClientesMenu.Show();
+            
+        }
 
-           this.Hide();
-            frmClientesMenu.FormClosed += (s, args) => this.Close();
+        private void btnAbrirUsuario_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
+        private void btnAbrirUsuario_MouseHover(object sender, EventArgs e)
         {
-            
+            btnAbrirUsuario.ShadowDecoration.Enabled = true;
+        }
+
+        private void btnAbrirUsuario_MouseLeave(object sender, EventArgs e)
+        {
+            btnAbrirUsuario.ShadowDecoration.Enabled = false;
+        }
+
+        private void btnAbrirCliente_MouseHover(object sender, EventArgs e)
+        {
+            btnAbrirCliente.ShadowDecoration.Enabled = true;
+        }
+
+        private void btnAbrirCliente_MouseLeave(object sender, EventArgs e)
+        {
+            btnAbrirCliente.ShadowDecoration.Enabled = false;
+        }
+
+        private void btnAbrirAgendamento_MouseHover(object sender, EventArgs e)
+        {
+            btnAbrirAgendamento.ShadowDecoration.Enabled = true;
+        }
+
+        private void btnAbrirAgendamento_MouseLeave(object sender, EventArgs e)
+        {
+            btnAbrirAgendamento.ShadowDecoration.Enabled = false;
+        }
+
+        private void btnAbrirCliente_Click(object sender, EventArgs e)
+        {
         }
     }
 }

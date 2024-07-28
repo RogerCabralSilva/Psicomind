@@ -50,12 +50,14 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
+            btnVoltar = new PictureBox();
             btnPagEditarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             btnPagConsultarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             btnPagInserirCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             SuspendLayout();
             // 
             // txtPsicomind
@@ -99,6 +101,7 @@
             btnPagEditarCliente.Size = new Size(212, 197);
             btnPagEditarCliente.TabIndex = 38;
             btnPagEditarCliente.Text = "guna2ContainerControl1";
+            btnPagEditarCliente.Click += btnPagEditarCliente_Click;
             // 
             // pictureBox5
             // 
@@ -156,6 +159,7 @@
             btnPagConsultarCliente.Size = new Size(212, 206);
             btnPagConsultarCliente.TabIndex = 37;
             btnPagConsultarCliente.Text = "guna2ContainerControl1";
+            btnPagConsultarCliente.Click += btnPagConsultarCliente_Click;
             // 
             // pictureBox3
             // 
@@ -264,11 +268,25 @@
             label4.TabIndex = 26;
             label4.Text = "Clientes";
             // 
+            // btnVoltar
+            // 
+            btnVoltar.BackColor = Color.White;
+            btnVoltar.Cursor = Cursors.Hand;
+            btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
+            btnVoltar.Location = new Point(70, 69);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(50, 30);
+            btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnVoltar.TabIndex = 42;
+            btnVoltar.TabStop = false;
+            btnVoltar.Click += btnVoltar_Click;
+            // 
             // FrmClientesMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1040, 654);
+            Controls.Add(btnVoltar);
             Controls.Add(txtPsicomind);
             Controls.Add(txtBoxTitulo);
             Controls.Add(btnPagEditarCliente);
@@ -286,6 +304,7 @@
             btnPagInserirCliente.ResumeLayout(false);
             btnPagInserirCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnVoltar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -307,5 +326,6 @@
         private PictureBox pictureBox1;
         private Label label3;
         private Label label4;
+        private PictureBox btnVoltar;
     }
 }
