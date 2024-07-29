@@ -1,6 +1,6 @@
 ﻿namespace Psicomind
 {
-    partial class FrmClientesMenu
+    partial class FrmUsuarioMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -30,78 +30,87 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClientesMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarioMenu));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtPsicomind = new Label();
-            txtBoxTitulo = new Label();
-            btnPagEditarCliente = new Guna.UI2.WinForms.Guna2ContainerControl();
+            txtTitulo = new Label();
+            btnPagEditarUsuario = new Guna.UI2.WinForms.Guna2ContainerControl();
+            label1 = new Label();
             pictureBox5 = new PictureBox();
             label9 = new Label();
-            label10 = new Label();
-            btnPagConsultarCliente = new Guna.UI2.WinForms.Guna2ContainerControl();
+            btnPagConsultarUsuario = new Guna.UI2.WinForms.Guna2ContainerControl();
+            label6 = new Label();
             pictureBox3 = new PictureBox();
             label5 = new Label();
-            label6 = new Label();
             label7 = new Label();
-            btnPagInserirCliente = new Guna.UI2.WinForms.Guna2ContainerControl();
+            btnPagInserirUsuario = new Guna.UI2.WinForms.Guna2ContainerControl();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
             btnVoltar = new PictureBox();
-            btnPagEditarCliente.SuspendLayout();
+            btnPagEditarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            btnPagConsultarCliente.SuspendLayout();
+            btnPagConsultarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            btnPagInserirCliente.SuspendLayout();
+            btnPagInserirUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             SuspendLayout();
             // 
             // txtPsicomind
             // 
-            txtPsicomind.Anchor = AnchorStyles.None;
             txtPsicomind.AutoSize = true;
             txtPsicomind.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPsicomind.ForeColor = SystemColors.Highlight;
-            txtPsicomind.Location = new Point(463, 69);
+            txtPsicomind.Location = new Point(455, 50);
             txtPsicomind.Name = "txtPsicomind";
             txtPsicomind.Size = new Size(141, 28);
-            txtPsicomind.TabIndex = 40;
+            txtPsicomind.TabIndex = 45;
             txtPsicomind.Text = "PSICOMIND";
             // 
-            // txtBoxTitulo
+            // txtTitulo
             // 
-            txtBoxTitulo.Anchor = AnchorStyles.None;
-            txtBoxTitulo.AutoSize = true;
-            txtBoxTitulo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtBoxTitulo.ForeColor = Color.Black;
-            txtBoxTitulo.Location = new Point(428, 83);
-            txtBoxTitulo.Name = "txtBoxTitulo";
-            txtBoxTitulo.Size = new Size(218, 60);
-            txtBoxTitulo.TabIndex = 39;
-            txtBoxTitulo.Text = "Clientes";
+            txtTitulo.AutoSize = true;
+            txtTitulo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTitulo.ForeColor = Color.Black;
+            txtTitulo.Location = new Point(414, 64);
+            txtTitulo.Name = "txtTitulo";
+            txtTitulo.Size = new Size(233, 60);
+            txtTitulo.TabIndex = 44;
+            txtTitulo.Text = "Usuários";
             // 
-            // btnPagEditarCliente
+            // btnPagEditarUsuario
             // 
-            btnPagEditarCliente.Anchor = AnchorStyles.None;
-            btnPagEditarCliente.BackColor = SystemColors.Control;
-            btnPagEditarCliente.BorderRadius = 40;
-            btnPagEditarCliente.Controls.Add(pictureBox5);
-            btnPagEditarCliente.Controls.Add(label9);
-            btnPagEditarCliente.Controls.Add(label10);
-            btnPagEditarCliente.Cursor = Cursors.Hand;
-            btnPagEditarCliente.CustomizableEdges = customizableEdges1;
-            btnPagEditarCliente.FillColor = Color.LightGray;
-            btnPagEditarCliente.Location = new Point(421, 426);
-            btnPagEditarCliente.Name = "btnPagEditarCliente";
-            btnPagEditarCliente.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnPagEditarCliente.Size = new Size(212, 197);
-            btnPagEditarCliente.TabIndex = 38;
-            btnPagEditarCliente.Text = "guna2ContainerControl1";
-            btnPagEditarCliente.Click += btnPagEditarCliente_Click;
+            btnPagEditarUsuario.BackColor = SystemColors.Control;
+            btnPagEditarUsuario.BorderRadius = 40;
+            btnPagEditarUsuario.Controls.Add(label1);
+            btnPagEditarUsuario.Controls.Add(pictureBox5);
+            btnPagEditarUsuario.Controls.Add(label9);
+            btnPagEditarUsuario.Cursor = Cursors.Hand;
+            btnPagEditarUsuario.CustomizableEdges = customizableEdges1;
+            btnPagEditarUsuario.FillColor = Color.LightGray;
+            btnPagEditarUsuario.Location = new Point(413, 407);
+            btnPagEditarUsuario.Name = "btnPagEditarUsuario";
+            btnPagEditarUsuario.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnPagEditarUsuario.Size = new Size(212, 197);
+            btnPagEditarUsuario.TabIndex = 43;
+            btnPagEditarUsuario.Text = "guna2ContainerControl1";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.LightGray;
+            label1.Enabled = false;
+            label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(49, 59);
+            label1.Name = "label1";
+            label1.Size = new Size(115, 29);
+            label1.TabIndex = 28;
+            label1.Text = "Usuários";
             // 
             // pictureBox5
             // 
@@ -128,38 +137,36 @@
             label9.TabIndex = 25;
             label9.Text = "Editar";
             // 
-            // label10
+            // btnPagConsultarUsuario
             // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.LightGray;
-            label10.Enabled = false;
-            label10.Font = new Font("Arial", 18F, FontStyle.Bold);
-            label10.ForeColor = Color.Black;
-            label10.Location = new Point(52, 64);
-            label10.Name = "label10";
-            label10.Size = new Size(106, 29);
-            label10.TabIndex = 26;
-            label10.Text = "Clientes";
+            btnPagConsultarUsuario.BackColor = SystemColors.Control;
+            btnPagConsultarUsuario.BorderRadius = 40;
+            btnPagConsultarUsuario.Controls.Add(label6);
+            btnPagConsultarUsuario.Controls.Add(pictureBox3);
+            btnPagConsultarUsuario.Controls.Add(label5);
+            btnPagConsultarUsuario.Controls.Add(label7);
+            btnPagConsultarUsuario.Cursor = Cursors.Hand;
+            btnPagConsultarUsuario.CustomizableEdges = customizableEdges3;
+            btnPagConsultarUsuario.FillColor = Color.LightGray;
+            btnPagConsultarUsuario.Location = new Point(579, 176);
+            btnPagConsultarUsuario.Name = "btnPagConsultarUsuario";
+            btnPagConsultarUsuario.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnPagConsultarUsuario.Size = new Size(212, 206);
+            btnPagConsultarUsuario.TabIndex = 42;
+            btnPagConsultarUsuario.Text = "guna2ContainerControl1";
             // 
-            // btnPagConsultarCliente
+            // label6
             // 
-            btnPagConsultarCliente.Anchor = AnchorStyles.None;
-            btnPagConsultarCliente.BackColor = SystemColors.Control;
-            btnPagConsultarCliente.BorderRadius = 40;
-            btnPagConsultarCliente.Controls.Add(pictureBox3);
-            btnPagConsultarCliente.Controls.Add(label5);
-            btnPagConsultarCliente.Controls.Add(label6);
-            btnPagConsultarCliente.Controls.Add(label7);
-            btnPagConsultarCliente.Cursor = Cursors.Hand;
-            btnPagConsultarCliente.CustomizableEdges = customizableEdges3;
-            btnPagConsultarCliente.FillColor = Color.LightGray;
-            btnPagConsultarCliente.Location = new Point(587, 195);
-            btnPagConsultarCliente.Name = "btnPagConsultarCliente";
-            btnPagConsultarCliente.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnPagConsultarCliente.Size = new Size(212, 206);
-            btnPagConsultarCliente.TabIndex = 37;
-            btnPagConsultarCliente.Text = "guna2ContainerControl1";
-            btnPagConsultarCliente.Click += btnPagConsultarCliente_Click;
+            label6.AutoSize = true;
+            label6.BackColor = Color.LightGray;
+            label6.Enabled = false;
+            label6.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(49, 68);
+            label6.Name = "label6";
+            label6.Size = new Size(115, 29);
+            label6.TabIndex = 28;
+            label6.Text = "Usuários";
             // 
             // pictureBox3
             // 
@@ -186,19 +193,6 @@
             label5.TabIndex = 25;
             label5.Text = "Consultar";
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.LightGray;
-            label6.Enabled = false;
-            label6.Font = new Font("Arial", 18F, FontStyle.Bold);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(56, 72);
-            label6.Name = "label6";
-            label6.Size = new Size(106, 29);
-            label6.TabIndex = 26;
-            label6.Text = "Clientes";
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -211,33 +205,31 @@
             label7.TabIndex = 23;
             label7.Text = "Inserir";
             // 
-            // btnPagInserirCliente
+            // btnPagInserirUsuario
             // 
-            btnPagInserirCliente.Anchor = AnchorStyles.None;
-            btnPagInserirCliente.BackColor = SystemColors.Control;
-            btnPagInserirCliente.BorderRadius = 40;
-            btnPagInserirCliente.Controls.Add(pictureBox1);
-            btnPagInserirCliente.Controls.Add(label3);
-            btnPagInserirCliente.Controls.Add(label4);
-            btnPagInserirCliente.Cursor = Cursors.Hand;
-            btnPagInserirCliente.CustomizableEdges = customizableEdges5;
-            btnPagInserirCliente.FillColor = Color.LightGray;
-            btnPagInserirCliente.Location = new Point(258, 195);
-            btnPagInserirCliente.Name = "btnPagInserirCliente";
-            btnPagInserirCliente.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnPagInserirCliente.Size = new Size(212, 206);
-            btnPagInserirCliente.TabIndex = 36;
-            btnPagInserirCliente.Text = "guna2ContainerControl1";
-            btnPagInserirCliente.Click += btnPagInserirCliente_Click;
+            btnPagInserirUsuario.BackColor = SystemColors.Control;
+            btnPagInserirUsuario.BorderRadius = 40;
+            btnPagInserirUsuario.Controls.Add(pictureBox1);
+            btnPagInserirUsuario.Controls.Add(label3);
+            btnPagInserirUsuario.Controls.Add(label4);
+            btnPagInserirUsuario.Cursor = Cursors.Hand;
+            btnPagInserirUsuario.CustomizableEdges = customizableEdges5;
+            btnPagInserirUsuario.FillColor = Color.LightGray;
+            btnPagInserirUsuario.Location = new Point(250, 176);
+            btnPagInserirUsuario.Name = "btnPagInserirUsuario";
+            btnPagInserirUsuario.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnPagInserirUsuario.Size = new Size(212, 206);
+            btnPagInserirUsuario.TabIndex = 41;
+            btnPagInserirUsuario.Text = "guna2ContainerControl1";
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.LightGray;
             pictureBox1.Enabled = false;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(48, 108);
+            pictureBox1.Location = new Point(42, 101);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(114, 69);
+            pictureBox1.Size = new Size(124, 79);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 24;
             pictureBox1.TabStop = false;
@@ -262,47 +254,46 @@
             label4.Enabled = false;
             label4.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(54, 68);
+            label4.Location = new Point(48, 64);
             label4.Name = "label4";
-            label4.Size = new Size(106, 29);
+            label4.Size = new Size(115, 29);
             label4.TabIndex = 26;
-            label4.Text = "Clientes";
+            label4.Text = "Usuários";
             // 
             // btnVoltar
             // 
             btnVoltar.BackColor = Color.Transparent;
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(70, 69);
+            btnVoltar.Location = new Point(96, 73);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(50, 30);
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btnVoltar.TabIndex = 42;
+            btnVoltar.TabIndex = 46;
             btnVoltar.TabStop = false;
             btnVoltar.Click += btnVoltar_Click;
             // 
-            // FrmClientesMenu
+            // FrmUsuarioMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1040, 654);
             Controls.Add(btnVoltar);
             Controls.Add(txtPsicomind);
-            Controls.Add(txtBoxTitulo);
-            Controls.Add(btnPagEditarCliente);
-            Controls.Add(btnPagConsultarCliente);
-            Controls.Add(btnPagInserirCliente);
-            Name = "FrmClientesMenu";
-            Text = "FrmClientesMenu";
-            Load += FrmClientesMenu_Load;
-            btnPagEditarCliente.ResumeLayout(false);
-            btnPagEditarCliente.PerformLayout();
+            Controls.Add(txtTitulo);
+            Controls.Add(btnPagEditarUsuario);
+            Controls.Add(btnPagConsultarUsuario);
+            Controls.Add(btnPagInserirUsuario);
+            Name = "FrmUsuarioMenu";
+            Text = "FrmUsuarioMenu";
+            btnPagEditarUsuario.ResumeLayout(false);
+            btnPagEditarUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            btnPagConsultarCliente.ResumeLayout(false);
-            btnPagConsultarCliente.PerformLayout();
+            btnPagConsultarUsuario.ResumeLayout(false);
+            btnPagConsultarUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            btnPagInserirCliente.ResumeLayout(false);
-            btnPagInserirCliente.PerformLayout();
+            btnPagInserirUsuario.ResumeLayout(false);
+            btnPagInserirUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).EndInit();
             ResumeLayout(false);
@@ -312,17 +303,17 @@
         #endregion
 
         private Label txtPsicomind;
-        private Label txtBoxTitulo;
-        private Guna.UI2.WinForms.Guna2ContainerControl btnPagEditarCliente;
+        private Label txtTitulo;
+        private Guna.UI2.WinForms.Guna2ContainerControl btnPagEditarUsuario;
+        private Label label1;
         private PictureBox pictureBox5;
         private Label label9;
-        private Label label10;
-        private Guna.UI2.WinForms.Guna2ContainerControl btnPagConsultarCliente;
+        private Guna.UI2.WinForms.Guna2ContainerControl btnPagConsultarUsuario;
+        private Label label6;
         private PictureBox pictureBox3;
         private Label label5;
-        private Label label6;
         private Label label7;
-        private Guna.UI2.WinForms.Guna2ContainerControl btnPagInserirCliente;
+        private Guna.UI2.WinForms.Guna2ContainerControl btnPagInserirUsuario;
         private PictureBox pictureBox1;
         private Label label3;
         private Label label4;

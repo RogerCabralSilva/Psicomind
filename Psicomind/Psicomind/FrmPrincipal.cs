@@ -1,21 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Psicomind
 {
     public partial class FrmPrincipal : Form
     {
+        private static FrmPrincipal instance;
+
         public FrmPrincipal()
         {
             InitializeComponent();
+        }
+
+        public static FrmPrincipal GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new FrmPrincipal();
+            }
+            return instance;
         }
 
         private void btnAbrirProfissional_MouseLeave(object sender, EventArgs e)
@@ -30,7 +33,10 @@ namespace Psicomind
 
         private void btnAbrirProfissional_Click(object sender, EventArgs e)
         {
-            
+            FrmProfissionalMenu FrmProfissionalMenu = new FrmProfissionalMenu();
+
+            FrmProfissionalMenu.StartPosition = FormStartPosition.CenterScreen;
+            FrmProfissionalMenu.Show();
         }
 
         private void btnAbrirUsuario_Click(object sender, EventArgs e)
@@ -70,11 +76,16 @@ namespace Psicomind
 
         private void btnAbrirCliente_Click(object sender, EventArgs e)
         {
-            FrmClientesMenu FrmClientesMenu = new FrmClientesMenu();
+            FrmClientesMenu frmClientesMenu = new FrmClientesMenu();
 
-            FrmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
+            frmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
+            frmClientesMenu.Show();
 
-            FrmClientesMenu.Show();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
