@@ -14,6 +14,7 @@ namespace Psicomind
 
         public static FrmPrincipal GetInstance()
         {
+            // Método para não gerar formulário duplicados do principal
             if (instance == null || instance.IsDisposed)
             {
                 instance = new FrmPrincipal();
@@ -21,6 +22,35 @@ namespace Psicomind
             return instance;
         }
 
+        private void btnAbrirProfissional_Click(object sender, EventArgs e)
+        {
+            // Abrir Formulário de profissionais
+
+            FrmProfissionalMenu FrmProfissionalMenu = new FrmProfissionalMenu();
+            FrmProfissionalMenu.StartPosition = FormStartPosition.CenterScreen;
+            FrmProfissionalMenu.Show();
+        }
+
+        private void btnAbrirCliente_Click(object sender, EventArgs e)
+        {
+            // Abrir Formulário de clientes
+
+            FrmClientesMenu frmClientesMenu = new FrmClientesMenu();
+
+            frmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
+            frmClientesMenu.Show();
+
+        }
+
+        private void btnAbrirUsuario_Click(object sender, EventArgs e)
+        {
+            // Abrir Formulário de usuários
+            FrmUsuarioMenu FrmUsuarioMenu = new FrmUsuarioMenu();
+            FrmUsuarioMenu.StartPosition = FormStartPosition.CenterScreen;
+            FrmUsuarioMenu.Show();
+        }
+
+        // Eventos de sombra nos botões do menu principal
         private void btnAbrirProfissional_MouseLeave(object sender, EventArgs e)
         {
             btnAbrirProfissional.ShadowDecoration.Enabled = false;
@@ -29,19 +59,6 @@ namespace Psicomind
         private void btnAbrirProfissional_MouseHover(object sender, EventArgs e)
         {
             btnAbrirProfissional.ShadowDecoration.Enabled = true;
-        }
-
-        private void btnAbrirProfissional_Click(object sender, EventArgs e)
-        {
-            FrmProfissionalMenu FrmProfissionalMenu = new FrmProfissionalMenu();
-
-            FrmProfissionalMenu.StartPosition = FormStartPosition.CenterScreen;
-            FrmProfissionalMenu.Show();
-        }
-
-        private void btnAbrirUsuario_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAbrirUsuario_MouseHover(object sender, EventArgs e)
@@ -73,19 +90,7 @@ namespace Psicomind
         {
             btnAbrirAgendamento.ShadowDecoration.Enabled = false;
         }
+        // Fim dos eventos de sombra
 
-        private void btnAbrirCliente_Click(object sender, EventArgs e)
-        {
-            FrmClientesMenu frmClientesMenu = new FrmClientesMenu();
-
-            frmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
-            frmClientesMenu.Show();
-
-        }
-
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

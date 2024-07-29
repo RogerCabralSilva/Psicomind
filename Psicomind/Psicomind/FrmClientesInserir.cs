@@ -243,12 +243,10 @@ namespace Psicomind
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
+            // Volta para o Menu Principal
             FrmClientesMenu FrmClientesMenu = new FrmClientesMenu();
-
             FrmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
-
             FrmClientesMenu.Show();
-
             this.Close();
 
         }
