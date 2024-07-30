@@ -62,10 +62,15 @@
             clnDataNascProfissional = new DataGridViewTextBoxColumn();
             clnGeneroProfissional = new DataGridViewTextBoxColumn();
             clnAtivoProfissional = new DataGridViewCheckBoxColumn();
+            guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
+            tabPage1 = new TabPage();
+            tabPage2 = new TabPage();
             guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProfissional).BeginInit();
+            guna2TabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2ContainerControl2
@@ -78,12 +83,13 @@
             guna2ContainerControl2.Controls.Add(btnVoltar);
             guna2ContainerControl2.Controls.Add(dgvProfissional);
             guna2ContainerControl2.CustomizableEdges = customizableEdges3;
-            guna2ContainerControl2.Location = new Point(158, 21);
+            guna2ContainerControl2.Location = new Point(32, 24);
             guna2ContainerControl2.Name = "guna2ContainerControl2";
             guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ContainerControl2.Size = new Size(1029, 656);
+            guna2ContainerControl2.Size = new Size(1012, 624);
             guna2ContainerControl2.TabIndex = 47;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
+            guna2ContainerControl2.Click += guna2ContainerControl2_Click;
             // 
             // label1
             // 
@@ -156,7 +162,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView2.GridColor = Color.FromArgb(242, 245, 250);
-            guna2DataGridView2.Location = new Point(911, 918);
+            guna2DataGridView2.Location = new Point(903, 902);
             guna2DataGridView2.Name = "guna2DataGridView2";
             guna2DataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -247,7 +253,7 @@
             btnVoltar.BackColor = Color.White;
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(28, 22);
+            btnVoltar.Location = new Point(20, 6);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(50, 30);
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -285,7 +291,7 @@
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
             dgvProfissional.DefaultCellStyle = dataGridViewCellStyle7;
             dgvProfissional.GridColor = Color.FromArgb(242, 245, 250);
-            dgvProfissional.Location = new Point(49, 163);
+            dgvProfissional.Location = new Point(41, 147);
             dgvProfissional.Name = "dgvProfissional";
             dgvProfissional.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -370,12 +376,62 @@
             clnAtivoProfissional.Name = "clnAtivoProfissional";
             clnAtivoProfissional.ReadOnly = true;
             // 
+            // guna2TabControl1
+            // 
+            guna2TabControl1.Alignment = TabAlignment.Left;
+            guna2TabControl1.Controls.Add(tabPage1);
+            guna2TabControl1.Controls.Add(tabPage2);
+            guna2TabControl1.ItemSize = new Size(180, 40);
+            guna2TabControl1.Location = new Point(55, 24);
+            guna2TabControl1.Name = "guna2TabControl1";
+            guna2TabControl1.SelectedIndex = 0;
+            guna2TabControl1.Size = new Size(1267, 676);
+            guna2TabControl1.TabButtonHoverState.BorderColor = Color.Empty;
+            guna2TabControl1.TabButtonHoverState.FillColor = Color.FromArgb(40, 52, 70);
+            guna2TabControl1.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);
+            guna2TabControl1.TabButtonHoverState.ForeColor = Color.White;
+            guna2TabControl1.TabButtonHoverState.InnerColor = Color.FromArgb(40, 52, 70);
+            guna2TabControl1.TabButtonIdleState.BorderColor = Color.Empty;
+            guna2TabControl1.TabButtonIdleState.FillColor = Color.FromArgb(33, 42, 57);
+            guna2TabControl1.TabButtonIdleState.Font = new Font("Segoe UI Semibold", 10F);
+            guna2TabControl1.TabButtonIdleState.ForeColor = Color.FromArgb(156, 160, 167);
+            guna2TabControl1.TabButtonIdleState.InnerColor = Color.FromArgb(33, 42, 57);
+            guna2TabControl1.TabButtonSelectedState.BorderColor = Color.Empty;
+            guna2TabControl1.TabButtonSelectedState.FillColor = Color.FromArgb(29, 37, 49);
+            guna2TabControl1.TabButtonSelectedState.Font = new Font("Segoe UI Semibold", 10F);
+            guna2TabControl1.TabButtonSelectedState.ForeColor = Color.White;
+            guna2TabControl1.TabButtonSelectedState.InnerColor = Color.FromArgb(76, 132, 255);
+            guna2TabControl1.TabButtonSize = new Size(180, 40);
+            guna2TabControl1.TabIndex = 48;
+            guna2TabControl1.TabMenuBackColor = Color.FromArgb(33, 42, 57);
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(guna2ContainerControl2);
+            tabPage1.Location = new Point(184, 4);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(1079, 668);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(184, 4);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(913, 668);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "tabPage2";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
             // FrmProfissionalConsultar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1334, 712);
-            Controls.Add(guna2ContainerControl2);
+            Controls.Add(guna2TabControl1);
             Name = "FrmProfissionalConsultar";
             Text = "FrmProfissionalConsultar";
             guna2ContainerControl2.ResumeLayout(false);
@@ -383,6 +439,8 @@
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvProfissional).EndInit();
+            guna2TabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -409,5 +467,8 @@
         private DataGridViewTextBoxColumn clnDataNascProfissional;
         private DataGridViewTextBoxColumn clnGeneroProfissional;
         private DataGridViewCheckBoxColumn clnAtivoProfissional;
+        private Guna.UI2.WinForms.Guna2TabControl guna2TabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
     }
 }

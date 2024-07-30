@@ -27,5 +27,10 @@ namespace Psicomind
 
             this.Close();
         }
+
+        private void guna2ContainerControl2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
