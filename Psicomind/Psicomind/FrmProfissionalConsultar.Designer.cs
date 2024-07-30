@@ -55,7 +55,7 @@
             DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
             pngCelularProfissional = new TabPage();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            btnConsultarEndereco = new Guna.UI2.WinForms.Guna2Button();
+            btnConsultarTelefoneProfissional = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
             txtConsultarProfissional = new Guna.UI2.WinForms.Guna2TextBox();
             pictureBox1 = new PictureBox();
@@ -112,7 +112,7 @@
             // 
             // guna2ContainerControl1
             // 
-            guna2ContainerControl1.Controls.Add(btnConsultarEndereco);
+            guna2ContainerControl1.Controls.Add(btnConsultarTelefoneProfissional);
             guna2ContainerControl1.Controls.Add(label3);
             guna2ContainerControl1.Controls.Add(txtConsultarProfissional);
             guna2ContainerControl1.Controls.Add(pictureBox1);
@@ -125,23 +125,23 @@
             guna2ContainerControl1.TabIndex = 1;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
-            // btnConsultarEndereco
+            // btnConsultarTelefoneProfissional
             // 
-            btnConsultarEndereco.BackColor = Color.White;
-            btnConsultarEndereco.BorderRadius = 10;
-            btnConsultarEndereco.CustomizableEdges = customizableEdges13;
-            btnConsultarEndereco.DisabledState.BorderColor = Color.DarkGray;
-            btnConsultarEndereco.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnConsultarEndereco.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnConsultarEndereco.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnConsultarEndereco.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnConsultarEndereco.ForeColor = Color.White;
-            btnConsultarEndereco.Location = new Point(668, 129);
-            btnConsultarEndereco.Name = "btnConsultarEndereco";
-            btnConsultarEndereco.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnConsultarEndereco.Size = new Size(122, 29);
-            btnConsultarEndereco.TabIndex = 53;
-            btnConsultarEndereco.Text = "Consultar";
+            btnConsultarTelefoneProfissional.BackColor = Color.White;
+            btnConsultarTelefoneProfissional.BorderRadius = 10;
+            btnConsultarTelefoneProfissional.CustomizableEdges = customizableEdges13;
+            btnConsultarTelefoneProfissional.DisabledState.BorderColor = Color.DarkGray;
+            btnConsultarTelefoneProfissional.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnConsultarTelefoneProfissional.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnConsultarTelefoneProfissional.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnConsultarTelefoneProfissional.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnConsultarTelefoneProfissional.ForeColor = Color.White;
+            btnConsultarTelefoneProfissional.Location = new Point(668, 129);
+            btnConsultarTelefoneProfissional.Name = "btnConsultarTelefoneProfissional";
+            btnConsultarTelefoneProfissional.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnConsultarTelefoneProfissional.Size = new Size(122, 29);
+            btnConsultarTelefoneProfissional.TabIndex = 53;
+            btnConsultarTelefoneProfissional.Text = "Consultar";
             // 
             // label3
             // 
@@ -696,7 +696,7 @@
         private Guna.UI2.WinForms.Guna2TabControl guna2TabControl1;
         private Guna.UI2.WinForms.Guna2Button btnConsultarDados;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
-        private Guna.UI2.WinForms.Guna2Button btnConsultarEndereco;
+        private Guna.UI2.WinForms.Guna2Button btnConsultarTelefoneProfissional;
         private Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtConsultarProfissional;
         private PictureBox pictureBox1;

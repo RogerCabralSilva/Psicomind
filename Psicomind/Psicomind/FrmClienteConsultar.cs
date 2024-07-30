@@ -32,5 +32,10 @@ namespace Psicomind
         {
 
         }
+
+        private void pngTelefoneCliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
