@@ -60,13 +60,6 @@
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             pictureBox1 = new PictureBox();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            dataGridViewCheckBoxColumn1 = new DataGridViewCheckBoxColumn();
             pngDadosProfissional = new TabPage();
             btnConsultarProfissional = new Guna.UI2.WinForms.Guna2ContainerControl();
             btnConsultar = new Guna.UI2.WinForms.Guna2Button();
@@ -91,6 +84,9 @@
             clnGeneroProfissional = new DataGridViewTextBoxColumn();
             clnAtivoProfissional = new DataGridViewCheckBoxColumn();
             guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            clnTelefone = new DataGridViewTextBoxColumn();
+            clnTipoTelefone = new DataGridViewTextBoxColumn();
             pngCelularProfissional.SuspendLayout();
             guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -221,7 +217,7 @@
             guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             guna2DataGridView1.ColumnHeadersHeight = 50;
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewCheckBoxColumn1 });
+            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, clnTelefone, clnTipoTelefone });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -231,7 +227,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.FromArgb(242, 245, 250);
-            guna2DataGridView1.Location = new Point(54, 164);
+            guna2DataGridView1.Location = new Point(52, 177);
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -268,54 +264,6 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(0, 0, 192);
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.FillWeight = 188.281708F;
-            dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.FillWeight = 188.281708F;
-            dataGridViewTextBoxColumn2.HeaderText = "Email";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.FillWeight = 188.281708F;
-            dataGridViewTextBoxColumn3.HeaderText = "CPF";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.FillWeight = 188.281708F;
-            dataGridViewTextBoxColumn4.HeaderText = "Especialização";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.FillWeight = 200.4F;
-            dataGridViewTextBoxColumn5.HeaderText = "Data de Nascimento";
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            dataGridViewTextBoxColumn6.HeaderText = "Genero";
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            dataGridViewCheckBoxColumn1.FillWeight = 110.2F;
-            dataGridViewCheckBoxColumn1.HeaderText = "Ativo";
-            dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            dataGridViewCheckBoxColumn1.ReadOnly = true;
-            // 
             // pngDadosProfissional
             // 
             pngDadosProfissional.Controls.Add(btnConsultarProfissional);
@@ -340,7 +288,7 @@
             btnConsultarProfissional.Location = new Point(-1, -1);
             btnConsultarProfissional.Name = "btnConsultarProfissional";
             btnConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnConsultarProfissional.Size = new Size(1022, 624);
+            btnConsultarProfissional.Size = new Size(1029, 632);
             btnConsultarProfissional.TabIndex = 47;
             btnConsultarProfissional.Text = "guna2ContainerControl2";
             btnConsultarProfissional.Click += guna2ContainerControl2_Click;
@@ -434,7 +382,7 @@
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
             guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
             guna2DataGridView2.GridColor = Color.FromArgb(242, 245, 250);
-            guna2DataGridView2.Location = new Point(908, 902);
+            guna2DataGridView2.Location = new Point(911, 906);
             guna2DataGridView2.Name = "guna2DataGridView2";
             guna2DataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -563,7 +511,7 @@
             dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
             dgvProfissional.DefaultCellStyle = dataGridViewCellStyle11;
             dgvProfissional.GridColor = Color.FromArgb(242, 245, 250);
-            dgvProfissional.Location = new Point(52, 163);
+            dgvProfissional.Location = new Point(50, 176);
             dgvProfissional.Name = "dgvProfissional";
             dgvProfissional.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -677,6 +625,25 @@
             guna2TabControl1.TabIndex = 48;
             guna2TabControl1.TabMenuBackColor = Color.FromArgb(33, 42, 57);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.FillWeight = 188.281708F;
+            dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // clnTelefone
+            // 
+            clnTelefone.HeaderText = "Telefone";
+            clnTelefone.Name = "clnTelefone";
+            clnTelefone.ReadOnly = true;
+            // 
+            // clnTipoTelefone
+            // 
+            clnTipoTelefone.HeaderText = "Tipo Telefone";
+            clnTipoTelefone.Name = "clnTipoTelefone";
+            clnTipoTelefone.ReadOnly = true;
+            // 
             // FrmProfissionalConsultar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -734,11 +701,7 @@
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private DataGridViewTextBoxColumn clnTelefone;
+        private DataGridViewTextBoxColumn clnTipoTelefone;
     }
 }
