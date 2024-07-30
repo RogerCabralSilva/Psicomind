@@ -47,14 +47,14 @@
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pngClienteTelefone = new Guna.UI2.WinForms.Guna2TabControl();
             pngClienteDados = new TabPage();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -80,13 +80,18 @@
             clnTipoTelefone = new DataGridViewTextBoxColumn();
             pngClienteEndereco = new TabPage();
             guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            btnConsultarEndereco = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            btnConsultarEndereco = new Guna.UI2.WinForms.Guna2Button();
+            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            clnNomeClienteEnd = new DataGridViewTextBoxColumn();
+            clnCep = new DataGridViewTextBoxColumn();
+            clnRua = new DataGridViewTextBoxColumn();
+            clnNumero = new DataGridViewTextBoxColumn();
+            clnBairro = new DataGridViewTextBoxColumn();
+            clnCidade = new DataGridViewTextBoxColumn();
+            clnUf = new DataGridViewTextBoxColumn();
+            clnTipoEndereco = new DataGridViewTextBoxColumn();
             pngClienteTelefone.SuspendLayout();
             pngClienteDados.SuspendLayout();
             guna2ContainerControl1.SuspendLayout();
@@ -525,6 +530,65 @@
             guna2ContainerControl2.TabIndex = 0;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
+            // btnConsultarEndereco
+            // 
+            btnConsultarEndereco.BackColor = Color.White;
+            btnConsultarEndereco.BorderRadius = 10;
+            btnConsultarEndereco.CustomizableEdges = customizableEdges9;
+            btnConsultarEndereco.DisabledState.BorderColor = Color.DarkGray;
+            btnConsultarEndereco.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnConsultarEndereco.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnConsultarEndereco.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnConsultarEndereco.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnConsultarEndereco.ForeColor = Color.White;
+            btnConsultarEndereco.Location = new Point(711, 146);
+            btnConsultarEndereco.Name = "btnConsultarEndereco";
+            btnConsultarEndereco.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnConsultarEndereco.Size = new Size(122, 29);
+            btnConsultarEndereco.TabIndex = 57;
+            btnConsultarEndereco.Text = "Consultar";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.White;
+            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.Highlight;
+            label2.Location = new Point(62, 118);
+            label2.Name = "label2";
+            label2.Size = new Size(255, 16);
+            label2.TabIndex = 56;
+            label2.Text = "Digite o nome para consulta de endereço:\r\n";
+            // 
+            // guna2TextBox2
+            // 
+            guna2TextBox2.BackColor = SystemColors.ButtonHighlight;
+            guna2TextBox2.BorderColor = Color.White;
+            guna2TextBox2.BorderRadius = 10;
+            guna2TextBox2.CustomizableEdges = customizableEdges11;
+            guna2TextBox2.DefaultText = "";
+            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox2.FillColor = Color.FromArgb(224, 224, 224);
+            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox2.Font = new Font("Segoe UI", 9F);
+            guna2TextBox2.ForeColor = Color.Black;
+            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox2.IconLeftSize = new Size(15, 15);
+            guna2TextBox2.IconRight = (Image)resources.GetObject("guna2TextBox2.IconRight");
+            guna2TextBox2.IconRightSize = new Size(15, 15);
+            guna2TextBox2.Location = new Point(62, 146);
+            guna2TextBox2.Name = "guna2TextBox2";
+            guna2TextBox2.PasswordChar = '\0';
+            guna2TextBox2.PlaceholderForeColor = Color.Silver;
+            guna2TextBox2.PlaceholderText = "";
+            guna2TextBox2.SelectedText = "";
+            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2TextBox2.Size = new Size(601, 29);
+            guna2TextBox2.TabIndex = 55;
+            // 
             // guna2DataGridView1
             // 
             guna2DataGridView1.AllowUserToResizeRows = false;
@@ -545,7 +609,7 @@
             guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             guna2DataGridView1.ColumnHeadersHeight = 50;
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4 });
+            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { clnNomeClienteEnd, clnCep, clnRua, clnNumero, clnBairro, clnCidade, clnUf, clnTipoEndereco });
             dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.BackColor = Color.White;
             dataGridViewCellStyle11.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -592,83 +656,61 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(0, 0, 192);
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
             // 
-            // dataGridViewTextBoxColumn2
+            // clnNomeClienteEnd
             // 
-            dataGridViewTextBoxColumn2.FillWeight = 188.281708F;
-            dataGridViewTextBoxColumn2.HeaderText = "Nome";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
+            clnNomeClienteEnd.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            clnNomeClienteEnd.FillWeight = 200F;
+            clnNomeClienteEnd.Frozen = true;
+            clnNomeClienteEnd.HeaderText = "Nome";
+            clnNomeClienteEnd.Name = "clnNomeClienteEnd";
+            clnNomeClienteEnd.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // clnCep
             // 
-            dataGridViewTextBoxColumn3.HeaderText = "Telefone";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
+            clnCep.HeaderText = "CEP";
+            clnCep.Name = "clnCep";
+            clnCep.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // clnRua
             // 
-            dataGridViewTextBoxColumn4.HeaderText = "Tipo Telefone";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
+            clnRua.FillWeight = 120F;
+            clnRua.HeaderText = "Rua";
+            clnRua.Name = "clnRua";
+            clnRua.ReadOnly = true;
             // 
-            // label2
+            // clnNumero
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(62, 118);
-            label2.Name = "label2";
-            label2.Size = new Size(255, 16);
-            label2.TabIndex = 56;
-            label2.Text = "Digite o nome para consulta de endereço:\r\n";
+            clnNumero.FillWeight = 70F;
+            clnNumero.HeaderText = "Número";
+            clnNumero.Name = "clnNumero";
+            clnNumero.ReadOnly = true;
             // 
-            // guna2TextBox2
+            // clnBairro
             // 
-            guna2TextBox2.BackColor = SystemColors.ButtonHighlight;
-            guna2TextBox2.BorderColor = Color.White;
-            guna2TextBox2.BorderRadius = 10;
-            guna2TextBox2.CustomizableEdges = customizableEdges11;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FillColor = Color.FromArgb(224, 224, 224);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.ForeColor = Color.Black;
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.IconLeftSize = new Size(15, 15);
-            guna2TextBox2.IconRight = (Image)resources.GetObject("guna2TextBox2.IconRight");
-            guna2TextBox2.IconRightSize = new Size(15, 15);
-            guna2TextBox2.Location = new Point(62, 146);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderForeColor = Color.Silver;
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox2.Size = new Size(601, 29);
-            guna2TextBox2.TabIndex = 55;
+            clnBairro.FillWeight = 120F;
+            clnBairro.HeaderText = "Bairro";
+            clnBairro.Name = "clnBairro";
+            clnBairro.ReadOnly = true;
             // 
-            // btnConsultarEndereco
+            // clnCidade
             // 
-            btnConsultarEndereco.BackColor = Color.White;
-            btnConsultarEndereco.BorderRadius = 10;
-            btnConsultarEndereco.CustomizableEdges = customizableEdges9;
-            btnConsultarEndereco.DisabledState.BorderColor = Color.DarkGray;
-            btnConsultarEndereco.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnConsultarEndereco.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnConsultarEndereco.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnConsultarEndereco.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnConsultarEndereco.ForeColor = Color.White;
-            btnConsultarEndereco.Location = new Point(711, 146);
-            btnConsultarEndereco.Name = "btnConsultarEndereco";
-            btnConsultarEndereco.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnConsultarEndereco.Size = new Size(122, 29);
-            btnConsultarEndereco.TabIndex = 57;
-            btnConsultarEndereco.Text = "Consultar";
+            clnCidade.HeaderText = "Cidade";
+            clnCidade.Name = "clnCidade";
+            clnCidade.ReadOnly = true;
+            // 
+            // clnUf
+            // 
+            clnUf.FillWeight = 50F;
+            clnUf.HeaderText = "UF";
+            clnUf.Name = "clnUf";
+            clnUf.ReadOnly = true;
+            // 
+            // clnTipoEndereco
+            // 
+            clnTipoEndereco.FillWeight = 90F;
+            clnTipoEndereco.HeaderText = "Tipo Endereço";
+            clnTipoEndereco.Name = "clnTipoEndereco";
+            clnTipoEndereco.ReadOnly = true;
             // 
             // FrmClienteConsultar
             // 
@@ -726,8 +768,13 @@
         private Label label2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn clnNomeClienteEnd;
+        private DataGridViewTextBoxColumn clnCep;
+        private DataGridViewTextBoxColumn clnRua;
+        private DataGridViewTextBoxColumn clnNumero;
+        private DataGridViewTextBoxColumn clnBairro;
+        private DataGridViewTextBoxColumn clnCidade;
+        private DataGridViewTextBoxColumn clnUf;
+        private DataGridViewTextBoxColumn clnTipoEndereco;
     }
 }
