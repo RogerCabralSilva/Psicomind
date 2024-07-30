@@ -55,9 +55,9 @@
             DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
             pngCelularProfissional = new TabPage();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnConsultarEndereco = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtConsultarProfissional = new Guna.UI2.WinForms.Guna2TextBox();
             pictureBox1 = new PictureBox();
             dgvTelefoneProfissional = new Guna.UI2.WinForms.Guna2DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -65,7 +65,7 @@
             clnTipoTelefone = new DataGridViewTextBoxColumn();
             pngDadosProfissional = new TabPage();
             btnConsultarProfissional = new Guna.UI2.WinForms.Guna2ContainerControl();
-            btnConsultar = new Guna.UI2.WinForms.Guna2Button();
+            btnConsultarDados = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             txtBuscarProfissional = new Guna.UI2.WinForms.Guna2TextBox();
             guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -112,9 +112,9 @@
             // 
             // guna2ContainerControl1
             // 
-            guna2ContainerControl1.Controls.Add(guna2Button1);
+            guna2ContainerControl1.Controls.Add(btnConsultarEndereco);
             guna2ContainerControl1.Controls.Add(label3);
-            guna2ContainerControl1.Controls.Add(guna2TextBox1);
+            guna2ContainerControl1.Controls.Add(txtConsultarProfissional);
             guna2ContainerControl1.Controls.Add(pictureBox1);
             guna2ContainerControl1.Controls.Add(dgvTelefoneProfissional);
             guna2ContainerControl1.CustomizableEdges = customizableEdges17;
@@ -125,23 +125,23 @@
             guna2ContainerControl1.TabIndex = 1;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
-            // guna2Button1
+            // btnConsultarEndereco
             // 
-            guna2Button1.BackColor = Color.White;
-            guna2Button1.BorderRadius = 10;
-            guna2Button1.CustomizableEdges = customizableEdges13;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(668, 129);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Button1.Size = new Size(122, 29);
-            guna2Button1.TabIndex = 53;
-            guna2Button1.Text = "Consultar";
+            btnConsultarEndereco.BackColor = Color.White;
+            btnConsultarEndereco.BorderRadius = 10;
+            btnConsultarEndereco.CustomizableEdges = customizableEdges13;
+            btnConsultarEndereco.DisabledState.BorderColor = Color.DarkGray;
+            btnConsultarEndereco.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnConsultarEndereco.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnConsultarEndereco.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnConsultarEndereco.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnConsultarEndereco.ForeColor = Color.White;
+            btnConsultarEndereco.Location = new Point(668, 129);
+            btnConsultarEndereco.Name = "btnConsultarEndereco";
+            btnConsultarEndereco.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnConsultarEndereco.Size = new Size(122, 29);
+            btnConsultarEndereco.TabIndex = 53;
+            btnConsultarEndereco.Text = "Consultar";
             // 
             // label3
             // 
@@ -155,34 +155,34 @@
             label3.TabIndex = 52;
             label3.Text = "Digite o nome para consulta do número de telefone:\r\n";
             // 
-            // guna2TextBox1
+            // txtConsultarProfissional
             // 
-            guna2TextBox1.BackColor = SystemColors.ButtonHighlight;
-            guna2TextBox1.BorderColor = Color.White;
-            guna2TextBox1.BorderRadius = 10;
-            guna2TextBox1.CustomizableEdges = customizableEdges15;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FillColor = Color.FromArgb(224, 224, 224);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.ForeColor = Color.Black;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.IconLeftSize = new Size(15, 15);
-            guna2TextBox1.IconRight = (Image)resources.GetObject("guna2TextBox1.IconRight");
-            guna2TextBox1.IconRightSize = new Size(15, 15);
-            guna2TextBox1.Location = new Point(50, 129);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderForeColor = Color.Silver;
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2TextBox1.Size = new Size(601, 29);
-            guna2TextBox1.TabIndex = 51;
+            txtConsultarProfissional.BackColor = SystemColors.ButtonHighlight;
+            txtConsultarProfissional.BorderColor = Color.White;
+            txtConsultarProfissional.BorderRadius = 10;
+            txtConsultarProfissional.CustomizableEdges = customizableEdges15;
+            txtConsultarProfissional.DefaultText = "";
+            txtConsultarProfissional.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtConsultarProfissional.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtConsultarProfissional.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtConsultarProfissional.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtConsultarProfissional.FillColor = Color.FromArgb(224, 224, 224);
+            txtConsultarProfissional.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtConsultarProfissional.Font = new Font("Segoe UI", 9F);
+            txtConsultarProfissional.ForeColor = Color.Black;
+            txtConsultarProfissional.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtConsultarProfissional.IconLeftSize = new Size(15, 15);
+            txtConsultarProfissional.IconRight = (Image)resources.GetObject("txtConsultarProfissional.IconRight");
+            txtConsultarProfissional.IconRightSize = new Size(15, 15);
+            txtConsultarProfissional.Location = new Point(50, 129);
+            txtConsultarProfissional.Name = "txtConsultarProfissional";
+            txtConsultarProfissional.PasswordChar = '\0';
+            txtConsultarProfissional.PlaceholderForeColor = Color.Silver;
+            txtConsultarProfissional.PlaceholderText = "";
+            txtConsultarProfissional.SelectedText = "";
+            txtConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtConsultarProfissional.Size = new Size(601, 29);
+            txtConsultarProfissional.TabIndex = 51;
             // 
             // pictureBox1
             // 
@@ -297,7 +297,7 @@
             // btnConsultarProfissional
             // 
             btnConsultarProfissional.Anchor = AnchorStyles.None;
-            btnConsultarProfissional.Controls.Add(btnConsultar);
+            btnConsultarProfissional.Controls.Add(btnConsultarDados);
             btnConsultarProfissional.Controls.Add(label1);
             btnConsultarProfissional.Controls.Add(txtBuscarProfissional);
             btnConsultarProfissional.Controls.Add(guna2DataGridView2);
@@ -312,23 +312,23 @@
             btnConsultarProfissional.Text = "guna2ContainerControl2";
             btnConsultarProfissional.Click += guna2ContainerControl2_Click;
             // 
-            // btnConsultar
+            // btnConsultarDados
             // 
-            btnConsultar.BackColor = Color.White;
-            btnConsultar.BorderRadius = 10;
-            btnConsultar.CustomizableEdges = customizableEdges19;
-            btnConsultar.DisabledState.BorderColor = Color.DarkGray;
-            btnConsultar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnConsultar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnConsultar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnConsultar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnConsultar.ForeColor = Color.White;
-            btnConsultar.Location = new Point(666, 128);
-            btnConsultar.Name = "btnConsultar";
-            btnConsultar.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            btnConsultar.Size = new Size(122, 29);
-            btnConsultar.TabIndex = 48;
-            btnConsultar.Text = "Consultar";
+            btnConsultarDados.BackColor = Color.White;
+            btnConsultarDados.BorderRadius = 10;
+            btnConsultarDados.CustomizableEdges = customizableEdges19;
+            btnConsultarDados.DisabledState.BorderColor = Color.DarkGray;
+            btnConsultarDados.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnConsultarDados.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnConsultarDados.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnConsultarDados.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnConsultarDados.ForeColor = Color.White;
+            btnConsultarDados.Location = new Point(666, 128);
+            btnConsultarDados.Name = "btnConsultarDados";
+            btnConsultarDados.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnConsultarDados.Size = new Size(122, 29);
+            btnConsultarDados.TabIndex = 48;
+            btnConsultarDados.Text = "Consultar";
             // 
             // label1
             // 
@@ -618,6 +618,7 @@
             // guna2TabControl1
             // 
             guna2TabControl1.Alignment = TabAlignment.Left;
+            guna2TabControl1.Anchor = AnchorStyles.None;
             guna2TabControl1.Controls.Add(pngDadosProfissional);
             guna2TabControl1.Controls.Add(pngCelularProfissional);
             guna2TabControl1.ItemSize = new Size(180, 40);
@@ -693,11 +694,11 @@
         private DataGridViewTextBoxColumn clnGeneroProfissional;
         private DataGridViewCheckBoxColumn clnAtivoProfissional;
         private Guna.UI2.WinForms.Guna2TabControl guna2TabControl1;
-        private Guna.UI2.WinForms.Guna2Button btnConsultar;
+        private Guna.UI2.WinForms.Guna2Button btnConsultarDados;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnConsultarEndereco;
         private Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtConsultarProfissional;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvTelefoneProfissional;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
