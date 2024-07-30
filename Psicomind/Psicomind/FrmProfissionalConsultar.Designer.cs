@@ -28,38 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProfissionalConsultar));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
             pngCelularProfissional = new TabPage();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             pictureBox1 = new PictureBox();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgvTelefoneProfissional = new Guna.UI2.WinForms.Guna2DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            clnTelefone = new DataGridViewTextBoxColumn();
+            clnTipoTelefone = new DataGridViewTextBoxColumn();
             pngDadosProfissional = new TabPage();
             btnConsultarProfissional = new Guna.UI2.WinForms.Guna2ContainerControl();
             btnConsultar = new Guna.UI2.WinForms.Guna2Button();
@@ -75,7 +78,7 @@
             dataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
             btnVoltar = new PictureBox();
-            dgvProfissional = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgvDadosProfissional = new Guna.UI2.WinForms.Guna2DataGridView();
             clnNomeProfissional = new DataGridViewTextBoxColumn();
             clnEmailProfissional = new DataGridViewTextBoxColumn();
             clnCpfProfissional = new DataGridViewTextBoxColumn();
@@ -84,18 +87,15 @@
             clnGeneroProfissional = new DataGridViewTextBoxColumn();
             clnAtivoProfissional = new DataGridViewCheckBoxColumn();
             guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            clnTelefone = new DataGridViewTextBoxColumn();
-            clnTipoTelefone = new DataGridViewTextBoxColumn();
             pngCelularProfissional.SuspendLayout();
             guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTelefoneProfissional).BeginInit();
             pngDadosProfissional.SuspendLayout();
             btnConsultarProfissional.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvProfissional).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDadosProfissional).BeginInit();
             guna2TabControl1.SuspendLayout();
             SuspendLayout();
             // 
@@ -116,11 +116,11 @@
             guna2ContainerControl1.Controls.Add(label3);
             guna2ContainerControl1.Controls.Add(guna2TextBox1);
             guna2ContainerControl1.Controls.Add(pictureBox1);
-            guna2ContainerControl1.Controls.Add(guna2DataGridView1);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges5;
+            guna2ContainerControl1.Controls.Add(dgvTelefoneProfissional);
+            guna2ContainerControl1.CustomizableEdges = customizableEdges17;
             guna2ContainerControl1.Location = new Point(-3, -2);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2ContainerControl1.Size = new Size(1030, 635);
             guna2ContainerControl1.TabIndex = 1;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
@@ -129,7 +129,7 @@
             // 
             guna2Button1.BackColor = Color.White;
             guna2Button1.BorderRadius = 10;
-            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.CustomizableEdges = customizableEdges13;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -138,7 +138,7 @@
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(668, 129);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2Button1.Size = new Size(122, 29);
             guna2Button1.TabIndex = 53;
             guna2Button1.Text = "Consultar";
@@ -160,7 +160,7 @@
             guna2TextBox1.BackColor = SystemColors.ButtonHighlight;
             guna2TextBox1.BorderColor = Color.White;
             guna2TextBox1.BorderRadius = 10;
-            guna2TextBox1.CustomizableEdges = customizableEdges3;
+            guna2TextBox1.CustomizableEdges = customizableEdges15;
             guna2TextBox1.DefaultText = "";
             guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -180,7 +180,7 @@
             guna2TextBox1.PlaceholderForeColor = Color.Silver;
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2TextBox1.Size = new Size(601, 29);
             guna2TextBox1.TabIndex = 51;
             // 
@@ -197,72 +197,91 @@
             pictureBox1.TabIndex = 49;
             pictureBox1.TabStop = false;
             // 
-            // guna2DataGridView1
+            // dgvTelefoneProfissional
             // 
-            guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 128, 255);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            guna2DataGridView1.Anchor = AnchorStyles.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(242, 245, 250);
-            dataGridViewCellStyle2.Font = new Font("Malgun Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0, true);
-            dataGridViewCellStyle2.ForeColor = Color.DimGray;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(242, 245, 250);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 50;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, clnTelefone, clnTipoTelefone });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 128, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView1.GridColor = Color.FromArgb(242, 245, 250);
-            guna2DataGridView1.Location = new Point(52, 177);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.RowTemplate.Height = 30;
-            guna2DataGridView1.Size = new Size(926, 386);
-            guna2DataGridView1.TabIndex = 50;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(242, 245, 250);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(242, 245, 250);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 8F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.DimGray;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 50;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 8F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 30;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(0, 0, 192);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
+            dgvTelefoneProfissional.AllowUserToResizeRows = false;
+            dataGridViewCellStyle13.BackColor = Color.White;
+            dataGridViewCellStyle13.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle13.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = Color.FromArgb(0, 128, 255);
+            dataGridViewCellStyle13.SelectionForeColor = Color.White;
+            dgvTelefoneProfissional.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dgvTelefoneProfissional.Anchor = AnchorStyles.None;
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = Color.FromArgb(242, 245, 250);
+            dataGridViewCellStyle14.Font = new Font("Malgun Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0, true);
+            dataGridViewCellStyle14.ForeColor = Color.DimGray;
+            dataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(242, 245, 250);
+            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
+            dgvTelefoneProfissional.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dgvTelefoneProfissional.ColumnHeadersHeight = 50;
+            dgvTelefoneProfissional.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvTelefoneProfissional.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, clnTelefone, clnTipoTelefone });
+            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = Color.White;
+            dataGridViewCellStyle15.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle15.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(0, 128, 255);
+            dataGridViewCellStyle15.SelectionForeColor = Color.White;
+            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.False;
+            dgvTelefoneProfissional.DefaultCellStyle = dataGridViewCellStyle15;
+            dgvTelefoneProfissional.GridColor = Color.FromArgb(242, 245, 250);
+            dgvTelefoneProfissional.Location = new Point(52, 177);
+            dgvTelefoneProfissional.Name = "dgvTelefoneProfissional";
+            dgvTelefoneProfissional.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = Color.White;
+            dataGridViewCellStyle16.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle16.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = Color.White;
+            dataGridViewCellStyle16.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.True;
+            dgvTelefoneProfissional.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dgvTelefoneProfissional.RowHeadersVisible = false;
+            dgvTelefoneProfissional.RowTemplate.Height = 30;
+            dgvTelefoneProfissional.Size = new Size(926, 386);
+            dgvTelefoneProfissional.TabIndex = 50;
+            dgvTelefoneProfissional.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvTelefoneProfissional.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvTelefoneProfissional.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvTelefoneProfissional.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvTelefoneProfissional.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvTelefoneProfissional.ThemeStyle.BackColor = Color.White;
+            dgvTelefoneProfissional.ThemeStyle.GridColor = Color.FromArgb(242, 245, 250);
+            dgvTelefoneProfissional.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(242, 245, 250);
+            dgvTelefoneProfissional.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvTelefoneProfissional.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 8F);
+            dgvTelefoneProfissional.ThemeStyle.HeaderStyle.ForeColor = Color.DimGray;
+            dgvTelefoneProfissional.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvTelefoneProfissional.ThemeStyle.HeaderStyle.Height = 50;
+            dgvTelefoneProfissional.ThemeStyle.ReadOnly = false;
+            dgvTelefoneProfissional.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvTelefoneProfissional.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvTelefoneProfissional.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 8F);
+            dgvTelefoneProfissional.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvTelefoneProfissional.ThemeStyle.RowsStyle.Height = 30;
+            dgvTelefoneProfissional.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(0, 0, 192);
+            dgvTelefoneProfissional.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.FillWeight = 188.281708F;
+            dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // clnTelefone
+            // 
+            clnTelefone.HeaderText = "Telefone";
+            clnTelefone.Name = "clnTelefone";
+            clnTelefone.ReadOnly = true;
+            // 
+            // clnTipoTelefone
+            // 
+            clnTipoTelefone.HeaderText = "Tipo Telefone";
+            clnTipoTelefone.Name = "clnTipoTelefone";
+            clnTipoTelefone.ReadOnly = true;
             // 
             // pngDadosProfissional
             // 
@@ -283,11 +302,11 @@
             btnConsultarProfissional.Controls.Add(txtBuscarProfissional);
             btnConsultarProfissional.Controls.Add(guna2DataGridView2);
             btnConsultarProfissional.Controls.Add(btnVoltar);
-            btnConsultarProfissional.Controls.Add(dgvProfissional);
-            btnConsultarProfissional.CustomizableEdges = customizableEdges11;
+            btnConsultarProfissional.Controls.Add(dgvDadosProfissional);
+            btnConsultarProfissional.CustomizableEdges = customizableEdges23;
             btnConsultarProfissional.Location = new Point(-1, -1);
             btnConsultarProfissional.Name = "btnConsultarProfissional";
-            btnConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnConsultarProfissional.Size = new Size(1029, 632);
             btnConsultarProfissional.TabIndex = 47;
             btnConsultarProfissional.Text = "guna2ContainerControl2";
@@ -297,7 +316,7 @@
             // 
             btnConsultar.BackColor = Color.White;
             btnConsultar.BorderRadius = 10;
-            btnConsultar.CustomizableEdges = customizableEdges7;
+            btnConsultar.CustomizableEdges = customizableEdges19;
             btnConsultar.DisabledState.BorderColor = Color.DarkGray;
             btnConsultar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnConsultar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -306,7 +325,7 @@
             btnConsultar.ForeColor = Color.White;
             btnConsultar.Location = new Point(666, 128);
             btnConsultar.Name = "btnConsultar";
-            btnConsultar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnConsultar.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnConsultar.Size = new Size(122, 29);
             btnConsultar.TabIndex = 48;
             btnConsultar.Text = "Consultar";
@@ -328,7 +347,7 @@
             txtBuscarProfissional.BackColor = SystemColors.ButtonHighlight;
             txtBuscarProfissional.BorderColor = Color.White;
             txtBuscarProfissional.BorderRadius = 10;
-            txtBuscarProfissional.CustomizableEdges = customizableEdges9;
+            txtBuscarProfissional.CustomizableEdges = customizableEdges21;
             txtBuscarProfissional.DefaultText = "";
             txtBuscarProfissional.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtBuscarProfissional.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -348,51 +367,51 @@
             txtBuscarProfissional.PlaceholderForeColor = Color.Silver;
             txtBuscarProfissional.PlaceholderText = "";
             txtBuscarProfissional.SelectedText = "";
-            txtBuscarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtBuscarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges22;
             txtBuscarProfissional.Size = new Size(601, 29);
             txtBuscarProfissional.TabIndex = 46;
             // 
             // guna2DataGridView2
             // 
             guna2DataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = Color.White;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 128, 255);
-            dataGridViewCellStyle5.SelectionForeColor = Color.White;
-            guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.BackColor = Color.White;
+            dataGridViewCellStyle17.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle17.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(0, 128, 255);
+            dataGridViewCellStyle17.SelectionForeColor = Color.White;
+            guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             guna2DataGridView2.Anchor = AnchorStyles.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(242, 245, 250);
-            dataGridViewCellStyle6.Font = new Font("Malgun Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0, true);
-            dataGridViewCellStyle6.ForeColor = Color.DimGray;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(242, 245, 250);
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = Color.FromArgb(242, 245, 250);
+            dataGridViewCellStyle18.Font = new Font("Malgun Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0, true);
+            dataGridViewCellStyle18.ForeColor = Color.DimGray;
+            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(242, 245, 250);
+            dataGridViewCellStyle18.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             guna2DataGridView2.ColumnHeadersHeight = 50;
             guna2DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             guna2DataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10, dataGridViewTextBoxColumn11, dataGridViewTextBoxColumn12, dataGridViewTextBoxColumn13, dataGridViewTextBoxColumn14, dataGridViewTextBoxColumn15, dataGridViewTextBoxColumn16 });
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.White;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(0, 128, 255);
-            dataGridViewCellStyle7.SelectionForeColor = Color.White;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = Color.White;
+            dataGridViewCellStyle19.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle19.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle19.SelectionBackColor = Color.FromArgb(0, 128, 255);
+            dataGridViewCellStyle19.SelectionForeColor = Color.White;
+            dataGridViewCellStyle19.WrapMode = DataGridViewTriState.False;
+            guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle19;
             guna2DataGridView2.GridColor = Color.FromArgb(242, 245, 250);
             guna2DataGridView2.Location = new Point(911, 906);
             guna2DataGridView2.Name = "guna2DataGridView2";
             guna2DataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.White;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = Color.White;
+            dataGridViewCellStyle20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle20.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = Color.White;
+            dataGridViewCellStyle20.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             guna2DataGridView2.RowHeadersVisible = false;
             guna2DataGridView2.RowTemplate.Height = 30;
             guna2DataGridView2.Size = new Size(836, 186);
@@ -481,72 +500,72 @@
             btnVoltar.TabStop = false;
             btnVoltar.Click += btnVoltar_Click;
             // 
-            // dgvProfissional
+            // dgvDadosProfissional
             // 
-            dgvProfissional.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = Color.White;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle9.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(0, 128, 255);
-            dataGridViewCellStyle9.SelectionForeColor = Color.White;
-            dgvProfissional.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            dgvProfissional.Anchor = AnchorStyles.None;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = Color.FromArgb(242, 245, 250);
-            dataGridViewCellStyle10.Font = new Font("Malgun Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0, true);
-            dataGridViewCellStyle10.ForeColor = Color.DimGray;
-            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(242, 245, 250);
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            dgvProfissional.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            dgvProfissional.ColumnHeadersHeight = 50;
-            dgvProfissional.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvProfissional.Columns.AddRange(new DataGridViewColumn[] { clnNomeProfissional, clnEmailProfissional, clnCpfProfissional, clnEspecializacao, clnDataNascProfissional, clnGeneroProfissional, clnAtivoProfissional });
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.White;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle11.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(0, 128, 255);
-            dataGridViewCellStyle11.SelectionForeColor = Color.White;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
-            dgvProfissional.DefaultCellStyle = dataGridViewCellStyle11;
-            dgvProfissional.GridColor = Color.FromArgb(242, 245, 250);
-            dgvProfissional.Location = new Point(50, 176);
-            dgvProfissional.Name = "dgvProfissional";
-            dgvProfissional.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = Color.White;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            dgvProfissional.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            dgvProfissional.RowHeadersVisible = false;
-            dgvProfissional.RowTemplate.Height = 30;
-            dgvProfissional.Size = new Size(926, 386);
-            dgvProfissional.TabIndex = 42;
-            dgvProfissional.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dgvProfissional.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvProfissional.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvProfissional.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvProfissional.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvProfissional.ThemeStyle.BackColor = Color.White;
-            dgvProfissional.ThemeStyle.GridColor = Color.FromArgb(242, 245, 250);
-            dgvProfissional.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(242, 245, 250);
-            dgvProfissional.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvProfissional.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 8F);
-            dgvProfissional.ThemeStyle.HeaderStyle.ForeColor = Color.DimGray;
-            dgvProfissional.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvProfissional.ThemeStyle.HeaderStyle.Height = 50;
-            dgvProfissional.ThemeStyle.ReadOnly = false;
-            dgvProfissional.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dgvProfissional.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvProfissional.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 8F);
-            dgvProfissional.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            dgvProfissional.ThemeStyle.RowsStyle.Height = 30;
-            dgvProfissional.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(0, 0, 192);
-            dgvProfissional.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
+            dgvDadosProfissional.AllowUserToResizeRows = false;
+            dataGridViewCellStyle21.BackColor = Color.White;
+            dataGridViewCellStyle21.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle21.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle21.SelectionBackColor = Color.FromArgb(0, 128, 255);
+            dataGridViewCellStyle21.SelectionForeColor = Color.White;
+            dgvDadosProfissional.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dgvDadosProfissional.Anchor = AnchorStyles.None;
+            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = Color.FromArgb(242, 245, 250);
+            dataGridViewCellStyle22.Font = new Font("Malgun Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0, true);
+            dataGridViewCellStyle22.ForeColor = Color.DimGray;
+            dataGridViewCellStyle22.SelectionBackColor = Color.FromArgb(242, 245, 250);
+            dataGridViewCellStyle22.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = DataGridViewTriState.True;
+            dgvDadosProfissional.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dgvDadosProfissional.ColumnHeadersHeight = 50;
+            dgvDadosProfissional.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvDadosProfissional.Columns.AddRange(new DataGridViewColumn[] { clnNomeProfissional, clnEmailProfissional, clnCpfProfissional, clnEspecializacao, clnDataNascProfissional, clnGeneroProfissional, clnAtivoProfissional });
+            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = Color.White;
+            dataGridViewCellStyle23.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle23.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle23.SelectionBackColor = Color.FromArgb(0, 128, 255);
+            dataGridViewCellStyle23.SelectionForeColor = Color.White;
+            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.False;
+            dgvDadosProfissional.DefaultCellStyle = dataGridViewCellStyle23;
+            dgvDadosProfissional.GridColor = Color.FromArgb(242, 245, 250);
+            dgvDadosProfissional.Location = new Point(50, 176);
+            dgvDadosProfissional.Name = "dgvDadosProfissional";
+            dgvDadosProfissional.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = Color.White;
+            dataGridViewCellStyle24.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle24.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = Color.White;
+            dataGridViewCellStyle24.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.True;
+            dgvDadosProfissional.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dgvDadosProfissional.RowHeadersVisible = false;
+            dgvDadosProfissional.RowTemplate.Height = 30;
+            dgvDadosProfissional.Size = new Size(926, 386);
+            dgvDadosProfissional.TabIndex = 42;
+            dgvDadosProfissional.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvDadosProfissional.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvDadosProfissional.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvDadosProfissional.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvDadosProfissional.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvDadosProfissional.ThemeStyle.BackColor = Color.White;
+            dgvDadosProfissional.ThemeStyle.GridColor = Color.FromArgb(242, 245, 250);
+            dgvDadosProfissional.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(242, 245, 250);
+            dgvDadosProfissional.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvDadosProfissional.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 8F);
+            dgvDadosProfissional.ThemeStyle.HeaderStyle.ForeColor = Color.DimGray;
+            dgvDadosProfissional.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvDadosProfissional.ThemeStyle.HeaderStyle.Height = 50;
+            dgvDadosProfissional.ThemeStyle.ReadOnly = false;
+            dgvDadosProfissional.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvDadosProfissional.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvDadosProfissional.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 8F);
+            dgvDadosProfissional.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvDadosProfissional.ThemeStyle.RowsStyle.Height = 30;
+            dgvDadosProfissional.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(0, 0, 192);
+            dgvDadosProfissional.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
             // 
             // clnNomeProfissional
             // 
@@ -625,25 +644,6 @@
             guna2TabControl1.TabIndex = 48;
             guna2TabControl1.TabMenuBackColor = Color.FromArgb(33, 42, 57);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.FillWeight = 188.281708F;
-            dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // clnTelefone
-            // 
-            clnTelefone.HeaderText = "Telefone";
-            clnTelefone.Name = "clnTelefone";
-            clnTelefone.ReadOnly = true;
-            // 
-            // clnTipoTelefone
-            // 
-            clnTipoTelefone.HeaderText = "Tipo Telefone";
-            clnTipoTelefone.Name = "clnTipoTelefone";
-            clnTipoTelefone.ReadOnly = true;
-            // 
             // FrmProfissionalConsultar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -656,13 +656,13 @@
             guna2ContainerControl1.ResumeLayout(false);
             guna2ContainerControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTelefoneProfissional).EndInit();
             pngDadosProfissional.ResumeLayout(false);
             btnConsultarProfissional.ResumeLayout(false);
             btnConsultarProfissional.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvProfissional).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDadosProfissional).EndInit();
             guna2TabControl1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -684,7 +684,7 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private PictureBox btnVoltar;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvProfissional;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvDadosProfissional;
         private DataGridViewTextBoxColumn clnNomeProfissional;
         private DataGridViewTextBoxColumn clnEmailProfissional;
         private DataGridViewTextBoxColumn clnCpfProfissional;
@@ -699,7 +699,7 @@
         private Label label3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvTelefoneProfissional;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn clnTelefone;
         private DataGridViewTextBoxColumn clnTipoTelefone;

@@ -27,5 +27,10 @@ namespace Psicomind
 
             this.Close();
         }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
