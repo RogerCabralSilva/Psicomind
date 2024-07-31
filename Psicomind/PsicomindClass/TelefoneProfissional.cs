@@ -115,6 +115,37 @@ namespace PsicomindClass
             return telefoneProfissional;
         }
 
+        public static List<TelefoneProfissional> ObterListaTelefone(string nome = null)
+        {
+            List<TelefoneProfissional> lista = new List<TelefoneProfissional>();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+
+            if (nome == null)
+            {
+
+                cmd.CommandText = "SELECT * FROM telefone_profissional";
+            }
+            else
+            {
+                cmd.CommandText = $"SELECT * FROM telefone_profissional WHERE nome LIKE '%{nome}%'";
+            }
+
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                lista.Add(new(
+
+                         dr.GetInt32(0),
+                         dr.GetString(1),
+                         dr.GetInt32(2),
+                         TelefoneTipo.ObterPorId(dr.GetInt32(3))
+                     ));
+            }
+
+            return lista;
+        }
 
     }
 

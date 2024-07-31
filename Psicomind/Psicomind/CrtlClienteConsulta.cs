@@ -60,5 +60,10 @@ namespace Psicomind
         {
 
         }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

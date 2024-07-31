@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySqlX.XDevAPI;
+using PsicomindClass;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +32,62 @@ namespace Psicomind
 
         private void guna2ContainerControl2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void FrmProfissionalConsultar_Load(object sender, EventArgs e)
+        {
+
+            CarregarDadosProfissional();
+            CarregarTelefoneProfissional();
+            
+
+        }
+
+        private void CarregarDadosProfissional() {
+
+            var profissionais = Profissional.ObterLista();
+            int count = 0;
+
+            dgvProfissionalDados.Rows.Clear();
+            foreach (var profissional in profissionais)
+            {
+                int rowIndex = dgvProfissionalDados.Rows.Add();
+                dgvProfissionalDados.Rows[count].Cells[0].Value = profissional.Nome;
+                dgvProfissionalDados.Rows[count].Cells[1].Value = profissional.Email;
+                dgvProfissionalDados.Rows[count].Cells[2].Value = profissional.Cpf;
+                dgvProfissionalDados.Rows[count].Cells[3].Value = profissional.Especializacao;
+                dgvProfissionalDados.Rows[count].Cells[4].Value = profissional.Data_contrato;
+                dgvProfissionalDados.Rows[count].Cells[5].Value = profissional.Data_cad;
+                dgvProfissionalDados.Rows[count].Cells[6].Value = profissional.Data_nasc;
+                dgvProfissionalDados.Rows[count].Cells[7].Value = profissional.Genero.Genero_nome;
+                dgvProfissionalDados.Rows[count].Cells[8].Value = profissional.Ativo;
+
+
+                count++;
+
+            }
+
+        }
+
+        private void CarregarTelefoneProfissional()
+        {
+
+            var telefones = TelefoneProfissional.ObterListaTelefone();
+            int count = 0;
+
+            dgvProfissionalTelefone.Rows.Clear();
+            foreach (var telefone in telefones)
+            {
+                int rowIndex = dgvProfissionalTelefone.Rows.Add();
+                dgvProfissionalTelefone.Rows[count].Cells[0].Value = telefone.Profissional_id;
+                dgvProfissionalTelefone.Rows[count].Cells[1].Value = telefone.Numero;
+                dgvProfissionalTelefone.Rows[count].Cells[2].Value = telefone.Telefonetipo_id.Tipo;
+
+                count++;
+
+
+            }
 
         }
 

@@ -145,5 +145,43 @@ namespace PsicomindClass
             }
             return endereco;
         }
+
+        public static List<Endereco> ObterListaEndereco(string nome = null)
+        {
+            List<Endereco> lista = new List<Endereco>();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+
+            if (nome == null)
+            {
+
+                cmd.CommandText = "SELECT * FROM enderecos";
+            }
+            else
+            {
+                cmd.CommandText = $"SELECT * FROM enderecos WHERE nome LIKE '%{nome}%'";
+            }
+
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                lista.Add(new(
+                       dr.GetInt32(0),
+                       dr.GetInt32(1),
+                       dr.GetString(2),
+                       dr.GetString(3),
+                       dr.GetString(4),
+                       dr.GetString(5),
+                       dr.GetString(6),
+                       dr.GetString(7),
+                       TipoEndereco.ObterPorId(dr.GetInt32(0))
+                       )
+                   );
+            }
+
+            return lista;
+        }
+
     }
 }
