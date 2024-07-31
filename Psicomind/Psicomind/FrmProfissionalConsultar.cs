@@ -40,11 +40,12 @@ namespace Psicomind
 
             CarregarDadosProfissional();
             CarregarTelefoneProfissional();
-            
+
 
         }
 
-        private void CarregarDadosProfissional() {
+        private void CarregarDadosProfissional()
+        {
 
             var profissionais = Profissional.ObterLista();
             int count = 0;
@@ -53,15 +54,16 @@ namespace Psicomind
             foreach (var profissional in profissionais)
             {
                 int rowIndex = dgvProfissionalDados.Rows.Add();
-                dgvProfissionalDados.Rows[count].Cells[0].Value = profissional.Nome;
-                dgvProfissionalDados.Rows[count].Cells[1].Value = profissional.Email;
-                dgvProfissionalDados.Rows[count].Cells[2].Value = profissional.Cpf;
-                dgvProfissionalDados.Rows[count].Cells[3].Value = profissional.Especializacao;
-                dgvProfissionalDados.Rows[count].Cells[4].Value = profissional.Data_contrato;
-                dgvProfissionalDados.Rows[count].Cells[5].Value = profissional.Data_cad;
-                dgvProfissionalDados.Rows[count].Cells[6].Value = profissional.Data_nasc;
-                dgvProfissionalDados.Rows[count].Cells[7].Value = profissional.Genero.Genero_nome;
-                dgvProfissionalDados.Rows[count].Cells[8].Value = profissional.Ativo;
+                dgvProfissionalDados.Rows[count].Cells[0].Value = profissional.Id;
+                dgvProfissionalDados.Rows[count].Cells[1].Value = profissional.Nome;
+                dgvProfissionalDados.Rows[count].Cells[2].Value = profissional.Email;
+                dgvProfissionalDados.Rows[count].Cells[3].Value = profissional.Cpf;
+                dgvProfissionalDados.Rows[count].Cells[4].Value = profissional.Especializacao;
+                dgvProfissionalDados.Rows[count].Cells[5].Value = profissional.Data_contrato;
+                dgvProfissionalDados.Rows[count].Cells[6].Value = profissional.Data_cad;
+                dgvProfissionalDados.Rows[count].Cells[7].Value = profissional.Data_nasc;
+                dgvProfissionalDados.Rows[count].Cells[8].Value = profissional.Genero.Genero_nome;
+                dgvProfissionalDados.Rows[count].Cells[9].Value = profissional.Ativo;
 
 
                 count++;
@@ -91,5 +93,13 @@ namespace Psicomind
 
         }
 
+        private void dgvProfissionalDados_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FrmProfissionalEditar frmProfissionalEditar = new();
+            frmProfissionalEditar.txtProfissionalId.Text = dgvProfissionalDados.Rows[dgvProfissionalDados.CurrentRow.Index].Cells[0].Value.ToString();
+
+            frmProfissionalEditar.Show();
+            this.Hide();
+        }
     }
 }

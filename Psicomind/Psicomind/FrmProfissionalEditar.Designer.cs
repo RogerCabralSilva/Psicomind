@@ -126,6 +126,7 @@
             guna2ContainerControl2.Size = new Size(748, 624);
             guna2ContainerControl2.TabIndex = 29;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
+            guna2ContainerControl2.Click += guna2ContainerControl2_Click;
             // 
             // txtEspecializaçãoProfissional
             // 
@@ -613,7 +614,7 @@
         private Label label1;
         private Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtSenhaProfissional;
-        private Guna.UI2.WinForms.Guna2TextBox txtProfissionalId;
+        public Guna.UI2.WinForms.Guna2TextBox txtProfissionalId;
         private Guna.UI2.WinForms.Guna2TextBox txtNomeProfissional;
     }
 }

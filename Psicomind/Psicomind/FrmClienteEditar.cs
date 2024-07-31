@@ -133,6 +133,39 @@ namespace Psicomind
             cmbTipoTelefone.DataSource = tipoTelefone;
             cmbTipoTelefone.DisplayMember = "Tipo";
             cmbTipoTelefone.ValueMember = "id";
+
+            // Preenchendo via ID
+
+            if (txtClienteId.Text != string.Empty)
+            {
+
+                // Busca o cliente
+
+                var cliente = Cliente.ObterPorId(int.Parse(txtClienteId.Text));
+                txtNome.Text = cliente.Nome;
+                txtSenha.Text = cliente.Senha;
+                cmbGenero.SelectedValue = cliente.GeneroCliente.Id;
+                dptDataNascimento.Value = cliente.Data_nasc;
+                chkAtivo.Checked = cliente.Ativo;
+
+                // Busca o Endereço
+                Endereco endereco = Endereco.ObterPorId(int.Parse(txtClienteId.Text));
+                mtxCep.Text = endereco.Cep;
+                txtRua.Text = endereco.Rua;
+                txtNumero.Text = endereco.Numero;
+                txtBairro.Text = endereco.Bairro;
+                txtCidade.Text = endereco.Cidade;
+                txtUf.Text = endereco.Uf;
+                cmbTipoEndereco.SelectedValue = endereco.TipoEndereco.Id;
+
+                // Busca o Telefone
+
+                TelefoneCliente telefoneCliente = TelefoneCliente.ObterPorId(int.Parse(txtClienteId.Text));
+                mtxTelefone.Text = telefoneCliente.Numero;
+                cmbTipoTelefone.SelectedValue = telefoneCliente.TelefoneTipo_id.Id;
+
+            }
+
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)

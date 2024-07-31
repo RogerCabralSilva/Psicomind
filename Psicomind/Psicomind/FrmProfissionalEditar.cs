@@ -106,6 +106,30 @@ namespace Psicomind
             cmbTipoTelefoneProfissional.DataSource = tipoTelefone;
             cmbTipoTelefoneProfissional.DisplayMember = "tipo";
             cmbTipoTelefoneProfissional.ValueMember = "id";
+
+            // Preenchendo via ID
+
+            if (txtProfissionalId.Text != string.Empty)
+            {
+
+                // Busca o cliente
+
+                var profissional = Profissional.ObterPorId(int.Parse(txtProfissionalId.Text)); ;
+                txtNomeProfissional.Text = profissional.Nome;
+                txtSenhaProfissional.Text = profissional.Senha;
+                txtEspecializaçãoProfissional.Text = profissional.Especializacao;
+                cmbGeneroProfissional.SelectedValue = profissional.Genero.Id;
+                chkAtivoProfissional.Checked = profissional.Ativo;
+                dptDataContrato.Value = profissional.Data_contrato;
+                dptDataNascimentoProfissional.Value = profissional.Data_nasc;
+
+
+                // Busca o Telefone
+
+                TelefoneProfissional telefoneProfissional = TelefoneProfissional.ObterPorId(int.Parse(txtProfissionalId.Text));
+                mtxTelefoneProfissional.Text = telefoneProfissional.Numero;
+                cmbTipoTelefoneProfissional.SelectedValue = telefoneProfissional.Telefonetipo_id.Id;
+            }
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -212,6 +236,11 @@ namespace Psicomind
             FrmProfissionalMenu.Show();
 
             this.Close();
+        }
+
+        private void guna2ContainerControl2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

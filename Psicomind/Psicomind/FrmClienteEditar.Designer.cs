@@ -876,7 +876,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNumero;
         private Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtSenha;
-        private Guna.UI2.WinForms.Guna2TextBox txtClienteId;
+        public Guna.UI2.WinForms.Guna2TextBox txtClienteId;
         private Guna.UI2.WinForms.Guna2TextBox txtNome;
     }
 }

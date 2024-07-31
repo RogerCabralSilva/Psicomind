@@ -48,13 +48,14 @@ namespace Psicomind
             foreach (var cliente in clientes)
             {
                 int rowIndex = dgvClientesDados.Rows.Add();
-                dgvClientesDados.Rows[count].Cells[0].Value = cliente.Nome;
-                dgvClientesDados.Rows[count].Cells[1].Value = cliente.Email;
-                dgvClientesDados.Rows[count].Cells[2].Value = cliente.Cpf;
-                dgvClientesDados.Rows[count].Cells[3].Value = cliente.Data_cad;
-                dgvClientesDados.Rows[count].Cells[4].Value = cliente.Data_nasc;
-                dgvClientesDados.Rows[count].Cells[5].Value = cliente.GeneroCliente.Genero_nome;
-                dgvClientesDados.Rows[count].Cells[6].Value = cliente.Ativo;
+                dgvClientesDados.Rows[count].Cells[0].Value = cliente.Id;
+                dgvClientesDados.Rows[count].Cells[1].Value = cliente.Nome;
+                dgvClientesDados.Rows[count].Cells[2].Value = cliente.Email;
+                dgvClientesDados.Rows[count].Cells[3].Value = cliente.Cpf;
+                dgvClientesDados.Rows[count].Cells[4].Value = cliente.Data_cad;
+                dgvClientesDados.Rows[count].Cells[5].Value = cliente.Data_nasc;
+                dgvClientesDados.Rows[count].Cells[6].Value = cliente.GeneroCliente.Genero_nome;
+                dgvClientesDados.Rows[count].Cells[7].Value = cliente.Ativo;
 
 
                 count++;
@@ -109,5 +110,15 @@ namespace Psicomind
 
         }
 
+        private void dgvClientesDados_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            FrmClienteEditar frmClienteEditar = new();
+            frmClienteEditar.txtClienteId.Text = dgvClientesDados.Rows[dgvClientesDados.CurrentRow.Index].Cells[0].Value.ToString();
+
+            frmClienteEditar.Show();
+            this.Hide();
+
+        }
     }
 }
