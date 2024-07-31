@@ -120,5 +120,10 @@ namespace Psicomind
             this.Hide();
 
         }
+
+        private void btnVoltar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

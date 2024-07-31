@@ -146,6 +146,10 @@ namespace PsicomindClass
             return endereco;
         }
 
+
+        /// <summary>
+        /// Obtem uma lista de endereços 
+        /// </summary>
         public static List<Endereco> ObterListaEndereco(string nome = null)
         {
             List<Endereco> lista = new List<Endereco>();
