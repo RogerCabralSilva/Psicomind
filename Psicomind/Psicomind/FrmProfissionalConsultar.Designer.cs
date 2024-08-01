@@ -106,7 +106,7 @@
             pngCelularProfissional.Location = new Point(184, 4);
             pngCelularProfissional.Name = "pngCelularProfissional";
             pngCelularProfissional.Padding = new Padding(3);
-            pngCelularProfissional.Size = new Size(1024, 631);
+            pngCelularProfissional.Size = new Size(1146, 704);
             pngCelularProfissional.TabIndex = 1;
             pngCelularProfissional.Text = "Telefone";
             pngCelularProfissional.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@
             guna2ContainerControl1.Location = new Point(-3, -2);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
             guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2ContainerControl1.Size = new Size(1030, 635);
+            guna2ContainerControl1.Size = new Size(1153, 635);
             guna2ContainerControl1.TabIndex = 1;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
@@ -214,7 +214,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvProfissionalTelefone.DefaultCellStyle = dataGridViewCellStyle3;
             dgvProfissionalTelefone.GridColor = Color.FromArgb(242, 245, 250);
-            dgvProfissionalTelefone.Location = new Point(52, 177);
+            dgvProfissionalTelefone.Location = new Point(113, 177);
             dgvProfissionalTelefone.Name = "dgvProfissionalTelefone";
             dgvProfissionalTelefone.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -276,7 +276,7 @@
             pngDadosProfissional.Location = new Point(184, 4);
             pngDadosProfissional.Name = "pngDadosProfissional";
             pngDadosProfissional.Padding = new Padding(3);
-            pngDadosProfissional.Size = new Size(1024, 631);
+            pngDadosProfissional.Size = new Size(1146, 704);
             pngDadosProfissional.TabIndex = 0;
             pngDadosProfissional.Text = "Dados Pessoais";
             pngDadosProfissional.UseVisualStyleBackColor = true;
@@ -291,10 +291,10 @@
             container.Controls.Add(guna2DataGridView2);
             container.Controls.Add(dgvProfissionalDados);
             container.CustomizableEdges = customizableEdges11;
-            container.Location = new Point(-2, -1);
+            container.Location = new Point(0, 0);
             container.Name = "container";
             container.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            container.Size = new Size(1064, 632);
+            container.Size = new Size(1150, 668);
             container.TabIndex = 47;
             container.Text = "guna2ContainerControl2";
             container.Click += guna2ContainerControl2_Click;
@@ -323,7 +323,7 @@
             btnVoltar.BackColor = Color.White;
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(49, 45);
+            btnVoltar.Location = new Point(48, 61);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(50, 30);
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -402,7 +402,7 @@
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
             guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
             guna2DataGridView2.GridColor = Color.FromArgb(242, 245, 250);
-            guna2DataGridView2.Location = new Point(929, 906);
+            guna2DataGridView2.Location = new Point(972, 924);
             guna2DataGridView2.Name = "guna2DataGridView2";
             guna2DataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -517,7 +517,7 @@
             dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
             dgvProfissionalDados.DefaultCellStyle = dataGridViewCellStyle11;
             dgvProfissionalDados.GridColor = Color.FromArgb(242, 245, 250);
-            dgvProfissionalDados.Location = new Point(48, 186);
+            dgvProfissionalDados.Location = new Point(49, 204);
             dgvProfissionalDados.Name = "dgvProfissionalDados";
             dgvProfissionalDados.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -530,7 +530,7 @@
             dgvProfissionalDados.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dgvProfissionalDados.RowHeadersVisible = false;
             dgvProfissionalDados.RowTemplate.Height = 30;
-            dgvProfissionalDados.Size = new Size(915, 386);
+            dgvProfissionalDados.Size = new Size(1053, 386);
             dgvProfissionalDados.TabIndex = 42;
             dgvProfissionalDados.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvProfissionalDados.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -631,14 +631,14 @@
             // guna2TabControl1
             // 
             guna2TabControl1.Alignment = TabAlignment.Left;
-            guna2TabControl1.Anchor = AnchorStyles.None;
             guna2TabControl1.Controls.Add(pngDadosProfissional);
             guna2TabControl1.Controls.Add(pngCelularProfissional);
+            guna2TabControl1.Dock = DockStyle.Fill;
             guna2TabControl1.ItemSize = new Size(180, 40);
-            guna2TabControl1.Location = new Point(50, 42);
+            guna2TabControl1.Location = new Point(0, 0);
             guna2TabControl1.Name = "guna2TabControl1";
             guna2TabControl1.SelectedIndex = 0;
-            guna2TabControl1.Size = new Size(1212, 639);
+            guna2TabControl1.Size = new Size(1334, 712);
             guna2TabControl1.TabButtonHoverState.BorderColor = Color.Empty;
             guna2TabControl1.TabButtonHoverState.FillColor = Color.FromArgb(40, 52, 70);
             guna2TabControl1.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);

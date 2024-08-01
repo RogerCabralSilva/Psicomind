@@ -112,11 +112,12 @@
             pngClienteTelefone.Controls.Add(pngClienteDados);
             pngClienteTelefone.Controls.Add(pngTelefoneCliente);
             pngClienteTelefone.Controls.Add(pngClienteEndereco);
+            pngClienteTelefone.Dock = DockStyle.Fill;
             pngClienteTelefone.ItemSize = new Size(180, 40);
-            pngClienteTelefone.Location = new Point(39, 34);
+            pngClienteTelefone.Location = new Point(0, 0);
             pngClienteTelefone.Name = "pngClienteTelefone";
             pngClienteTelefone.SelectedIndex = 0;
-            pngClienteTelefone.Size = new Size(1255, 639);
+            pngClienteTelefone.Size = new Size(1334, 712);
             pngClienteTelefone.TabButtonHoverState.BorderColor = Color.Empty;
             pngClienteTelefone.TabButtonHoverState.FillColor = Color.FromArgb(40, 52, 70);
             pngClienteTelefone.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);
@@ -142,7 +143,7 @@
             pngClienteDados.Location = new Point(184, 4);
             pngClienteDados.Name = "pngClienteDados";
             pngClienteDados.Padding = new Padding(3);
-            pngClienteDados.Size = new Size(1067, 631);
+            pngClienteDados.Size = new Size(1146, 704);
             pngClienteDados.TabIndex = 0;
             pngClienteDados.Text = "Dados Pessoais";
             pngClienteDados.UseVisualStyleBackColor = true;
@@ -157,7 +158,7 @@
             guna2ContainerControl1.Location = new Point(-6, -3);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
             guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ContainerControl1.Size = new Size(1073, 639);
+            guna2ContainerControl1.Size = new Size(1156, 639);
             guna2ContainerControl1.TabIndex = 0;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
@@ -208,7 +209,7 @@
             btnVoltar.BackColor = Color.White;
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(49, 61);
+            btnVoltar.Location = new Point(49, 67);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(50, 30);
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -245,7 +246,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvClientesDados.DefaultCellStyle = dataGridViewCellStyle3;
             dgvClientesDados.GridColor = Color.FromArgb(242, 245, 250);
-            dgvClientesDados.Location = new Point(52, 191);
+            dgvClientesDados.Location = new Point(49, 191);
             dgvClientesDados.Name = "dgvClientesDados";
             dgvClientesDados.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -258,7 +259,7 @@
             dgvClientesDados.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvClientesDados.RowHeadersVisible = false;
             dgvClientesDados.RowTemplate.Height = 30;
-            dgvClientesDados.Size = new Size(978, 411);
+            dgvClientesDados.Size = new Size(1023, 411);
             dgvClientesDados.TabIndex = 49;
             dgvClientesDados.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvClientesDados.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -352,7 +353,7 @@
             pngTelefoneCliente.Location = new Point(184, 4);
             pngTelefoneCliente.Name = "pngTelefoneCliente";
             pngTelefoneCliente.Padding = new Padding(3);
-            pngTelefoneCliente.Size = new Size(1067, 631);
+            pngTelefoneCliente.Size = new Size(1146, 704);
             pngTelefoneCliente.TabIndex = 1;
             pngTelefoneCliente.Text = "Telefone";
             pngTelefoneCliente.UseVisualStyleBackColor = true;
@@ -363,7 +364,7 @@
             pictureBox1.BackColor = Color.White;
             pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(53, 60);
+            pictureBox1.Location = new Point(53, 74);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(50, 30);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -459,7 +460,7 @@
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
             dgvClienteTelefone.DefaultCellStyle = dataGridViewCellStyle7;
             dgvClienteTelefone.GridColor = Color.FromArgb(242, 245, 250);
-            dgvClienteTelefone.Location = new Point(53, 195);
+            dgvClienteTelefone.Location = new Point(53, 232);
             dgvClienteTelefone.Name = "dgvClienteTelefone";
             dgvClienteTelefone.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -472,7 +473,7 @@
             dgvClienteTelefone.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dgvClienteTelefone.RowHeadersVisible = false;
             dgvClienteTelefone.RowTemplate.Height = 30;
-            dgvClienteTelefone.Size = new Size(960, 386);
+            dgvClienteTelefone.Size = new Size(1040, 386);
             dgvClienteTelefone.TabIndex = 51;
             dgvClienteTelefone.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvClienteTelefone.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -521,7 +522,7 @@
             pngClienteEndereco.Location = new Point(184, 4);
             pngClienteEndereco.Name = "pngClienteEndereco";
             pngClienteEndereco.Padding = new Padding(3);
-            pngClienteEndereco.Size = new Size(1067, 631);
+            pngClienteEndereco.Size = new Size(1146, 704);
             pngClienteEndereco.TabIndex = 2;
             pngClienteEndereco.Text = "Endereço";
             pngClienteEndereco.UseVisualStyleBackColor = true;
@@ -536,7 +537,7 @@
             guna2ContainerControl2.Location = new Point(-2, -4);
             guna2ContainerControl2.Name = "guna2ContainerControl2";
             guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2ContainerControl2.Size = new Size(1071, 639);
+            guna2ContainerControl2.Size = new Size(1152, 639);
             guna2ContainerControl2.TabIndex = 0;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
@@ -629,7 +630,7 @@
             dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
             dgvClienteEndereco.DefaultCellStyle = dataGridViewCellStyle11;
             dgvClienteEndereco.GridColor = Color.FromArgb(242, 245, 250);
-            dgvClienteEndereco.Location = new Point(62, 199);
+            dgvClienteEndereco.Location = new Point(103, 199);
             dgvClienteEndereco.Name = "dgvClienteEndereco";
             dgvClienteEndereco.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
