@@ -10,11 +10,12 @@ namespace PsicomindClass
     public class Usuario
     {
         public int Id { get; set; }
+        public Cargo Cargo { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
         public bool Ativo {  get; set; }
-        public Cargo Cargo { get; set; }
+        
 
         public Usuario(int id, string nome, string email, string senha, bool ativo)
         {
@@ -60,6 +61,16 @@ namespace PsicomindClass
             Cargo = cargo;
         }
 
+        public Usuario(int id, Cargo cargo, string nome, string email, string senha, bool ativo)
+        {
+            Id = id;
+            Cargo = cargo;
+            Nome = nome;
+            Email = email;
+            Senha = senha;
+            Ativo = ativo;
+        }
+
         public void Inserir ()
         {
             var cmd = Banco.Abrir();
@@ -94,12 +105,12 @@ namespace PsicomindClass
             {
                 lista.Add(new Usuario(
                     dr.GetInt32(0),
-                    dr.GetString(1),
+                    Cargo.ObterPorId(dr.GetInt32(1)),
                     dr.GetString(2),
                     dr.GetString(3),
-                    dr.GetBoolean(4),
-                    Cargo.ObterPorId(dr.GetInt32(5))
-
+                    dr.GetString(4),
+                    dr.GetBoolean(5)
+                    
                     ));
             }
 
