@@ -25,6 +25,15 @@ namespace PsicomindClass
             Ativo = ativo;
         }
 
+        public Usuario(int id, string nome, string email, string senha, bool ativo, Cargo cargo)
+        {
+            Id = id;
+            Nome = nome;
+            Email = email;
+            Ativo = ativo;
+            Cargo = cargo;
+        }
+
         public Usuario(string nome, string email, string senha, bool ativo)
         {
             Nome = nome;
