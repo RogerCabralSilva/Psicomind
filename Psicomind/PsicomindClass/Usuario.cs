@@ -81,11 +81,11 @@ namespace PsicomindClass
 
             if (nome == null)
             {
-                cmd.CommandText = "SELECT * FROM usuario_cargo";
+                cmd.CommandText = "SELECT * FROM usuarios";
             }
             else
             {
-                cmd.CommandText = $"SELECT * FROM usuario_cargos WHERE nome LIKE '%{nome}%' ";
+                cmd.CommandText = $"SELECT * FROM usuarios WHERE nome LIKE '%{nome}%' ";
             }
 
             var dr = cmd.ExecuteReader();

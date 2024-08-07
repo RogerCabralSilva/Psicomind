@@ -23,5 +23,13 @@ namespace Psicomind
             frmPrincipal.StartPosition = FormStartPosition.CenterScreen;
             this.Close();
         }
+
+        private void btnPagConsultarUsuario_Click(object sender, EventArgs e)
+        {
+            FrmUsuarioConsultar userConsultar = new FrmUsuarioConsultar();
+            userConsultar.StartPosition = FormStartPosition.CenterScreen;
+            userConsultar.Show();
+            this.Close();
+        }
     }
 }

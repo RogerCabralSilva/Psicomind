@@ -146,6 +146,7 @@
             btnPagConsultarUsuario.Size = new Size(212, 197);
             btnPagConsultarUsuario.TabIndex = 42;
             btnPagConsultarUsuario.Text = "guna2ContainerControl1";
+            btnPagConsultarUsuario.Click += btnPagConsultarUsuario_Click;
             // 
             // label6
             // 
