@@ -92,16 +92,18 @@ namespace Psicomind
         private void CarregarTelefoneCliente()
         {
 
-            var telefones = TelefoneCliente.ObterListaTelefone();
+            var clientes = Cliente.ObterLista();
             int count = 0;
-
+            
+            
             dgvClienteTelefone.Rows.Clear();
-            foreach (var telefone in telefones)
+            foreach (var cliente in clientes)
             {
                 int rowIndex = dgvClienteTelefone.Rows.Add();
-                dgvClienteTelefone.Rows[count].Cells[0].Value = telefone.Cliente_id;
-                dgvClienteTelefone.Rows[count].Cells[1].Value = telefone.Numero;
-                dgvClienteTelefone.Rows[count].Cells[2].Value = telefone.TelefoneTipo_id.Tipo;
+                dgvClienteTelefone.Rows[count].Cells[0].Value = cliente.Nome;
+                dgvClienteTelefone.Rows[count].Cells[1].Value = cliente.Telefone.Numero;
+                dgvClienteTelefone.Rows[count].Cells[2].Value = cliente.Telefone.TelefoneTipo_id.Tipo;
+
 
                 count++;
 
@@ -153,5 +155,6 @@ namespace Psicomind
 
             this.Close();
         }
+
     }
 }

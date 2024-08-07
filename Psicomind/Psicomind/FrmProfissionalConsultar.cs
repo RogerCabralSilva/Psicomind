@@ -85,9 +85,7 @@ namespace Psicomind
             foreach (var cliente in clientes)
             {
                 int rowIndex = dgvProfissionalTelefone.Rows.Add();
-                dgvProfissionalTelefone.Rows[count].Cells[0].Value = cliente.Nome;
-                dgvProfissionalTelefone.Rows[count].Cells[1].Value = cliente.Telefone;
-                dgvProfissionalTelefone.Rows[count].Cells[2].Value = telefone.Telefonetipo_id.Tipo;
+
 
                 count++;
 

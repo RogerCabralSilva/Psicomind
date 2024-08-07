@@ -61,12 +61,12 @@ namespace PsicomindClass
         /// <summary>
         /// Lista de endereço de um cliente
         /// </summary>
-        public List<Endereco>? Enderecos { get; set; }
+        public Endereco? Enderecos { get; set; }
 
         /// <summary>
         /// Lista de telefone do cliente
         /// </summary>
-        public List<TelefoneCliente>? Telefone { get; set; }
+        public TelefoneCliente? Telefone { get; set; }
 
 
         public Cliente()
@@ -75,7 +75,7 @@ namespace PsicomindClass
 
         }
 
-        public Cliente(int id, string nome, string cpf, string email, string senha, DateTime data_nasc, DateTime data_cad, bool ativo, Genero generoCliente, List<Endereco> enderecos)
+        public Cliente(int id, string nome, string cpf, string email, string senha, DateTime data_nasc, DateTime data_cad, bool ativo, Genero generoCliente, Endereco enderecos)
         {
             Id = id;
             Nome = nome;
@@ -124,6 +124,21 @@ namespace PsicomindClass
 
         }
 
+        public Cliente(int id, string? nome, string? email, string? cpf, string? senha, DateTime data_nasc, DateTime data_cad, bool ativo, Genero generoCliente, Endereco? enderecos, TelefoneCliente? telefone)
+        {
+            Id = id;
+            Nome = nome;
+            Email = email;
+            Cpf = cpf;
+            Senha = senha;
+            Data_nasc = data_nasc;
+            Data_cad = data_cad;
+            Ativo = ativo;
+            GeneroCliente = generoCliente;
+            Enderecos = enderecos;
+            Telefone = telefone;
+        }
+
         /// <summary>
         /// Inserir cliente no banco de dados.
         /// <para>Parâmetros:</para>
@@ -166,11 +181,11 @@ namespace PsicomindClass
 
             if (nome == null)
             {
-                cmd.CommandText = "SELECT * FROM clientes";
+                cmd.CommandText = "SELECT * FROM cliente_info";
             }
             else
             {
-                cmd.CommandText = $"SELECT * FROM clientes WHERE nome LIKE '%{nome}%' ";
+                cmd.CommandText = $"SELECT * FROM cliente_info WHERE nome LIKE '%{nome}%' ";
             }
 
             var dr = cmd.ExecuteReader();
@@ -185,9 +200,10 @@ namespace PsicomindClass
                     dr.GetString(4),
                     dr.GetDateTime(5),
                     dr.GetDateTime(6),
-                    Genero.ObterPorId(dr.GetInt32(7)),
-                    dr.GetBoolean(8)
-
+                    dr.GetBoolean(7),
+                    Genero.ObterPorId(dr.GetInt32(8)),
+                    Endereco.ObterPorId(dr.GetInt32(9)),
+                    TelefoneCliente.ObterPorId(dr.GetInt32(10))
                     ));
             }
 
@@ -219,9 +235,10 @@ namespace PsicomindClass
                     dr.GetString(4),
                     dr.GetDateTime(5),
                     dr.GetDateTime(6),
-                    Genero.ObterPorId(dr.GetInt32(7)),
-                    dr.GetBoolean(8)
-
+                    dr.GetBoolean(7),
+                    Genero.ObterPorId(dr.GetInt32(8)),
+                    Endereco.ObterPorId(dr.GetInt32(9)),
+                    TelefoneCliente.ObterPorId(dr.GetInt32(10))
                     ));
             }
 
