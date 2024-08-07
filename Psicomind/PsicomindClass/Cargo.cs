@@ -61,7 +61,7 @@ namespace PsicomindClass
 
         }
 
-        public List<Cargo> ObterLista()
+        public static List<Cargo> ObterLista()
         {
 
             List<Cargo> cargos = new();

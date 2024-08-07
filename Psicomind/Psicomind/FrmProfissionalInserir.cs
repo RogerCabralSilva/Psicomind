@@ -78,6 +78,14 @@ namespace Psicomind
 
             profissional.Inserir();
 
+            // Inserir Usuário Profissional
+            if (profissional.Id > 0)
+            {
+                string primeiroNome = txtNomeProfissional.Text.Split(' ')[0];
+                Usuario usuario = new(primeiroNome, txtEmailProfissional.Text, txtSenhaProfissional.Text, Cargo.ObterPorId(Convert.ToInt32(cmbCargos.SelectedValue)));
+
+                usuario.Inserir();
+            }
 
             // Se o profissional for inserido e consequentemente seu ID for atribuído, mostre:
 
@@ -116,6 +124,11 @@ namespace Psicomind
             cmbTipoTelefoneProfissional.DataSource = tipoTelefone;
             cmbTipoTelefoneProfissional.DisplayMember = "tipo";
             cmbTipoTelefoneProfissional.ValueMember = "id";
+
+            var cargo = Cargo.ObterLista();
+            cmbCargos.DataSource= cargo;
+            cmbCargos.DisplayMember = "nome";
+            cmbCargos.ValueMember = "id";
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

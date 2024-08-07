@@ -54,6 +54,9 @@ namespace Psicomind
             foreach (var profissional in profissionais)
             {
                 int rowIndex = dgvProfissionalDados.Rows.Add();
+
+                dgvProfissionalDados.Columns["clnDataNascProfissional"].DefaultCellStyle.Format = "dd/MM/yyyy";
+                dgvProfissionalDados.Columns["clnDataContrato"].DefaultCellStyle.Format = "dd/MM/yyyy";
                 dgvProfissionalDados.Rows[count].Cells[0].Value = profissional.Id;
                 dgvProfissionalDados.Rows[count].Cells[1].Value = profissional.Nome;
                 dgvProfissionalDados.Rows[count].Cells[2].Value = profissional.Email;
@@ -75,15 +78,15 @@ namespace Psicomind
         private void CarregarTelefoneProfissional()
         {
 
-            var telefones = TelefoneProfissional.ObterListaTelefone();
+            var clientes = Cliente.ObterLista();
             int count = 0;
 
             dgvProfissionalTelefone.Rows.Clear();
-            foreach (var telefone in telefones)
+            foreach (var cliente in clientes)
             {
                 int rowIndex = dgvProfissionalTelefone.Rows.Add();
-                dgvProfissionalTelefone.Rows[count].Cells[0].Value = telefone.Profissional_id;
-                dgvProfissionalTelefone.Rows[count].Cells[1].Value = telefone.Numero;
+                dgvProfissionalTelefone.Rows[count].Cells[0].Value = cliente.Nome;
+                dgvProfissionalTelefone.Rows[count].Cells[1].Value = cliente.Telefone;
                 dgvProfissionalTelefone.Rows[count].Cells[2].Value = telefone.Telefonetipo_id.Tipo;
 
                 count++;
@@ -111,6 +114,11 @@ namespace Psicomind
             FrmClientesMenu.Show();
 
             this.Close();
+        }
+
+        private void dgvProfissionalDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

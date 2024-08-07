@@ -145,7 +145,14 @@ namespace Psicomind
                 MessageBox.Show($"Já existe alguma informação inserida !!!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            // Inserir Usuário 
+            if (cliente.Id > 0)
+            {
+                string primeiroNome = txtNome.Text.Split(' ')[0];
+                Usuario usuario = new(primeiroNome, txtEmail.Text, txtSenha.Text, Cargo.ObterPorId(Convert.ToInt32(txtCargoId.Text)));
 
+                usuario.Inserir();
+            }
 
             // Se cliente tiver id mostre isso
 

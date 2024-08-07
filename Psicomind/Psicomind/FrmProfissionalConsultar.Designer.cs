@@ -79,6 +79,7 @@
             dataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
             dgvProfissionalDados = new Guna.UI2.WinForms.Guna2DataGridView();
+            guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             clnIdProfissional = new DataGridViewTextBoxColumn();
             clnNomeProfissional = new DataGridViewTextBoxColumn();
             clnEmailProfissional = new DataGridViewTextBoxColumn();
@@ -89,7 +90,6 @@
             clnDataNascProfissional = new DataGridViewTextBoxColumn();
             clnGeneroProfissional = new DataGridViewTextBoxColumn();
             clnAtivoProfissional = new DataGridViewCheckBoxColumn();
-            guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             pngCelularProfissional.SuspendLayout();
             guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -534,7 +534,7 @@
             dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
             dgvProfissionalDados.DefaultCellStyle = dataGridViewCellStyle11;
             dgvProfissionalDados.GridColor = Color.FromArgb(242, 245, 250);
-            dgvProfissionalDados.Location = new Point(49, 204);
+            dgvProfissionalDados.Location = new Point(29, 204);
             dgvProfissionalDados.Name = "dgvProfissionalDados";
             dgvProfissionalDados.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -547,7 +547,7 @@
             dgvProfissionalDados.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dgvProfissionalDados.RowHeadersVisible = false;
             dgvProfissionalDados.RowTemplate.Height = 30;
-            dgvProfissionalDados.Size = new Size(1053, 386);
+            dgvProfissionalDados.Size = new Size(1097, 386);
             dgvProfissionalDados.TabIndex = 42;
             dgvProfissionalDados.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvProfissionalDados.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -570,7 +570,38 @@
             dgvProfissionalDados.ThemeStyle.RowsStyle.Height = 30;
             dgvProfissionalDados.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(0, 0, 192);
             dgvProfissionalDados.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
+            dgvProfissionalDados.CellContentClick += dgvProfissionalDados_CellContentClick;
             dgvProfissionalDados.CellContentDoubleClick += dgvProfissionalDados_CellContentDoubleClick;
+            // 
+            // guna2TabControl1
+            // 
+            guna2TabControl1.Alignment = TabAlignment.Left;
+            guna2TabControl1.Controls.Add(pngDadosProfissional);
+            guna2TabControl1.Controls.Add(pngCelularProfissional);
+            guna2TabControl1.Dock = DockStyle.Fill;
+            guna2TabControl1.ItemSize = new Size(180, 40);
+            guna2TabControl1.Location = new Point(0, 0);
+            guna2TabControl1.Name = "guna2TabControl1";
+            guna2TabControl1.SelectedIndex = 0;
+            guna2TabControl1.Size = new Size(1334, 712);
+            guna2TabControl1.TabButtonHoverState.BorderColor = Color.Empty;
+            guna2TabControl1.TabButtonHoverState.FillColor = Color.FromArgb(40, 52, 70);
+            guna2TabControl1.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);
+            guna2TabControl1.TabButtonHoverState.ForeColor = Color.White;
+            guna2TabControl1.TabButtonHoverState.InnerColor = Color.FromArgb(40, 52, 70);
+            guna2TabControl1.TabButtonIdleState.BorderColor = Color.Empty;
+            guna2TabControl1.TabButtonIdleState.FillColor = Color.FromArgb(33, 42, 57);
+            guna2TabControl1.TabButtonIdleState.Font = new Font("Segoe UI Semibold", 10F);
+            guna2TabControl1.TabButtonIdleState.ForeColor = Color.FromArgb(156, 160, 167);
+            guna2TabControl1.TabButtonIdleState.InnerColor = Color.FromArgb(33, 42, 57);
+            guna2TabControl1.TabButtonSelectedState.BorderColor = Color.Empty;
+            guna2TabControl1.TabButtonSelectedState.FillColor = Color.FromArgb(29, 37, 49);
+            guna2TabControl1.TabButtonSelectedState.Font = new Font("Segoe UI Semibold", 10F);
+            guna2TabControl1.TabButtonSelectedState.ForeColor = Color.White;
+            guna2TabControl1.TabButtonSelectedState.InnerColor = Color.FromArgb(76, 132, 255);
+            guna2TabControl1.TabButtonSize = new Size(180, 40);
+            guna2TabControl1.TabIndex = 48;
+            guna2TabControl1.TabMenuBackColor = Color.FromArgb(33, 42, 57);
             // 
             // clnIdProfissional
             // 
@@ -620,14 +651,14 @@
             // 
             // clnDataCad
             // 
-            clnDataCad.FillWeight = 150F;
+            clnDataCad.FillWeight = 160F;
             clnDataCad.HeaderText = "Data Cadastro";
             clnDataCad.Name = "clnDataCad";
             clnDataCad.ReadOnly = true;
             // 
             // clnDataNascProfissional
             // 
-            clnDataNascProfissional.FillWeight = 200.4F;
+            clnDataNascProfissional.FillWeight = 210.4F;
             clnDataNascProfissional.HeaderText = "Data de Nascimento";
             clnDataNascProfissional.Name = "clnDataNascProfissional";
             clnDataNascProfissional.ReadOnly = true;
@@ -644,36 +675,6 @@
             clnAtivoProfissional.HeaderText = "Ativo";
             clnAtivoProfissional.Name = "clnAtivoProfissional";
             clnAtivoProfissional.ReadOnly = true;
-            // 
-            // guna2TabControl1
-            // 
-            guna2TabControl1.Alignment = TabAlignment.Left;
-            guna2TabControl1.Controls.Add(pngDadosProfissional);
-            guna2TabControl1.Controls.Add(pngCelularProfissional);
-            guna2TabControl1.Dock = DockStyle.Fill;
-            guna2TabControl1.ItemSize = new Size(180, 40);
-            guna2TabControl1.Location = new Point(0, 0);
-            guna2TabControl1.Name = "guna2TabControl1";
-            guna2TabControl1.SelectedIndex = 0;
-            guna2TabControl1.Size = new Size(1334, 712);
-            guna2TabControl1.TabButtonHoverState.BorderColor = Color.Empty;
-            guna2TabControl1.TabButtonHoverState.FillColor = Color.FromArgb(40, 52, 70);
-            guna2TabControl1.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);
-            guna2TabControl1.TabButtonHoverState.ForeColor = Color.White;
-            guna2TabControl1.TabButtonHoverState.InnerColor = Color.FromArgb(40, 52, 70);
-            guna2TabControl1.TabButtonIdleState.BorderColor = Color.Empty;
-            guna2TabControl1.TabButtonIdleState.FillColor = Color.FromArgb(33, 42, 57);
-            guna2TabControl1.TabButtonIdleState.Font = new Font("Segoe UI Semibold", 10F);
-            guna2TabControl1.TabButtonIdleState.ForeColor = Color.FromArgb(156, 160, 167);
-            guna2TabControl1.TabButtonIdleState.InnerColor = Color.FromArgb(33, 42, 57);
-            guna2TabControl1.TabButtonSelectedState.BorderColor = Color.Empty;
-            guna2TabControl1.TabButtonSelectedState.FillColor = Color.FromArgb(29, 37, 49);
-            guna2TabControl1.TabButtonSelectedState.Font = new Font("Segoe UI Semibold", 10F);
-            guna2TabControl1.TabButtonSelectedState.ForeColor = Color.White;
-            guna2TabControl1.TabButtonSelectedState.InnerColor = Color.FromArgb(76, 132, 255);
-            guna2TabControl1.TabButtonSize = new Size(180, 40);
-            guna2TabControl1.TabIndex = 48;
-            guna2TabControl1.TabMenuBackColor = Color.FromArgb(33, 42, 57);
             // 
             // FrmProfissionalConsultar
             // 
@@ -727,6 +728,7 @@
         private DataGridViewTextBoxColumn clnTelefone;
         private DataGridViewTextBoxColumn clnTipoTelefone;
         private PictureBox btnVoltar;
+        private PictureBox pictureBox1;
         private DataGridViewTextBoxColumn clnIdProfissional;
         private DataGridViewTextBoxColumn clnNomeProfissional;
         private DataGridViewTextBoxColumn clnEmailProfissional;
@@ -737,6 +739,5 @@
         private DataGridViewTextBoxColumn clnDataNascProfissional;
         private DataGridViewTextBoxColumn clnGeneroProfissional;
         private DataGridViewCheckBoxColumn clnAtivoProfissional;
-        private PictureBox pictureBox1;
     }
 }
