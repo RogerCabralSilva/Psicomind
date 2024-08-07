@@ -121,9 +121,37 @@ namespace Psicomind
 
         }
 
+        private void btnVoltarTelefone_Click(object sender, EventArgs e)
+        {
+            FrmClientesMenu FrmClientesMenu = new FrmClientesMenu();
+
+            FrmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
+
+            FrmClientesMenu.Show();
+
+            this.Close();
+        }
+
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
+            FrmClientesMenu FrmClientesMenu = new FrmClientesMenu();
 
+            FrmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
+
+            FrmClientesMenu.Show();
+
+            this.Close();
+        }
+
+        private void btnVoltarEndereco_Click(object sender, EventArgs e)
+        {
+            FrmClientesMenu FrmClientesMenu = new FrmClientesMenu();
+
+            FrmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
+
+            FrmClientesMenu.Show();
+
+            this.Close();
         }
     }
 }

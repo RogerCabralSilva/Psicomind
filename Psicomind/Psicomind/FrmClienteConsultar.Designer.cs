@@ -71,7 +71,7 @@
             clnGeneroCliente = new DataGridViewTextBoxColumn();
             clnAtivoCliente = new DataGridViewCheckBoxColumn();
             pngTelefoneCliente = new TabPage();
-            pictureBox1 = new PictureBox();
+            btnVoltarTelefone = new PictureBox();
             btnConsultarTelefoneCliente = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -93,17 +93,19 @@
             clnCidade = new DataGridViewTextBoxColumn();
             clnUf = new DataGridViewTextBoxColumn();
             clnTipoEndereco = new DataGridViewTextBoxColumn();
+            btnVoltarEndereco = new PictureBox();
             pngClienteTelefone.SuspendLayout();
             pngClienteDados.SuspendLayout();
             guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvClientesDados).BeginInit();
             pngTelefoneCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnVoltarTelefone).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvClienteTelefone).BeginInit();
             pngClienteEndereco.SuspendLayout();
             guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClienteEndereco).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnVoltarEndereco).BeginInit();
             SuspendLayout();
             // 
             // pngClienteTelefone
@@ -215,6 +217,7 @@
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnVoltar.TabIndex = 48;
             btnVoltar.TabStop = false;
+            btnVoltar.Click += btnVoltar_Click_1;
             // 
             // dgvClientesDados
             // 
@@ -345,7 +348,7 @@
             // 
             // pngTelefoneCliente
             // 
-            pngTelefoneCliente.Controls.Add(pictureBox1);
+            pngTelefoneCliente.Controls.Add(btnVoltarTelefone);
             pngTelefoneCliente.Controls.Add(btnConsultarTelefoneCliente);
             pngTelefoneCliente.Controls.Add(label3);
             pngTelefoneCliente.Controls.Add(guna2TextBox1);
@@ -358,18 +361,19 @@
             pngTelefoneCliente.Text = "Telefone";
             pngTelefoneCliente.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // btnVoltarTelefone
             // 
-            pictureBox1.Anchor = AnchorStyles.None;
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(53, 74);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(50, 30);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 56;
-            pictureBox1.TabStop = false;
+            btnVoltarTelefone.Anchor = AnchorStyles.None;
+            btnVoltarTelefone.BackColor = Color.White;
+            btnVoltarTelefone.Cursor = Cursors.Hand;
+            btnVoltarTelefone.Image = (Image)resources.GetObject("btnVoltarTelefone.Image");
+            btnVoltarTelefone.Location = new Point(53, 74);
+            btnVoltarTelefone.Name = "btnVoltarTelefone";
+            btnVoltarTelefone.Size = new Size(50, 30);
+            btnVoltarTelefone.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnVoltarTelefone.TabIndex = 56;
+            btnVoltarTelefone.TabStop = false;
+            btnVoltarTelefone.Click += btnVoltarTelefone_Click;
             // 
             // btnConsultarTelefoneCliente
             // 
@@ -529,6 +533,7 @@
             // 
             // guna2ContainerControl2
             // 
+            guna2ContainerControl2.Controls.Add(btnVoltarEndereco);
             guna2ContainerControl2.Controls.Add(btnConsultarEndereco);
             guna2ContainerControl2.Controls.Add(label2);
             guna2ContainerControl2.Controls.Add(guna2TextBox2);
@@ -723,6 +728,20 @@
             clnTipoEndereco.Name = "clnTipoEndereco";
             clnTipoEndereco.ReadOnly = true;
             // 
+            // btnVoltarEndereco
+            // 
+            btnVoltarEndereco.Anchor = AnchorStyles.None;
+            btnVoltarEndereco.BackColor = Color.White;
+            btnVoltarEndereco.Cursor = Cursors.Hand;
+            btnVoltarEndereco.Image = (Image)resources.GetObject("btnVoltarEndereco.Image");
+            btnVoltarEndereco.Location = new Point(62, 63);
+            btnVoltarEndereco.Name = "btnVoltarEndereco";
+            btnVoltarEndereco.Size = new Size(50, 30);
+            btnVoltarEndereco.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnVoltarEndereco.TabIndex = 58;
+            btnVoltarEndereco.TabStop = false;
+            btnVoltarEndereco.Click += btnVoltarEndereco_Click;
+            // 
             // FrmClienteConsultar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -740,12 +759,13 @@
             ((System.ComponentModel.ISupportInitialize)dgvClientesDados).EndInit();
             pngTelefoneCliente.ResumeLayout(false);
             pngTelefoneCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnVoltarTelefone).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvClienteTelefone).EndInit();
             pngClienteEndereco.ResumeLayout(false);
             guna2ContainerControl2.ResumeLayout(false);
             guna2ContainerControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClienteEndereco).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnVoltarEndereco).EndInit();
             ResumeLayout(false);
         }
 
@@ -767,7 +787,7 @@
         private DataGridViewTextBoxColumn clnTipoTelefone;
         private Label label3;
         private Guna.UI2.WinForms.Guna2Button btnConsultarTelefoneCliente;
-        private PictureBox pictureBox1;
+        private PictureBox btnVoltarTelefone;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
         private Guna.UI2.WinForms.Guna2Button btnConsultarEndereco;
         private Label label2;
@@ -789,5 +809,6 @@
         private DataGridViewTextBoxColumn clnDataNascCliente;
         private DataGridViewTextBoxColumn clnGeneroCliente;
         private DataGridViewCheckBoxColumn clnAtivoCliente;
+        private PictureBox btnVoltarEndereco;
     }
 }

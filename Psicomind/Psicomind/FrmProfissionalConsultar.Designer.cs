@@ -30,10 +30,10 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProfissionalConsultar));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProfissionalConsultar));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
@@ -55,6 +55,7 @@
             DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             pngCelularProfissional = new TabPage();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            pictureBox1 = new PictureBox();
             btnConsultarTelefoneProfissional = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
             txtConsultarProfissional = new Guna.UI2.WinForms.Guna2TextBox();
@@ -91,6 +92,7 @@
             guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             pngCelularProfissional.SuspendLayout();
             guna2ContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProfissionalTelefone).BeginInit();
             pngDadosProfissional.SuspendLayout();
             container.SuspendLayout();
@@ -113,6 +115,7 @@
             // 
             // guna2ContainerControl1
             // 
+            guna2ContainerControl1.Controls.Add(pictureBox1);
             guna2ContainerControl1.Controls.Add(btnConsultarTelefoneProfissional);
             guna2ContainerControl1.Controls.Add(label3);
             guna2ContainerControl1.Controls.Add(txtConsultarProfissional);
@@ -124,6 +127,20 @@
             guna2ContainerControl1.Size = new Size(1153, 635);
             guna2ContainerControl1.TabIndex = 1;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.BackColor = Color.White;
+            pictureBox1.Cursor = Cursors.Hand;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(51, 61);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(50, 30);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 54;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // btnConsultarTelefoneProfissional
             // 
@@ -670,6 +687,7 @@
             pngCelularProfissional.ResumeLayout(false);
             guna2ContainerControl1.ResumeLayout(false);
             guna2ContainerControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvProfissionalTelefone).EndInit();
             pngDadosProfissional.ResumeLayout(false);
             container.ResumeLayout(false);
@@ -719,5 +737,6 @@
         private DataGridViewTextBoxColumn clnDataNascProfissional;
         private DataGridViewTextBoxColumn clnGeneroProfissional;
         private DataGridViewCheckBoxColumn clnAtivoProfissional;
+        private PictureBox pictureBox1;
     }
 }

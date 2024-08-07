@@ -101,5 +101,16 @@ namespace Psicomind
             frmProfissionalEditar.Show();
             this.Hide();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FrmClientesMenu FrmClientesMenu = new FrmClientesMenu();
+
+            FrmClientesMenu.StartPosition = FormStartPosition.CenterScreen;
+
+            FrmClientesMenu.Show();
+
+            this.Close();
+        }
     }
 }
