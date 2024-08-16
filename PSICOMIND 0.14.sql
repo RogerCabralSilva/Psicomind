@@ -70,15 +70,6 @@ CREATE TABLE enderecos (
     CONSTRAINT fk_tipoEndereco_id FOREIGN KEY (tipo_endereco_id) REFERENCES tipo_endereco(id)
 );
 
--- Tabela usuarios
-CREATE TABLE usuarios (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    email VARCHAR(60) NOT NULL UNIQUE,
-    senha CHAR(32) NOT NULL,
-    ativo BIT(1) NOT NULL
-);
-
 -- Tabela cargos
 CREATE TABLE cargos (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -86,13 +77,20 @@ CREATE TABLE cargos (
     sigla CHAR(3) NOT NULL
 );
 
--- Tabela usuario_cargo
-CREATE TABLE usuario_cargo (
-    usuario_id INT NOT NULL,
+
+
+-- Tabela usuarios
+CREATE TABLE usuarios (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     cargo_id INT NOT NULL,
-    CONSTRAINT fk_usuarioCargo_usuario_id FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(60) NOT NULL UNIQUE,
+    senha CHAR(32) NOT NULL,
+    ativo BIT(1) NOT NULL,
     CONSTRAINT fk_usuarioCargo_cargo_id FOREIGN KEY (cargo_id) REFERENCES cargos(id)
+    
 );
+
 
 
 -- Tabela profissionais
@@ -294,17 +292,19 @@ DELIMITER $$
 CREATE PROCEDURE sp_usuarios_insert(
     spnome VARCHAR(100),
     spemail VARCHAR(60),
-    spsenha VARCHAR(20)
+    spsenha VARCHAR(20),
+    spcargo_id INT
 )
 BEGIN
-    INSERT INTO usuarios (nome, email, senha, ativo)
-    VALUES (spnome, spemail, MD5(spsenha), 1);
+    INSERT INTO usuarios (nome, email, senha, ativo, cargo_id)
+    VALUES (spnome, spemail, MD5(spsenha), 1, spcargo_id);
     SELECT LAST_INSERT_ID() FROM usuarios;
 END $$
 DELIMITER ;
 
 -- Exemplo de chamada:
--- CALL sp_usuarios_insert('Annie', 'annie@gmail.com', '123');
+-- CALL sp_usuarios_insert('Annie', 'annie@gmail.com', '123', 1);
+-- drop procedure sp_usuarios_insert;
 
 -- Inserir profissional
 DELIMITER $$
@@ -626,9 +626,36 @@ INSERT INTO telefone_tipo (id, tipo) VALUES (0, 'Telefone');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Gerente', 'GRT');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Recepcionista', 'RCP');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Psicólogo', 'PSI');
+INSERT INTO cargos (id, nome, sigla) VALUES (0,'Cliente','CLI');
 
 -- Inserir tipos de endereço
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Residencial","RES");
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Comercial","COM");
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Postal","POS");
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Temporário","TEM");
+
+CREATE VIEW cliente_info AS
+SELECT 
+    c.id, 
+    c.nome, 
+    c.email, 
+    c.CPF, 
+    c.senha, 
+    c.data_nasc, 
+    c.data_cad, 
+    c.ativo, 
+    c.genero_id, 
+    e.id AS enderecos_id, 
+    tc.id AS telefone_id
+FROM 
+    clientes c
+LEFT JOIN 
+    telefone_cliente tc ON c.id = tc.cliente_id
+LEFT JOIN 
+    enderecos e ON c.id = e.cliente_id;
+
+DROP VIEW cliente_info;
+
+    
+SELECT * FROM cliente_info;
+
