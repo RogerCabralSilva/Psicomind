@@ -78,16 +78,16 @@ namespace Psicomind
         private void CarregarTelefoneProfissional()
         {
 
-            var clientes = Cliente.ObterLista();
+            var profissionais = Profissional.ObterLista();
             int count = 0;
 
             dgvProfissionalTelefone.Rows.Clear();
-            foreach (var cliente in clientes)
+            foreach (var profissional in profissionais)
             {
                 int rowIndex = dgvProfissionalTelefone.Rows.Add();
-                dgvProfissionalTelefone.Rows[count].Cells[0].Value = cliente.Nome;
-                dgvProfissionalTelefone.Rows[count].Cells[1].Value = cliente.Telefone;
-                dgvProfissionalTelefone.Rows[count].Cells[2].Value = cliente.Telefone;
+                dgvProfissionalTelefone.Rows[count].Cells[0].Value = profissional.Nome;
+                dgvProfissionalTelefone.Rows[count].Cells[1].Value = profissional.TelefoneProfissional.Numero;
+                dgvProfissionalTelefone.Rows[count].Cells[2].Value = profissional.TelefoneProfissional.Telefonetipo_id.Tipo;
 
                 count++;
 
@@ -117,6 +117,11 @@ namespace Psicomind
         }
 
         private void dgvProfissionalDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvProfissionalTelefone_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

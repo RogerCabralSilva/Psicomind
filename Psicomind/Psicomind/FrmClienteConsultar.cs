@@ -67,21 +67,21 @@ namespace Psicomind
         private void CarregarEndereco()
         {
 
-            var enderecos = Endereco.ObterListaEndereco();
+            var cliente = Cliente.ObterLista();
             int count = 0;
 
             dgvClienteEndereco.Rows.Clear();
-            foreach (var endereco in enderecos)
+            foreach (var clientes in cliente)
             {
                 int rowIndex = dgvClienteEndereco.Rows.Add();
-                dgvClienteEndereco.Rows[count].Cells[0].Value = endereco.Cliente_Id;
-                dgvClienteEndereco.Rows[count].Cells[1].Value = endereco.Cep;
-                dgvClienteEndereco.Rows[count].Cells[2].Value = endereco.Rua;
-                dgvClienteEndereco.Rows[count].Cells[3].Value = endereco.Numero;
-                dgvClienteEndereco.Rows[count].Cells[4].Value = endereco.Bairro;
-                dgvClienteEndereco.Rows[count].Cells[5].Value = endereco.Cidade;
-                dgvClienteEndereco.Rows[count].Cells[6].Value = endereco.Uf;
-                dgvClienteEndereco.Rows[count].Cells[7].Value = endereco.TipoEndereco.Nome;
+                dgvClienteEndereco.Rows[count].Cells[0].Value = clientes.Nome;
+                dgvClienteEndereco.Rows[count].Cells[1].Value = clientes.Enderecos.Cep;
+                dgvClienteEndereco.Rows[count].Cells[2].Value = clientes.Enderecos.Rua;
+                dgvClienteEndereco.Rows[count].Cells[3].Value = clientes.Enderecos.Numero;
+                dgvClienteEndereco.Rows[count].Cells[4].Value = clientes.Enderecos.Bairro;
+                dgvClienteEndereco.Rows[count].Cells[5].Value = clientes.Enderecos.Cidade;
+                dgvClienteEndereco.Rows[count].Cells[6].Value = clientes.Enderecos.Uf;
+                dgvClienteEndereco.Rows[count].Cells[7].Value = clientes.Enderecos.TipoEndereco.Nome;
 
                 count++;
 
@@ -94,8 +94,8 @@ namespace Psicomind
 
             var clientes = Cliente.ObterLista();
             int count = 0;
-            
-            
+
+
             dgvClienteTelefone.Rows.Clear();
             foreach (var cliente in clientes)
             {
@@ -156,5 +156,28 @@ namespace Psicomind
             this.Close();
         }
 
+        private void btn_consultar_dados_pessoais_cliente_Click(object sender, EventArgs e)
+        {
+            var cliente = Cliente.ObterLista(txtBuscaClienteDadosPessoais.Text);
+            int count = 0;
+
+            dgvClienteEndereco.Rows.Clear();
+            foreach (var clientes in cliente)
+            {
+                int rowIndex = dgvClienteEndereco.Rows.Add();
+                dgvClienteEndereco.Rows[count].Cells[0].Value = clientes.Nome;
+                dgvClienteEndereco.Rows[count].Cells[1].Value = clientes.Enderecos.Cep;
+                dgvClienteEndereco.Rows[count].Cells[2].Value = clientes.Enderecos.Rua;
+                dgvClienteEndereco.Rows[count].Cells[3].Value = clientes.Enderecos.Numero;
+                dgvClienteEndereco.Rows[count].Cells[4].Value = clientes.Enderecos.Bairro;
+                dgvClienteEndereco.Rows[count].Cells[5].Value = clientes.Enderecos.Cidade;
+                dgvClienteEndereco.Rows[count].Cells[6].Value = clientes.Enderecos.Uf;
+                dgvClienteEndereco.Rows[count].Cells[7].Value = clientes.Enderecos.TipoEndereco.Nome;
+
+                count++;
+
+            }
+            CarregarDadosCliente();
+        }
     }
 }

@@ -20,6 +20,7 @@ namespace PsicomindClass
         public DateTime Data_cad { get; set; }
         public DateTime Data_nasc { get; set; }
         public Genero Genero { get; set; }
+        public TelefoneProfissional TelefoneProfissional { get; set; }
         public bool Ativo { get; set; }
 
         public Profissional()
@@ -94,6 +95,22 @@ namespace PsicomindClass
             Genero = genero;
         }
 
+        public Profissional(int id, string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_cad, DateTime data_nasc, Genero genero, TelefoneProfissional telefoneProfissional, bool ativo)
+        {
+            Id = id;
+            Nome = nome;
+            Email = email;
+            Senha = senha;
+            Cpf = cpf;
+            Especializacao = especializacao;
+            Data_contrato = data_contrato;
+            Data_cad = data_cad;
+            Data_nasc = data_nasc;
+            Genero = genero;
+            TelefoneProfissional = telefoneProfissional;
+            Ativo = ativo;
+        }
+
 
         // Inserindo Profissional
 
@@ -140,7 +157,8 @@ namespace PsicomindClass
                 dr.GetDateTime(7),
                 dr.GetDateTime(8),
                 Genero.ObterPorId(dr.GetInt32(9)),
-                dr.GetBoolean(10)
+                TelefoneProfissional.ObterPorId(dr.GetInt32(10)),
+                dr.GetBoolean(11)
                 ));
             }
 
@@ -179,11 +197,11 @@ namespace PsicomindClass
             if (nome == null)
             {
 
-                cmd.CommandText = "SELECT * FROM profissionais";
+                cmd.CommandText = "SELECT * FROM profissional_info";
             }
             else
             {
-                cmd.CommandText = $"SELECT * FROM profissionais WHERE nome LIKE '%{nome}%'";
+                cmd.CommandText = $"SELECT * FROM profissional_info WHERE nome LIKE '%{nome}%'";
             }
 
             var dr = cmd.ExecuteReader();
@@ -192,7 +210,6 @@ namespace PsicomindClass
             {
 
                 lista.Add(new Profissional(
-
                 dr.GetInt32(0),
                 dr.GetString(1),
                 dr.GetString(2),
@@ -203,7 +220,8 @@ namespace PsicomindClass
                 dr.GetDateTime(7),
                 dr.GetDateTime(8),
                 Genero.ObterPorId(dr.GetInt32(9)),
-                dr.GetBoolean(10)
+                TelefoneProfissional.ObterPorId(dr.GetInt32(10)),
+                dr.GetBoolean(11)
                 ));
 
             }
