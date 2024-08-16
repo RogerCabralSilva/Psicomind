@@ -654,8 +654,27 @@ LEFT JOIN
 LEFT JOIN 
     enderecos e ON c.id = e.cliente_id;
 
-DROP VIEW cliente_info;
+-- DROP VIEW cliente_info;
 
-    
-SELECT * FROM cliente_info;
+CREATE VIEW profissional_info AS
+SELECT 
+    p.id, 
+    p.nome, 
+    p.email, 
+    p.senha, 
+    p.CPF, 
+    p.especializacao, 
+    p.data_contrato, 
+    p.data_cad,
+    p.data_nasc,
+    p.genero_id, 
+    tp.id as id_telefone_profissional,
+	p.ativo
+FROM 
+    profissionais p
+LEFT JOIN 
+    telefone_profissional tp ON p.id = tp.profissional_id;
 
+-- DROP VIEW profissional_info;
+
+select * from profissional_info;
