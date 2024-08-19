@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProfissionalMenu));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnPagInserirProfissionais = new Guna.UI2.WinForms.Guna2ContainerControl();
             pictureBox1 = new PictureBox();
             label3 = new Label();
@@ -51,6 +53,9 @@
             pictureBox5 = new PictureBox();
             label9 = new Label();
             btnVoltar = new PictureBox();
+            btnEscala = new Guna.UI2.WinForms.Guna2ContainerControl();
+            label6 = new Label();
+            pictureBox2 = new PictureBox();
             btnPagInserirProfissionais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             btnPagConsultarProfissionais.SuspendLayout();
@@ -58,6 +63,8 @@
             btnPagEditarProfissionais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
+            btnEscala.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // btnPagInserirProfissionais
@@ -69,11 +76,11 @@
             btnPagInserirProfissionais.Controls.Add(label3);
             btnPagInserirProfissionais.Controls.Add(label4);
             btnPagInserirProfissionais.Cursor = Cursors.Hand;
-            btnPagInserirProfissionais.CustomizableEdges = customizableEdges1;
+            btnPagInserirProfissionais.CustomizableEdges = customizableEdges9;
             btnPagInserirProfissionais.FillColor = Color.LightGray;
-            btnPagInserirProfissionais.Location = new Point(250, 176);
+            btnPagInserirProfissionais.Location = new Point(290, 160);
             btnPagInserirProfissionais.Name = "btnPagInserirProfissionais";
-            btnPagInserirProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnPagInserirProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnPagInserirProfissionais.Size = new Size(212, 206);
             btnPagInserirProfissionais.TabIndex = 36;
             btnPagInserirProfissionais.Text = "guna2ContainerControl1";
@@ -98,7 +105,7 @@
             label3.Enabled = false;
             label3.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(62, 38);
+            label3.Location = new Point(62, 41);
             label3.Name = "label3";
             label3.Size = new Size(86, 29);
             label3.TabIndex = 25;
@@ -139,11 +146,11 @@
             btnPagConsultarProfissionais.Controls.Add(label5);
             btnPagConsultarProfissionais.Controls.Add(label7);
             btnPagConsultarProfissionais.Cursor = Cursors.Hand;
-            btnPagConsultarProfissionais.CustomizableEdges = customizableEdges3;
+            btnPagConsultarProfissionais.CustomizableEdges = customizableEdges11;
             btnPagConsultarProfissionais.FillColor = Color.LightGray;
-            btnPagConsultarProfissionais.Location = new Point(579, 176);
+            btnPagConsultarProfissionais.Location = new Point(555, 160);
             btnPagConsultarProfissionais.Name = "btnPagConsultarProfissionais";
-            btnPagConsultarProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnPagConsultarProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnPagConsultarProfissionais.Size = new Size(212, 206);
             btnPagConsultarProfissionais.TabIndex = 37;
             btnPagConsultarProfissionais.Text = "guna2ContainerControl1";
@@ -220,11 +227,11 @@
             btnPagEditarProfissionais.Controls.Add(pictureBox5);
             btnPagEditarProfissionais.Controls.Add(label9);
             btnPagEditarProfissionais.Cursor = Cursors.Hand;
-            btnPagEditarProfissionais.CustomizableEdges = customizableEdges5;
+            btnPagEditarProfissionais.CustomizableEdges = customizableEdges13;
             btnPagEditarProfissionais.FillColor = Color.LightGray;
-            btnPagEditarProfissionais.Location = new Point(413, 407);
+            btnPagEditarProfissionais.Location = new Point(290, 391);
             btnPagEditarProfissionais.Name = "btnPagEditarProfissionais";
-            btnPagEditarProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnPagEditarProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnPagEditarProfissionais.Size = new Size(212, 197);
             btnPagEditarProfissionais.TabIndex = 38;
             btnPagEditarProfissionais.Text = "guna2ContainerControl1";
@@ -281,11 +288,55 @@
             btnVoltar.TabStop = false;
             btnVoltar.Click += btnVoltar_Click;
             // 
+            // btnEscala
+            // 
+            btnEscala.Anchor = AnchorStyles.None;
+            btnEscala.BackColor = SystemColors.Control;
+            btnEscala.BorderRadius = 40;
+            btnEscala.Controls.Add(label6);
+            btnEscala.Controls.Add(pictureBox2);
+            btnEscala.Cursor = Cursors.Hand;
+            btnEscala.CustomizableEdges = customizableEdges15;
+            btnEscala.FillColor = Color.LightGray;
+            btnEscala.Location = new Point(555, 391);
+            btnEscala.Name = "btnEscala";
+            btnEscala.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnEscala.Size = new Size(212, 197);
+            btnEscala.TabIndex = 39;
+            btnEscala.Text = "guna2ContainerControl1";
+            btnEscala.Click += guna2ContainerControl1_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.LightGray;
+            label6.Enabled = false;
+            label6.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(43, 37);
+            label6.Name = "label6";
+            label6.Size = new Size(120, 37);
+            label6.TabIndex = 27;
+            label6.Text = "Escala";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.LightGray;
+            pictureBox2.Enabled = false;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(55, 77);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(102, 91);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 24;
+            pictureBox2.TabStop = false;
+            // 
             // FrmProfissionalMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1040, 654);
+            Controls.Add(btnEscala);
             Controls.Add(btnVoltar);
             Controls.Add(btnPagInserirProfissionais);
             Controls.Add(txtPsicomind);
@@ -304,6 +355,9 @@
             btnPagEditarProfissionais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).EndInit();
+            btnEscala.ResumeLayout(false);
+            btnEscala.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -326,5 +380,8 @@
         private PictureBox pictureBox5;
         private Label label9;
         private PictureBox btnVoltar;
+        private Guna.UI2.WinForms.Guna2ContainerControl btnEscala;
+        private Label label6;
+        private PictureBox pictureBox2;
     }
 }

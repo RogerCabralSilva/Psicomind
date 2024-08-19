@@ -47,5 +47,20 @@ namespace Psicomind
             FrmProfissionalEditar.ShowDialog();
             this.Close();
         }
+
+        private void guna2ContainerControl1_Click(object sender, EventArgs e)
+        {
+
+            FrmEscala FrmEscala = new FrmEscala();
+            FrmEscala.StartPosition = FormStartPosition.CenterScreen;
+            FrmEscala.ShowDialog();
+            this.Close();
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
