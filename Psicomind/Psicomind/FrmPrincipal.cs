@@ -90,6 +90,13 @@ namespace Psicomind
         {
             btnAbrirAgendamento.ShadowDecoration.Enabled = false;
         }
+
+        private void btnAbrirAgendamento_Click(object sender, EventArgs e)
+        {
+            frmAgendamento frmAgendamento = new frmAgendamento();
+            frmAgendamento.StartPosition = FormStartPosition.CenterScreen;
+            frmAgendamento.Show();
+        }
         // Fim dos eventos de sombra
 
     }

@@ -342,6 +342,7 @@
             btnAbrirAgendamento.Size = new Size(316, 192);
             btnAbrirAgendamento.TabIndex = 32;
             btnAbrirAgendamento.Text = "guna2ContainerControl1";
+            btnAbrirAgendamento.Click += btnAbrirAgendamento_Click;
             btnAbrirAgendamento.MouseLeave += btnAbrirAgendamento_MouseLeave;
             btnAbrirAgendamento.MouseHover += btnAbrirAgendamento_MouseHover;
             // 
