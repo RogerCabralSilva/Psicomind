@@ -12,7 +12,7 @@ namespace PsicomindClass
         public int Id { get; set; }
 
         public DateTime Dia { get; set; }
-        public DateTime Horario { get; set; }
+        public TimeSpan Horario { get; set; }
         public Boolean Disponivel { get; set; }
         public Profissional Profissional { get; set; }
         public DateTime DataInicio { get; set; }
@@ -26,7 +26,7 @@ namespace PsicomindClass
 
         }
 
-        public Escala(int id, Profissional profissional, DateTime dia, DateTime horario, bool disponivel)
+        public Escala(int id, Profissional profissional, DateTime dia, TimeSpan horario, bool disponivel)
         {
             Id = id;
             Profissional = profissional;
@@ -35,7 +35,7 @@ namespace PsicomindClass
             Disponivel = disponivel;
         }
 
-        public Escala(Profissional profissional, DateTime dia, DateTime horario, bool disponivel)
+        public Escala(Profissional profissional, DateTime dia, TimeSpan horario, bool disponivel)
         {
             Profissional = profissional;
             Dia = dia;
@@ -43,7 +43,7 @@ namespace PsicomindClass
             Disponivel = disponivel;
         }
 
-        public Escala(Profissional profissional, DateTime dia, DateTime horario, bool disponivel, int duracao)
+        public Escala(Profissional profissional, DateTime dia, TimeSpan horario, bool disponivel, int duracao)
         {
             Profissional = profissional;
             Dia = dia;
@@ -67,7 +67,7 @@ namespace PsicomindClass
             Disponivel = disponivel;
         }
 
-        public Escala(DateTime horario)
+        public Escala(TimeSpan horario)
         {
             Horario = horario;
         }
@@ -95,14 +95,14 @@ namespace PsicomindClass
             List<Escala> lista = new List<Escala>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"SELECT horario FROM Escala where dispoivel = 1 and dia = '{data}';";
+            cmd.CommandText = $"SELECT horario FROM Escala where disponivel = 1 and dia = '{data}';";
 
             var dr = cmd.ExecuteReader();
 
             while (dr.Read())
             {
                 lista.Add(new Escala(
-                        dr.GetDateTime(0)
+                        dr.GetTimeSpan(0)
                     ));
             }
 

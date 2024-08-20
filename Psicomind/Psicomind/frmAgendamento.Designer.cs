@@ -40,6 +40,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            mcAgendamento = new MonthCalendar();
             label4 = new Label();
             dtpDataAgendamento = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label2 = new Label();
@@ -48,7 +49,7 @@
             label3 = new Label();
             cmbHorarios = new Guna.UI2.WinForms.Guna2ComboBox();
             btnConsultarProfissional = new Guna.UI2.WinForms.Guna2Button();
-            guna2NotificationPaint1 = new Guna.UI2.WinForms.Guna2NotificationPaint(components);
+            toolTip2 = new ToolTip(components);
             guna2ContainerControl1.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             // 
             guna2ContainerControl1.Anchor = AnchorStyles.None;
             guna2ContainerControl1.BorderRadius = 20;
+            guna2ContainerControl1.Controls.Add(mcAgendamento);
             guna2ContainerControl1.Controls.Add(label4);
             guna2ContainerControl1.Controls.Add(dtpDataAgendamento);
             guna2ContainerControl1.Controls.Add(label2);
@@ -71,6 +73,14 @@
             guna2ContainerControl1.Size = new Size(1111, 556);
             guna2ContainerControl1.TabIndex = 1;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
+            // 
+            // mcAgendamento
+            // 
+            mcAgendamento.BackColor = SystemColors.InactiveCaptionText;
+            mcAgendamento.Location = new Point(63, 253);
+            mcAgendamento.Name = "mcAgendamento";
+            mcAgendamento.TabIndex = 2;
+            mcAgendamento.DateChanged += mcAgendamento_DateChanged;
             // 
             // label4
             // 
@@ -93,7 +103,7 @@
             dtpDataAgendamento.FillColor = Color.White;
             dtpDataAgendamento.Font = new Font("Segoe UI", 9F);
             dtpDataAgendamento.Format = DateTimePickerFormat.Short;
-            dtpDataAgendamento.Location = new Point(415, 281);
+            dtpDataAgendamento.Location = new Point(35, 102);
             dtpDataAgendamento.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpDataAgendamento.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpDataAgendamento.Name = "dtpDataAgendamento";
@@ -101,7 +111,6 @@
             dtpDataAgendamento.Size = new Size(255, 36);
             dtpDataAgendamento.TabIndex = 47;
             dtpDataAgendamento.Value = new DateTime(2024, 8, 19, 11, 43, 41, 124);
-            dtpDataAgendamento.ValueChanged += dtpDataAgendamento_ValueChanged;
             // 
             // label2
             // 
@@ -114,7 +123,6 @@
             label2.Size = new Size(123, 16);
             label2.TabIndex = 46;
             label2.Text = "Horários Disponíveis";
-            label2.Click += label2_Click;
             // 
             // label1
             // 
@@ -127,7 +135,6 @@
             label1.Size = new Size(71, 16);
             label1.TabIndex = 45;
             label1.Text = "Profissional";
-            label1.Click += label1_Click;
             // 
             // cmbProfissionais
             // 
@@ -178,7 +185,6 @@
             cmbHorarios.ShadowDecoration.CustomizableEdges = customizableEdges6;
             cmbHorarios.Size = new Size(251, 36);
             cmbHorarios.TabIndex = 4;
-            cmbHorarios.SelectedIndexChanged += guna2ComboBox1_SelectedIndexChanged;
             // 
             // btnConsultarProfissional
             // 
@@ -217,12 +223,14 @@
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private Guna.UI2.WinForms.Guna2Button btnConsultarProfissional;
         private Guna.UI2.WinForms.Guna2ComboBox cmbHorarios;
-        private Guna.UI2.WinForms.Guna2NotificationPaint guna2NotificationPaint1;
         private Label label3;
         private Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbProfissionais;
         private Label label2;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDataAgendamento;
         private Label label4;
+        private MonthCalendar mcAgendamento;
+        private ToolTip toolTip1;
+        private ToolTip toolTip2;
     }
 }
