@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using static Mysqlx.Notice.Warning.Types;
 
 namespace PsicomindClass
 {
@@ -16,6 +17,10 @@ namespace PsicomindClass
         public string Senha { get; set; }
         public bool Ativo {  get; set; }
         
+        public Usuario()
+        {
+
+        }
 
         public Usuario(int id, string nome, string email, string senha, bool ativo)
         {
@@ -116,5 +121,37 @@ namespace PsicomindClass
 
             return lista;
         }
+
+        public static Usuario EfetuarLogin(string email, string senha)
+        {
+
+            Usuario usuario = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"select * from usuarios" +
+                $" where email = '{email}' and senha = md5('{senha}') and ativo = 1";
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+
+                usuario = new Usuario(
+
+                    dr.GetInt32(0),
+                    Cargo.ObterPorId(dr.GetInt32(1)),
+                    dr.GetString(2),
+                    dr.GetString(3),
+                    dr.GetString(4),
+                    dr.GetBoolean(5)
+
+                    );
+                
+
+            }
+
+            return usuario;
+
+        }
+
     }
 }

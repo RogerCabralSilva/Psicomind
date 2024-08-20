@@ -234,7 +234,7 @@
             btnVoltar.BackColor = Color.White;
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(49, 67);
+            btnVoltar.Location = new Point(35, 67);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(50, 30);
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -390,7 +390,7 @@
             btnVoltarTelefone.BackColor = Color.White;
             btnVoltarTelefone.Cursor = Cursors.Hand;
             btnVoltarTelefone.Image = (Image)resources.GetObject("btnVoltarTelefone.Image");
-            btnVoltarTelefone.Location = new Point(53, 74);
+            btnVoltarTelefone.Location = new Point(45, 65);
             btnVoltarTelefone.Name = "btnVoltarTelefone";
             btnVoltarTelefone.Size = new Size(50, 30);
             btnVoltarTelefone.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -409,7 +409,7 @@
             btnConsultarTelefoneCliente.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnConsultarTelefoneCliente.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConsultarTelefoneCliente.ForeColor = Color.White;
-            btnConsultarTelefoneCliente.Location = new Point(693, 149);
+            btnConsultarTelefoneCliente.Location = new Point(685, 140);
             btnConsultarTelefoneCliente.Name = "btnConsultarTelefoneCliente";
             btnConsultarTelefoneCliente.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnConsultarTelefoneCliente.Size = new Size(122, 29);
@@ -423,7 +423,7 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.Highlight;
-            label3.Location = new Point(53, 121);
+            label3.Location = new Point(45, 112);
             label3.Name = "label3";
             label3.Size = new Size(311, 16);
             label3.TabIndex = 54;
@@ -448,7 +448,7 @@
             txtBuscarTelefone.IconLeftSize = new Size(15, 15);
             txtBuscarTelefone.IconRight = (Image)resources.GetObject("txtBuscarTelefone.IconRight");
             txtBuscarTelefone.IconRightSize = new Size(15, 15);
-            txtBuscarTelefone.Location = new Point(53, 149);
+            txtBuscarTelefone.Location = new Point(45, 140);
             txtBuscarTelefone.Name = "txtBuscarTelefone";
             txtBuscarTelefone.PasswordChar = '\0';
             txtBuscarTelefone.PlaceholderForeColor = Color.Silver;
@@ -488,7 +488,7 @@
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
             dgvClienteTelefone.DefaultCellStyle = dataGridViewCellStyle7;
             dgvClienteTelefone.GridColor = Color.FromArgb(242, 245, 250);
-            dgvClienteTelefone.Location = new Point(53, 232);
+            dgvClienteTelefone.Location = new Point(45, 191);
             dgvClienteTelefone.Name = "dgvClienteTelefone";
             dgvClienteTelefone.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -501,7 +501,7 @@
             dgvClienteTelefone.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dgvClienteTelefone.RowHeadersVisible = false;
             dgvClienteTelefone.RowTemplate.Height = 30;
-            dgvClienteTelefone.Size = new Size(1040, 386);
+            dgvClienteTelefone.Size = new Size(1040, 428);
             dgvClienteTelefone.TabIndex = 51;
             dgvClienteTelefone.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvClienteTelefone.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -576,7 +576,7 @@
             btnVoltarEndereco.BackColor = Color.White;
             btnVoltarEndereco.Cursor = Cursors.Hand;
             btnVoltarEndereco.Image = (Image)resources.GetObject("btnVoltarEndereco.Image");
-            btnVoltarEndereco.Location = new Point(62, 63);
+            btnVoltarEndereco.Location = new Point(51, 67);
             btnVoltarEndereco.Name = "btnVoltarEndereco";
             btnVoltarEndereco.Size = new Size(50, 30);
             btnVoltarEndereco.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -595,7 +595,7 @@
             btnConsultarEndereco.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnConsultarEndereco.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConsultarEndereco.ForeColor = Color.White;
-            btnConsultarEndereco.Location = new Point(711, 146);
+            btnConsultarEndereco.Location = new Point(700, 146);
             btnConsultarEndereco.Name = "btnConsultarEndereco";
             btnConsultarEndereco.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnConsultarEndereco.Size = new Size(122, 29);
@@ -609,7 +609,7 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(62, 118);
+            label2.Location = new Point(51, 118);
             label2.Name = "label2";
             label2.Size = new Size(255, 16);
             label2.TabIndex = 56;
@@ -634,7 +634,7 @@
             txtBuscarEndereco.IconLeftSize = new Size(15, 15);
             txtBuscarEndereco.IconRight = (Image)resources.GetObject("txtBuscarEndereco.IconRight");
             txtBuscarEndereco.IconRightSize = new Size(15, 15);
-            txtBuscarEndereco.Location = new Point(62, 146);
+            txtBuscarEndereco.Location = new Point(51, 146);
             txtBuscarEndereco.Name = "txtBuscarEndereco";
             txtBuscarEndereco.PasswordChar = '\0';
             txtBuscarEndereco.PlaceholderForeColor = Color.Silver;
@@ -674,7 +674,7 @@
             dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
             dgvClienteEndereco.DefaultCellStyle = dataGridViewCellStyle11;
             dgvClienteEndereco.GridColor = Color.FromArgb(242, 245, 250);
-            dgvClienteEndereco.Location = new Point(103, 199);
+            dgvClienteEndereco.Location = new Point(51, 199);
             dgvClienteEndereco.Name = "dgvClienteEndereco";
             dgvClienteEndereco.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -687,7 +687,7 @@
             dgvClienteEndereco.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dgvClienteEndereco.RowHeadersVisible = false;
             dgvClienteEndereco.RowTemplate.Height = 30;
-            dgvClienteEndereco.Size = new Size(960, 386);
+            dgvClienteEndereco.Size = new Size(1001, 386);
             dgvClienteEndereco.TabIndex = 52;
             dgvClienteEndereco.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvClienteEndereco.ThemeStyle.AlternatingRowsStyle.Font = null;

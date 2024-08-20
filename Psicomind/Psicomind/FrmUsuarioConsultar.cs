@@ -65,5 +65,28 @@ namespace Psicomind
         {
 
         }
+
+        private void btnConsultarDados_Click(object sender, EventArgs e)
+        {
+
+            var usuarios = Usuario.ObterLista(txtBuscarUsuario.Text);
+            int count = 0;
+
+            dgvUserDados.Rows.Clear();
+            foreach (var usuario in usuarios)
+            {
+                int rowIndex = dgvUserDados.Rows.Add();
+                dgvUserDados.Rows[count].Cells[0].Value = usuario.Id;
+                dgvUserDados.Rows[count].Cells[1].Value = usuario.Nome;
+                dgvUserDados.Rows[count].Cells[2].Value = usuario.Email;
+                dgvUserDados.Rows[count].Cells[3].Value = usuario.Cargo.Nome;
+                dgvUserDados.Rows[count].Cells[4].Value = usuario.Ativo;
+
+                count++;
+
+
+            }
+
+        }
     }
 }
