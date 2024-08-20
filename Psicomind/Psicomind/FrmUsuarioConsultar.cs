@@ -31,7 +31,7 @@ namespace Psicomind
 
             var usuarios = Usuario.ObterLista();
             int count = 0;
-            
+
             dgvUserDados.Rows.Clear();
             foreach (var usuario in usuarios)
             {
@@ -59,6 +59,11 @@ namespace Psicomind
             frmUsuarioMenu.Show();
 
             this.Close();
+        }
+
+        private void txtBuscarProfissional_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

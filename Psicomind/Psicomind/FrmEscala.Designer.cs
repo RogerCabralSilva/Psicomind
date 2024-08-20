@@ -33,6 +33,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEscala));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -43,15 +45,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label3 = new Label();
             btnInserir = new Guna.UI2.WinForms.Guna2Button();
             btnVoltar = new PictureBox();
             guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            mskHorarioInicio = new MaskedTextBox();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             mskHorarioFinal = new MaskedTextBox();
-            mskHorarioInicio = new MaskedTextBox();
             btnDuracao = new Guna.UI2.WinForms.Guna2NumericUpDown();
             label7 = new Label();
             label6 = new Label();
@@ -62,12 +63,11 @@
             dtpDataInicio = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label1 = new Label();
             cmbProfissionais = new Guna.UI2.WinForms.Guna2ComboBox();
-            guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             guna2ContainerControl2.SuspendLayout();
+            guna2ContainerControl3.SuspendLayout();
             guna2ContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnDuracao).BeginInit();
-            guna2ContainerControl3.SuspendLayout();
             SuspendLayout();
             // 
             // label3
@@ -113,6 +113,7 @@
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnVoltar.TabIndex = 41;
             btnVoltar.TabStop = false;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // guna2ContainerControl2
             // 
@@ -142,6 +143,34 @@
             guna2ContainerControl2.TabIndex = 30;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
+            // guna2ContainerControl3
+            // 
+            guna2ContainerControl3.BorderColor = Color.FromArgb(213, 218, 223);
+            guna2ContainerControl3.BorderRadius = 15;
+            guna2ContainerControl3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            guna2ContainerControl3.BorderThickness = 1;
+            guna2ContainerControl3.Controls.Add(mskHorarioInicio);
+            guna2ContainerControl3.CustomizableEdges = customizableEdges3;
+            guna2ContainerControl3.FillColor = Color.WhiteSmoke;
+            guna2ContainerControl3.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2ContainerControl3.Location = new Point(120, 348);
+            guna2ContainerControl3.Name = "guna2ContainerControl3";
+            guna2ContainerControl3.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2ContainerControl3.Size = new Size(200, 36);
+            guna2ContainerControl3.TabIndex = 59;
+            guna2ContainerControl3.Text = "guna2ContainerControl3";
+            // 
+            // mskHorarioInicio
+            // 
+            mskHorarioInicio.BackColor = Color.WhiteSmoke;
+            mskHorarioInicio.BorderStyle = BorderStyle.None;
+            mskHorarioInicio.Location = new Point(15, 11);
+            mskHorarioInicio.Mask = "90:00";
+            mskHorarioInicio.Name = "mskHorarioInicio";
+            mskHorarioInicio.Size = new Size(100, 16);
+            mskHorarioInicio.TabIndex = 56;
+            mskHorarioInicio.ValidatingType = typeof(DateTime);
+            // 
             // guna2ContainerControl1
             // 
             guna2ContainerControl1.BorderColor = Color.FromArgb(213, 218, 223);
@@ -169,17 +198,6 @@
             mskHorarioFinal.Size = new Size(100, 16);
             mskHorarioFinal.TabIndex = 57;
             mskHorarioFinal.ValidatingType = typeof(DateTime);
-            // 
-            // mskHorarioInicio
-            // 
-            mskHorarioInicio.BackColor = Color.WhiteSmoke;
-            mskHorarioInicio.BorderStyle = BorderStyle.None;
-            mskHorarioInicio.Location = new Point(15, 11);
-            mskHorarioInicio.Mask = "90:00";
-            mskHorarioInicio.Name = "mskHorarioInicio";
-            mskHorarioInicio.Size = new Size(100, 16);
-            mskHorarioInicio.TabIndex = 56;
-            mskHorarioInicio.ValidatingType = typeof(DateTime);
             // 
             // btnDuracao
             // 
@@ -318,23 +336,6 @@
             cmbProfissionais.TabIndex = 42;
             cmbProfissionais.SelectedIndexChanged += cmbProfissionais_SelectedIndexChanged;
             // 
-            // guna2ContainerControl3
-            // 
-            guna2ContainerControl3.BorderColor = Color.FromArgb(213, 218, 223);
-            guna2ContainerControl3.BorderRadius = 15;
-            guna2ContainerControl3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            guna2ContainerControl3.BorderThickness = 1;
-            guna2ContainerControl3.Controls.Add(mskHorarioInicio);
-            guna2ContainerControl3.CustomizableEdges = customizableEdges3;
-            guna2ContainerControl3.FillColor = Color.WhiteSmoke;
-            guna2ContainerControl3.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2ContainerControl3.Location = new Point(120, 348);
-            guna2ContainerControl3.Name = "guna2ContainerControl3";
-            guna2ContainerControl3.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ContainerControl3.Size = new Size(200, 36);
-            guna2ContainerControl3.TabIndex = 59;
-            guna2ContainerControl3.Text = "guna2ContainerControl3";
-            // 
             // FrmEscala
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -347,11 +348,11 @@
             ((System.ComponentModel.ISupportInitialize)btnVoltar).EndInit();
             guna2ContainerControl2.ResumeLayout(false);
             guna2ContainerControl2.PerformLayout();
+            guna2ContainerControl3.ResumeLayout(false);
+            guna2ContainerControl3.PerformLayout();
             guna2ContainerControl1.ResumeLayout(false);
             guna2ContainerControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnDuracao).EndInit();
-            guna2ContainerControl3.ResumeLayout(false);
-            guna2ContainerControl3.PerformLayout();
             ResumeLayout(false);
         }
 

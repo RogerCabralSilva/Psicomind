@@ -144,7 +144,7 @@
             txtEspecializaçãoProfissional.Font = new Font("Segoe UI", 9F);
             txtEspecializaçãoProfissional.ForeColor = Color.Black;
             txtEspecializaçãoProfissional.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEspecializaçãoProfissional.Location = new Point(97, 371);
+            txtEspecializaçãoProfissional.Location = new Point(94, 390);
             txtEspecializaçãoProfissional.Name = "txtEspecializaçãoProfissional";
             txtEspecializaçãoProfissional.PasswordChar = '\0';
             txtEspecializaçãoProfissional.PlaceholderForeColor = Color.Silver;
@@ -163,7 +163,7 @@
             dptDataContrato.FocusedColor = Color.Gainsboro;
             dptDataContrato.Font = new Font("Segoe UI", 9F);
             dptDataContrato.Format = DateTimePickerFormat.Short;
-            dptDataContrato.Location = new Point(97, 436);
+            dptDataContrato.Location = new Point(94, 455);
             dptDataContrato.MaxDate = new DateTime(2040, 12, 31, 0, 0, 0, 0);
             dptDataContrato.MinDate = new DateTime(1920, 1, 1, 0, 0, 0, 0);
             dptDataContrato.Name = "dptDataContrato";
@@ -178,7 +178,7 @@
             label11.BackColor = Color.White;
             label11.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = SystemColors.Highlight;
-            label11.Location = new Point(97, 419);
+            label11.Location = new Point(94, 438);
             label11.Name = "label11";
             label11.Size = new Size(106, 16);
             label11.TabIndex = 49;
@@ -190,7 +190,7 @@
             label10.BackColor = Color.White;
             label10.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = SystemColors.Highlight;
-            label10.Location = new Point(97, 352);
+            label10.Location = new Point(94, 371);
             label10.Name = "label10";
             label10.Size = new Size(97, 16);
             label10.TabIndex = 47;
@@ -206,7 +206,7 @@
             chkAtivoProfissional.CheckMarkColor = Color.Black;
             chkAtivoProfissional.CustomizableEdges = customizableEdges5;
             chkAtivoProfissional.ForeColor = SystemColors.ControlDarkDark;
-            chkAtivoProfissional.Location = new Point(584, 444);
+            chkAtivoProfissional.Location = new Point(581, 463);
             chkAtivoProfissional.Name = "chkAtivoProfissional";
             chkAtivoProfissional.ShadowDecoration.CustomizableEdges = customizableEdges6;
             chkAtivoProfissional.Size = new Size(20, 20);
@@ -238,7 +238,7 @@
             guna2ContainerControl1.Controls.Add(mtxTelefoneProfissional);
             guna2ContainerControl1.CustomizableEdges = customizableEdges7;
             guna2ContainerControl1.FillColor = Color.FromArgb(224, 224, 224);
-            guna2ContainerControl1.Location = new Point(97, 236);
+            guna2ContainerControl1.Location = new Point(94, 255);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
             guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2ContainerControl1.Size = new Size(96, 25);
@@ -275,7 +275,7 @@
             btnLimpar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnLimpar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLimpar.ForeColor = Color.White;
-            btnLimpar.Location = new Point(462, 531);
+            btnLimpar.Location = new Point(459, 550);
             btnLimpar.Name = "btnLimpar";
             btnLimpar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnLimpar.Size = new Size(126, 33);
@@ -294,7 +294,7 @@
             btnConsultar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnConsultar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConsultar.ForeColor = Color.White;
-            btnConsultar.Location = new Point(321, 531);
+            btnConsultar.Location = new Point(318, 550);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnConsultar.Size = new Size(122, 33);
@@ -315,7 +315,7 @@
             btnEditar.Enabled = false;
             btnEditar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(196, 531);
+            btnEditar.Location = new Point(193, 550);
             btnEditar.Name = "btnEditar";
             btnEditar.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnEditar.Size = new Size(103, 33);
@@ -332,7 +332,7 @@
             dptDataNascimentoProfissional.FocusedColor = Color.Gainsboro;
             dptDataNascimentoProfissional.Font = new Font("Segoe UI", 9F);
             dptDataNascimentoProfissional.Format = DateTimePickerFormat.Short;
-            dptDataNascimentoProfissional.Location = new Point(421, 293);
+            dptDataNascimentoProfissional.Location = new Point(418, 312);
             dptDataNascimentoProfissional.MaxDate = new DateTime(2040, 12, 31, 0, 0, 0, 0);
             dptDataNascimentoProfissional.MinDate = new DateTime(1920, 1, 1, 0, 0, 0, 0);
             dptDataNascimentoProfissional.Name = "dptDataNascimentoProfissional";
@@ -355,7 +355,7 @@
             cmbTipoTelefoneProfissional.Font = new Font("Segoe UI", 10F);
             cmbTipoTelefoneProfissional.ForeColor = Color.FromArgb(68, 88, 112);
             cmbTipoTelefoneProfissional.ItemHeight = 20;
-            cmbTipoTelefoneProfissional.Location = new Point(421, 235);
+            cmbTipoTelefoneProfissional.Location = new Point(418, 254);
             cmbTipoTelefoneProfissional.Name = "cmbTipoTelefoneProfissional";
             cmbTipoTelefoneProfissional.ShadowDecoration.CustomizableEdges = customizableEdges18;
             cmbTipoTelefoneProfissional.Size = new Size(119, 26);
@@ -375,7 +375,7 @@
             cmbGeneroProfissional.Font = new Font("Segoe UI", 10F);
             cmbGeneroProfissional.ForeColor = Color.FromArgb(68, 88, 112);
             cmbGeneroProfissional.ItemHeight = 20;
-            cmbGeneroProfissional.Location = new Point(97, 295);
+            cmbGeneroProfissional.Location = new Point(94, 314);
             cmbGeneroProfissional.Name = "cmbGeneroProfissional";
             cmbGeneroProfissional.ShadowDecoration.CustomizableEdges = customizableEdges20;
             cmbGeneroProfissional.Size = new Size(230, 26);
@@ -387,7 +387,7 @@
             label7.BackColor = Color.White;
             label7.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.Highlight;
-            label7.Location = new Point(421, 276);
+            label7.Location = new Point(418, 295);
             label7.Name = "label7";
             label7.Size = new Size(126, 16);
             label7.TabIndex = 31;
@@ -399,7 +399,7 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(609, 446);
+            label2.Location = new Point(606, 465);
             label2.Name = "label2";
             label2.Size = new Size(45, 18);
             label2.TabIndex = 31;
@@ -411,7 +411,7 @@
             label9.BackColor = Color.White;
             label9.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = SystemColors.Highlight;
-            label9.Location = new Point(421, 217);
+            label9.Location = new Point(418, 236);
             label9.Name = "label9";
             label9.Size = new Size(105, 16);
             label9.TabIndex = 29;
@@ -423,7 +423,7 @@
             label6.BackColor = Color.White;
             label6.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.Highlight;
-            label6.Location = new Point(97, 276);
+            label6.Location = new Point(94, 295);
             label6.Name = "label6";
             label6.Size = new Size(52, 16);
             label6.TabIndex = 29;
@@ -435,7 +435,7 @@
             label8.BackColor = Color.White;
             label8.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = SystemColors.Highlight;
-            label8.Location = new Point(97, 217);
+            label8.Location = new Point(94, 236);
             label8.Name = "label8";
             label8.Size = new Size(58, 16);
             label8.TabIndex = 29;
@@ -447,7 +447,7 @@
             label4.BackColor = Color.White;
             label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.Highlight;
-            label4.Location = new Point(421, 162);
+            label4.Location = new Point(418, 181);
             label4.Name = "label4";
             label4.Size = new Size(43, 16);
             label4.TabIndex = 29;
@@ -459,7 +459,7 @@
             label18.BackColor = Color.White;
             label18.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = SystemColors.Highlight;
-            label18.Location = new Point(321, 92);
+            label18.Location = new Point(318, 111);
             label18.Name = "label18";
             label18.Size = new Size(105, 16);
             label18.TabIndex = 29;
@@ -471,7 +471,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(97, 162);
+            label1.Location = new Point(94, 181);
             label1.Name = "label1";
             label1.Size = new Size(43, 16);
             label1.TabIndex = 29;
@@ -483,7 +483,7 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(249, 40);
+            label3.Location = new Point(251, 58);
             label3.Name = "label3";
             label3.Size = new Size(262, 29);
             label3.TabIndex = 28;
@@ -505,7 +505,7 @@
             txtSenhaProfissional.Font = new Font("Segoe UI", 9F);
             txtSenhaProfissional.ForeColor = Color.Black;
             txtSenhaProfissional.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenhaProfissional.Location = new Point(421, 181);
+            txtSenhaProfissional.Location = new Point(418, 200);
             txtSenhaProfissional.Name = "txtSenhaProfissional";
             txtSenhaProfissional.PasswordChar = '●';
             txtSenhaProfissional.PlaceholderForeColor = Color.Silver;
@@ -532,7 +532,7 @@
             txtProfissionalId.Font = new Font("Segoe UI", 9F);
             txtProfissionalId.ForeColor = Color.Black;
             txtProfissionalId.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtProfissionalId.Location = new Point(333, 111);
+            txtProfissionalId.Location = new Point(330, 130);
             txtProfissionalId.Name = "txtProfissionalId";
             txtProfissionalId.PasswordChar = '\0';
             txtProfissionalId.PlaceholderForeColor = Color.Silver;
@@ -559,7 +559,7 @@
             txtNomeProfissional.Font = new Font("Segoe UI", 9F);
             txtNomeProfissional.ForeColor = Color.Black;
             txtNomeProfissional.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNomeProfissional.Location = new Point(97, 181);
+            txtNomeProfissional.Location = new Point(94, 200);
             txtNomeProfissional.Name = "txtNomeProfissional";
             txtNomeProfissional.PasswordChar = '\0';
             txtNomeProfissional.PlaceholderForeColor = Color.Silver;

@@ -45,7 +45,7 @@ namespace Psicomind
 
             Escala escala = new(
                Profissional.ObterPorId(Convert.ToInt32(cmbProfissionais.SelectedValue)),
-               dtpDataInicio.Value, 
+               dtpDataInicio.Value,
                dtpDataFinal.Value,
                Convert.ToDateTime(mskHorarioInicio.Text),
                Convert.ToDateTime(mskHorarioFinal.Text),
@@ -63,6 +63,17 @@ namespace Psicomind
 
             MessageBox.Show("Escala Inserida com sucesso!!!");
            
+
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+
+            FrmProfissionalMenu frmProfissionalMenu = new();
+            frmProfissionalMenu.StartPosition = FormStartPosition.CenterScreen;
+            frmProfissionalMenu.Show();
+
+            this.Close();
 
         }
     }
