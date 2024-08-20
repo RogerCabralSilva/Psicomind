@@ -61,6 +61,8 @@
             dtpDataInicio = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label1 = new Label();
             cmbProfissionais = new Guna.UI2.WinForms.Guna2ComboBox();
+            mskHorarioInicio = new MaskedTextBox();
+            mskHorarioFinal = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnDuracao).BeginInit();
@@ -116,6 +118,8 @@
             guna2ContainerControl2.Anchor = AnchorStyles.None;
             guna2ContainerControl2.BackColor = Color.Transparent;
             guna2ContainerControl2.BorderRadius = 30;
+            guna2ContainerControl2.Controls.Add(mskHorarioFinal);
+            guna2ContainerControl2.Controls.Add(mskHorarioInicio);
             guna2ContainerControl2.Controls.Add(txtHorarioFinal);
             guna2ContainerControl2.Controls.Add(txtHorarioInicio);
             guna2ContainerControl2.Controls.Add(btnDuracao);
@@ -320,6 +324,28 @@
             cmbProfissionais.Size = new Size(340, 36);
             cmbProfissionais.TabIndex = 42;
             // 
+            // mskHorarioInicio
+            // 
+            mskHorarioInicio.BackColor = Color.WhiteSmoke;
+            mskHorarioInicio.BorderStyle = BorderStyle.None;
+            mskHorarioInicio.Location = new Point(134, 353);
+            mskHorarioInicio.Mask = "90:00";
+            mskHorarioInicio.Name = "mskHorarioInicio";
+            mskHorarioInicio.Size = new Size(100, 16);
+            mskHorarioInicio.TabIndex = 56;
+            mskHorarioInicio.ValidatingType = typeof(DateTime);
+            // 
+            // mskHorarioFinal
+            // 
+            mskHorarioFinal.BackColor = Color.WhiteSmoke;
+            mskHorarioFinal.BorderStyle = BorderStyle.None;
+            mskHorarioFinal.Location = new Point(433, 353);
+            mskHorarioFinal.Mask = "90:00";
+            mskHorarioFinal.Name = "mskHorarioFinal";
+            mskHorarioFinal.Size = new Size(100, 16);
+            mskHorarioFinal.TabIndex = 57;
+            mskHorarioFinal.ValidatingType = typeof(DateTime);
+            // 
             // FrmEscala
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -353,5 +379,7 @@
         private Guna.UI2.WinForms.Guna2NumericUpDown btnDuracao;
         private Guna.UI2.WinForms.Guna2TextBox txtHorarioInicio;
         private Guna.UI2.WinForms.Guna2TextBox txtHorarioFinal;
+        private MaskedTextBox mskHorarioFinal;
+        private MaskedTextBox mskHorarioInicio;
     }
 }
