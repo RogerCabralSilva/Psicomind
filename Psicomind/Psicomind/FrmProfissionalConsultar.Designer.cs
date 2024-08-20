@@ -335,7 +335,7 @@
             btnConsultarDados.Size = new Size(122, 29);
             btnConsultarDados.TabIndex = 48;
             btnConsultarDados.Text = "Consultar";
-            btnConsultarDados.Click += btnConsultarDados_Click;
+            btnConsultarDados.Click += btnConsultarDados_Click_1;
             // 
             // btnVoltar
             // 
@@ -391,7 +391,6 @@
             txtBuscarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtBuscarProfissional.Size = new Size(601, 29);
             txtBuscarProfissional.TabIndex = 46;
-            txtBuscarProfissional.TextChanged += txtBuscarProfissional_TextChanged;
             // 
             // guna2DataGridView2
             // 

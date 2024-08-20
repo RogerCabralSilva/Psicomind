@@ -126,9 +126,28 @@ namespace Psicomind
 
         }
 
-
-        private void btnConsultarDados_Click(object sender, EventArgs e)
+        private void btnConsultarTelefoneProfissional_Click(object sender, EventArgs e)
         {
+            var profissionais = Profissional.ObterLista(txtConsultarProfissional.Text);
+            int count = 0;
+
+            dgvProfissionalTelefone.Rows.Clear();
+            foreach (var profissional in profissionais)
+            {
+                int rowIndex = dgvProfissionalTelefone.Rows.Add();
+                dgvProfissionalTelefone.Rows[count].Cells[0].Value = profissional.Nome;
+                dgvProfissionalTelefone.Rows[count].Cells[1].Value = profissional.TelefoneProfissional.Numero;
+                dgvProfissionalTelefone.Rows[count].Cells[2].Value = profissional.TelefoneProfissional.Telefonetipo_id.Tipo;
+
+                count++;
+
+
+            }
+        }
+
+        private void btnConsultarDados_Click_1(object sender, EventArgs e)
+        {
+
             var profissionais = Profissional.ObterLista(txtBuscarProfissional.Text);
             int count = 0;
 
@@ -154,35 +173,6 @@ namespace Psicomind
                 count++;
 
             }
-        }
-
-        private void btnConsultarTelefoneProfissional_Click(object sender, EventArgs e)
-        {
-            var profissionais = Profissional.ObterLista(txtConsultarProfissional.Text);
-            int count = 0;
-
-            dgvProfissionalTelefone.Rows.Clear();
-            foreach (var profissional in profissionais)
-            {
-                int rowIndex = dgvProfissionalTelefone.Rows.Add();
-                dgvProfissionalTelefone.Rows[count].Cells[0].Value = profissional.Nome;
-                dgvProfissionalTelefone.Rows[count].Cells[1].Value = profissional.TelefoneProfissional.Numero;
-                dgvProfissionalTelefone.Rows[count].Cells[2].Value = profissional.TelefoneProfissional.Telefonetipo_id.Tipo;
-
-                count++;
-
-
-            }
-        }
-
-        private void txtBuscarProfissional_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnConsultarDados_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
