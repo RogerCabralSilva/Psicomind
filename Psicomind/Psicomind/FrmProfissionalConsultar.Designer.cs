@@ -329,12 +329,13 @@
             btnConsultarDados.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnConsultarDados.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConsultarDados.ForeColor = Color.White;
-            btnConsultarDados.Location = new Point(666, 128);
+            btnConsultarDados.Location = new Point(645, 128);
             btnConsultarDados.Name = "btnConsultarDados";
             btnConsultarDados.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnConsultarDados.Size = new Size(122, 29);
             btnConsultarDados.TabIndex = 48;
             btnConsultarDados.Text = "Consultar";
+            btnConsultarDados.Click += btnConsultarDados_Click;
             // 
             // btnVoltar
             // 
@@ -342,7 +343,7 @@
             btnVoltar.BackColor = Color.White;
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(48, 61);
+            btnVoltar.Location = new Point(30, 62);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(50, 30);
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -356,7 +357,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(49, 105);
+            label1.Location = new Point(30, 105);
             label1.Name = "label1";
             label1.Size = new Size(174, 16);
             label1.TabIndex = 47;
@@ -381,7 +382,7 @@
             txtBuscarProfissional.IconLeftSize = new Size(15, 15);
             txtBuscarProfissional.IconRight = (Image)resources.GetObject("txtBuscarProfissional.IconRight");
             txtBuscarProfissional.IconRightSize = new Size(15, 15);
-            txtBuscarProfissional.Location = new Point(48, 128);
+            txtBuscarProfissional.Location = new Point(29, 128);
             txtBuscarProfissional.Name = "txtBuscarProfissional";
             txtBuscarProfissional.PasswordChar = '\0';
             txtBuscarProfissional.PlaceholderForeColor = Color.Silver;
@@ -390,6 +391,7 @@
             txtBuscarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtBuscarProfissional.Size = new Size(601, 29);
             txtBuscarProfissional.TabIndex = 46;
+            txtBuscarProfissional.TextChanged += txtBuscarProfissional_TextChanged;
             // 
             // guna2DataGridView2
             // 

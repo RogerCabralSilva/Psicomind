@@ -202,6 +202,7 @@
             txtBuscarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtBuscarProfissional.Size = new Size(601, 29);
             txtBuscarProfissional.TabIndex = 46;
+            txtBuscarProfissional.TextChanged += txtBuscarProfissional_TextChanged;
             // 
             // guna2DataGridView2
             // 

@@ -130,5 +130,15 @@ namespace Psicomind
         {
 
         }
+
+        private void txtBuscarProfissional_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsultarDados_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

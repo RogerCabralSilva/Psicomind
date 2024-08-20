@@ -57,7 +57,7 @@
             txtPsicomind.AutoSize = true;
             txtPsicomind.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPsicomind.ForeColor = SystemColors.Highlight;
-            txtPsicomind.Location = new Point(455, 50);
+            txtPsicomind.Location = new Point(387, 94);
             txtPsicomind.Name = "txtPsicomind";
             txtPsicomind.Size = new Size(141, 28);
             txtPsicomind.TabIndex = 45;
@@ -68,7 +68,7 @@
             txtTitulo.AutoSize = true;
             txtTitulo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTitulo.ForeColor = Color.Black;
-            txtTitulo.Location = new Point(414, 64);
+            txtTitulo.Location = new Point(346, 108);
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(233, 60);
             txtTitulo.TabIndex = 44;
@@ -84,7 +84,7 @@
             btnPagEditarUsuario.Cursor = Cursors.Hand;
             btnPagEditarUsuario.CustomizableEdges = customizableEdges1;
             btnPagEditarUsuario.FillColor = Color.LightGray;
-            btnPagEditarUsuario.Location = new Point(266, 239);
+            btnPagEditarUsuario.Location = new Point(201, 231);
             btnPagEditarUsuario.Name = "btnPagEditarUsuario";
             btnPagEditarUsuario.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnPagEditarUsuario.Size = new Size(212, 197);
@@ -109,7 +109,7 @@
             pictureBox5.BackColor = Color.LightGray;
             pictureBox5.Enabled = false;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(49, 97);
+            pictureBox5.Location = new Point(46, 94);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(114, 70);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -140,7 +140,7 @@
             btnPagConsultarUsuario.Cursor = Cursors.Hand;
             btnPagConsultarUsuario.CustomizableEdges = customizableEdges3;
             btnPagConsultarUsuario.FillColor = Color.LightGray;
-            btnPagConsultarUsuario.Location = new Point(585, 239);
+            btnPagConsultarUsuario.Location = new Point(488, 231);
             btnPagConsultarUsuario.Name = "btnPagConsultarUsuario";
             btnPagConsultarUsuario.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnPagConsultarUsuario.Size = new Size(212, 197);
@@ -166,7 +166,7 @@
             pictureBox3.BackColor = Color.LightGray;
             pictureBox3.Enabled = false;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(58, 115);
+            pictureBox3.Location = new Point(49, 101);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(96, 60);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -203,7 +203,7 @@
             btnVoltar.BackColor = Color.Transparent;
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(96, 73);
+            btnVoltar.Location = new Point(49, 38);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(50, 30);
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -215,7 +215,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1040, 654);
+            ClientSize = new Size(915, 561);
             Controls.Add(btnVoltar);
             Controls.Add(txtPsicomind);
             Controls.Add(txtTitulo);
