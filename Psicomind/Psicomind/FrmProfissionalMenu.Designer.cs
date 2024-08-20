@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProfissionalMenu));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnPagInserirProfissionais = new Guna.UI2.WinForms.Guna2ContainerControl();
             pictureBox1 = new PictureBox();
             label3 = new Label();
@@ -76,11 +76,11 @@
             btnPagInserirProfissionais.Controls.Add(label3);
             btnPagInserirProfissionais.Controls.Add(label4);
             btnPagInserirProfissionais.Cursor = Cursors.Hand;
-            btnPagInserirProfissionais.CustomizableEdges = customizableEdges9;
+            btnPagInserirProfissionais.CustomizableEdges = customizableEdges1;
             btnPagInserirProfissionais.FillColor = Color.LightGray;
             btnPagInserirProfissionais.Location = new Point(290, 160);
             btnPagInserirProfissionais.Name = "btnPagInserirProfissionais";
-            btnPagInserirProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnPagInserirProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnPagInserirProfissionais.Size = new Size(212, 206);
             btnPagInserirProfissionais.TabIndex = 36;
             btnPagInserirProfissionais.Text = "guna2ContainerControl1";
@@ -146,11 +146,11 @@
             btnPagConsultarProfissionais.Controls.Add(label5);
             btnPagConsultarProfissionais.Controls.Add(label7);
             btnPagConsultarProfissionais.Cursor = Cursors.Hand;
-            btnPagConsultarProfissionais.CustomizableEdges = customizableEdges11;
+            btnPagConsultarProfissionais.CustomizableEdges = customizableEdges3;
             btnPagConsultarProfissionais.FillColor = Color.LightGray;
             btnPagConsultarProfissionais.Location = new Point(555, 160);
             btnPagConsultarProfissionais.Name = "btnPagConsultarProfissionais";
-            btnPagConsultarProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnPagConsultarProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnPagConsultarProfissionais.Size = new Size(212, 206);
             btnPagConsultarProfissionais.TabIndex = 37;
             btnPagConsultarProfissionais.Text = "guna2ContainerControl1";
@@ -227,11 +227,11 @@
             btnPagEditarProfissionais.Controls.Add(pictureBox5);
             btnPagEditarProfissionais.Controls.Add(label9);
             btnPagEditarProfissionais.Cursor = Cursors.Hand;
-            btnPagEditarProfissionais.CustomizableEdges = customizableEdges13;
+            btnPagEditarProfissionais.CustomizableEdges = customizableEdges5;
             btnPagEditarProfissionais.FillColor = Color.LightGray;
             btnPagEditarProfissionais.Location = new Point(290, 391);
             btnPagEditarProfissionais.Name = "btnPagEditarProfissionais";
-            btnPagEditarProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnPagEditarProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnPagEditarProfissionais.Size = new Size(212, 197);
             btnPagEditarProfissionais.TabIndex = 38;
             btnPagEditarProfissionais.Text = "guna2ContainerControl1";
@@ -296,11 +296,11 @@
             btnEscala.Controls.Add(label6);
             btnEscala.Controls.Add(pictureBox2);
             btnEscala.Cursor = Cursors.Hand;
-            btnEscala.CustomizableEdges = customizableEdges15;
+            btnEscala.CustomizableEdges = customizableEdges7;
             btnEscala.FillColor = Color.LightGray;
             btnEscala.Location = new Point(555, 391);
             btnEscala.Name = "btnEscala";
-            btnEscala.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnEscala.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnEscala.Size = new Size(212, 197);
             btnEscala.TabIndex = 39;
             btnEscala.Text = "guna2ContainerControl1";
@@ -324,9 +324,9 @@
             pictureBox2.BackColor = Color.LightGray;
             pictureBox2.Enabled = false;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(55, 77);
+            pictureBox2.Location = new Point(58, 77);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(102, 91);
+            pictureBox2.Size = new Size(93, 91);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 24;
             pictureBox2.TabStop = false;

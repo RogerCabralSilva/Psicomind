@@ -22,6 +22,10 @@ namespace Psicomind
         private void frmAgendamento_Load(object sender, EventArgs e)
         {
 
+            var profissional = Profissional.ObterLista();
+            cmbProfissionais.DataSource = profissional;
+            cmbProfissionais.DisplayMember = "nome";
+            cmbProfissionais.ValueMember = "id";
 
         }
 
@@ -44,17 +48,37 @@ namespace Psicomind
 
         private void btnConsultarProfissional_Click(object sender, EventArgs e)
         {
-            string dataFormatada = dtp.Value.Date.ToString("yyyy-MM-dd");
+            string dataFormatada = dtpDataAgendamento.Value.Date.ToString("yyyy-MM-dd");
             var calendario = Calendario.ObterLIstaHorarios(dataFormatada);
-            
 
-                cmbHorarios.DataSource = calendario;
-                cmbHorarios.DisplayMember = "horario";
-                cmbHorarios.ValueMember = "id";
-            
+
+            cmbHorarios.DataSource = calendario;
+            cmbHorarios.DisplayMember = "horario";
+            cmbHorarios.ValueMember = "id";
+
 
 
             frmAgendamento_Load(sender, e);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtp_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpDataAgendamento_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

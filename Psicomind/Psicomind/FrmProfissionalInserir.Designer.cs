@@ -391,6 +391,7 @@
             cmbTipoTelefoneProfissional.ShadowDecoration.CustomizableEdges = customizableEdges18;
             cmbTipoTelefoneProfissional.Size = new Size(119, 26);
             cmbTipoTelefoneProfissional.TabIndex = 5;
+            cmbTipoTelefoneProfissional.SelectedIndexChanged += cmbTipoTelefoneProfissional_SelectedIndexChanged;
             // 
             // cmbGeneroProfissional
             // 

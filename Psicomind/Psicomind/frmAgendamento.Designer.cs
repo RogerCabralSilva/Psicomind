@@ -40,23 +40,29 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            label4 = new Label();
+            dtpDataAgendamento = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            label2 = new Label();
+            label1 = new Label();
+            cmbProfissionais = new Guna.UI2.WinForms.Guna2ComboBox();
+            label3 = new Label();
             cmbHorarios = new Guna.UI2.WinForms.Guna2ComboBox();
             btnConsultarProfissional = new Guna.UI2.WinForms.Guna2Button();
-            cmbProfissionais = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2NotificationPaint1 = new Guna.UI2.WinForms.Guna2NotificationPaint(components);
-            dtp = new DateTimePicker();
             guna2ContainerControl1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2ContainerControl1
             // 
             guna2ContainerControl1.BorderRadius = 20;
-            guna2ContainerControl1.Controls.Add(dtp);
-            guna2ContainerControl1.Controls.Add(guna2Button1);
+            guna2ContainerControl1.Controls.Add(label4);
+            guna2ContainerControl1.Controls.Add(dtpDataAgendamento);
+            guna2ContainerControl1.Controls.Add(label2);
+            guna2ContainerControl1.Controls.Add(label1);
+            guna2ContainerControl1.Controls.Add(cmbProfissionais);
+            guna2ContainerControl1.Controls.Add(label3);
             guna2ContainerControl1.Controls.Add(cmbHorarios);
             guna2ContainerControl1.Controls.Add(btnConsultarProfissional);
-            guna2ContainerControl1.Controls.Add(cmbProfissionais);
             guna2ContainerControl1.CustomizableEdges = customizableEdges9;
             guna2ContainerControl1.Location = new Point(26, 12);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
@@ -65,66 +71,68 @@
             guna2ContainerControl1.TabIndex = 1;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
-            // guna2Button1
+            // label4
             // 
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 10;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(866, 374);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(120, 30);
-            guna2Button1.TabIndex = 5;
-            guna2Button1.Text = "consultar";
+            label4.AutoSize = true;
+            label4.BackColor = Color.White;
+            label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.Highlight;
+            label4.Location = new Point(489, 253);
+            label4.Name = "label4";
+            label4.Size = new Size(107, 16);
+            label4.TabIndex = 48;
+            label4.Text = "Selecione a data\r\n";
             // 
-            // cmbHorarios
+            // dtpDataAgendamento
             // 
-            cmbHorarios.BackColor = Color.Transparent;
-            cmbHorarios.CustomizableEdges = customizableEdges3;
-            cmbHorarios.DrawMode = DrawMode.OwnerDrawFixed;
-            cmbHorarios.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbHorarios.FocusedColor = Color.FromArgb(94, 148, 255);
-            cmbHorarios.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cmbHorarios.Font = new Font("Segoe UI", 10F);
-            cmbHorarios.ForeColor = Color.FromArgb(68, 88, 112);
-            cmbHorarios.ItemHeight = 30;
-            cmbHorarios.Location = new Point(746, 245);
-            cmbHorarios.Name = "cmbHorarios";
-            cmbHorarios.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            cmbHorarios.Size = new Size(251, 36);
-            cmbHorarios.TabIndex = 4;
-            cmbHorarios.SelectedIndexChanged += guna2ComboBox1_SelectedIndexChanged;
+            dtpDataAgendamento.BackColor = Color.Transparent;
+            dtpDataAgendamento.BorderRadius = 15;
+            dtpDataAgendamento.Checked = true;
+            dtpDataAgendamento.CustomizableEdges = customizableEdges1;
+            dtpDataAgendamento.FillColor = Color.White;
+            dtpDataAgendamento.Font = new Font("Segoe UI", 9F);
+            dtpDataAgendamento.Format = DateTimePickerFormat.Short;
+            dtpDataAgendamento.Location = new Point(415, 281);
+            dtpDataAgendamento.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpDataAgendamento.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpDataAgendamento.Name = "dtpDataAgendamento";
+            dtpDataAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            dtpDataAgendamento.Size = new Size(255, 36);
+            dtpDataAgendamento.TabIndex = 47;
+            dtpDataAgendamento.Value = new DateTime(2024, 8, 19, 11, 43, 41, 124);
+            dtpDataAgendamento.ValueChanged += dtpDataAgendamento_ValueChanged;
             // 
-            // btnConsultarProfissional
+            // label2
             // 
-            btnConsultarProfissional.BackColor = Color.Transparent;
-            btnConsultarProfissional.BorderRadius = 10;
-            btnConsultarProfissional.CustomizableEdges = customizableEdges5;
-            btnConsultarProfissional.DisabledState.BorderColor = Color.DarkGray;
-            btnConsultarProfissional.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnConsultarProfissional.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnConsultarProfissional.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnConsultarProfissional.Font = new Font("Segoe UI", 9F);
-            btnConsultarProfissional.ForeColor = Color.White;
-            btnConsultarProfissional.Location = new Point(111, 403);
-            btnConsultarProfissional.Name = "btnConsultarProfissional";
-            btnConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnConsultarProfissional.Size = new Size(120, 30);
-            btnConsultarProfissional.TabIndex = 3;
-            btnConsultarProfissional.Text = "consultar";
-            btnConsultarProfissional.Click += btnConsultarProfissional_Click;
+            label2.AutoSize = true;
+            label2.BackColor = Color.White;
+            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.Highlight;
+            label2.Location = new Point(479, 408);
+            label2.Name = "label2";
+            label2.Size = new Size(123, 16);
+            label2.TabIndex = 46;
+            label2.Text = "Horários Disponíveis";
+            label2.Click += label2_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.Highlight;
+            label1.Location = new Point(505, 170);
+            label1.Name = "label1";
+            label1.Size = new Size(71, 16);
+            label1.TabIndex = 45;
+            label1.Text = "Profissional";
+            label1.Click += label1_Click;
             // 
             // cmbProfissionais
             // 
             cmbProfissionais.BackColor = Color.Transparent;
             cmbProfissionais.BorderRadius = 15;
-            cmbProfissionais.CustomizableEdges = customizableEdges7;
+            cmbProfissionais.CustomizableEdges = customizableEdges3;
             cmbProfissionais.DrawMode = DrawMode.OwnerDrawFixed;
             cmbProfissionais.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbProfissionais.FillColor = Color.WhiteSmoke;
@@ -133,19 +141,62 @@
             cmbProfissionais.Font = new Font("Segoe UI", 10F);
             cmbProfissionais.ForeColor = Color.FromArgb(68, 88, 112);
             cmbProfissionais.ItemHeight = 30;
-            cmbProfissionais.Location = new Point(60, 131);
+            cmbProfissionais.Location = new Point(374, 193);
             cmbProfissionais.Name = "cmbProfissionais";
-            cmbProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            cmbProfissionais.Size = new Size(227, 36);
-            cmbProfissionais.TabIndex = 2;
+            cmbProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cmbProfissionais.Size = new Size(333, 36);
+            cmbProfissionais.TabIndex = 44;
             // 
-            // dtp
+            // label3
             // 
-            dtp.Format = DateTimePickerFormat.Short;
-            dtp.Location = new Point(60, 278);
-            dtp.Name = "dtp";
-            dtp.Size = new Size(200, 23);
-            dtp.TabIndex = 6;
+            label3.AutoSize = true;
+            label3.BackColor = Color.White;
+            label3.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(358, 102);
+            label3.Name = "label3";
+            label3.Size = new Size(364, 32);
+            label3.TabIndex = 29;
+            label3.Text = "Agendamento de Consulta";
+            // 
+            // cmbHorarios
+            // 
+            cmbHorarios.BackColor = Color.Transparent;
+            cmbHorarios.BorderRadius = 15;
+            cmbHorarios.CustomizableEdges = customizableEdges5;
+            cmbHorarios.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbHorarios.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbHorarios.FillColor = Color.WhiteSmoke;
+            cmbHorarios.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbHorarios.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbHorarios.Font = new Font("Segoe UI", 10F);
+            cmbHorarios.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbHorarios.ItemHeight = 30;
+            cmbHorarios.Location = new Point(415, 434);
+            cmbHorarios.Name = "cmbHorarios";
+            cmbHorarios.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            cmbHorarios.Size = new Size(251, 36);
+            cmbHorarios.TabIndex = 4;
+            cmbHorarios.SelectedIndexChanged += guna2ComboBox1_SelectedIndexChanged;
+            // 
+            // btnConsultarProfissional
+            // 
+            btnConsultarProfissional.BackColor = Color.Transparent;
+            btnConsultarProfissional.BorderRadius = 10;
+            btnConsultarProfissional.CustomizableEdges = customizableEdges7;
+            btnConsultarProfissional.DisabledState.BorderColor = Color.DarkGray;
+            btnConsultarProfissional.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnConsultarProfissional.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnConsultarProfissional.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnConsultarProfissional.Font = new Font("Segoe UI", 9F);
+            btnConsultarProfissional.ForeColor = Color.White;
+            btnConsultarProfissional.Location = new Point(479, 339);
+            btnConsultarProfissional.Name = "btnConsultarProfissional";
+            btnConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnConsultarProfissional.Size = new Size(120, 30);
+            btnConsultarProfissional.TabIndex = 3;
+            btnConsultarProfissional.Text = "consultar";
+            btnConsultarProfissional.Click += btnConsultarProfissional_Click;
             // 
             // frmAgendamento
             // 
@@ -157,16 +208,20 @@
             Text = "frmAgendamento";
             Load += frmAgendamento_Load;
             guna2ContainerControl1.ResumeLayout(false);
+            guna2ContainerControl1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private Guna.UI2.WinForms.Guna2Button btnConsultarProfissional;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbProfissionais;
         private Guna.UI2.WinForms.Guna2ComboBox cmbHorarios;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2NotificationPaint guna2NotificationPaint1;
-        private DateTimePicker dtp;
+        private Label label3;
+        private Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbProfissionais;
+        private Label label2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDataAgendamento;
+        private Label label4;
     }
 }

@@ -126,7 +126,7 @@ namespace Psicomind
             cmbTipoTelefoneProfissional.ValueMember = "id";
 
             var cargo = Cargo.ObterLista();
-            cmbCargos.DataSource= cargo;
+            cmbCargos.DataSource = cargo;
             cmbCargos.DisplayMember = "nome";
             cmbCargos.ValueMember = "id";
         }
@@ -152,6 +152,11 @@ namespace Psicomind
         }
 
         private void guna2ContainerControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbTipoTelefoneProfissional_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
