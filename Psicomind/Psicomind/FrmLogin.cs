@@ -46,11 +46,9 @@ namespace Psicomind
 
                     Program.Usuario = usuario;
 
-                    FrmPrincipal frmPrincipal = new();
-                    frmPrincipal.StartPosition = FormStartPosition.CenterScreen;
-                    frmPrincipal.Show();
-
-                    this.Hide();
+                    // Fecha o formulário de login e retorna DialogResult.OK
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
 
                 }
                 else
@@ -68,6 +66,16 @@ namespace Psicomind
                 MessageBox.Show("Digite suas credenciais para prosseguir!");
 
             }
+
+
+            // Limpando os campos ao clicar o botao
+            txtEmail.Clear();
+            txtSenha.Clear();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

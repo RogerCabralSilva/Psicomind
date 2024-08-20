@@ -1,6 +1,6 @@
 ﻿namespace Psicomind
 {
-    partial class FrmUsuarioMenu
+    partial class FrmAgendamentoMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgendamentoMenu));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarioMenu));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            btnVoltar = new PictureBox();
             txtPsicomind = new Label();
             txtTitulo = new Label();
             btnPagEditarUsuario = new Guna.UI2.WinForms.Guna2ContainerControl();
-            label1 = new Label();
             pictureBox5 = new PictureBox();
             label9 = new Label();
             btnPagConsultarUsuario = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -44,65 +44,64 @@
             pictureBox3 = new PictureBox();
             label5 = new Label();
             label7 = new Label();
-            btnVoltar = new PictureBox();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             btnPagEditarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             btnPagConsultarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             SuspendLayout();
+            // 
+            // btnVoltar
+            // 
+            btnVoltar.BackColor = Color.Transparent;
+            btnVoltar.Cursor = Cursors.Hand;
+            btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
+            btnVoltar.Location = new Point(62, 54);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(50, 30);
+            btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnVoltar.TabIndex = 51;
+            btnVoltar.TabStop = false;
             // 
             // txtPsicomind
             // 
             txtPsicomind.AutoSize = true;
             txtPsicomind.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPsicomind.ForeColor = SystemColors.Highlight;
-            txtPsicomind.Location = new Point(387, 94);
+            txtPsicomind.Location = new Point(396, 101);
             txtPsicomind.Name = "txtPsicomind";
             txtPsicomind.Size = new Size(141, 28);
-            txtPsicomind.TabIndex = 45;
+            txtPsicomind.TabIndex = 50;
             txtPsicomind.Text = "PSICOMIND";
             // 
             // txtTitulo
             // 
             txtTitulo.AutoSize = true;
-            txtTitulo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTitulo.Font = new Font("Arial Black", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTitulo.ForeColor = Color.Black;
-            txtTitulo.Location = new Point(346, 108);
+            txtTitulo.Location = new Point(319, 120);
             txtTitulo.Name = "txtTitulo";
-            txtTitulo.Size = new Size(233, 60);
-            txtTitulo.TabIndex = 44;
-            txtTitulo.Text = "Usuários";
+            txtTitulo.Size = new Size(305, 50);
+            txtTitulo.TabIndex = 49;
+            txtTitulo.Text = "Agendamentos";
             // 
             // btnPagEditarUsuario
             // 
             btnPagEditarUsuario.BackColor = SystemColors.Control;
             btnPagEditarUsuario.BorderRadius = 40;
-            btnPagEditarUsuario.Controls.Add(label1);
+            btnPagEditarUsuario.Controls.Add(label2);
             btnPagEditarUsuario.Controls.Add(pictureBox5);
             btnPagEditarUsuario.Controls.Add(label9);
             btnPagEditarUsuario.Cursor = Cursors.Hand;
             btnPagEditarUsuario.CustomizableEdges = customizableEdges1;
             btnPagEditarUsuario.FillColor = Color.LightGray;
-            btnPagEditarUsuario.Location = new Point(201, 231);
+            btnPagEditarUsuario.Location = new Point(214, 247);
             btnPagEditarUsuario.Name = "btnPagEditarUsuario";
             btnPagEditarUsuario.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnPagEditarUsuario.Size = new Size(212, 197);
-            btnPagEditarUsuario.TabIndex = 43;
+            btnPagEditarUsuario.TabIndex = 48;
             btnPagEditarUsuario.Text = "guna2ContainerControl1";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.LightGray;
-            label1.Enabled = false;
-            label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(49, 59);
-            label1.Name = "label1";
-            label1.Size = new Size(115, 29);
-            label1.TabIndex = 28;
-            label1.Text = "Usuários";
             // 
             // pictureBox5
             // 
@@ -115,6 +114,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 24;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // label9
             // 
@@ -125,9 +125,9 @@
             label9.ForeColor = Color.Black;
             label9.Location = new Point(64, 33);
             label9.Name = "label9";
-            label9.Size = new Size(81, 29);
+            label9.Size = new Size(86, 29);
             label9.TabIndex = 25;
-            label9.Text = "Editar";
+            label9.Text = "Inserir";
             // 
             // btnPagConsultarUsuario
             // 
@@ -140,35 +140,34 @@
             btnPagConsultarUsuario.Cursor = Cursors.Hand;
             btnPagConsultarUsuario.CustomizableEdges = customizableEdges3;
             btnPagConsultarUsuario.FillColor = Color.LightGray;
-            btnPagConsultarUsuario.Location = new Point(488, 231);
+            btnPagConsultarUsuario.Location = new Point(501, 247);
             btnPagConsultarUsuario.Name = "btnPagConsultarUsuario";
             btnPagConsultarUsuario.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnPagConsultarUsuario.Size = new Size(212, 197);
-            btnPagConsultarUsuario.TabIndex = 42;
+            btnPagConsultarUsuario.TabIndex = 47;
             btnPagConsultarUsuario.Text = "guna2ContainerControl1";
-            btnPagConsultarUsuario.Click += btnPagConsultarUsuario_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.LightGray;
             label6.Enabled = false;
-            label6.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Arial", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(49, 68);
+            label6.Location = new Point(20, 60);
             label6.Name = "label6";
-            label6.Size = new Size(115, 29);
+            label6.Size = new Size(166, 26);
             label6.TabIndex = 28;
-            label6.Text = "Usuários";
+            label6.Text = "Agendamentos";
             // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.LightGray;
             pictureBox3.Enabled = false;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(59, 104);
+            pictureBox3.Location = new Point(66, 94);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(96, 60);
+            pictureBox3.Size = new Size(77, 73);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 24;
             pictureBox3.TabStop = false;
@@ -180,7 +179,7 @@
             label5.Enabled = false;
             label5.Font = new Font("Arial", 18F, FontStyle.Bold);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(44, 42);
+            label5.Location = new Point(43, 34);
             label5.Name = "label5";
             label5.Size = new Size(125, 29);
             label5.TabIndex = 25;
@@ -198,20 +197,20 @@
             label7.TabIndex = 23;
             label7.Text = "Inserir";
             // 
-            // btnVoltar
+            // label2
             // 
-            btnVoltar.BackColor = Color.Transparent;
-            btnVoltar.Cursor = Cursors.Hand;
-            btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(49, 38);
-            btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(50, 30);
-            btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btnVoltar.TabIndex = 46;
-            btnVoltar.TabStop = false;
-            btnVoltar.Click += btnVoltar_Click;
+            label2.AutoSize = true;
+            label2.BackColor = Color.LightGray;
+            label2.Enabled = false;
+            label2.Font = new Font("Arial", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(23, 57);
+            label2.Name = "label2";
+            label2.Size = new Size(166, 26);
+            label2.TabIndex = 29;
+            label2.Text = "Agendamentos";
             // 
-            // FrmUsuarioMenu
+            // FrmAgendamentoMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -221,25 +220,25 @@
             Controls.Add(txtTitulo);
             Controls.Add(btnPagEditarUsuario);
             Controls.Add(btnPagConsultarUsuario);
-            Name = "FrmUsuarioMenu";
-            Text = "FrmUsuarioMenu";
+            Name = "FrmAgendamentoMenu";
+            Text = "FrmAgendamentoMenu";
+            ((System.ComponentModel.ISupportInitialize)btnVoltar).EndInit();
             btnPagEditarUsuario.ResumeLayout(false);
             btnPagEditarUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             btnPagConsultarUsuario.ResumeLayout(false);
             btnPagConsultarUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnVoltar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private PictureBox btnVoltar;
         private Label txtPsicomind;
         private Label txtTitulo;
         private Guna.UI2.WinForms.Guna2ContainerControl btnPagEditarUsuario;
-        private Label label1;
         private PictureBox pictureBox5;
         private Label label9;
         private Guna.UI2.WinForms.Guna2ContainerControl btnPagConsultarUsuario;
@@ -247,6 +246,6 @@
         private PictureBox pictureBox3;
         private Label label5;
         private Label label7;
-        private PictureBox btnVoltar;
+        private Label label2;
     }
 }

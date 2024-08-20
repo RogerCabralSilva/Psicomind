@@ -100,16 +100,12 @@ namespace Psicomind
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            FrmLogin login = new();
-            //login.MdiParent = this;
 
-            login.StartPosition = FormStartPosition.CenterScreen;
-            //this.Hide(); // so visualizar a tela de login
-            login.ShowDialog();
+            lblCargoUser.Text = Program.Usuario.Cargo.Nome;
+            lblUsername.Text = Program.Usuario.Nome;
 
-         
         }
-        // Fim dos eventos de sombra
+        
 
     }
 }

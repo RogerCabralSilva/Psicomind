@@ -93,7 +93,7 @@
             guna2ContainerControl2.Controls.Add(pictureBox2);
             guna2ContainerControl2.CustomizableEdges = customizableEdges1;
             guna2ContainerControl2.FillColor = SystemColors.Control;
-            guna2ContainerControl2.Location = new Point(977, 45);
+            guna2ContainerControl2.Location = new Point(983, 45);
             guna2ContainerControl2.Name = "guna2ContainerControl2";
             guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ContainerControl2.Size = new Size(176, 44);
@@ -107,30 +107,30 @@
             lblCargoUser.BackColor = SystemColors.Control;
             lblCargoUser.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCargoUser.ForeColor = SystemColors.Highlight;
-            lblCargoUser.Location = new Point(74, 22);
+            lblCargoUser.Location = new Point(46, 21);
             lblCargoUser.Name = "lblCargoUser";
-            lblCargoUser.Size = new Size(49, 16);
+            lblCargoUser.Size = new Size(14, 16);
             lblCargoUser.TabIndex = 29;
-            lblCargoUser.Text = "Cargo";
+            lblCargoUser.Text = " |";
             // 
             // lblUsername
             // 
             lblUsername.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblUsername.AutoSize = true;
             lblUsername.BackColor = SystemColors.Control;
-            lblUsername.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsername.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUsername.ForeColor = Color.Black;
-            lblUsername.Location = new Point(18, 6);
+            lblUsername.Location = new Point(45, 4);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(105, 16);
+            lblUsername.Size = new Size(17, 19);
             lblUsername.TabIndex = 29;
-            lblUsername.Text = "Nome Usuário";
+            lblUsername.Text = " |";
             // 
             // pictureBox2
             // 
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(129, 0);
+            pictureBox2.Location = new Point(4, 1);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(40, 40);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
