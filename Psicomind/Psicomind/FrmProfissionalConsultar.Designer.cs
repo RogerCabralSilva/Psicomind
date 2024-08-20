@@ -201,6 +201,7 @@
             txtConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtConsultarProfissional.Size = new Size(601, 29);
             txtConsultarProfissional.TabIndex = 51;
+            txtConsultarProfissional.TextChanged += txtConsultarProfissional_TextChanged;
             // 
             // dgvProfissionalTelefone
             // 
@@ -232,7 +233,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvProfissionalTelefone.DefaultCellStyle = dataGridViewCellStyle3;
             dgvProfissionalTelefone.GridColor = Color.FromArgb(242, 245, 250);
-            dgvProfissionalTelefone.Location = new Point(113, 177);
+            dgvProfissionalTelefone.Location = new Point(51, 177);
             dgvProfissionalTelefone.Name = "dgvProfissionalTelefone";
             dgvProfissionalTelefone.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -245,7 +246,7 @@
             dgvProfissionalTelefone.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvProfissionalTelefone.RowHeadersVisible = false;
             dgvProfissionalTelefone.RowTemplate.Height = 30;
-            dgvProfissionalTelefone.Size = new Size(926, 386);
+            dgvProfissionalTelefone.Size = new Size(988, 386);
             dgvProfissionalTelefone.TabIndex = 50;
             dgvProfissionalTelefone.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvProfissionalTelefone.ThemeStyle.AlternatingRowsStyle.Font = null;
