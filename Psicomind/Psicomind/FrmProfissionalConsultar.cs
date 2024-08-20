@@ -125,5 +125,10 @@ namespace Psicomind
         {
 
         }
+
+        private void txtConsultarProfissional_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

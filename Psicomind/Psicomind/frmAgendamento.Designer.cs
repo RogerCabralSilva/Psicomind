@@ -54,6 +54,7 @@
             // 
             // guna2ContainerControl1
             // 
+            guna2ContainerControl1.Anchor = AnchorStyles.None;
             guna2ContainerControl1.BorderRadius = 20;
             guna2ContainerControl1.Controls.Add(label4);
             guna2ContainerControl1.Controls.Add(dtpDataAgendamento);

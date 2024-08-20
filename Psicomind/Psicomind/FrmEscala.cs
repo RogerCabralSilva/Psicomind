@@ -43,9 +43,15 @@ namespace Psicomind
 
 
             Escala escala = new(
-                Profissional.ObterPorId(Convert.ToInt32())
+               Profissional.ObterPorId(Convert.ToInt32(cmbProfissionais.SelectedValue)),
+               dtpDataInicio.Value, 
+               dtpDataFinal.Value,
+               Convert.ToDateTime(mskHorarioInicio.Text),
+               Convert.ToDateTime(mskHorarioFinal.Text),
+               Convert.ToInt32(btnDuracao.Value)
                 );
 
+            escala.Inserir();
 
         }
     }
