@@ -1,4 +1,5 @@
-﻿using PsicomindClass;
+﻿using MySqlX.XDevAPI;
+using PsicomindClass;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +52,17 @@ namespace Psicomind
                Convert.ToInt32(btnDuracao.Value)
                 );
 
-            escala.Inserir();
+            try
+            {
+                escala.Inserir();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show($"Não foi possível inserir escala {ex}");
+            }
+
+            MessageBox.Show("Escala Inserida com sucesso!!!");
+           
 
         }
     }

@@ -201,7 +201,6 @@
             txtConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtConsultarProfissional.Size = new Size(601, 29);
             txtConsultarProfissional.TabIndex = 51;
-            txtConsultarProfissional.TextChanged += txtConsultarProfissional_TextChanged;
             // 
             // dgvProfissionalTelefone
             // 

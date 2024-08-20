@@ -140,7 +140,7 @@ namespace PsicomindClass
 
             Profissional profissional = new();
             var cmd = Banco.Abrir();
-            cmd.CommandText = $"SELECT * FROM profissionais WHERE id = {id}";
+            cmd.CommandText = $"SELECT * FROM profissional_info WHERE id = {id}";
             var dr = cmd.ExecuteReader();
 
             while (dr.Read())

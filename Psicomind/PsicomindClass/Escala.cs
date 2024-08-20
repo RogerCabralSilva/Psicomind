@@ -62,6 +62,16 @@ namespace PsicomindClass
             Duracao = duracao;
         }
 
+        public Escala(bool disponivel)
+        {
+            Disponivel = disponivel;
+        }
+
+        public Escala(DateTime horario)
+        {
+            Horario = horario;
+        }
+
         public void Inserir()
         {
 
@@ -71,13 +81,61 @@ namespace PsicomindClass
 
             cmd.Parameters.AddWithValue("data_inicio", DataInicio);
             cmd.Parameters.AddWithValue("data_fim", DataFinal);
-            cmd.Parameters.AddWithValue("horario_incio", HorarioInicio);
+            cmd.Parameters.AddWithValue("horario_inicio", HorarioInicio);
             cmd.Parameters.AddWithValue("horario_fim", HorarioFinal);
             cmd.Parameters.AddWithValue("intervalo_minutos",Duracao);
             cmd.Parameters.AddWithValue("profissional_id", Profissional.Id);
 
             cmd.ExecuteNonQuery();
 
+        }
+
+        public static List<Escala> ObterLIstaHorarios(string data)
+        {
+            List<Escala> lista = new List<Escala>();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"SELECT horario FROM Escala where dispoivel = 1 and dia = '{data}';";
+
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                lista.Add(new Escala(
+                        dr.GetDateTime(0)
+                    ));
+            }
+
+            return lista;
+        }
+
+        public static Escala ObterPorDisponivelId(int id)
+        {
+            Escala calendario = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"SELECT dispoivel FROM Escala where id = 1;";
+
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                calendario = (new Escala(
+                        dr.GetBoolean(0)));
+
+            }
+
+            return calendario;
+        }
+
+        public bool Editar(int id)
+        {
+            var dr = Banco.Abrir();
+            dr.CommandType = CommandType.Text;
+            dr.CommandText = $"UPDATE Escala SET dispoivel = 0 where id = {id}";
+
+
+            return dr.ExecuteNonQuery() > -1 ? true : false;
         }
 
     }
