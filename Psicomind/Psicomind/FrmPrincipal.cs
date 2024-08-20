@@ -97,6 +97,18 @@ namespace Psicomind
             frmAgendamento.StartPosition = FormStartPosition.CenterScreen;
             frmAgendamento.Show();
         }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            FrmLogin login = new();
+            //login.MdiParent = this;
+
+            login.StartPosition = FormStartPosition.CenterScreen;
+            //this.Hide(); // so visualizar a tela de login
+            login.ShowDialog();
+
+         
+        }
         // Fim dos eventos de sombra
 
     }

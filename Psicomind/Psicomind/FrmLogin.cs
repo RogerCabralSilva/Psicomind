@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PsicomindClass;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,39 @@ namespace Psicomind
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
+            if (txtEmail.Text != string.Empty && txtSenha.Text != string.Empty)
+            {
+
+                var usuario = Usuario.EfetuarLogin(txtEmail.Text, txtSenha.Text);
+
+                if (usuario.Id > 0)
+                {
+
+                    Program.Usuario = usuario;
+
+                    FrmPrincipal frmPrincipal = new();
+                    frmPrincipal.StartPosition = FormStartPosition.CenterScreen;
+                    frmPrincipal.Show();
+
+                    this.Hide();
+
+                }
+                else
+                {
+
+                    MessageBox.Show("Email e/ou senha inválidos");
+                    txtEmail.Focus();
+
+                }
+
+            }
+            else
+            {
+
+                MessageBox.Show("Digite suas credenciais para prosseguir!");
+
+            }
 
         }
     }

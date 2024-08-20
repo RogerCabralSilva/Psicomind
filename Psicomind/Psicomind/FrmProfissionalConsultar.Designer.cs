@@ -134,7 +134,7 @@
             pictureBox1.BackColor = Color.White;
             pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(51, 61);
+            pictureBox1.Location = new Point(41, 61);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(50, 30);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -343,7 +343,7 @@
             btnVoltar.BackColor = Color.White;
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(30, 62);
+            btnVoltar.Location = new Point(21, 62);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(50, 30);
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
