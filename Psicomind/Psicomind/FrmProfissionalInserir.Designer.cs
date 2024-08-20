@@ -553,11 +553,11 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.White;
-            label3.Font = new Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(95, 103);
+            label3.Location = new Point(286, 72);
             label3.Name = "label3";
-            label3.Size = new Size(161, 24);
+            label3.Size = new Size(196, 29);
             label3.TabIndex = 28;
             label3.Text = "Dados Pessoais";
             // 

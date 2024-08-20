@@ -311,11 +311,11 @@
             label6.AutoSize = true;
             label6.BackColor = Color.LightGray;
             label6.Enabled = false;
-            label6.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Arial", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(43, 37);
+            label6.Location = new Point(53, 40);
             label6.Name = "label6";
-            label6.Size = new Size(120, 37);
+            label6.Size = new Size(106, 34);
             label6.TabIndex = 27;
             label6.Text = "Escala";
             // 
@@ -324,9 +324,9 @@
             pictureBox2.BackColor = Color.LightGray;
             pictureBox2.Enabled = false;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(58, 77);
+            pictureBox2.Location = new Point(60, 85);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(93, 91);
+            pictureBox2.Size = new Size(88, 78);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 24;
             pictureBox2.TabStop = false;
