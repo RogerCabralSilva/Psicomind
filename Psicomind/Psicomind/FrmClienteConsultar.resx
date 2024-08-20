@@ -1050,7 +1050,7 @@
         AAAAAADARPzWb/3/Tdy72pX3IdcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="guna2TextBox1.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtBuscarTelefone.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
         0AAAFtABZca5ogAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAD00SURBVHhe7d0L
@@ -1647,7 +1647,7 @@
         AAAAAADARPzWb/3/Tdy72pX3IdcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="guna2TextBox2.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtBuscarEndereco.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
         0AAAFtABZca5ogAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAD00SURBVHhe7d0L

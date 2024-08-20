@@ -42,9 +42,6 @@ namespace Psicomind
         {
 
 
-            Escala escala = new(
-                Profissional.ObterPorId(Convert.ToInt32())
-                );
 
 
         }

@@ -159,6 +159,7 @@
             btnConsultarTelefoneProfissional.Size = new Size(122, 29);
             btnConsultarTelefoneProfissional.TabIndex = 53;
             btnConsultarTelefoneProfissional.Text = "Consultar";
+            btnConsultarTelefoneProfissional.Click += btnConsultarTelefoneProfissional_Click;
             // 
             // label3
             // 
@@ -334,6 +335,7 @@
             btnConsultarDados.Size = new Size(122, 29);
             btnConsultarDados.TabIndex = 48;
             btnConsultarDados.Text = "Consultar";
+            btnConsultarDados.Click += btnConsultarDados_Click;
             // 
             // btnVoltar
             // 
