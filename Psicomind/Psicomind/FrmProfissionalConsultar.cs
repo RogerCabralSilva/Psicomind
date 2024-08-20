@@ -126,9 +126,53 @@ namespace Psicomind
 
         }
 
-        private void txtConsultarProfissional_TextChanged(object sender, EventArgs e)
-        {
 
+        private void btnConsultarDados_Click(object sender, EventArgs e)
+        {
+            var profissionais = Profissional.ObterLista(txtBuscarProfissional.Text);
+            int count = 0;
+
+            dgvProfissionalDados.Rows.Clear();
+            foreach (var profissional in profissionais)
+            {
+                int rowIndex = dgvProfissionalDados.Rows.Add();
+
+                dgvProfissionalDados.Columns["clnDataNascProfissional"].DefaultCellStyle.Format = "dd/MM/yyyy";
+                dgvProfissionalDados.Columns["clnDataContrato"].DefaultCellStyle.Format = "dd/MM/yyyy";
+                dgvProfissionalDados.Rows[count].Cells[0].Value = profissional.Id;
+                dgvProfissionalDados.Rows[count].Cells[1].Value = profissional.Nome;
+                dgvProfissionalDados.Rows[count].Cells[2].Value = profissional.Email;
+                dgvProfissionalDados.Rows[count].Cells[3].Value = profissional.Cpf;
+                dgvProfissionalDados.Rows[count].Cells[4].Value = profissional.Especializacao;
+                dgvProfissionalDados.Rows[count].Cells[5].Value = profissional.Data_contrato;
+                dgvProfissionalDados.Rows[count].Cells[6].Value = profissional.Data_cad;
+                dgvProfissionalDados.Rows[count].Cells[7].Value = profissional.Data_nasc;
+                dgvProfissionalDados.Rows[count].Cells[8].Value = profissional.Genero.Genero_nome;
+                dgvProfissionalDados.Rows[count].Cells[9].Value = profissional.Ativo;
+
+
+                count++;
+
+            }
+        }
+
+        private void btnConsultarTelefoneProfissional_Click(object sender, EventArgs e)
+        {
+            var profissionais = Profissional.ObterLista(txtConsultarProfissional.Text);
+            int count = 0;
+
+            dgvProfissionalTelefone.Rows.Clear();
+            foreach (var profissional in profissionais)
+            {
+                int rowIndex = dgvProfissionalTelefone.Rows.Add();
+                dgvProfissionalTelefone.Rows[count].Cells[0].Value = profissional.Nome;
+                dgvProfissionalTelefone.Rows[count].Cells[1].Value = profissional.TelefoneProfissional.Numero;
+                dgvProfissionalTelefone.Rows[count].Cells[2].Value = profissional.TelefoneProfissional.Telefonetipo_id.Tipo;
+
+                count++;
+
+
+            }
         }
     }
 }

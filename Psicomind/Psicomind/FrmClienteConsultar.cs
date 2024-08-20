@@ -158,7 +158,31 @@ namespace Psicomind
 
         private void btn_consultar_dados_pessoais_cliente_Click(object sender, EventArgs e)
         {
-            var cliente = Cliente.ObterLista(txtBuscaClienteDadosPessoais.Text);
+            var clientes = Cliente.ObterLista(txtBuscaClienteDadosPessoais.Text);
+            int count = 0;
+
+            dgvClientesDados.Rows.Clear();
+            foreach (var cliente in clientes)
+            {
+                int rowIndex = dgvClientesDados.Rows.Add();
+                dgvClientesDados.Rows[count].Cells[0].Value = cliente.Id;
+                dgvClientesDados.Rows[count].Cells[1].Value = cliente.Nome;
+                dgvClientesDados.Rows[count].Cells[2].Value = cliente.Email;
+                dgvClientesDados.Rows[count].Cells[3].Value = cliente.Cpf;
+                dgvClientesDados.Rows[count].Cells[4].Value = cliente.Data_cad;
+                dgvClientesDados.Rows[count].Cells[5].Value = cliente.Data_nasc;
+                dgvClientesDados.Rows[count].Cells[6].Value = cliente.GeneroCliente.Genero_nome;
+                dgvClientesDados.Rows[count].Cells[7].Value = cliente.Ativo;
+
+
+                count++;
+
+            }
+        }
+
+        private void btnConsultarEndereco_Click(object sender, EventArgs e)
+        {
+            var cliente = Cliente.ObterLista(txtBuscarEndereco.Text);
             int count = 0;
 
             dgvClienteEndereco.Rows.Clear();
@@ -178,6 +202,27 @@ namespace Psicomind
 
             }
             CarregarDadosCliente();
+        }
+
+        private void btnConsultarTelefoneCliente_Click(object sender, EventArgs e)
+        {
+            var clientes = Cliente.ObterLista(txtBuscarTelefone.Text);
+            int count = 0;
+
+
+            dgvClienteTelefone.Rows.Clear();
+            foreach (var cliente in clientes)
+            {
+                int rowIndex = dgvClienteTelefone.Rows.Add();
+                dgvClienteTelefone.Rows[count].Cells[0].Value = cliente.Nome;
+                dgvClienteTelefone.Rows[count].Cells[1].Value = cliente.Telefone.Numero;
+                dgvClienteTelefone.Rows[count].Cells[2].Value = cliente.Telefone.TelefoneTipo_id.Tipo;
+
+
+                count++;
+
+
+            }
         }
     }
 }
