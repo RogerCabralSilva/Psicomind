@@ -413,6 +413,7 @@
             cmbGeneroProfissional.ShadowDecoration.CustomizableEdges = customizableEdges20;
             cmbGeneroProfissional.Size = new Size(230, 26);
             cmbGeneroProfissional.TabIndex = 6;
+            cmbGeneroProfissional.SelectedIndexChanged += cmbGeneroProfissional_SelectedIndexChanged;
             // 
             // label7
             // 

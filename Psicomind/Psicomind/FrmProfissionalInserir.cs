@@ -160,5 +160,10 @@ namespace Psicomind
         {
 
         }
+
+        private void cmbGeneroProfissional_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

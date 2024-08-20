@@ -32,7 +32,7 @@ namespace PsicomindClass
             List<Calendario> lista = new List<Calendario>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"SELECT horario FROM calendario where dispoivel = 1 and {data};";
+            cmd.CommandText = $"SELECT horario FROM calendario where dispoivel = 1 and dia = '{data}';";
 
             var dr = cmd.ExecuteReader();
 

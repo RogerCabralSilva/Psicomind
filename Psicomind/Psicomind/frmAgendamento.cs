@@ -27,6 +27,8 @@ namespace Psicomind
             cmbProfissionais.DisplayMember = "nome";
             cmbProfissionais.ValueMember = "id";
 
+
+
         }
 
 
@@ -51,12 +53,9 @@ namespace Psicomind
             string dataFormatada = dtpDataAgendamento.Value.Date.ToString("yyyy-MM-dd");
             var calendario = Calendario.ObterLIstaHorarios(dataFormatada);
 
-
             cmbHorarios.DataSource = calendario;
             cmbHorarios.DisplayMember = "horario";
             cmbHorarios.ValueMember = "id";
-
-
 
             frmAgendamento_Load(sender, e);
         }

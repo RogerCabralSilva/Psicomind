@@ -49,6 +49,8 @@
             btnInserir = new Guna.UI2.WinForms.Guna2Button();
             btnVoltar = new PictureBox();
             guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            mskHorarioFinal = new MaskedTextBox();
+            mskHorarioInicio = new MaskedTextBox();
             txtHorarioFinal = new Guna.UI2.WinForms.Guna2TextBox();
             txtHorarioInicio = new Guna.UI2.WinForms.Guna2TextBox();
             btnDuracao = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -61,8 +63,6 @@
             dtpDataInicio = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label1 = new Label();
             cmbProfissionais = new Guna.UI2.WinForms.Guna2ComboBox();
-            mskHorarioInicio = new MaskedTextBox();
-            mskHorarioFinal = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnDuracao).BeginInit();
@@ -143,6 +143,28 @@
             guna2ContainerControl2.TabIndex = 30;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
+            // mskHorarioFinal
+            // 
+            mskHorarioFinal.BackColor = Color.WhiteSmoke;
+            mskHorarioFinal.BorderStyle = BorderStyle.None;
+            mskHorarioFinal.Location = new Point(433, 353);
+            mskHorarioFinal.Mask = "90:00";
+            mskHorarioFinal.Name = "mskHorarioFinal";
+            mskHorarioFinal.Size = new Size(100, 16);
+            mskHorarioFinal.TabIndex = 57;
+            mskHorarioFinal.ValidatingType = typeof(DateTime);
+            // 
+            // mskHorarioInicio
+            // 
+            mskHorarioInicio.BackColor = Color.WhiteSmoke;
+            mskHorarioInicio.BorderStyle = BorderStyle.None;
+            mskHorarioInicio.Location = new Point(134, 353);
+            mskHorarioInicio.Mask = "90:00";
+            mskHorarioInicio.Name = "mskHorarioInicio";
+            mskHorarioInicio.Size = new Size(100, 16);
+            mskHorarioInicio.TabIndex = 56;
+            mskHorarioInicio.ValidatingType = typeof(DateTime);
+            // 
             // txtHorarioFinal
             // 
             txtHorarioFinal.BorderRadius = 15;
@@ -186,7 +208,6 @@
             txtHorarioInicio.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtHorarioInicio.Size = new Size(200, 36);
             txtHorarioInicio.TabIndex = 54;
-            txtHorarioInicio.TextChanged += txtHorarioInicio_TextChanged;
             // 
             // btnDuracao
             // 
@@ -323,28 +344,7 @@
             cmbProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cmbProfissionais.Size = new Size(340, 36);
             cmbProfissionais.TabIndex = 42;
-            // 
-            // mskHorarioInicio
-            // 
-            mskHorarioInicio.BackColor = Color.WhiteSmoke;
-            mskHorarioInicio.BorderStyle = BorderStyle.None;
-            mskHorarioInicio.Location = new Point(134, 353);
-            mskHorarioInicio.Mask = "90:00";
-            mskHorarioInicio.Name = "mskHorarioInicio";
-            mskHorarioInicio.Size = new Size(100, 16);
-            mskHorarioInicio.TabIndex = 56;
-            mskHorarioInicio.ValidatingType = typeof(DateTime);
-            // 
-            // mskHorarioFinal
-            // 
-            mskHorarioFinal.BackColor = Color.WhiteSmoke;
-            mskHorarioFinal.BorderStyle = BorderStyle.None;
-            mskHorarioFinal.Location = new Point(433, 353);
-            mskHorarioFinal.Mask = "90:00";
-            mskHorarioFinal.Name = "mskHorarioFinal";
-            mskHorarioFinal.Size = new Size(100, 16);
-            mskHorarioFinal.TabIndex = 57;
-            mskHorarioFinal.ValidatingType = typeof(DateTime);
+            cmbProfissionais.SelectedIndexChanged += cmbProfissionais_SelectedIndexChanged;
             // 
             // FrmEscala
             // 

@@ -33,20 +33,19 @@ namespace Psicomind
 
         }
 
-        private void dtpHorarioInicio_ValueChanged(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-        private void txtHorarioInicio_TextChanged(object sender, EventArgs e)
+        private void cmbProfissionais_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
+
+
+            Escala escala = new(
+                Profissional.ObterPorId(Convert.ToInt32())
+                );
+
 
         }
     }
