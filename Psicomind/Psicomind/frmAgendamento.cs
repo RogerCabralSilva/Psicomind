@@ -1,4 +1,5 @@
 ﻿using PsicomindClass;
+using Syncfusion.WinForms.Input;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -9,59 +10,75 @@ namespace Psicomind
 {
     public partial class frmAgendamento : Form
     {
-
-
         public frmAgendamento()
         {
             InitializeComponent();
-            // Inicialize o ToolTip
             toolTip1 = new ToolTip();
         }
 
-        // Lista de datas com agendamentos disponíveis
-        // Lista de datas com agendamentos disponíveis
-        private DateTime[] datasComAgendamentos;
-
         private void frmAgendamento_Load(object sender, EventArgs e)
         {
-            // Inicializa os dados no ComboBox de profissionais
             var profissional = Profissional.ObterLista();
             cmbProfissionais.DataSource = profissional;
             cmbProfissionais.DisplayMember = "nome";
             cmbProfissionais.ValueMember = "id";
 
-            // Obtém a lista de datas com agendamentos disponíveis e converte para array
-            var listaDias = Escala.ObterTodosOsDias(); // Supondo que retorna uma lista de DateTime
-            datasComAgendamentos = listaDias.ToArray(); // Converte a lista para um array
+            sfCalendar1.FirstDayOfWeek = System.DayOfWeek.Monday;
 
-            // Destaca as datas com agendamentos disponíveis
-            mcAgendamento.BoldedDates = datasComAgendamentos;
+            // Chamamos o método para atualizar as datas de acordo com o profissional selecionado
+            AtualizarDatasCalendario();
         }
 
-
-        private void btn1_Click(object sender, EventArgs e)
+        // Método para atualizar as datas no calendário com base no profissional selecionado
+        private void AtualizarDatasCalendario()
         {
-            var disp = Calendario.ObterPorDisponivelId(1);
-            Calendario calendario = new(false);
-            calendario.Editar(1);
+            if (cmbProfissionais.SelectedValue == null) return;
+
+            // Converta o SelectedValue para int de forma segura
+            int profissionalId;
+            if (int.TryParse(cmbProfissionais.SelectedValue.ToString(), out profissionalId))
+            {
+                List<Escala> listaDias = Escala.ObterTodosOsDias(profissionalId);
+
+                // Limpa as datas especiais antes de adicionar as novas
+                sfCalendar1.SpecialDates.Clear();
+
+                List<SpecialDate> specialDates = new List<SpecialDate>();
+                foreach (var escala in listaDias)
+                {
+                    specialDates.Add(new SpecialDate
+                    {
+                        BackColor = Color.FromArgb(32, 113, 227),
+                        ForeColor = Color.White,
+                        Value = escala.Dia
+                    });
+                }
+
+                sfCalendar1.SpecialDates.AddRange(specialDates);
+            }
         }
+
 
         private void btnConsultarProfissional_Click(object sender, EventArgs e)
         {
-            string dataFormatada = mcAgendamento.SelectionStart.ToString("yyyy-MM-dd");
-            var calendario = Escala.ObterLIstaHorarios(dataFormatada);
+            DateTime dataSelecionada = sfCalendar1.SelectedDate.Value;
+            string dataFormatada = dataSelecionada.ToString("yyyy-MM-dd");
+            var calendario = Escala.ObterLIstaHorarios(dataFormatada, Convert.ToInt32(cmbProfissionais.SelectedValue));
 
             cmbHorarios.DataSource = calendario;
             cmbHorarios.DisplayMember = "horario";
             cmbHorarios.ValueMember = "id";
-
-            frmAgendamento_Load(sender, e);
         }
 
-        private void mcAgendamento_DateChanged(object sender, DateRangeEventArgs e)
+        private void sfCalendar1_Click(object sender, EventArgs e)
         {
-            // Destaca as datas com agendamentos disponíveis
-            mcAgendamento.BoldedDates = datasComAgendamentos;
+            // Lógica adicional se necessário
+        }
+
+        private void cmbProfissionais_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            // Atualiza as datas do calendário quando o profissional selecionado mudar
+            AtualizarDatasCalendario();
         }
     }
 }

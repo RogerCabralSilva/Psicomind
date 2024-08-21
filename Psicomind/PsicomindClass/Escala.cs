@@ -101,12 +101,12 @@ namespace PsicomindClass
 
         }
 
-        public static List<Escala> ObterLIstaHorarios(string data)
+        public static List<Escala> ObterLIstaHorarios(string data, int id)
         {
             List<Escala> lista = new List<Escala>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"SELECT horario FROM Escala where disponivel = 1 and dia = '{data}';";
+            cmd.CommandText = $"SELECT horario FROM escala where disponivel = 1 and dia = '{data}' and profissional_id = {id};";
 
             var dr = cmd.ExecuteReader();
 
@@ -120,22 +120,21 @@ namespace PsicomindClass
             return lista;
         }
 
-        public static List<DateTime> ObterTodosOsDias()
+        public static List<Escala> ObterTodosOsDias(int id)
         {
-            List<DateTime> lista = new List<DateTime>();
+            List<Escala> lista = new List<Escala>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"SELECT dia FROM escala WHERE disponivel = 1;";
+            cmd.CommandText = $"SELECT dia FROM escala WHERE disponivel = 1 and profissional_id = {id};";
 
             var dr = cmd.ExecuteReader();
 
             while (dr.Read())
             {
-                lista.Add(dr.GetDateTime(0));
+                lista.Add(new Escala(
+                        dr.GetDateTime(0)
+                    ));
             }
-
-            dr.Close();
-            cmd.Connection.Close();
 
             return lista;
         }
