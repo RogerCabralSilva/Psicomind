@@ -99,6 +99,7 @@
             guna2ContainerControl2.Size = new Size(176, 44);
             guna2ContainerControl2.TabIndex = 2;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
+            guna2ContainerControl2.Click += guna2ContainerControl2_Click;
             // 
             // lblCargoUser
             // 
@@ -122,9 +123,10 @@
             lblUsername.ForeColor = Color.Black;
             lblUsername.Location = new Point(45, 4);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(17, 19);
+            lblUsername.Size = new Size(90, 19);
             lblUsername.TabIndex = 29;
-            lblUsername.Text = " |";
+            lblUsername.Text = " | DR.roger";
+            lblUsername.Click += lblUsername_Click;
             // 
             // pictureBox2
             // 

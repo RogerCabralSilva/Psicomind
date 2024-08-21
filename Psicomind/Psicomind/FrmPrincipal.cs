@@ -105,7 +105,15 @@ namespace Psicomind
             lblUsername.Text = Program.Usuario.Nome;
 
         }
-        
 
+        private void guna2ContainerControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

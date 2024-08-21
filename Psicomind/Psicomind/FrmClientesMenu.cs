@@ -17,10 +17,24 @@ namespace Psicomind
 
         private void btnPagInserirCliente_Click(object sender, EventArgs e)
         {
-            FrmClientesInserir clienteInserir = new FrmClientesInserir();
-            clienteInserir.StartPosition = FormStartPosition.CenterScreen;
-            clienteInserir.Show();
-            this.Close();
+
+            int cargo = Program.Usuario.Cargo.Id;
+
+            if (cargo == 1 || cargo == 2)
+            {
+                FrmClientesInserir clienteInserir = new FrmClientesInserir();
+                clienteInserir.StartPosition = FormStartPosition.CenterScreen;
+                clienteInserir.Show();
+                this.Close();
+
+            }
+            else
+            {
+
+                MessageBox.Show("Você não possui permissão para entrar nessa área", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -32,18 +46,48 @@ namespace Psicomind
 
         private void btnPagConsultarCliente_Click(object sender, EventArgs e)
         {
-            FrmClienteConsultar clienteConsultar = new FrmClienteConsultar();
-            clienteConsultar.StartPosition = FormStartPosition.CenterScreen;
-            clienteConsultar.Show();
-            this.Close();
+
+
+            int cargo = Program.Usuario.Cargo.Id;
+
+            if (cargo == 1 || cargo == 2)
+            {
+                FrmClienteConsultar clienteConsultar = new FrmClienteConsultar();
+                clienteConsultar.StartPosition = FormStartPosition.CenterScreen;
+                clienteConsultar.Show();
+                this.Close();
+            }
+            else
+            {
+
+                MessageBox.Show("Você não possui permissão para entrar nessa área", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            
         }
 
         private void btnPagEditarCliente_Click(object sender, EventArgs e)
         {
-            FrmClienteEditar frmClienteEditar = new FrmClienteEditar();
-            frmClienteEditar.StartPosition = FormStartPosition.CenterScreen;
-            frmClienteEditar.Show();
-            this.Close();
+
+            int cargo = Program.Usuario.Cargo.Id;
+
+            if (cargo == 1 || cargo == 2)
+            {
+                
+                FrmClienteEditar frmClienteEditar = new FrmClienteEditar();
+                frmClienteEditar.StartPosition = FormStartPosition.CenterScreen;
+                frmClienteEditar.Show();
+                this.Close();
+
+            }
+            else
+            {
+
+                MessageBox.Show("Você não possui permissão para entrar nessa área", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            
         }
     }
 }
