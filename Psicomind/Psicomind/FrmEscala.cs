@@ -28,12 +28,15 @@ namespace Psicomind
         {
 
 
-            var user = Usuario.ObterListaPsicologo();
-            cmbProfissionais.DataSource = user;
+            //var user = Usuario.ObterListaPsicologo();
+            //cmbProfissionais.DataSource = user;
+            //cmbProfissionais.DisplayMember = "nome";
+            //cmbProfissionais.ValueMember = "id";
+
+            var profissional = Profissional.ObterLista();
+            cmbProfissionais.DataSource = profissional;
             cmbProfissionais.DisplayMember = "nome";
             cmbProfissionais.ValueMember = "id";
-
-
             
             cmbProfissionais.SelectedValue = 0;
 
