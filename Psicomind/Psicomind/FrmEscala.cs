@@ -32,6 +32,8 @@ namespace Psicomind
             cmbProfissionais.DisplayMember = "nome";
             cmbProfissionais.ValueMember = "id";
 
+            cmbProfissionais.SelectedValue = 0;
+
         }
 
         private void cmbProfissionais_SelectedIndexChanged(object sender, EventArgs e)
@@ -90,6 +92,11 @@ namespace Psicomind
             FrmShowEscala frmShowEscala = new(profissionalId);
             frmShowEscala.StartPosition = FormStartPosition.CenterScreen;
             frmShowEscala.Show();
+
+            mskHorarioInicio.Clear();
+            mskHorarioFinal.Clear();
+            cmbProfissionais.SelectedValue = 0;
+            btnDuracao.Value = 0;
 
         }
 
