@@ -49,6 +49,7 @@
             btnInserir = new Guna.UI2.WinForms.Guna2Button();
             btnVoltar = new PictureBox();
             guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            linkLabel1 = new LinkLabel();
             guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             mskHorarioInicio = new MaskedTextBox();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -120,6 +121,7 @@
             guna2ContainerControl2.Anchor = AnchorStyles.None;
             guna2ContainerControl2.BackColor = Color.Transparent;
             guna2ContainerControl2.BorderRadius = 30;
+            guna2ContainerControl2.Controls.Add(linkLabel1);
             guna2ContainerControl2.Controls.Add(guna2ContainerControl3);
             guna2ContainerControl2.Controls.Add(guna2ContainerControl1);
             guna2ContainerControl2.Controls.Add(btnDuracao);
@@ -142,6 +144,19 @@
             guna2ContainerControl2.Size = new Size(748, 624);
             guna2ContainerControl2.TabIndex = 30;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            linkLabel1.LinkColor = Color.DimGray;
+            linkLabel1.Location = new Point(243, 181);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(303, 16);
+            linkLabel1.TabIndex = 62;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Selecione o profissional e consulte sua escala aqui";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // guna2ContainerControl3
             // 
@@ -310,7 +325,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(348, 126);
+            label1.Location = new Point(350, 113);
             label1.Name = "label1";
             label1.Size = new Size(71, 16);
             label1.TabIndex = 43;
@@ -329,7 +344,7 @@
             cmbProfissionais.Font = new Font("Segoe UI", 10F);
             cmbProfissionais.ForeColor = Color.FromArgb(68, 88, 112);
             cmbProfissionais.ItemHeight = 30;
-            cmbProfissionais.Location = new Point(217, 149);
+            cmbProfissionais.Location = new Point(219, 136);
             cmbProfissionais.Name = "cmbProfissionais";
             cmbProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cmbProfissionais.Size = new Size(340, 36);
@@ -375,5 +390,6 @@
         private MaskedTextBox mskHorarioInicio;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl3;
+        private LinkLabel linkLabel1;
     }
 }

@@ -122,6 +122,39 @@ namespace PsicomindClass
             return lista;
         }
 
+        public static List<Usuario> ObterListaPsicologo(string nome = null)
+        {
+            List<Usuario> lista = new List<Usuario>();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+
+            if (nome == null)
+            {
+                cmd.CommandText = "SELECT * FROM usuarios WHERE cargo_id = '3'";
+            }
+            else
+            {
+                cmd.CommandText = $"SELECT * FROM usuarios WHERE nome LIKE '%{nome}%' ";
+            }
+
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                lista.Add(new Usuario(
+                    dr.GetInt32(0),
+                    Cargo.ObterPorId(dr.GetInt32(1)),
+                    dr.GetString(2),
+                    dr.GetString(3),
+                    dr.GetString(4),
+                    dr.GetBoolean(5)
+
+                    ));
+            }
+
+            return lista;
+        }
+
         public static Usuario EfetuarLogin(string email, string senha)
         {
 
