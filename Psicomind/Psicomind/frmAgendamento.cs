@@ -19,12 +19,8 @@ namespace Psicomind
         }
 
         // Lista de datas com agendamentos disponíveis
-        private DateTime[] datasComAgendamentos = new DateTime[]
-        {
-            new DateTime(2024, 8, 22),
-            new DateTime(2024, 8, 25),
-            new DateTime(2024, 9, 1)
-        };
+        // Lista de datas com agendamentos disponíveis
+        private DateTime[] datasComAgendamentos;
 
         private void frmAgendamento_Load(object sender, EventArgs e)
         {
@@ -34,28 +30,14 @@ namespace Psicomind
             cmbProfissionais.DisplayMember = "nome";
             cmbProfissionais.ValueMember = "id";
 
+            // Obtém a lista de datas com agendamentos disponíveis e converte para array
+            var listaDias = Escala.ObterTodosOsDias(); // Supondo que retorna uma lista de DateTime
+            datasComAgendamentos = listaDias.ToArray(); // Converte a lista para um array
+
             // Destaca as datas com agendamentos disponíveis
             mcAgendamento.BoldedDates = datasComAgendamentos;
-
-            // Customiza o MonthCalendar
-            CustomizeMonthCalendar();
         }
 
-        private void CustomizeMonthCalendar()
-        {
-            // Configura a aparência do MonthCalendar
-            mcAgendamento.BackColor = Color.WhiteSmoke; // Cor de fundo
-            mcAgendamento.ForeColor = Color.DarkBlue; // Cor do texto
-            mcAgendamento.TitleBackColor = Color.LightSkyBlue; // Cor de fundo do título
-            mcAgendamento.TitleForeColor = Color.White; // Cor do texto do título
-
-            // Adiciona tooltips às datas com agendamentos
-            foreach (DateTime date in datasComAgendamentos)
-            {
-                // Configura o tooltip para o MonthCalendar
-                toolTip1.SetToolTip(mcAgendamento, $"Data: {date.ToShortDateString()} - Agendamento Disponível");
-            }
-        }
 
         private void btn1_Click(object sender, EventArgs e)
         {
