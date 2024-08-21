@@ -42,6 +42,28 @@ namespace Psicomind
         private void btnInserir_Click(object sender, EventArgs e)
         {
 
+            int profissionalId = Convert.ToInt32(cmbProfissionais.SelectedValue);
+
+            if (cmbProfissionais.SelectedValue == null)
+            {
+                MessageBox.Show("Selecione um profissional para incluir sua escala", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!mskHorarioInicio.MaskFull || mskHorarioInicio.Text.Contains('_'))
+            {
+                MessageBox.Show("O horário de inicio deve ser indicado para incluir sua escala", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!mskHorarioFinal.MaskFull || mskHorarioFinal.Text.Contains('_'))
+            {
+                MessageBox.Show("O horário de final deve ser indicado para incluir sua escala", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (btnDuracao.Value == 0)
+            {
+                MessageBox.Show("Insira a duração da sua consulta para incluir sua escala", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             Escala escala = new(
                Profissional.ObterPorId(Convert.ToInt32(cmbProfissionais.SelectedValue)),
@@ -52,19 +74,22 @@ namespace Psicomind
                Convert.ToInt32(btnDuracao.Value)
                 );
 
+
             try
             {
                 escala.Inserir();
+                MessageBox.Show("Escala Inserida com sucesso!!!");
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
-                MessageBox.Show($"Não foi possível inserir escala {ex}");
+                MessageBox.Show($"Não foi possível inserir escala: {ex.Message}");
+                return; // Abort if insertion fails
             }
 
-            MessageBox.Show("Escala Inserida com sucesso!!!");
-
-            FrmShowEscala frmShowEscala = new();
-           
+            // Criar e exibir o FrmShowEscala com o ID da escala
+            FrmShowEscala frmShowEscala = new(profissionalId);
+            frmShowEscala.StartPosition = FormStartPosition.CenterScreen;
+            frmShowEscala.Show();
 
         }
 

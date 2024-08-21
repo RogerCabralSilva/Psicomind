@@ -308,6 +308,7 @@
             dgvClientesDados.ThemeStyle.RowsStyle.Height = 30;
             dgvClientesDados.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(0, 0, 192);
             dgvClientesDados.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
+            dgvClientesDados.CellContentClick += dgvClientesDados_CellContentClick;
             dgvClientesDados.CellContentDoubleClick += dgvClientesDados_CellContentDoubleClick;
             // 
             // clnClienteId

@@ -224,5 +224,10 @@ namespace Psicomind
 
             }
         }
+
+        private void dgvClientesDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

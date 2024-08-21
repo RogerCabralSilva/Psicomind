@@ -111,6 +111,11 @@ namespace PsicomindClass
             Ativo = ativo;
         }
 
+        public Profissional(string nome)
+        {
+            Nome = nome;
+        }
+
 
         // Inserindo Profissional
 
@@ -163,6 +168,28 @@ namespace PsicomindClass
             }
 
             return profissional;
+
+
+        }
+
+        public static string ObterNomePorId(int id)
+        {
+
+            string nome = string.Empty;
+
+            Profissional profissional = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"SELECT nome FROM profissionais WHERE id = {id}";
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+
+                nome = dr.GetString(0);
+                
+            }
+
+            return nome;
 
 
         }

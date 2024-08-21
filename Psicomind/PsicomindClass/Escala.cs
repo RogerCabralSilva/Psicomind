@@ -72,6 +72,12 @@ namespace PsicomindClass
             Horario = horario;
         }
 
+        public Escala(DateTime dia, TimeSpan horario)
+        {
+            Dia = dia;
+            Horario = horario;
+        }
+
         public void Inserir()
         {
 
@@ -86,7 +92,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("intervalo_minutos",Duracao);
             cmd.Parameters.AddWithValue("profissional_id", Profissional.Id);
 
-            cmd.ExecuteNonQuery();
+            cmd.ExecuteScalar();
 
         }
 
@@ -136,6 +142,26 @@ namespace PsicomindClass
 
 
             return dr.ExecuteNonQuery() > -1 ? true : false;
+        }
+
+        public static List<Escala> ObterListaProfissional(int id)
+        {
+            List<Escala> lista = new List<Escala>();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"SELECT dia, horario FROM escala where disponivel = 1 and profissional_id = '{id}';";
+
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                lista.Add(new Escala(
+                        dr.GetDateTime(0),
+                        dr.GetTimeSpan(1)
+                    ));
+            }
+
+            return lista;
         }
 
     }
