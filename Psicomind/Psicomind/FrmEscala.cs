@@ -27,11 +27,14 @@ namespace Psicomind
         private void FrmEscala_Load(object sender, EventArgs e)
         {
 
-            var profissional = Profissional.ObterLista();
-            cmbProfissionais.DataSource = profissional;
+
+            var user = Usuario.ObterListaPsicologo();
+            cmbProfissionais.DataSource = user;
             cmbProfissionais.DisplayMember = "nome";
             cmbProfissionais.ValueMember = "id";
 
+
+            
             cmbProfissionais.SelectedValue = 0;
 
         }
@@ -108,6 +111,17 @@ namespace Psicomind
             frmProfissionalMenu.Show();
 
             this.Close();
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            int profissionalId = Convert.ToInt32(cmbProfissionais.SelectedValue);
+
+            FrmShowEscala frmShowEscala = new(profissionalId);
+            frmShowEscala.StartPosition = FormStartPosition.CenterScreen;
+            frmShowEscala.Show();
 
         }
     }

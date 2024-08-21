@@ -26,35 +26,100 @@ namespace Psicomind
 
         private void btnPagInserirProfissionais_Click(object sender, EventArgs e)
         {
-            FrmProfissionalInserir FrmProfissionalInserir = new FrmProfissionalInserir();
-            FrmProfissionalInserir.StartPosition = FormStartPosition.CenterScreen;
-            FrmProfissionalInserir.ShowDialog();
-            this.Close();
+
+            int cargo = Program.Usuario.Cargo.Id;
+
+            if (cargo == 1 || cargo == 2)
+            {
+                
+                FrmProfissionalInserir FrmProfissionalInserir = new FrmProfissionalInserir();
+                FrmProfissionalInserir.StartPosition = FormStartPosition.CenterScreen;
+                FrmProfissionalInserir.ShowDialog();
+                this.Close();
+
+            }
+            else
+            {
+
+                MessageBox.Show("Você não possui permissão para entrar nessa área", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+           
         }
 
         private void btnPagConsultarProfissionais_Click(object sender, EventArgs e)
         {
-            FrmProfissionalConsultar FrmProfissionalConsultar = new FrmProfissionalConsultar();
-            FrmProfissionalConsultar.StartPosition = FormStartPosition.CenterScreen;
-            FrmProfissionalConsultar.ShowDialog();
-            this.Close();
+
+
+            int cargo = Program.Usuario.Cargo.Id;
+
+            if (cargo == 1 || cargo == 2)
+            {
+                
+                FrmProfissionalConsultar FrmProfissionalConsultar = new FrmProfissionalConsultar();
+                FrmProfissionalConsultar.StartPosition = FormStartPosition.CenterScreen;
+                FrmProfissionalConsultar.ShowDialog();
+                this.Close();
+
+            }
+            else
+            {
+
+                MessageBox.Show("Você não possui permissão para entrar nessa área", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            
         }
 
         private void btnPagEditarProfissionais_Click(object sender, EventArgs e)
         {
-            FrmProfissionalEditar FrmProfissionalEditar = new FrmProfissionalEditar();
-            FrmProfissionalEditar.StartPosition = FormStartPosition.CenterScreen;
-            FrmProfissionalEditar.ShowDialog();
-            this.Close();
+
+
+            int cargo = Program.Usuario.Cargo.Id;
+
+            if (cargo == 1 || cargo == 2)
+            {
+                
+                FrmProfissionalEditar FrmProfissionalEditar = new FrmProfissionalEditar();
+                FrmProfissionalEditar.StartPosition = FormStartPosition.CenterScreen;
+                FrmProfissionalEditar.ShowDialog();
+                this.Close();
+
+            }
+            else
+            {
+
+                MessageBox.Show("Você não possui permissão para entrar nessa área", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            
         }
 
         private void guna2ContainerControl1_Click(object sender, EventArgs e)
         {
 
-            FrmEscala FrmEscala = new FrmEscala();
-            FrmEscala.StartPosition = FormStartPosition.CenterScreen;
-            FrmEscala.ShowDialog();
-            this.Close();
+
+            int cargo = Program.Usuario.Cargo.Id;
+
+            if (cargo == 1 || cargo == 2 || cargo == 3)
+            {
+                
+                FrmEscala FrmEscala = new FrmEscala();
+                FrmEscala.StartPosition = FormStartPosition.CenterScreen;
+                FrmEscala.ShowDialog();
+                this.Close();
+
+            }
+            else
+            {
+
+                MessageBox.Show("Você não possui permissão para entrar nessa área", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
 
         }
 

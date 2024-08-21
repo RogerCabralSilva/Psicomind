@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PsicomindClass;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Psicomind
 {
     public partial class FrmAgendamentoMenu : Form
     {
+
+
         public FrmAgendamentoMenu()
         {
             InitializeComponent();
@@ -25,10 +28,33 @@ namespace Psicomind
         private void btnPagEditarUsuario_Click(object sender, EventArgs e)
         {
 
-            frmAgendamento frmAgendamento = new();
-            frmAgendamento.StartPosition = FormStartPosition.CenterScreen;
-            frmAgendamento.Show();
+            int cargo = Program.Usuario.Cargo.Id;
+
+            if (cargo == 1 || cargo == 2)
+            {
+                frmAgendamento frmAgendamento = new();
+                frmAgendamento.StartPosition = FormStartPosition.CenterScreen;
+                frmAgendamento.Show();
+
+            }
+            else
+            {
+
+                MessageBox.Show("Você não possui permissão para entrar nessa área", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
 
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+
+            FrmPrincipal frmPrincipal = FrmPrincipal.GetInstance();
+            frmPrincipal.StartPosition = FormStartPosition.CenterScreen;
+            this.Close();
+        }
+
+    
     }
 }

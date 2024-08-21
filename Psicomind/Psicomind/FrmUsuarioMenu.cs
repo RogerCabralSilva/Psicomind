@@ -26,10 +26,26 @@ namespace Psicomind
 
         private void btnPagConsultarUsuario_Click(object sender, EventArgs e)
         {
-            FrmUsuarioConsultar userConsultar = new FrmUsuarioConsultar();
-            userConsultar.StartPosition = FormStartPosition.CenterScreen;
-            userConsultar.Show();
-            this.Close();
+
+            int cargo = Program.Usuario.Cargo.Id;
+
+            if (cargo == 1 || cargo == 2)
+            {
+                
+                FrmUsuarioConsultar userConsultar = new FrmUsuarioConsultar();
+                userConsultar.StartPosition = FormStartPosition.CenterScreen;
+                userConsultar.Show();
+                this.Close();
+
+            }
+            else
+            {
+
+                MessageBox.Show("Você não possui permissão para entrar nessa área", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            
         }
     }
 }

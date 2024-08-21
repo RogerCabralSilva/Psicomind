@@ -42,7 +42,6 @@ namespace Psicomind
         private void CarregaEscala()
         {
 
-
             var escalas = Escala.ObterListaProfissional(profissionalId);
             int count = 0;
 
@@ -55,7 +54,6 @@ namespace Psicomind
                 dgvEscala.Rows[count].Cells[1].Value = escala.Horario;
 
                 count++;
-
 
             }
 

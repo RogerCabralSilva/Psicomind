@@ -63,6 +63,7 @@
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnVoltar.TabIndex = 51;
             btnVoltar.TabStop = false;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // txtPsicomind
             // 

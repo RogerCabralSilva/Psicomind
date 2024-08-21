@@ -81,8 +81,11 @@ namespace Psicomind
             // Inserir Usuário Profissional
             if (profissional.Id > 0)
             {
-                string primeiroNome = txtNomeProfissional.Text.Split(' ')[0];
-                Usuario usuario = new(primeiroNome, txtEmailProfissional.Text, txtSenhaProfissional.Text, Cargo.ObterPorId(Convert.ToInt32(cmbCargos.SelectedValue)));
+                string[] nomes = txtNomeProfissional.Text.Split(' ');
+                string primeiroNome = nomes.Length > 0 ? nomes[0] : "";
+                string segundoNome = nomes.Length > 1 ? nomes[1] : "";
+
+                Usuario usuario = new Usuario($"{primeiroNome} {segundoNome}", txtEmailProfissional.Text, txtSenhaProfissional.Text, Cargo.ObterPorId(Convert.ToInt32(cmbCargos.SelectedValue)));
 
                 usuario.Inserir();
             }
