@@ -107,7 +107,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvEscala.DefaultCellStyle = dataGridViewCellStyle3;
             dgvEscala.GridColor = Color.FromArgb(231, 229, 255);
-            dgvEscala.Location = new Point(186, 213);
+            dgvEscala.Location = new Point(190, 214);
             dgvEscala.Name = "dgvEscala";
             dgvEscala.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;

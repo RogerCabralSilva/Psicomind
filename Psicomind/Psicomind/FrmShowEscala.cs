@@ -51,7 +51,7 @@ namespace Psicomind
             foreach (var escala in escalas)
             {
                 int rowIndex = dgvEscala.Rows.Add();
-                dgvEscala.Rows[count].Cells[0].Value = escala.Dia;
+                dgvEscala.Rows[count].Cells[0].Value = escala.Dia.Date.ToString("dd/MM/yyyy");
                 dgvEscala.Rows[count].Cells[1].Value = escala.Horario;
 
                 count++;
