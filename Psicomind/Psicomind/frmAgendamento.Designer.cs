@@ -80,7 +80,6 @@
             mcAgendamento.Location = new Point(425, 195);
             mcAgendamento.Name = "mcAgendamento";
             mcAgendamento.TabIndex = 2;
-            mcAgendamento.DateChanged += mcAgendamento_DateChanged;
             // 
             // label4
             // 

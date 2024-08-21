@@ -78,6 +78,11 @@ namespace PsicomindClass
             Horario = horario;
         }
 
+        public Escala(DateTime dia)
+        {
+            Dia = dia;
+        }
+
         public void Inserir()
         {
 
@@ -114,6 +119,27 @@ namespace PsicomindClass
 
             return lista;
         }
+
+        public static List<DateTime> ObterTodosOsDias()
+        {
+            List<DateTime> lista = new List<DateTime>();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"SELECT dia FROM escala WHERE disponivel = 1;";
+
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                lista.Add(dr.GetDateTime(0));
+            }
+
+            dr.Close();
+            cmd.Connection.Close();
+
+            return lista;
+        }
+
 
         public static Escala ObterPorDisponivelId(int id)
         {
