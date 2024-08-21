@@ -90,7 +90,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("horario_inicio", HorarioInicio);
             cmd.Parameters.AddWithValue("horario_fim", HorarioFinal);
             cmd.Parameters.AddWithValue("intervalo_minutos",Duracao);
-            cmd.Parameters.AddWithValue("profissional_id", Profissional.Id);
+            cmd.Parameters.AddWithValue("id_profissional", Profissional.Id);
 
             cmd.ExecuteScalar();
 

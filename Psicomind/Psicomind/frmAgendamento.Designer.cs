@@ -77,7 +77,7 @@
             // mcAgendamento
             // 
             mcAgendamento.BackColor = SystemColors.InactiveCaptionText;
-            mcAgendamento.Location = new Point(63, 253);
+            mcAgendamento.Location = new Point(425, 195);
             mcAgendamento.Name = "mcAgendamento";
             mcAgendamento.TabIndex = 2;
             mcAgendamento.DateChanged += mcAgendamento_DateChanged;
@@ -88,7 +88,7 @@
             label4.BackColor = Color.White;
             label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.Highlight;
-            label4.Location = new Point(489, 253);
+            label4.Location = new Point(489, 178);
             label4.Name = "label4";
             label4.Size = new Size(107, 16);
             label4.TabIndex = 48;
@@ -103,7 +103,7 @@
             dtpDataAgendamento.FillColor = Color.White;
             dtpDataAgendamento.Font = new Font("Segoe UI", 9F);
             dtpDataAgendamento.Format = DateTimePickerFormat.Short;
-            dtpDataAgendamento.Location = new Point(35, 102);
+            dtpDataAgendamento.Location = new Point(21, 38);
             dtpDataAgendamento.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpDataAgendamento.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpDataAgendamento.Name = "dtpDataAgendamento";
@@ -118,7 +118,7 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(479, 408);
+            label2.Location = new Point(480, 449);
             label2.Name = "label2";
             label2.Size = new Size(123, 16);
             label2.TabIndex = 46;
@@ -130,7 +130,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(505, 170);
+            label1.Location = new Point(505, 91);
             label1.Name = "label1";
             label1.Size = new Size(71, 16);
             label1.TabIndex = 45;
@@ -149,7 +149,7 @@
             cmbProfissionais.Font = new Font("Segoe UI", 10F);
             cmbProfissionais.ForeColor = Color.FromArgb(68, 88, 112);
             cmbProfissionais.ItemHeight = 30;
-            cmbProfissionais.Location = new Point(374, 193);
+            cmbProfissionais.Location = new Point(374, 114);
             cmbProfissionais.Name = "cmbProfissionais";
             cmbProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges4;
             cmbProfissionais.Size = new Size(333, 36);
@@ -161,7 +161,7 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(358, 102);
+            label3.Location = new Point(358, 38);
             label3.Name = "label3";
             label3.Size = new Size(364, 32);
             label3.TabIndex = 29;
@@ -180,7 +180,7 @@
             cmbHorarios.Font = new Font("Segoe UI", 10F);
             cmbHorarios.ForeColor = Color.FromArgb(68, 88, 112);
             cmbHorarios.ItemHeight = 30;
-            cmbHorarios.Location = new Point(415, 434);
+            cmbHorarios.Location = new Point(416, 475);
             cmbHorarios.Name = "cmbHorarios";
             cmbHorarios.ShadowDecoration.CustomizableEdges = customizableEdges6;
             cmbHorarios.Size = new Size(251, 36);
@@ -197,7 +197,7 @@
             btnConsultarProfissional.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnConsultarProfissional.Font = new Font("Segoe UI", 9F);
             btnConsultarProfissional.ForeColor = Color.White;
-            btnConsultarProfissional.Location = new Point(479, 339);
+            btnConsultarProfissional.Location = new Point(483, 396);
             btnConsultarProfissional.Name = "btnConsultarProfissional";
             btnConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnConsultarProfissional.Size = new Size(120, 30);
