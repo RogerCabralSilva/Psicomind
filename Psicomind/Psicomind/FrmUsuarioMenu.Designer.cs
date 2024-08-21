@@ -68,7 +68,7 @@
             txtTitulo.AutoSize = true;
             txtTitulo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTitulo.ForeColor = Color.Black;
-            txtTitulo.Location = new Point(346, 108);
+            txtTitulo.Location = new Point(346, 110);
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(233, 60);
             txtTitulo.TabIndex = 44;

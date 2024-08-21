@@ -15,11 +15,10 @@ namespace Psicomind
         {
             Usuario = new();
 
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            //ApplicationConfiguration.Initialize();
-            //Application.Run(new FrmPrincipal());
+            // Mantendo a configuração padrão do programa ao inicializar
+            ApplicationConfiguration.Initialize();
 
+            // Abrindo tela de login 
             FrmLogin login = new();
             login.StartPosition = FormStartPosition.CenterScreen;
 
@@ -33,6 +32,13 @@ namespace Psicomind
                 // Se o login falhou ou foi cancelado, encerra a aplicação
                 Application.Exit();
             }
+
+
+
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            //Application.Run(new FrmPrincipal());
+
 
         }
     }

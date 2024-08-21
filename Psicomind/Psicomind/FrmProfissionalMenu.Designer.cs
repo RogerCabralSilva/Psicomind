@@ -130,7 +130,7 @@
             txtPsicomind.AutoSize = true;
             txtPsicomind.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPsicomind.ForeColor = SystemColors.Highlight;
-            txtPsicomind.Location = new Point(455, 50);
+            txtPsicomind.Location = new Point(455, 52);
             txtPsicomind.Name = "txtPsicomind";
             txtPsicomind.Size = new Size(141, 28);
             txtPsicomind.TabIndex = 40;
@@ -212,7 +212,7 @@
             txtTitulo.AutoSize = true;
             txtTitulo.Font = new Font("Arial Black", 32F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTitulo.ForeColor = Color.Black;
-            txtTitulo.Location = new Point(374, 64);
+            txtTitulo.Location = new Point(374, 69);
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(329, 60);
             txtTitulo.TabIndex = 39;

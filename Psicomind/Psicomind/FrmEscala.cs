@@ -62,6 +62,8 @@ namespace Psicomind
             }
 
             MessageBox.Show("Escala Inserida com sucesso!!!");
+
+            FrmShowEscala frmShowEscala = new();
            
 
         }

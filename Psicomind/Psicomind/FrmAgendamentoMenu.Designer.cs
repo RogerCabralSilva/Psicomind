@@ -37,6 +37,7 @@
             txtPsicomind = new Label();
             txtTitulo = new Label();
             btnPagEditarUsuario = new Guna.UI2.WinForms.Guna2ContainerControl();
+            label2 = new Label();
             pictureBox5 = new PictureBox();
             label9 = new Label();
             btnPagConsultarUsuario = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -44,7 +45,6 @@
             pictureBox3 = new PictureBox();
             label5 = new Label();
             label7 = new Label();
-            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             btnPagEditarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -102,15 +102,29 @@
             btnPagEditarUsuario.Size = new Size(212, 197);
             btnPagEditarUsuario.TabIndex = 48;
             btnPagEditarUsuario.Text = "guna2ContainerControl1";
+            btnPagEditarUsuario.Click += btnPagEditarUsuario_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.LightGray;
+            label2.Enabled = false;
+            label2.Font = new Font("Arial", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(23, 57);
+            label2.Name = "label2";
+            label2.Size = new Size(166, 26);
+            label2.TabIndex = 29;
+            label2.Text = "Agendamentos";
             // 
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.LightGray;
             pictureBox5.Enabled = false;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(46, 94);
+            pictureBox5.Location = new Point(68, 94);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(114, 70);
+            pictureBox5.Size = new Size(80, 73);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 24;
             pictureBox5.TabStop = false;
@@ -196,19 +210,6 @@
             label7.Size = new Size(99, 32);
             label7.TabIndex = 23;
             label7.Text = "Inserir";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.LightGray;
-            label2.Enabled = false;
-            label2.Font = new Font("Arial", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(23, 57);
-            label2.Name = "label2";
-            label2.Size = new Size(166, 26);
-            label2.TabIndex = 29;
-            label2.Text = "Agendamentos";
             // 
             // FrmAgendamentoMenu
             // 

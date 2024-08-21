@@ -93,9 +93,9 @@ namespace Psicomind
 
         private void btnAbrirAgendamento_Click(object sender, EventArgs e)
         {
-            frmAgendamento frmAgendamento = new frmAgendamento();
-            frmAgendamento.StartPosition = FormStartPosition.CenterScreen;
-            frmAgendamento.Show();
+            FrmAgendamentoMenu frmAgendamentoMenu = new();
+            frmAgendamentoMenu.StartPosition = FormStartPosition.CenterScreen;
+            frmAgendamentoMenu.Show();
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
