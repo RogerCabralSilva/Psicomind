@@ -50,7 +50,7 @@ namespace PsicomindClass
             cmd.CommandText = "sp_agendamentos_insert";
 
             cmd.Parameters.AddWithValue("spprofissional_id", Profissional.Id);
-            cmd.Parameters.AddWithValue("spprofissional_id", Usuario.Id);
+            cmd.Parameters.AddWithValue("spusuarios_id", Usuario.Id);
             cmd.Parameters.AddWithValue("sppreco_id", Preco_Consulta.Id);
             cmd.Parameters.AddWithValue("spescala_id", Escala.Id);
             cmd.Parameters.AddWithValue("sptipo_agendamento_id", Tipo_agendamento_id.Id);

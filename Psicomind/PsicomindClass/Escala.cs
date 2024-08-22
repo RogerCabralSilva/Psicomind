@@ -145,7 +145,7 @@ namespace PsicomindClass
             Escala calendario = new();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"SELECT dispoivel FROM Escala where id = 1;";
+            cmd.CommandText = $"SELECT disponivel FROM Escala where id = 1;";
 
             var dr = cmd.ExecuteReader();
 
@@ -163,7 +163,7 @@ namespace PsicomindClass
         {
             var dr = Banco.Abrir();
             dr.CommandType = CommandType.Text;
-            dr.CommandText = $"UPDATE Escala SET dispoivel = 0 where id = {id}";
+            dr.CommandText = $"UPDATE Escala SET disponivel = 0 where id = {id}";
 
 
             return dr.ExecuteNonQuery() > -1 ? true : false;
