@@ -189,5 +189,13 @@ namespace PsicomindClass
             return lista;
         }
 
+        public static void Deletar (string date, string horario) 
+        { 
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"delete from escala where dia = '{date}' and horario = '{horario}'";
+            cmd.ExecuteReader();
+        }
+
     }
 }

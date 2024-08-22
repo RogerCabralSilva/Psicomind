@@ -38,11 +38,12 @@
             guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             lblProfissional = new Label();
             dgvEscala = new Guna.UI2.WinForms.Guna2DataGridView();
-            clnData = new DataGridViewTextBoxColumn();
-            clnHorario = new DataGridViewTextBoxColumn();
             label1 = new Label();
             btnVoltar = new PictureBox();
             label3 = new Label();
+            clnData = new DataGridViewTextBoxColumn();
+            clnHorario = new DataGridViewTextBoxColumn();
+            clnExcluir = new DataGridViewButtonColumn();
             guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEscala).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
@@ -97,7 +98,7 @@
             dgvEscala.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvEscala.ColumnHeadersHeight = 34;
             dgvEscala.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvEscala.Columns.AddRange(new DataGridViewColumn[] { clnData, clnHorario });
+            dgvEscala.Columns.AddRange(new DataGridViewColumn[] { clnData, clnHorario, clnExcluir });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -107,7 +108,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvEscala.DefaultCellStyle = dataGridViewCellStyle3;
             dgvEscala.GridColor = Color.FromArgb(231, 229, 255);
-            dgvEscala.Location = new Point(190, 214);
+            dgvEscala.Location = new Point(139, 215);
             dgvEscala.Name = "dgvEscala";
             dgvEscala.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -120,7 +121,7 @@
             dgvEscala.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvEscala.RowHeadersVisible = false;
             dgvEscala.RowTemplate.Height = 29;
-            dgvEscala.Size = new Size(389, 346);
+            dgvEscala.Size = new Size(489, 346);
             dgvEscala.TabIndex = 44;
             dgvEscala.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvEscala.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);
@@ -144,16 +145,6 @@
             dgvEscala.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvEscala.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvEscala.CellContentClick += dgvEscala_CellContentClick;
-            // 
-            // clnData
-            // 
-            clnData.HeaderText = "Data";
-            clnData.Name = "clnData";
-            // 
-            // clnHorario
-            // 
-            clnHorario.HeaderText = "Horário";
-            clnHorario.Name = "clnHorario";
             // 
             // label1
             // 
@@ -192,6 +183,30 @@
             label3.TabIndex = 28;
             label3.Text = "Escala Inserida";
             // 
+            // clnData
+            // 
+            clnData.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            clnData.Frozen = true;
+            clnData.HeaderText = "Data";
+            clnData.Name = "clnData";
+            clnData.Width = 195;
+            // 
+            // clnHorario
+            // 
+            clnHorario.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            clnHorario.Frozen = true;
+            clnHorario.HeaderText = "Horário";
+            clnHorario.Name = "clnHorario";
+            clnHorario.Width = 194;
+            // 
+            // clnExcluir
+            // 
+            clnExcluir.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            clnExcluir.Frozen = true;
+            clnExcluir.HeaderText = "Excluír";
+            clnExcluir.Name = "clnExcluir";
+            clnExcluir.Text = "Excluir";
+            // 
             // FrmShowEscala
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -215,8 +230,9 @@
         private PictureBox btnVoltar;
         private Label label3;
         private Guna.UI2.WinForms.Guna2DataGridView dgvEscala;
+        private Label lblProfissional;
         private DataGridViewTextBoxColumn clnData;
         private DataGridViewTextBoxColumn clnHorario;
-        private Label lblProfissional;
+        private DataGridViewButtonColumn clnExcluir;
     }
 }

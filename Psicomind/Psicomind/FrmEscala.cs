@@ -37,8 +37,16 @@ namespace Psicomind
             cmbProfissionais.DataSource = profissional;
             cmbProfissionais.DisplayMember = "nome";
             cmbProfissionais.ValueMember = "id";
-            
+
             cmbProfissionais.SelectedValue = 0;
+
+            // Define a data mínima como o dia de hoje
+            dtpDataFinal.MinDate = DateTime.Today;
+
+            // Define a data mínima como o dia de hoje
+            dtpDataInicio.MinDate = DateTime.Today;
+
+
 
         }
 
@@ -73,27 +81,38 @@ namespace Psicomind
                 return;
             }
 
-            
-            Escala escala = new(
-               Profissional.ObterPorId(Convert.ToInt32(cmbProfissionais.SelectedValue)),
-               dtpDataInicio.Value,
-               dtpDataFinal.Value,
-               Convert.ToDateTime(mskHorarioInicio.Text),
-               Convert.ToDateTime(mskHorarioFinal.Text),
-               Convert.ToInt32(btnDuracao.Value)
-                );
+
 
 
             try
             {
-                escala.Inserir();
-                MessageBox.Show("Escala Inserida com sucesso!!!");
+                if (dtpDataFinal.Value < dtpDataInicio.Value)
+                {
+                    MessageBox.Show("A data final selecionada é maior que a data de ínicio !!!");
+
+                }
+                else
+                {
+                    Escala escala = new(
+                    Profissional.ObterPorId(Convert.ToInt32(cmbProfissionais.SelectedValue)),
+                    dtpDataInicio.Value,
+                    dtpDataFinal.Value,
+                    Convert.ToDateTime(mskHorarioInicio.Text),
+                    Convert.ToDateTime(mskHorarioFinal.Text),
+                    Convert.ToInt32(btnDuracao.Value));
+
+                    escala.Inserir();
+                    MessageBox.Show("Escala Inserida com sucesso!!!");
+                }
             }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
+            catch
             {
-                MessageBox.Show($"Não foi possível inserir escala: {ex.Message}");
-                return; // Abort if insertion fails
+                MessageBox.Show("Não foi possível registrar a escala", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+
+
 
             // Criar e exibir o FrmShowEscala com o ID da escala
             FrmShowEscala frmShowEscala = new(profissionalId);
@@ -126,6 +145,16 @@ namespace Psicomind
             FrmShowEscala frmShowEscala = new(profissionalId);
             frmShowEscala.StartPosition = FormStartPosition.CenterScreen;
             frmShowEscala.Show();
+
+        }
+
+        private void dtpDataInicio_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpDataFinal_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }
