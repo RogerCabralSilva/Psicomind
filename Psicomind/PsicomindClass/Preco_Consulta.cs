@@ -9,15 +9,18 @@ namespace PsicomindClass
     public class Preco_Consulta
     {
         
-
         public int Id { get; set; }
         public double Preco { get; set; }
-        public TipoAgendamento Tipo_agendamento { get; set; }
-
-        public Preco_Consulta(double preco, TipoAgendamento tipo_agendamento)
+        
+        public Preco_Consulta(double preco)
         {
-             Preco = preco;
-             Tipo_agendamento = tipo_agendamento;
+            Preco = preco;
+        }
+
+        public Preco_Consulta(int id, double preco)
+        {
+            Id = id;
+            Preco = preco;
         }
 
         public Preco_Consulta()
@@ -25,10 +28,7 @@ namespace PsicomindClass
 
         }
 
-        public Preco_Consulta(double preco)
-        {
-            Preco = preco;
-        }
+
 
         public static Preco_Consulta ObterPorId(int id)
         {

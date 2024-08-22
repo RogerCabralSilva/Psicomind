@@ -11,23 +11,32 @@ namespace PsicomindClass
     {
         public int Id { get; set; }
         public string Tipo_Agendamento { get; set; }
+        public Preco_Consulta Preco_Consulta { get; set; }
+        
+        public TipoAgendamento(int id, string tipo_Agendamento, Preco_Consulta preco_Consulta)
+        {
+            Id = id;
+            Tipo_Agendamento = tipo_Agendamento;
+            Preco_Consulta = preco_Consulta;
+        }
+
+        public TipoAgendamento(string tipo_Agendamento, Preco_Consulta preco_Consulta)
+        {
+            Tipo_Agendamento = tipo_Agendamento;
+            Preco_Consulta = preco_Consulta;
+        }
+
+        public TipoAgendamento(int id)
+        {
+            Id = id;
+        }
+
+        
 
         public TipoAgendamento()
         {
 
         }
-
-        public TipoAgendamento(int id, string tipo_Agendamento)
-        {
-            Id = id;
-            Tipo_Agendamento = tipo_Agendamento;
-        }
-
-        public TipoAgendamento(string tipo_Agendamento)
-        {
-            Tipo_Agendamento = tipo_Agendamento;
-        }
-
 
         public static TipoAgendamento ObterPorId(int id)
         {
@@ -43,8 +52,8 @@ namespace PsicomindClass
                 tipoAgendamento = (new TipoAgendamento(
 
                     dr.GetInt32(0),
-                    dr.GetString(1)
-
+                    dr.GetString(1),
+                    Preco_Consulta.ObterPorId(Convert.ToInt32(dr.GetInt32(2)))
                     ));
                 ;
 
@@ -68,7 +77,8 @@ namespace PsicomindClass
                 tipoAgendamento.Add(new(
 
                     dr.GetInt32(0),
-                    dr.GetString(1)
+                    dr.GetString(1),
+                    Preco_Consulta.ObterPorId(Convert.ToInt32(dr.GetInt32(2)))
 
                     ));
 

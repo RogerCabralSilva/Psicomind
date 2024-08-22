@@ -13,7 +13,6 @@ namespace PsicomindClass
         public int Id { get; set; }
         public Profissional Profissional { get; set; }
         public Usuario Usuario { get; set; }
-        public Preco_Consulta Preco_Consulta { get; set; }
         public Escala Escala {  get; set; }
         public TipoAgendamento Tipo_agendamento_id { get; set; }
         public bool Status_agendamento { get; set; }
@@ -23,24 +22,25 @@ namespace PsicomindClass
         {
             Profissional = profissional;
             Usuario = usuario;
-            Preco_Consulta = preco_Consulta;
             Escala = escala;
             Tipo_agendamento_id = tipo_agendamento_id;
             Status_agendamento = status_agendamento;
         }
 
-        public Agendamento(int id, Profissional profissional, Usuario usuario, Preco_Consulta preco_Consulta, Escala escala, TipoAgendamento tipo_agendamento_id, bool status_agendamento)
+        public Agendamento(int id, Profissional profissional, Usuario usuario, Escala escala, TipoAgendamento tipo_agendamento_id, bool status_agendamento)
         {
             Id = id;
             Profissional = profissional;
             Usuario = usuario;
-            Preco_Consulta = preco_Consulta;
             Escala = escala;
             Tipo_agendamento_id = tipo_agendamento_id;
             Status_agendamento = status_agendamento;
         }
 
-        
+        public Agendamento()
+        {
+
+        }
 
         public void Inserir()
         {
@@ -51,7 +51,6 @@ namespace PsicomindClass
 
             cmd.Parameters.AddWithValue("spprofissional_id", Profissional.Id);
             cmd.Parameters.AddWithValue("spusuarios_id", Usuario.Id);
-            cmd.Parameters.AddWithValue("sppreco_id", Preco_Consulta.Id);
             cmd.Parameters.AddWithValue("spescala_id", Escala.Id);
             cmd.Parameters.AddWithValue("sptipo_agendamento_id", Tipo_agendamento_id.Id);
             cmd.Parameters.AddWithValue("spstatus_agendamento", Status_agendamento);

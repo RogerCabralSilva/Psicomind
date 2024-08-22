@@ -121,10 +121,19 @@ CREATE TABLE telefone_profissional (
     CONSTRAINT fk_telefone_profissional_tipo_id FOREIGN KEY (telefone_tipo_id) REFERENCES telefone_tipo(id)
 );
 
+
+-- Tabela  preco
+CREATE TABLE preco_consulta (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    preco DECIMAL(10,2) NOT NULL	
+);
+
 -- Tabela tipo_agendamento
 CREATE TABLE tipo_agendamento (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    tipo_agendamento VARCHAR(50) NOT NULL
+    tipo_agendamento VARCHAR(50) NOT NULL,
+    preco_id INT NOT NULL,
+    CONSTRAINT fk_preco_agendamento FOREIGN KEY (preco_id) REFERENCES preco_consulta(id)
 );
 
 -- Tabela grupo
@@ -147,27 +156,19 @@ CREATE TABLE escala (
 
 );
 
--- Tabela  preco
-CREATE TABLE preco_consulta (
-	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    preco DECIMAL(10,2) NOT NULL,	
-    tipo_agendamento_id INT NOT NULL,
-    CONSTRAINT fk_preco_consulta_tipo_agendamento_id FOREIGN KEY (tipo_agendamento_id) REFERENCES tipo_agendamento(id)
-);
+
 
 -- Tabela agendamentos
 CREATE TABLE agendamentos (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     profissionais_id INT NOT NULL,
     usuarios_id INT NOT NULL,
-    preco_id INT NOT NULL,
     escala_id INT NOT NULL,
     tipo_agendamento_id INT NOT NULL,
     status_agendamento CHAR(1) NOT NULL,
     CONSTRAINT fk_agendamentos_profissionais_id FOREIGN KEY (profissionais_id) REFERENCES profissionais(id),
     CONSTRAINT fk_agendamentos_usuarios_id FOREIGN KEY (usuarios_id) REFERENCES usuarios(id),
     CONSTRAINT fk_agendamentos_escala_id FOREIGN KEY (escala_id) REFERENCES escala(id),
-    CONSTRAINT fk_preco_agendamento FOREIGN KEY (preco_id) REFERENCES preco_consulta(id),
     CONSTRAINT fk_tipoAgendamento_id FOREIGN KEY (tipo_agendamento_id) REFERENCES tipo_agendamento(id)
 );
 
@@ -325,14 +326,13 @@ DELIMITER $$
 CREATE PROCEDURE sp_agendamentos_insert(
     spprofissional_id INT,
     spusuarios_id INT,
-    sppreco_id INT,
     spescala_id INT,
     sptipo_agendamento_id INT,
     spstatus_agendamento CHAR(1)
 )
 BEGIN
     INSERT INTO agendamentos
-    VALUES (0, spprofissional_id, spusuarios_id, sppreco_id, spescala_id, sptipo_agendamento_id, spstatus_agendamento);
+    VALUES (0, spprofissional_id, spusuarios_id, spescala_id, sptipo_agendamento_id, spstatus_agendamento);
     
     SELECT LAST_INSERT_ID() AS id;
 END $$
@@ -717,15 +717,18 @@ CALL sp_usuarios_insert('Annie', 'annie@gmail.com', '123', 1);
 SELECT * FROM escala;
 SELECT * FROM usuarios;
 select * from cargos;
+select * from agendamentos;
 
+select id from escala where dia = '2024-08-27' and horario = '12:00' and profissional_id = 2;
 
-INSERT INTO tipo_agendamento VALUES (0,'Particular');
-INSERT INTO tipo_agendamento VALUES (0,'Grupo');
-SELECT * FROM preco_consulta WHERE id =1;
-
-INSERT INTO preco_consulta VALUES (0, '250.00', 1);
-INSERT INTO preco_consulta VALUES (0, '80.00', 2);
+INSERT INTO preco_consulta VALUES (0, '250.00');
+INSERT INTO preco_consulta VALUES (0, '80.00');
 select * from preco_consulta;
+
+INSERT INTO tipo_agendamento VALUES (0,'Particular',1);
+INSERT INTO tipo_agendamento VALUES (0,'Grupo',2);
+SELECT * FROM tipo_agendamento;
+
  
 -- drop procedure InserirHorariosSemana;
 -- drop table escala;
