@@ -220,6 +220,7 @@
             btnDuracao.CustomizableEdges = customizableEdges7;
             btnDuracao.Font = new Font("Segoe UI", 9F);
             btnDuracao.Location = new Point(348, 455);
+            btnDuracao.Maximum = new decimal(new int[] { 240, 0, 0, 0 });
             btnDuracao.Name = "btnDuracao";
             btnDuracao.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnDuracao.Size = new Size(100, 36);
@@ -289,6 +290,7 @@
             dtpDataFinal.Size = new Size(255, 36);
             dtpDataFinal.TabIndex = 46;
             dtpDataFinal.Value = new DateTime(2024, 8, 19, 11, 43, 41, 124);
+            dtpDataFinal.ValueChanged += dtpDataFinal_ValueChanged;
             // 
             // label2
             // 
@@ -318,6 +320,7 @@
             dtpDataInicio.Size = new Size(255, 36);
             dtpDataInicio.TabIndex = 44;
             dtpDataInicio.Value = new DateTime(2024, 8, 19, 11, 43, 41, 124);
+            dtpDataInicio.ValueChanged += dtpDataInicio_ValueChanged;
             // 
             // label1
             // 
