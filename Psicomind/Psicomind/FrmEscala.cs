@@ -73,7 +73,9 @@ namespace Psicomind
                 return;
             }
 
-            Escala escala = new(
+            try
+            {
+               Escala escala = new(
                Profissional.ObterPorId(Convert.ToInt32(cmbProfissionais.SelectedValue)),
                dtpDataInicio.Value,
                dtpDataFinal.Value,
@@ -81,6 +83,13 @@ namespace Psicomind
                Convert.ToDateTime(mskHorarioFinal.Text),
                Convert.ToInt32(btnDuracao.Value)
                 );
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possível registrar a escala", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            
 
 
             try
