@@ -10,6 +10,8 @@ namespace Psicomind
 {
     public partial class frmAgendamento : Form
     {
+
+        private Preco_Consulta Preco_Consulta;
         public frmAgendamento()
         {
             InitializeComponent();
@@ -18,10 +20,16 @@ namespace Psicomind
 
         private void frmAgendamento_Load(object sender, EventArgs e)
         {
+
             var profissional = Profissional.ObterLista();
             cmbProfissionais.DataSource = profissional;
             cmbProfissionais.DisplayMember = "nome";
             cmbProfissionais.ValueMember = "id";
+
+            var tipoAgendamento = TipoAgendamento.ObterLista();
+            cmbTipoAgendamento.DataSource = tipoAgendamento;
+            cmbTipoAgendamento.DisplayMember = "tipo_agendamento";
+            cmbTipoAgendamento.ValueMember = "id";
 
             sfCalendar1.FirstDayOfWeek = System.DayOfWeek.Monday;
 
@@ -32,6 +40,9 @@ namespace Psicomind
         // Método para atualizar as datas no calendário com base no profissional selecionado
         private void AtualizarDatasCalendario()
         {
+
+
+
             if (cmbProfissionais.SelectedValue == null) return;
 
             // Converta o SelectedValue para int de forma segura
@@ -82,6 +93,35 @@ namespace Psicomind
         }
 
         private void cmbHorarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbTipoAgendamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void txtPreco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbTipoAgendamento_SelectedValueChanged(object sender, EventArgs e)
+        {
+            int tipoAgendamento_id = cmbTipoAgendamento.SelectedIndex + 1;
+            Preco_Consulta r = Preco_Consulta.ObterPorId(tipoAgendamento_id);
+
+
+            double preco = r.Preco;
+            string formatodo = "R$ " + r.Preco;
+            txtPreco.Text = Convert.ToString(formatodo);
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
 
         }

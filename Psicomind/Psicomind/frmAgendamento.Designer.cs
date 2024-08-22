@@ -28,15 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            btnEfetuarAgendamento = new Guna.UI2.WinForms.Guna2Button();
+            label8 = new Label();
+            txtPreco = new Guna.UI2.WinForms.Guna2TextBox();
+            label7 = new Label();
+            cmbTipoAgendamento = new Guna.UI2.WinForms.Guna2ComboBox();
+            mtxCpf = new MaskedTextBox();
+            txtClienteCpf = new Guna.UI2.WinForms.Guna2TextBox();
+            label6 = new Label();
             sfCalendar1 = new Syncfusion.WinForms.Input.SfCalendar();
             label4 = new Label();
             label5 = new Label();
@@ -53,6 +72,15 @@
             // 
             guna2ContainerControl1.Anchor = AnchorStyles.None;
             guna2ContainerControl1.BorderRadius = 20;
+            guna2ContainerControl1.Controls.Add(guna2ContainerControl2);
+            guna2ContainerControl1.Controls.Add(btnEfetuarAgendamento);
+            guna2ContainerControl1.Controls.Add(label8);
+            guna2ContainerControl1.Controls.Add(txtPreco);
+            guna2ContainerControl1.Controls.Add(label7);
+            guna2ContainerControl1.Controls.Add(cmbTipoAgendamento);
+            guna2ContainerControl1.Controls.Add(mtxCpf);
+            guna2ContainerControl1.Controls.Add(txtClienteCpf);
+            guna2ContainerControl1.Controls.Add(label6);
             guna2ContainerControl1.Controls.Add(sfCalendar1);
             guna2ContainerControl1.Controls.Add(label4);
             guna2ContainerControl1.Controls.Add(label5);
@@ -62,13 +90,161 @@
             guna2ContainerControl1.Controls.Add(label3);
             guna2ContainerControl1.Controls.Add(cmbHorarios);
             guna2ContainerControl1.Controls.Add(btnConsultarProfissional);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges7;
-            guna2ContainerControl1.Location = new Point(46, 24);
+            guna2ContainerControl1.CustomizableEdges = customizableEdges35;
+            guna2ContainerControl1.Location = new Point(43, 36);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2ContainerControl1.Size = new Size(1124, 604);
+            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2ContainerControl1.Size = new Size(1124, 624);
             guna2ContainerControl1.TabIndex = 1;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
+            // 
+            // guna2ContainerControl2
+            // 
+            guna2ContainerControl2.BorderRadius = 5;
+            guna2ContainerControl2.CustomizableEdges = customizableEdges19;
+            guna2ContainerControl2.FillColor = Color.Gainsboro;
+            guna2ContainerControl2.Location = new Point(551, 125);
+            guna2ContainerControl2.Name = "guna2ContainerControl2";
+            guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2ContainerControl2.Size = new Size(2, 448);
+            guna2ContainerControl2.TabIndex = 57;
+            guna2ContainerControl2.Text = "guna2ContainerControl2";
+            // 
+            // btnEfetuarAgendamento
+            // 
+            btnEfetuarAgendamento.BackColor = Color.Transparent;
+            btnEfetuarAgendamento.BorderRadius = 10;
+            btnEfetuarAgendamento.CustomizableEdges = customizableEdges21;
+            btnEfetuarAgendamento.DisabledState.BorderColor = Color.DarkGray;
+            btnEfetuarAgendamento.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEfetuarAgendamento.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEfetuarAgendamento.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEfetuarAgendamento.Font = new Font("Century Gothic", 8F, FontStyle.Bold);
+            btnEfetuarAgendamento.ForeColor = Color.White;
+            btnEfetuarAgendamento.Location = new Point(841, 436);
+            btnEfetuarAgendamento.Name = "btnEfetuarAgendamento";
+            btnEfetuarAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnEfetuarAgendamento.Size = new Size(144, 39);
+            btnEfetuarAgendamento.TabIndex = 4;
+            btnEfetuarAgendamento.Text = "Efetuar Agendamento";
+            btnEfetuarAgendamento.Click += guna2Button1_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.White;
+            label8.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = SystemColors.Highlight;
+            label8.Location = new Point(614, 411);
+            label8.Name = "label8";
+            label8.Size = new Size(110, 16);
+            label8.TabIndex = 56;
+            label8.Text = "Valor da Consulta";
+            // 
+            // txtPreco
+            // 
+            txtPreco.BackColor = Color.Transparent;
+            txtPreco.BorderRadius = 15;
+            txtPreco.CustomizableEdges = customizableEdges23;
+            txtPreco.DefaultText = "R$";
+            txtPreco.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPreco.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPreco.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPreco.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPreco.Enabled = false;
+            txtPreco.FillColor = Color.WhiteSmoke;
+            txtPreco.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPreco.Font = new Font("Segoe UI", 9F);
+            txtPreco.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPreco.Location = new Point(614, 436);
+            txtPreco.Name = "txtPreco";
+            txtPreco.PasswordChar = '\0';
+            txtPreco.PlaceholderText = "";
+            txtPreco.ReadOnly = true;
+            txtPreco.SelectedText = "";
+            txtPreco.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            txtPreco.Size = new Size(211, 36);
+            txtPreco.TabIndex = 55;
+            txtPreco.TextChanged += txtPreco_TextChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.White;
+            label7.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.Highlight;
+            label7.Location = new Point(614, 315);
+            label7.Name = "label7";
+            label7.Size = new Size(139, 16);
+            label7.TabIndex = 54;
+            label7.Text = "Tipo de Agendamento";
+            // 
+            // cmbTipoAgendamento
+            // 
+            cmbTipoAgendamento.BackColor = Color.Transparent;
+            cmbTipoAgendamento.BorderRadius = 15;
+            cmbTipoAgendamento.CustomizableEdges = customizableEdges25;
+            cmbTipoAgendamento.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbTipoAgendamento.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTipoAgendamento.FillColor = Color.WhiteSmoke;
+            cmbTipoAgendamento.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbTipoAgendamento.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbTipoAgendamento.Font = new Font("Segoe UI", 10F);
+            cmbTipoAgendamento.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbTipoAgendamento.ItemHeight = 30;
+            cmbTipoAgendamento.Location = new Point(611, 339);
+            cmbTipoAgendamento.Name = "cmbTipoAgendamento";
+            cmbTipoAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            cmbTipoAgendamento.Size = new Size(374, 36);
+            cmbTipoAgendamento.TabIndex = 53;
+            cmbTipoAgendamento.SelectedIndexChanged += cmbTipoAgendamento_SelectedIndexChanged;
+            cmbTipoAgendamento.SelectedValueChanged += cmbTipoAgendamento_SelectedValueChanged;
+            // 
+            // mtxCpf
+            // 
+            mtxCpf.BackColor = Color.WhiteSmoke;
+            mtxCpf.BorderStyle = BorderStyle.None;
+            mtxCpf.Location = new Point(628, 248);
+            mtxCpf.Mask = "000.000.000-00";
+            mtxCpf.Name = "mtxCpf";
+            mtxCpf.Size = new Size(100, 16);
+            mtxCpf.TabIndex = 52;
+            // 
+            // txtClienteCpf
+            // 
+            txtClienteCpf.BackColor = Color.Transparent;
+            txtClienteCpf.BorderRadius = 15;
+            txtClienteCpf.CustomizableEdges = customizableEdges27;
+            txtClienteCpf.DefaultText = "";
+            txtClienteCpf.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtClienteCpf.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtClienteCpf.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtClienteCpf.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtClienteCpf.FillColor = Color.WhiteSmoke;
+            txtClienteCpf.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtClienteCpf.Font = new Font("Segoe UI", 9F);
+            txtClienteCpf.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtClienteCpf.Location = new Point(611, 237);
+            txtClienteCpf.Name = "txtClienteCpf";
+            txtClienteCpf.PasswordChar = '\0';
+            txtClienteCpf.PlaceholderText = "";
+            txtClienteCpf.ReadOnly = true;
+            txtClienteCpf.SelectedText = "";
+            txtClienteCpf.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            txtClienteCpf.Size = new Size(211, 36);
+            txtClienteCpf.TabIndex = 51;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.White;
+            label6.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.Highlight;
+            label6.Location = new Point(611, 213);
+            label6.Name = "label6";
+            label6.Size = new Size(73, 16);
+            label6.TabIndex = 50;
+            label6.Text = "Cliente CPF";
             // 
             // sfCalendar1
             // 
@@ -77,10 +253,10 @@
             sfCalendar1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             sfCalendar1.ForeColor = SystemColors.ControlText;
             sfCalendar1.ImeMode = ImeMode.NoControl;
-            sfCalendar1.Location = new Point(142, 217);
+            sfCalendar1.Location = new Point(147, 211);
             sfCalendar1.MinimumSize = new Size(196, 196);
             sfCalendar1.Name = "sfCalendar1";
-            sfCalendar1.Size = new Size(329, 196);
+            sfCalendar1.Size = new Size(336, 196);
             sfCalendar1.Style.BorderColor = Color.Transparent;
             sfCalendar1.Style.Cell.CellFont = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             sfCalendar1.Style.Header.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -94,7 +270,7 @@
             label4.BackColor = Color.White;
             label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.Highlight;
-            label4.Location = new Point(156, 192);
+            label4.Location = new Point(156, 197);
             label4.Name = "label4";
             label4.Size = new Size(107, 16);
             label4.TabIndex = 48;
@@ -106,7 +282,7 @@
             label5.BackColor = Color.White;
             label5.Font = new Font("Century Gothic", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ControlDark;
-            label5.Location = new Point(150, 417);
+            label5.Location = new Point(150, 421);
             label5.Name = "label5";
             label5.Size = new Size(173, 15);
             label5.TabIndex = 46;
@@ -130,7 +306,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(160, 116);
+            label1.Location = new Point(154, 116);
             label1.Name = "label1";
             label1.Size = new Size(71, 16);
             label1.TabIndex = 45;
@@ -140,7 +316,7 @@
             // 
             cmbProfissionais.BackColor = Color.Transparent;
             cmbProfissionais.BorderRadius = 15;
-            cmbProfissionais.CustomizableEdges = customizableEdges1;
+            cmbProfissionais.CustomizableEdges = customizableEdges29;
             cmbProfissionais.DrawMode = DrawMode.OwnerDrawFixed;
             cmbProfissionais.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbProfissionais.FillColor = Color.WhiteSmoke;
@@ -151,7 +327,7 @@
             cmbProfissionais.ItemHeight = 30;
             cmbProfissionais.Location = new Point(150, 140);
             cmbProfissionais.Name = "cmbProfissionais";
-            cmbProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cmbProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges30;
             cmbProfissionais.Size = new Size(333, 36);
             cmbProfissionais.TabIndex = 44;
             cmbProfissionais.SelectedIndexChanged += cmbProfissionais_SelectedIndexChanged_1;
@@ -162,7 +338,7 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(358, 38);
+            label3.Location = new Point(376, 51);
             label3.Name = "label3";
             label3.Size = new Size(364, 32);
             label3.TabIndex = 29;
@@ -172,7 +348,7 @@
             // 
             cmbHorarios.BackColor = Color.Transparent;
             cmbHorarios.BorderRadius = 15;
-            cmbHorarios.CustomizableEdges = customizableEdges3;
+            cmbHorarios.CustomizableEdges = customizableEdges31;
             cmbHorarios.DrawMode = DrawMode.OwnerDrawFixed;
             cmbHorarios.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbHorarios.FillColor = Color.WhiteSmoke;
@@ -183,7 +359,7 @@
             cmbHorarios.ItemHeight = 30;
             cmbHorarios.Location = new Point(142, 526);
             cmbHorarios.Name = "cmbHorarios";
-            cmbHorarios.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cmbHorarios.ShadowDecoration.CustomizableEdges = customizableEdges32;
             cmbHorarios.Size = new Size(251, 36);
             cmbHorarios.TabIndex = 4;
             cmbHorarios.SelectedIndexChanged += cmbHorarios_SelectedIndexChanged;
@@ -192,17 +368,16 @@
             // 
             btnConsultarProfissional.BackColor = Color.Transparent;
             btnConsultarProfissional.BorderRadius = 10;
-            btnConsultarProfissional.CustomizableEdges = customizableEdges5;
+            btnConsultarProfissional.CustomizableEdges = customizableEdges33;
             btnConsultarProfissional.DisabledState.BorderColor = Color.DarkGray;
             btnConsultarProfissional.DisabledState.CustomBorderColor = Color.DarkGray;
             btnConsultarProfissional.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnConsultarProfissional.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnConsultarProfissional.FillColor = SystemColors.MenuHighlight;
-            btnConsultarProfissional.Font = new Font("Segoe UI", 9F);
+            btnConsultarProfissional.Font = new Font("Century Gothic", 8F, FontStyle.Bold);
             btnConsultarProfissional.ForeColor = Color.White;
             btnConsultarProfissional.Location = new Point(358, 451);
             btnConsultarProfissional.Name = "btnConsultarProfissional";
-            btnConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges34;
             btnConsultarProfissional.Size = new Size(120, 30);
             btnConsultarProfissional.TabIndex = 3;
             btnConsultarProfissional.Text = "consultar";
@@ -212,7 +387,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1199, 650);
+            ClientSize = new Size(1199, 699);
             Controls.Add(guna2ContainerControl1);
             Name = "frmAgendamento";
             Text = "frmAgendamento";
@@ -234,5 +409,14 @@
         private ToolTip toolTip1;
         private Syncfusion.WinForms.Input.SfCalendar sfCalendar1;
         private Label label5;
+        private Label label6;
+        private Guna.UI2.WinForms.Guna2TextBox txtClienteCpf;
+        private Label label7;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbTipoAgendamento;
+        private MaskedTextBox mtxCpf;
+        private Guna.UI2.WinForms.Guna2TextBox txtPreco;
+        private Label label8;
+        private Guna.UI2.WinForms.Guna2Button btnEfetuarAgendamento;
+        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
     }
 }
