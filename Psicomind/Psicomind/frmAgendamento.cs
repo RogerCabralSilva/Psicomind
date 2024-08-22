@@ -121,8 +121,18 @@ namespace Psicomind
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnEfetuarAgendamento_Click(object sender, EventArgs e)
         {
+
+
+
+            Agendamento agendamento = new(
+                Profissional.ObterPorId(Convert.ToInt32(cmbProfissionais.SelectedValue)),
+                Program.Usuario.Id,
+                Preco_Consulta.ObterPorId(Convert.ToInt32(txtPreco.Text)),
+                
+                ); 
+            agendamento.Inserir();
 
         }
     }
