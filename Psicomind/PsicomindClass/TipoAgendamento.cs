@@ -54,7 +54,7 @@ namespace PsicomindClass
 
         }
 
-        public List<TipoAgendamento> ObterLista()
+        public static List<TipoAgendamento> ObterLista(string nome = null)
         {
 
             List<TipoAgendamento> tipoAgendamento = new();
@@ -73,7 +73,6 @@ namespace PsicomindClass
                     ));
 
             }
-
 
             return tipoAgendamento;
 
