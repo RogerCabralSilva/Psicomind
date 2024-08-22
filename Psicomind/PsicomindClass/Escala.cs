@@ -197,5 +197,20 @@ namespace PsicomindClass
             cmd.ExecuteReader();
         }
 
+        public static Escala ObterIdDataHorario (string data, string horario, int id) 
+        {
+            Escala codigo = new Escala();
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"select id from escala where dia = '{data}' and horario = '{horario}' and profissional_id = {id}";
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                dr.GetInt32(0);
+            }
+
+            return codigo;
+        }
+
     }
 }

@@ -76,6 +76,11 @@ namespace PsicomindClass
             Ativo = ativo;
         }
 
+        public Usuario(int id)
+        {
+            Id = id;
+        }
+
         public void Inserir ()
         {
             var cmd = Banco.Abrir();
@@ -121,6 +126,25 @@ namespace PsicomindClass
 
             return lista;
         }
+
+        public static Usuario ObterPorId(int id)
+        {
+            Usuario usuario = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"Select * from usuarios where id = {id}";
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                usuario = (new Usuario(
+                    dr.GetInt32(0)
+                    ));
+            }
+
+            return usuario;
+        }
+
 
         public static List<Usuario> ObterListaPsicologo(string nome = null)
         {

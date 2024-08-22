@@ -123,14 +123,21 @@ namespace Psicomind
 
         private void btnEfetuarAgendamento_Click(object sender, EventArgs e)
         {
+            DateTime dataSelecionada = sfCalendar1.SelectedDate.Value;
+            string dataFormatada = dataSelecionada.ToString("yyyy-MM-dd");
 
+
+
+            var codigo = Escala.ObterIdDataHorario(dataFormatada, Convert.ToString(cmbHorarios.SelectedValue), Convert.ToInt32(cmbProfissionais.SelectedValue));
 
 
             Agendamento agendamento = new(
                 Profissional.ObterPorId(Convert.ToInt32(cmbProfissionais.SelectedValue)),
-                Program.Usuario.Id,
+                Usuario.ObterPorId(Program.Usuario.Id),
                 Preco_Consulta.ObterPorId(Convert.ToInt32(txtPreco.Text)),
-                
+                codigo, 
+                TipoAgendamento.ObterPorId(Convert.ToInt32(cmbTipoAgendamento.SelectedValue)),
+                true
                 ); 
             agendamento.Inserir();
 
