@@ -39,13 +39,13 @@
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             sfCalendar1 = new Syncfusion.WinForms.Input.SfCalendar();
             label4 = new Label();
+            label5 = new Label();
             label2 = new Label();
             label1 = new Label();
             cmbProfissionais = new Guna.UI2.WinForms.Guna2ComboBox();
             label3 = new Label();
             cmbHorarios = new Guna.UI2.WinForms.Guna2ComboBox();
             btnConsultarProfissional = new Guna.UI2.WinForms.Guna2Button();
-            label5 = new Label();
             guna2ContainerControl1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,10 +63,10 @@
             guna2ContainerControl1.Controls.Add(cmbHorarios);
             guna2ContainerControl1.Controls.Add(btnConsultarProfissional);
             guna2ContainerControl1.CustomizableEdges = customizableEdges7;
-            guna2ContainerControl1.Location = new Point(46, 41);
+            guna2ContainerControl1.Location = new Point(46, 24);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
             guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2ContainerControl1.Size = new Size(1124, 582);
+            guna2ContainerControl1.Size = new Size(1124, 604);
             guna2ContainerControl1.TabIndex = 1;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
@@ -77,10 +77,10 @@
             sfCalendar1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             sfCalendar1.ForeColor = SystemColors.ControlText;
             sfCalendar1.ImeMode = ImeMode.NoControl;
-            sfCalendar1.Location = new Point(383, 206);
+            sfCalendar1.Location = new Point(142, 217);
             sfCalendar1.MinimumSize = new Size(196, 196);
             sfCalendar1.Name = "sfCalendar1";
-            sfCalendar1.Size = new Size(315, 213);
+            sfCalendar1.Size = new Size(329, 196);
             sfCalendar1.Style.BorderColor = Color.Transparent;
             sfCalendar1.Style.Cell.CellFont = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             sfCalendar1.Style.Header.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -94,11 +94,23 @@
             label4.BackColor = Color.White;
             label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.Highlight;
-            label4.Location = new Point(489, 178);
+            label4.Location = new Point(156, 192);
             label4.Name = "label4";
             label4.Size = new Size(107, 16);
             label4.TabIndex = 48;
             label4.Text = "Selecione a data\r\n";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.White;
+            label5.Font = new Font("Century Gothic", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.ControlDark;
+            label5.Location = new Point(150, 417);
+            label5.Name = "label5";
+            label5.Size = new Size(173, 15);
+            label5.TabIndex = 46;
+            label5.Text = "Dias em azul: Datas disponíveis";
             // 
             // label2
             // 
@@ -106,7 +118,7 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(471, 485);
+            label2.Location = new Point(143, 504);
             label2.Name = "label2";
             label2.Size = new Size(123, 16);
             label2.TabIndex = 46;
@@ -118,7 +130,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(505, 91);
+            label1.Location = new Point(160, 116);
             label1.Name = "label1";
             label1.Size = new Size(71, 16);
             label1.TabIndex = 45;
@@ -137,7 +149,7 @@
             cmbProfissionais.Font = new Font("Segoe UI", 10F);
             cmbProfissionais.ForeColor = Color.FromArgb(68, 88, 112);
             cmbProfissionais.ItemHeight = 30;
-            cmbProfissionais.Location = new Point(374, 114);
+            cmbProfissionais.Location = new Point(150, 140);
             cmbProfissionais.Name = "cmbProfissionais";
             cmbProfissionais.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cmbProfissionais.Size = new Size(333, 36);
@@ -169,11 +181,12 @@
             cmbHorarios.Font = new Font("Segoe UI", 10F);
             cmbHorarios.ForeColor = Color.FromArgb(68, 88, 112);
             cmbHorarios.ItemHeight = 30;
-            cmbHorarios.Location = new Point(407, 511);
+            cmbHorarios.Location = new Point(142, 526);
             cmbHorarios.Name = "cmbHorarios";
             cmbHorarios.ShadowDecoration.CustomizableEdges = customizableEdges4;
             cmbHorarios.Size = new Size(251, 36);
             cmbHorarios.TabIndex = 4;
+            cmbHorarios.SelectedIndexChanged += cmbHorarios_SelectedIndexChanged;
             // 
             // btnConsultarProfissional
             // 
@@ -187,25 +200,13 @@
             btnConsultarProfissional.FillColor = SystemColors.MenuHighlight;
             btnConsultarProfissional.Font = new Font("Segoe UI", 9F);
             btnConsultarProfissional.ForeColor = Color.White;
-            btnConsultarProfissional.Location = new Point(476, 435);
+            btnConsultarProfissional.Location = new Point(358, 451);
             btnConsultarProfissional.Name = "btnConsultarProfissional";
             btnConsultarProfissional.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnConsultarProfissional.Size = new Size(120, 30);
             btnConsultarProfissional.TabIndex = 3;
             btnConsultarProfissional.Text = "consultar";
             btnConsultarProfissional.Click += btnConsultarProfissional_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.White;
-            label5.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = SystemColors.Highlight;
-            label5.Location = new Point(338, 22);
-            label5.Name = "label5";
-            label5.Size = new Size(430, 16);
-            label5.TabIndex = 46;
-            label5.Text = "Os dias marcados em azul são as datas disponiveis para agendamentos.";
             // 
             // frmAgendamento
             // 

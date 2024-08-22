@@ -80,5 +80,10 @@ namespace Psicomind
             // Atualiza as datas do calendário quando o profissional selecionado mudar
             AtualizarDatasCalendario();
         }
+
+        private void cmbHorarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
