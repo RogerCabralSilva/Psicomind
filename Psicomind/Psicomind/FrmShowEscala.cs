@@ -41,30 +41,38 @@ namespace Psicomind
 
         private void CarregaEscala()
         {
-
             var escalas = Escala.ObterListaProfissional(profissionalId);
             int count = 0;
 
-
+            // Limpa as linhas existentes no DataGridView
             dgvEscala.Rows.Clear();
+
+            // Adiciona as linhas de escala ao DataGridView
             foreach (var escala in escalas)
             {
                 int rowIndex = dgvEscala.Rows.Add();
                 dgvEscala.Rows[count].Cells[0].Value = escala.Dia.Date.ToString("dd/MM/yyyy");
                 dgvEscala.Rows[count].Cells[1].Value = escala.Horario;
-
-
                 count++;
-
             }
-            DataGridViewButtonColumn button = new DataGridViewButtonColumn();
 
-            button.Width = 100;
-            button.Text = "deletar";
+            // Verifica se a coluna de botões já existe, para não adicionar duplicadamente
+            if (dgvEscala.Columns["btnDeletar"] == null)
+            {
+                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                button.Name = "btnDeletar";
+                button.HeaderText = "Ação";
+                button.Text = "Deletar";
+                button.UseColumnTextForButtonValue = true; // Exibe o texto do botão
 
+                button.Width = 100;
+                dgvEscala.Columns.Add(button); // Adiciona a coluna de botão ao DataGridView
+            }
         }
 
-        private void dgvEscala_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+
+    private void dgvEscala_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) // Verifica se a linha clicada é válida
             {

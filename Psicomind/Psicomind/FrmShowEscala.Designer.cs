@@ -32,9 +32,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmShowEscala));
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             lblProfissional = new Label();
             dgvEscala = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -99,29 +100,29 @@
             dgvEscala.ColumnHeadersHeight = 34;
             dgvEscala.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvEscala.Columns.AddRange(new DataGridViewColumn[] { clnData, clnHorario, clnExcluir });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvEscala.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvEscala.DefaultCellStyle = dataGridViewCellStyle4;
             dgvEscala.GridColor = Color.FromArgb(231, 229, 255);
             dgvEscala.Location = new Point(139, 215);
             dgvEscala.Name = "dgvEscala";
             dgvEscala.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvEscala.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvEscala.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvEscala.RowHeadersVisible = false;
             dgvEscala.RowTemplate.Height = 29;
-            dgvEscala.Size = new Size(489, 346);
+            dgvEscala.Size = new Size(498, 346);
             dgvEscala.TabIndex = 44;
             dgvEscala.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvEscala.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);
@@ -202,10 +203,17 @@
             // clnExcluir
             // 
             clnExcluir.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            clnExcluir.DefaultCellStyle = dataGridViewCellStyle3;
             clnExcluir.Frozen = true;
-            clnExcluir.HeaderText = "Excluír";
+            clnExcluir.HeaderText = "";
             clnExcluir.Name = "clnExcluir";
             clnExcluir.Text = "Excluir";
+            clnExcluir.ToolTipText = "sla";
+            clnExcluir.UseColumnTextForButtonValue = true;
             // 
             // FrmShowEscala
             // 
