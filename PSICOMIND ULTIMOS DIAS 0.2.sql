@@ -325,12 +325,14 @@ DELIMITER $$
 CREATE PROCEDURE sp_agendamentos_insert(
     spprofissional_id INT,
     spusuarios_id INT,
-    spstatus_agendamento CHAR(1),
-    spdata_agendamento DATETIME
+    sppreco_id INT,
+    spescala_id INT,
+    sptipo_agendamento_id INT,
+    spstatus_agendamento CHAR(1)
 )
 BEGIN
     INSERT INTO agendamentos
-    VALUES (0, spprofissional_id, spusuarios_id, spdata_agendamento, spstatus_agendamento);
+    VALUES (0, spprofissional_id, spusuarios_id, sppreco_id, spescala_id, sptipo_agendamento_id, spstatus_agendamento);
     
     SELECT LAST_INSERT_ID() AS id;
 END $$
@@ -719,7 +721,7 @@ select * from cargos;
 
 INSERT INTO tipo_agendamento VALUES (0,'Particular');
 INSERT INTO tipo_agendamento VALUES (0,'Grupo');
-select * from tipo_agendamento;
+SELECT * FROM preco_consulta WHERE id =1;
 
 INSERT INTO preco_consulta VALUES (0, '250.00', 1);
 INSERT INTO preco_consulta VALUES (0, '80.00', 2);
