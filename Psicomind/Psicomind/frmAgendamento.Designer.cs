@@ -220,6 +220,7 @@
             txtClienteCpf.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtClienteCpf.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtClienteCpf.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtClienteCpf.Enabled = false;
             txtClienteCpf.FillColor = Color.WhiteSmoke;
             txtClienteCpf.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtClienteCpf.Font = new Font("Segoe UI", 9F);

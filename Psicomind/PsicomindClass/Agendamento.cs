@@ -13,8 +13,8 @@ namespace PsicomindClass
         public int Id { get; set; }
         public Profissional Profissional { get; set; }
         public Usuario Usuario { get; set; }
+        public Escala Escala { get; set; }
         public Cliente Cliente { get; set; }
-        public Escala Escala {  get; set; }
         public TipoAgendamento Tipo_agendamento_id { get; set; }
         public bool Status_agendamento { get; set; }
         
@@ -26,23 +26,23 @@ namespace PsicomindClass
 
         }
 
-        public Agendamento(int id, Profissional profissional, Usuario usuario, Cliente cliente, Escala escala, TipoAgendamento tipo_agendamento_id, bool status_agendamento)
+        public Agendamento(int id, Profissional profissional, Usuario usuario, Escala escala, Cliente cliente, TipoAgendamento tipo_agendamento_id, bool status_agendamento)
         {
             Id = id;
             Profissional = profissional;
             Usuario = usuario;
-            Cliente = cliente;
             Escala = escala;
+            Cliente = cliente;
             Tipo_agendamento_id = tipo_agendamento_id;
             Status_agendamento = status_agendamento;
         }
 
-        public Agendamento(Profissional profissional, Usuario usuario, Cliente cliente, Escala escala, TipoAgendamento tipo_agendamento_id, bool status_agendamento)
+        public Agendamento(Profissional profissional, Usuario usuario, Escala escala, Cliente cliente, TipoAgendamento tipo_agendamento_id, bool status_agendamento)
         {
             Profissional = profissional;
             Usuario = usuario;
-            Cliente = cliente;
             Escala = escala;
+            Cliente = cliente;
             Tipo_agendamento_id = tipo_agendamento_id;
             Status_agendamento = status_agendamento;
         }
