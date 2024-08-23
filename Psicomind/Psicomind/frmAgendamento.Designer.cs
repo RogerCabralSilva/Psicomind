@@ -165,7 +165,6 @@
             txtPreco.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtPreco.Size = new Size(211, 36);
             txtPreco.TabIndex = 55;
-            txtPreco.TextChanged += txtPreco_TextChanged;
             // 
             // label7
             // 
@@ -197,7 +196,6 @@
             cmbTipoAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cmbTipoAgendamento.Size = new Size(374, 36);
             cmbTipoAgendamento.TabIndex = 53;
-            cmbTipoAgendamento.SelectedIndexChanged += cmbTipoAgendamento_SelectedIndexChanged;
             cmbTipoAgendamento.SelectedValueChanged += cmbTipoAgendamento_SelectedValueChanged;
             // 
             // mtxCpf
@@ -238,7 +236,7 @@
             sfCalendar1.Style.Header.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             sfCalendar1.TabIndex = 49;
             sfCalendar1.Text = "sfCalendar1";
-            sfCalendar1.Click += sfCalendar1_Click;
+
             // 
             // label4
             // 
@@ -338,7 +336,6 @@
             cmbHorarios.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cmbHorarios.Size = new Size(251, 36);
             cmbHorarios.TabIndex = 4;
-            cmbHorarios.SelectedIndexChanged += cmbHorarios_SelectedIndexChanged;
             // 
             // btnConsultarProfissional
             // 

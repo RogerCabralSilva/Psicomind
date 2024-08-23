@@ -14,8 +14,7 @@ namespace Psicomind
         private Preco_Consulta Preco_Consulta;
         public frmAgendamento()
         {
-            InitializeComponent();
-            toolTip1 = new ToolTip();
+
         }
 
         private void frmAgendamento_Load(object sender, EventArgs e)
@@ -69,7 +68,6 @@ namespace Psicomind
             }
         }
 
-
         private void btnConsultarProfissional_Click(object sender, EventArgs e)
         {
             DateTime dataSelecionada = sfCalendar1.SelectedDate.Value;
@@ -81,32 +79,10 @@ namespace Psicomind
             cmbHorarios.ValueMember = "id";
         }
 
-        private void sfCalendar1_Click(object sender, EventArgs e)
-        {
-            // Lógica adicional se necessário
-        }
-
         private void cmbProfissionais_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             // Atualiza as datas do calendário quando o profissional selecionado mudar
             AtualizarDatasCalendario();
-        }
-
-        private void cmbHorarios_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbTipoAgendamento_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-        private void txtPreco_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void cmbTipoAgendamento_SelectedValueChanged(object sender, EventArgs e)
@@ -116,29 +92,49 @@ namespace Psicomind
 
 
             double preco = r.Preco;
-            string formatodo = "R$ " + r.Preco;
+            string formatodo = "R$ " + r.Preco + ",00";
             txtPreco.Text = Convert.ToString(formatodo);
 
         }
 
         private void btnEfetuarAgendamento_Click(object sender, EventArgs e)
         {
-            DateTime dataSelecionada = sfCalendar1.SelectedDate.Value;
-            string dataFormatada = dataSelecionada.ToString("yyyy-MM-dd");
-            var codigo = Escala.ObterIdDataHorario(dataFormatada, Convert.ToString(cmbHorarios.Text), Convert.ToInt32(cmbProfissionais.SelectedValue));
-            int tipoAgendamento_id = cmbTipoAgendamento.SelectedIndex + 1;
-            mtxCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            try 
+            {
 
-            Agendamento agendamento = new(
-                Profissional.ObterPorId(Convert.ToInt32(cmbProfissionais.SelectedValue)),
-                Usuario.ObterPorId(Program.Usuario.Id),
-                codigo,
-                Cliente.ObterPorCpf(mtxCpf.Text),
-                TipoAgendamento.ObterPorId(Convert.ToInt32(cmbTipoAgendamento.SelectedValue)),
-                true
-                );
-            agendamento.Inserir();
-            Escala.DarBaixa(dataFormatada, Convert.ToString(cmbHorarios.Text), Convert.ToInt32(cmbProfissionais.SelectedValue));
+                DateTime dataSelecionada = sfCalendar1.SelectedDate.Value;
+                string dataFormatada = dataSelecionada.ToString("yyyy-MM-dd");
+                var codigo = Escala.ObterIdDataHorario(dataFormatada, Convert.ToString(cmbHorarios.Text), Convert.ToInt32(cmbProfissionais.SelectedValue));
+                int tipoAgendamento_id = cmbTipoAgendamento.SelectedIndex + 1;
+                mtxCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
+                Agendamento agendamento = new(
+                    Profissional.ObterPorId(Convert.ToInt32(cmbProfissionais.SelectedValue)),
+                    Usuario.ObterPorId(Program.Usuario.Id),
+                    codigo,
+                    Cliente.ObterPorCpf(mtxCpf.Text),
+                    TipoAgendamento.ObterPorId(Convert.ToInt32(cmbTipoAgendamento.SelectedValue)),
+                    true
+                    );
+                agendamento.Inserir();
+                Escala.DarBaixa(dataFormatada, Convert.ToString(cmbHorarios.Text), Convert.ToInt32(cmbProfissionais.SelectedValue));
+
+                Consulta consulta = new(agendamento.Id, "1", "Agendada");
+                consulta.Inserir();
+
+            }
+            catch
+            {
+                MessageBox.Show($"Erro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // limpa Campos 
+            cmbProfissionais.SelectedIndex = -1;
+            cmbHorarios.SelectedIndex = -1;
+            cmbTipoAgendamento.SelectedIndex = -1;
+            txtPreco.Clear();
+            mtxCpf.Clear();
+
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

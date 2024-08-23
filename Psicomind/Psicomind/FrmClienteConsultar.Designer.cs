@@ -244,6 +244,8 @@
             // 
             // dgvClientesDados
             // 
+            dgvClientesDados.AllowUserToAddRows = false;
+            dgvClientesDados.AllowUserToDeleteRows = false;
             dgvClientesDados.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -461,6 +463,8 @@
             // 
             // dgvClienteTelefone
             // 
+            dgvClienteTelefone.AllowUserToAddRows = false;
+            dgvClienteTelefone.AllowUserToDeleteRows = false;
             dgvClienteTelefone.AllowUserToResizeRows = false;
             dataGridViewCellStyle5.BackColor = Color.White;
             dataGridViewCellStyle5.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -647,6 +651,8 @@
             // 
             // dgvClienteEndereco
             // 
+            dgvClienteEndereco.AllowUserToAddRows = false;
+            dgvClienteEndereco.AllowUserToDeleteRows = false;
             dgvClienteEndereco.AllowUserToResizeRows = false;
             dataGridViewCellStyle9.BackColor = Color.White;
             dataGridViewCellStyle9.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);

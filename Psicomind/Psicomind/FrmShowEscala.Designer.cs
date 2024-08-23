@@ -34,17 +34,17 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmShowEscala));
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmShowEscala));
             guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             lblProfissional = new Label();
             dgvEscala = new Guna.UI2.WinForms.Guna2DataGridView();
-            label1 = new Label();
-            btnVoltar = new PictureBox();
-            label3 = new Label();
             clnData = new DataGridViewTextBoxColumn();
             clnHorario = new DataGridViewTextBoxColumn();
             clnExcluir = new DataGridViewButtonColumn();
+            label1 = new Label();
+            btnVoltar = new PictureBox();
+            label3 = new Label();
             guna2ContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEscala).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
@@ -82,6 +82,7 @@
             // 
             // dgvEscala
             // 
+            dgvEscala.AllowUserToAddRows = false;
             dgvEscala.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
@@ -111,6 +112,7 @@
             dgvEscala.GridColor = Color.FromArgb(231, 229, 255);
             dgvEscala.Location = new Point(139, 215);
             dgvEscala.Name = "dgvEscala";
+            dgvEscala.ReadOnly = true;
             dgvEscala.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = Color.White;
@@ -137,7 +139,7 @@
             dgvEscala.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvEscala.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvEscala.ThemeStyle.HeaderStyle.Height = 34;
-            dgvEscala.ThemeStyle.ReadOnly = false;
+            dgvEscala.ThemeStyle.ReadOnly = true;
             dgvEscala.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvEscala.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvEscala.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
@@ -146,6 +148,40 @@
             dgvEscala.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvEscala.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvEscala.CellContentClick += dgvEscala_CellContentClick;
+            // 
+            // clnData
+            // 
+            clnData.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            clnData.Frozen = true;
+            clnData.HeaderText = "Data";
+            clnData.Name = "clnData";
+            clnData.ReadOnly = true;
+            clnData.Width = 195;
+            // 
+            // clnHorario
+            // 
+            clnHorario.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            clnHorario.Frozen = true;
+            clnHorario.HeaderText = "Horário";
+            clnHorario.Name = "clnHorario";
+            clnHorario.ReadOnly = true;
+            clnHorario.Width = 194;
+            // 
+            // clnExcluir
+            // 
+            clnExcluir.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            clnExcluir.DefaultCellStyle = dataGridViewCellStyle3;
+            clnExcluir.Frozen = true;
+            clnExcluir.HeaderText = "";
+            clnExcluir.Name = "clnExcluir";
+            clnExcluir.ReadOnly = true;
+            clnExcluir.Text = "Excluir";
+            clnExcluir.ToolTipText = "sla";
+            clnExcluir.UseColumnTextForButtonValue = true;
             // 
             // label1
             // 
@@ -183,37 +219,6 @@
             label3.Size = new Size(152, 22);
             label3.TabIndex = 28;
             label3.Text = "Escala Inserida";
-            // 
-            // clnData
-            // 
-            clnData.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            clnData.Frozen = true;
-            clnData.HeaderText = "Data";
-            clnData.Name = "clnData";
-            clnData.Width = 195;
-            // 
-            // clnHorario
-            // 
-            clnHorario.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            clnHorario.Frozen = true;
-            clnHorario.HeaderText = "Horário";
-            clnHorario.Name = "clnHorario";
-            clnHorario.Width = 194;
-            // 
-            // clnExcluir
-            // 
-            clnExcluir.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            clnExcluir.DefaultCellStyle = dataGridViewCellStyle3;
-            clnExcluir.Frozen = true;
-            clnExcluir.HeaderText = "";
-            clnExcluir.Name = "clnExcluir";
-            clnExcluir.Text = "Excluir";
-            clnExcluir.ToolTipText = "sla";
-            clnExcluir.UseColumnTextForButtonValue = true;
             // 
             // FrmShowEscala
             // 
