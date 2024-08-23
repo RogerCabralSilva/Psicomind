@@ -129,18 +129,23 @@ namespace Psicomind
             var codigo = Escala.ObterIdDataHorario(dataFormatada, Convert.ToString(cmbHorarios.Text), Convert.ToInt32(cmbProfissionais.SelectedValue));
 
             int tipoAgendamento_id = cmbTipoAgendamento.SelectedIndex + 1;
-            
-            
+
+
             Agendamento agendamento = new(
                 Profissional.ObterPorId(Convert.ToInt32(cmbProfissionais.SelectedValue)),
                 Usuario.ObterPorId(Program.Usuario.Id),
                 Preco_Consulta.ObterPorId(Convert.ToInt32(tipoAgendamento_id)),
-                codigo, 
+                codigo,
                 TipoAgendamento.ObterPorId(Convert.ToInt32(cmbTipoAgendamento.SelectedValue)),
                 true
-                ); 
+                );
             agendamento.Inserir();
             Escala.DarBaixa(dataFormatada, Convert.ToString(cmbHorarios.Text), Convert.ToInt32(cmbProfissionais.SelectedValue));
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
