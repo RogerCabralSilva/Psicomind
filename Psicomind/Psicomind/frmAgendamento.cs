@@ -136,9 +136,14 @@ namespace Psicomind
                 Cliente.ObterPorCpf(mtxCpf.Text),
                 TipoAgendamento.ObterPorId(Convert.ToInt32(cmbTipoAgendamento.SelectedValue)),
                 true
-                ); 
+                );
             agendamento.Inserir();
             Escala.DarBaixa(dataFormatada, Convert.ToString(cmbHorarios.Text), Convert.ToInt32(cmbProfissionais.SelectedValue));
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

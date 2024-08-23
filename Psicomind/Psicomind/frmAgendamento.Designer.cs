@@ -46,6 +46,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgendamento));
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             btnEfetuarAgendamento = new Guna.UI2.WinForms.Guna2Button();
@@ -65,13 +66,16 @@
             label3 = new Label();
             cmbHorarios = new Guna.UI2.WinForms.Guna2ComboBox();
             btnConsultarProfissional = new Guna.UI2.WinForms.Guna2Button();
+            btnVoltar = new PictureBox();
             guna2ContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
             SuspendLayout();
             // 
             // guna2ContainerControl1
             // 
             guna2ContainerControl1.Anchor = AnchorStyles.None;
             guna2ContainerControl1.BorderRadius = 20;
+            guna2ContainerControl1.Controls.Add(btnVoltar);
             guna2ContainerControl1.Controls.Add(guna2ContainerControl2);
             guna2ContainerControl1.Controls.Add(btnEfetuarAgendamento);
             guna2ContainerControl1.Controls.Add(label8);
@@ -384,6 +388,19 @@
             btnConsultarProfissional.Text = "consultar";
             btnConsultarProfissional.Click += btnConsultarProfissional_Click;
             // 
+            // btnVoltar
+            // 
+            btnVoltar.BackColor = Color.White;
+            btnVoltar.Cursor = Cursors.Hand;
+            btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
+            btnVoltar.Location = new Point(46, 53);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(50, 30);
+            btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnVoltar.TabIndex = 42;
+            btnVoltar.TabStop = false;
+            btnVoltar.Click += btnVoltar_Click;
+            // 
             // frmAgendamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -395,6 +412,7 @@
             Load += frmAgendamento_Load;
             guna2ContainerControl1.ResumeLayout(false);
             guna2ContainerControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnVoltar).EndInit();
             ResumeLayout(false);
         }
 
@@ -419,5 +437,6 @@
         private Label label8;
         private Guna.UI2.WinForms.Guna2Button btnEfetuarAgendamento;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
+        private PictureBox btnVoltar;
     }
 }
