@@ -126,7 +126,7 @@ namespace Psicomind
             DateTime dataSelecionada = sfCalendar1.SelectedDate.Value;
             string dataFormatada = dataSelecionada.ToString("yyyy-MM-dd");
 
-            var codigo = Escala.ObterIdDataHorario(dataFormatada, Convert.ToString(cmbHorarios.SelectedValue), Convert.ToInt32(cmbProfissionais.SelectedValue));
+            var codigo = Escala.ObterIdDataHorario(dataFormatada, Convert.ToString(cmbHorarios.Text), Convert.ToInt32(cmbProfissionais.SelectedValue));
 
             int tipoAgendamento_id = cmbTipoAgendamento.SelectedIndex + 1;
             
@@ -140,7 +140,7 @@ namespace Psicomind
                 true
                 ); 
             agendamento.Inserir();
-
+            Escala.DarBaixa(dataFormatada, Convert.ToString(cmbHorarios.Text), Convert.ToInt32(cmbProfissionais.SelectedValue));
         }
     }
 }

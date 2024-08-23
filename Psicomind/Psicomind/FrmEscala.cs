@@ -157,5 +157,10 @@ namespace Psicomind
         {
 
         }
+
+        private void mskHorarioInicio_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

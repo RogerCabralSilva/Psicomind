@@ -197,6 +197,14 @@ namespace PsicomindClass
             cmd.ExecuteReader();
         }
 
+        public static void DarBaixa(string data, string horario, int id)
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"UPDATE escala SET disponivel = 0 WHERE dia = '{data}' and horario = '{horario}' and profissional_id = {id} ";
+            cmd.ExecuteReader();
+        }
+
         public static Escala ObterIdDataHorario (string data, string horario, int id) 
         {
             Escala codigo = new Escala();
@@ -206,7 +214,7 @@ namespace PsicomindClass
 
             while (dr.Read())
             {
-                dr.GetInt32(0);
+               codigo.Id = dr.GetInt32(0);
             }
 
             return codigo;

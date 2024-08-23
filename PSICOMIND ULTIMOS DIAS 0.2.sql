@@ -719,7 +719,11 @@ SELECT * FROM usuarios;
 select * from cargos;
 select * from agendamentos;
 
-select id from escala where dia = '2024-08-27' and horario = '12:00' and profissional_id = 2;
+-- select id from escala where dia = '2024-08-27' and horario = '18:00' and profissional_id = 1;
+
+-- UPDATE escala SET disponivel = 0 WHERE dia = '2024-08-27' and horario = '18:00' and profissional_id = 1;
+
+-- SELECT horario FROM escala where disponivel = 1 and dia = '2024-08-26' and profissional_id = 1;
 
 INSERT INTO preco_consulta VALUES (0, '250.00');
 INSERT INTO preco_consulta VALUES (0, '80.00');

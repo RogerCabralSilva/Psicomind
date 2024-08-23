@@ -185,6 +185,7 @@
             mskHorarioInicio.Size = new Size(100, 16);
             mskHorarioInicio.TabIndex = 56;
             mskHorarioInicio.ValidatingType = typeof(DateTime);
+            mskHorarioInicio.MaskInputRejected += mskHorarioInicio_MaskInputRejected;
             // 
             // guna2ContainerControl1
             // 
