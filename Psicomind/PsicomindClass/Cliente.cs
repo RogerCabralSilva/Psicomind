@@ -139,6 +139,16 @@ namespace PsicomindClass
             Telefone = telefone;
         }
 
+        public Cliente(string? cpf)
+        {
+            Cpf = cpf;
+        }
+
+        public Cliente(int id)
+        {
+            Id = id;
+        }
+
         /// <summary>
         /// Inserir cliente no banco de dados.
         /// <para>Parâmetros:</para>
@@ -240,6 +250,24 @@ namespace PsicomindClass
                     Endereco.ObterPorId(dr.GetInt32(9)),
                     TelefoneCliente.ObterPorId(dr.GetInt32(10))
                     ));
+            }
+
+            return cliente;
+        }
+
+        public static Cliente ObterPorCpf(string cpf)
+        {
+            Cliente cliente = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"SELECT id FROM clientes WHERE cpf = '{cpf}'";
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                cliente = (new Cliente(
+                     cliente.Id = dr.GetInt32(0)
+                    )) ; 
             }
 
             return cliente;
