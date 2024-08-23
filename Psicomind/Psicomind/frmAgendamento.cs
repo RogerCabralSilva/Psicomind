@@ -14,7 +14,7 @@ namespace Psicomind
         private Preco_Consulta Preco_Consulta;
         public frmAgendamento()
         {
-
+            InitializeComponent();
         }
 
         private void frmAgendamento_Load(object sender, EventArgs e)
