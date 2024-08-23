@@ -55,6 +55,11 @@ namespace Psicomind
             this.Close();
         }
 
-    
+        private void btnPagConsultarUsuario_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
     }
 }
