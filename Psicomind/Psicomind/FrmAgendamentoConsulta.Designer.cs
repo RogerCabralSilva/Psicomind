@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -40,6 +40,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgendamentoConsulta));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
@@ -48,11 +52,13 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            cmbTipoAgendamento = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             mskHorarioConsulta = new MaskedTextBox();
             dtpDataConsulta = new Guna.UI2.WinForms.Guna2DateTimePicker();
             txtEmailConsulta = new Guna.UI2.WinForms.Guna2TextBox();
             label3 = new Label();
+            btnListaTudo = new Guna.UI2.WinForms.Guna2Button();
             btnConsultarConsulta = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             txtNomeConsulta = new Guna.UI2.WinForms.Guna2TextBox();
@@ -77,22 +83,44 @@
             // guna2ContainerControl1
             // 
             guna2ContainerControl1.BorderRadius = 15;
+            guna2ContainerControl1.Controls.Add(cmbTipoAgendamento);
             guna2ContainerControl1.Controls.Add(guna2ContainerControl3);
             guna2ContainerControl1.Controls.Add(dtpDataConsulta);
             guna2ContainerControl1.Controls.Add(txtEmailConsulta);
             guna2ContainerControl1.Controls.Add(label3);
+            guna2ContainerControl1.Controls.Add(btnListaTudo);
             guna2ContainerControl1.Controls.Add(btnConsultarConsulta);
             guna2ContainerControl1.Controls.Add(label1);
             guna2ContainerControl1.Controls.Add(txtNomeConsulta);
             guna2ContainerControl1.Controls.Add(btnVoltar);
             guna2ContainerControl1.Controls.Add(dgvClientesDados);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges11;
+            guna2ContainerControl1.CustomizableEdges = customizableEdges15;
             guna2ContainerControl1.Location = new Point(29, 36);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2ContainerControl1.Size = new Size(1303, 737);
             guna2ContainerControl1.TabIndex = 1;
             guna2ContainerControl1.Text = "guna2ContainerControl1";
+            // 
+            // cmbTipoAgendamento
+            // 
+            cmbTipoAgendamento.BackColor = Color.Transparent;
+            cmbTipoAgendamento.BorderRadius = 10;
+            cmbTipoAgendamento.CustomizableEdges = customizableEdges1;
+            cmbTipoAgendamento.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbTipoAgendamento.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTipoAgendamento.FillColor = Color.FromArgb(224, 224, 224);
+            cmbTipoAgendamento.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbTipoAgendamento.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbTipoAgendamento.Font = new Font("Segoe UI", 10F);
+            cmbTipoAgendamento.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbTipoAgendamento.ItemHeight = 30;
+            cmbTipoAgendamento.Items.AddRange(new object[] { "Concluída", "Cancelada", "Agendada" });
+            cmbTipoAgendamento.Location = new Point(971, 157);
+            cmbTipoAgendamento.Name = "cmbTipoAgendamento";
+            cmbTipoAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cmbTipoAgendamento.Size = new Size(127, 36);
+            cmbTipoAgendamento.TabIndex = 62;
             // 
             // guna2ContainerControl3
             // 
@@ -102,12 +130,12 @@
             guna2ContainerControl3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             guna2ContainerControl3.BorderThickness = 1;
             guna2ContainerControl3.Controls.Add(mskHorarioConsulta);
-            guna2ContainerControl3.CustomizableEdges = customizableEdges1;
+            guna2ContainerControl3.CustomizableEdges = customizableEdges3;
             guna2ContainerControl3.FillColor = Color.FromArgb(224, 224, 224);
             guna2ContainerControl3.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2ContainerControl3.Location = new Point(850, 159);
+            guna2ContainerControl3.Location = new Point(781, 160);
             guna2ContainerControl3.Name = "guna2ContainerControl3";
-            guna2ContainerControl3.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2ContainerControl3.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2ContainerControl3.Size = new Size(157, 30);
             guna2ContainerControl3.TabIndex = 61;
             guna2ContainerControl3.Text = "guna2ContainerControl3";
@@ -128,15 +156,15 @@
             dtpDataConsulta.BackColor = Color.Transparent;
             dtpDataConsulta.BorderRadius = 10;
             dtpDataConsulta.Checked = true;
-            dtpDataConsulta.CustomizableEdges = customizableEdges3;
+            dtpDataConsulta.CustomizableEdges = customizableEdges5;
             dtpDataConsulta.FillColor = Color.White;
             dtpDataConsulta.Font = new Font("Segoe UI", 9F);
             dtpDataConsulta.Format = DateTimePickerFormat.Short;
-            dtpDataConsulta.Location = new Point(636, 159);
+            dtpDataConsulta.Location = new Point(567, 160);
             dtpDataConsulta.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpDataConsulta.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpDataConsulta.Name = "dtpDataConsulta";
-            dtpDataConsulta.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            dtpDataConsulta.ShadowDecoration.CustomizableEdges = customizableEdges6;
             dtpDataConsulta.Size = new Size(187, 30);
             dtpDataConsulta.TabIndex = 60;
             dtpDataConsulta.Value = new DateTime(2024, 8, 19, 11, 43, 41, 124);
@@ -146,7 +174,7 @@
             txtEmailConsulta.BackColor = SystemColors.ButtonHighlight;
             txtEmailConsulta.BorderColor = Color.White;
             txtEmailConsulta.BorderRadius = 10;
-            txtEmailConsulta.CustomizableEdges = customizableEdges5;
+            txtEmailConsulta.CustomizableEdges = customizableEdges7;
             txtEmailConsulta.DefaultText = "";
             txtEmailConsulta.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtEmailConsulta.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -159,13 +187,13 @@
             txtEmailConsulta.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmailConsulta.IconLeftSize = new Size(15, 15);
             txtEmailConsulta.IconRightSize = new Size(15, 15);
-            txtEmailConsulta.Location = new Point(353, 159);
+            txtEmailConsulta.Location = new Point(284, 160);
             txtEmailConsulta.Name = "txtEmailConsulta";
             txtEmailConsulta.PasswordChar = '\0';
             txtEmailConsulta.PlaceholderForeColor = Color.Silver;
             txtEmailConsulta.PlaceholderText = "Email";
             txtEmailConsulta.SelectedText = "";
-            txtEmailConsulta.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtEmailConsulta.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtEmailConsulta.Size = new Size(260, 29);
             txtEmailConsulta.TabIndex = 58;
             // 
@@ -181,20 +209,39 @@
             label3.TabIndex = 57;
             label3.Text = "Agendamento Consulta";
             // 
+            // btnListaTudo
+            // 
+            btnListaTudo.BackColor = Color.White;
+            btnListaTudo.BorderRadius = 10;
+            btnListaTudo.CustomizableEdges = customizableEdges9;
+            btnListaTudo.DisabledState.BorderColor = Color.DarkGray;
+            btnListaTudo.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnListaTudo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnListaTudo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnListaTudo.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnListaTudo.ForeColor = Color.White;
+            btnListaTudo.Location = new Point(1144, 668);
+            btnListaTudo.Name = "btnListaTudo";
+            btnListaTudo.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnListaTudo.Size = new Size(122, 29);
+            btnListaTudo.TabIndex = 56;
+            btnListaTudo.Text = "Listar Tudo";
+            btnListaTudo.Click += btnListarTudo;
+            // 
             // btnConsultarConsulta
             // 
             btnConsultarConsulta.BackColor = Color.White;
             btnConsultarConsulta.BorderRadius = 10;
-            btnConsultarConsulta.CustomizableEdges = customizableEdges7;
+            btnConsultarConsulta.CustomizableEdges = customizableEdges11;
             btnConsultarConsulta.DisabledState.BorderColor = Color.DarkGray;
             btnConsultarConsulta.DisabledState.CustomBorderColor = Color.DarkGray;
             btnConsultarConsulta.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnConsultarConsulta.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnConsultarConsulta.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConsultarConsulta.ForeColor = Color.White;
-            btnConsultarConsulta.Location = new Point(1040, 160);
+            btnConsultarConsulta.Location = new Point(1134, 160);
             btnConsultarConsulta.Name = "btnConsultarConsulta";
-            btnConsultarConsulta.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnConsultarConsulta.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnConsultarConsulta.Size = new Size(122, 29);
             btnConsultarConsulta.TabIndex = 56;
             btnConsultarConsulta.Text = "Consultar";
@@ -206,7 +253,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(107, 136);
+            label1.Location = new Point(38, 137);
             label1.Name = "label1";
             label1.Size = new Size(193, 16);
             label1.TabIndex = 51;
@@ -217,7 +264,7 @@
             txtNomeConsulta.BackColor = SystemColors.ButtonHighlight;
             txtNomeConsulta.BorderColor = Color.White;
             txtNomeConsulta.BorderRadius = 10;
-            txtNomeConsulta.CustomizableEdges = customizableEdges9;
+            txtNomeConsulta.CustomizableEdges = customizableEdges13;
             txtNomeConsulta.DefaultText = "";
             txtNomeConsulta.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtNomeConsulta.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -230,13 +277,13 @@
             txtNomeConsulta.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNomeConsulta.IconLeftSize = new Size(15, 15);
             txtNomeConsulta.IconRightSize = new Size(15, 15);
-            txtNomeConsulta.Location = new Point(106, 159);
+            txtNomeConsulta.Location = new Point(37, 160);
             txtNomeConsulta.Name = "txtNomeConsulta";
             txtNomeConsulta.PasswordChar = '\0';
             txtNomeConsulta.PlaceholderForeColor = Color.Silver;
             txtNomeConsulta.PlaceholderText = "Nome";
             txtNomeConsulta.SelectedText = "";
-            txtNomeConsulta.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtNomeConsulta.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtNomeConsulta.Size = new Size(230, 29);
             txtNomeConsulta.TabIndex = 50;
             // 
@@ -427,7 +474,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvClientesDados;
         private Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtEmailConsulta;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDataConsulta;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl3;
         private MaskedTextBox mskHorarioConsulta;
         private DataGridViewTextBoxColumn clnNomeProfissional;
@@ -440,5 +486,8 @@
         private DataGridViewTextBoxColumn clnStatusConsulta;
         private DataGridViewButtonColumn btnConcluir;
         private DataGridViewButtonColumn btnCancelar;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDataConsulta;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbTipoAgendamento;
+        private Guna.UI2.WinForms.Guna2Button btnListaTudo;
     }
 }

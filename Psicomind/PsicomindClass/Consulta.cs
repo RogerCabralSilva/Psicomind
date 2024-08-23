@@ -15,7 +15,7 @@ namespace PsicomindClass
         public int Agendamento_id { get; set; }
         public string Observacoes_consulta { get; set; }
         public string Nome_profissional { get; set; }
-        public string Nome_cliente {  get; set; }
+        public string Nome_cliente { get; set; }
         public string Email_cliente { get; set; }
         public DateTime Data_nascimento_cliente { get; set; }
         public DateTime Dia_escala { get; set; }
@@ -57,7 +57,7 @@ namespace PsicomindClass
             Status_consulta = status_consulta;
         }
 
-        public void Inserir ()
+        public void Inserir()
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -70,38 +70,44 @@ namespace PsicomindClass
             cmd.ExecuteReader();
         }
 
-        public static List<Consulta> ObterLista(string nome_cliente = null, DateTime? dia_escala = null, string? horario = null, string status_consulta = null)
+        public static List<Consulta> ObterLista(string nome_cliente = null, string email = null,  string? dia_escala = null, string status_consulta = null, string horario = null)
         {
             List<Consulta> lista = new List<Consulta>();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
 
             // Início da query básica
-            string query = "SELECT nome_profissional, nome_cliente, email_cliente, data_nascimento_cliente, dia_escala, horario_escala, status_pagamento, status_consulta FROM vw_consulta_informacoes_cliente WHERE 1=1";
+            string query = "SELECT nome_profissional, nome_cliente, email_cliente, data_nascimento_cliente, dia_escala, horario_escala, status_pagamento, status_consulta FROM vw_consulta_informacoes_cliente WHERE 1=1 ";
 
             // Adicionando filtros dinamicamente
-            if (nome_cliente != null)
+            if (!string.IsNullOrEmpty(nome_cliente))
             {
                 query += " AND nome_cliente LIKE @nome_cliente";
                 cmd.Parameters.AddWithValue("@nome_cliente", $"%{nome_cliente}%");
             }
 
-            if (dia_escala != null)
+            if (!string.IsNullOrEmpty(dia_escala))
             {
                 query += " AND dia_escala = @dia_escala";
-                cmd.Parameters.AddWithValue("@dia_escala", dia_escala.Value);
+                cmd.Parameters.AddWithValue("@dia_escala", dia_escala);
             }
 
-            if (horario != null)
+            if (!string.IsNullOrEmpty(horario))
             {
                 query += " AND horario_escala = @horario";
                 cmd.Parameters.AddWithValue("@horario", horario);
             }
 
-            if (status_consulta != null)
+            if (!string.IsNullOrEmpty(status_consulta))
             {
                 query += " AND status_consulta = @status_consulta";
                 cmd.Parameters.AddWithValue("@status_consulta", status_consulta);
+            }
+
+            if (!string.IsNullOrEmpty(email))
+            {
+                query += " AND email_cliente = @email_cliente";
+                cmd.Parameters.AddWithValue("@email_cliente", email);
             }
 
             // Atribuindo a query ao comando
@@ -112,17 +118,19 @@ namespace PsicomindClass
             while (dr.Read())
             {
                 lista.Add(new Consulta(
-                    dr.GetString(0),
-                    dr.GetString(1),
-                    dr.GetString(2),
-                    dr.GetDateTime(3),
-                    dr.GetDateTime(4),
-                    dr.GetTimeSpan(5),
-                    dr.GetString(6),
-                    dr.GetString(7)
+                    dr.GetString(0), // nome_profissional
+                    dr.GetString(1), // nome_cliente
+                    dr.GetString(2), // email_cliente
+                    dr.GetDateTime(3), // data_nascimento_cliente
+                    dr.GetDateTime(4), // dia_escala
+                    dr.GetTimeSpan(5), // horario_escala
+                    dr.GetString(6), // status_pagamento
+                    dr.GetString(7)  // status_consulta
                 ));
             }
 
+            dr.Close();
+            cmd.Connection.Close();
             return lista;
         }
 
