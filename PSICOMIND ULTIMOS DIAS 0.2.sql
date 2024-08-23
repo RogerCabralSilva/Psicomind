@@ -163,24 +163,17 @@ CREATE TABLE agendamentos (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     profissionais_id INT NOT NULL,
     usuarios_id INT NOT NULL,
+    cliente_id INT NOT NULL,
     escala_id INT NOT NULL,
     tipo_agendamento_id INT NOT NULL,
     status_agendamento CHAR(1) NOT NULL,
     CONSTRAINT fk_agendamentos_profissionais_id FOREIGN KEY (profissionais_id) REFERENCES profissionais(id),
     CONSTRAINT fk_agendamentos_usuarios_id FOREIGN KEY (usuarios_id) REFERENCES usuarios(id),
+    CONSTRAINT fk_clienteAgendamento_id FOREIGN KEY (cliente_id) REFERENCES clientes(id),
     CONSTRAINT fk_agendamentos_escala_id FOREIGN KEY (escala_id) REFERENCES escala(id),
     CONSTRAINT fk_tipoAgendamento_id FOREIGN KEY (tipo_agendamento_id) REFERENCES tipo_agendamento(id)
 );
 
-
--- Tabela Cliente Agendamento 
-CREATE TABLE cliente_agendamento (
-	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    cliente_id INT NOT NULL,
-    agendamento_id INT NOT NULL,
-	CONSTRAINT fk_clienteAgendamento_id FOREIGN KEY (cliente_id) REFERENCES clientes(id),
-    CONSTRAINT fk_agendamentoCliente_id FOREIGN KEY (agendamento_id) REFERENCES agendamentos(id)
-);
 
 
 -- Tabela consultas
@@ -220,7 +213,7 @@ END $$
 DELIMITER ;
 
 -- Exemplo de chamada:
--- CALL sp_clientes_insert('Roger Cabral Silv', 'cabralroger15@gmail.com', '125', '46129420808', '2006-01-18');
+-- CALL sp_clientes_insert('Roger Cabral Silv', 'cabralroger15@gmail.com', '125', '46129420808', '2006-01-18',1);
 
 -- Inserir telefone_cliente
 DELIMITER $$
@@ -326,13 +319,14 @@ DELIMITER $$
 CREATE PROCEDURE sp_agendamentos_insert(
     spprofissional_id INT,
     spusuarios_id INT,
+    spcliente_id INT,
     spescala_id INT,
     sptipo_agendamento_id INT,
     spstatus_agendamento CHAR(1)
 )
 BEGIN
     INSERT INTO agendamentos
-    VALUES (0, spprofissional_id, spusuarios_id, spescala_id, sptipo_agendamento_id, spstatus_agendamento);
+    VALUES (0, spprofissional_id, spusuarios_id, spcliente_id, spescala_id, sptipo_agendamento_id, spstatus_agendamento);
     
     SELECT LAST_INSERT_ID() AS id;
 END $$
@@ -718,6 +712,7 @@ SELECT * FROM escala;
 SELECT * FROM usuarios;
 select * from cargos;
 select * from agendamentos;
+select * from clientes;
 
 -- select id from escala where dia = '2024-08-27' and horario = '18:00' and profissional_id = 1;
 
@@ -725,14 +720,19 @@ select * from agendamentos;
 
 -- SELECT horario FROM escala where disponivel = 1 and dia = '2024-08-26' and profissional_id = 1;
 
-INSERT INTO preco_consulta VALUES (0, '250.00');
-INSERT INTO preco_consulta VALUES (0, '80.00');
+INSERT INTO preco_consulta VALUES (0, '200.00');
+INSERT INTO preco_consulta VALUES (0, '450.00');
+INSERT INTO preco_consulta VALUES (0, '200.00');
+INSERT INTO preco_consulta VALUES (0, '150.00');
 select * from preco_consulta;
 
-INSERT INTO tipo_agendamento VALUES (0,'Particular',1);
-INSERT INTO tipo_agendamento VALUES (0,'Grupo',2);
+INSERT INTO tipo_agendamento VALUES (0,'Acompanhamento Terapêutico',1);
+INSERT INTO tipo_agendamento VALUES (0,'Avaliação Psicológicao',2);
+INSERT INTO tipo_agendamento VALUES (0,'Orientação Vocacional',3);
+INSERT INTO tipo_agendamento VALUES (0,'Psicanálise',4);
 SELECT * FROM tipo_agendamento;
 
+SELECT id FROM clientes WHERE cpf = '46129420808';
  
 -- drop procedure InserirHorariosSemana;
 -- drop table escala;
