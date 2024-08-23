@@ -266,7 +266,7 @@ namespace PsicomindClass
             while (dr.Read())
             {
                 cliente = (new Cliente(
-                     cliente.Id = dr.GetInt32(0)
+                    cliente.Id = dr.GetInt32(0)
                     )) ; 
             }
 

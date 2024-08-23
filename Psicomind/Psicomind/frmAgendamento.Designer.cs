@@ -30,8 +30,6 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,7 +44,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgendamento));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             guna2ContainerControl2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             btnEfetuarAgendamento = new Guna.UI2.WinForms.Guna2Button();
@@ -55,7 +54,6 @@
             label7 = new Label();
             cmbTipoAgendamento = new Guna.UI2.WinForms.Guna2ComboBox();
             mtxCpf = new MaskedTextBox();
-            txtClienteCpf = new Guna.UI2.WinForms.Guna2TextBox();
             label6 = new Label();
             sfCalendar1 = new Syncfusion.WinForms.Input.SfCalendar();
             label4 = new Label();
@@ -66,24 +64,22 @@
             label3 = new Label();
             cmbHorarios = new Guna.UI2.WinForms.Guna2ComboBox();
             btnConsultarProfissional = new Guna.UI2.WinForms.Guna2Button();
-            btnVoltar = new PictureBox();
+            guna2ContainerControl3 = new Guna.UI2.WinForms.Guna2ContainerControl();
             guna2ContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnVoltar).BeginInit();
+            guna2ContainerControl3.SuspendLayout();
             SuspendLayout();
             // 
             // guna2ContainerControl1
             // 
             guna2ContainerControl1.Anchor = AnchorStyles.None;
             guna2ContainerControl1.BorderRadius = 20;
-            guna2ContainerControl1.Controls.Add(btnVoltar);
+            guna2ContainerControl1.Controls.Add(guna2ContainerControl3);
             guna2ContainerControl1.Controls.Add(guna2ContainerControl2);
             guna2ContainerControl1.Controls.Add(btnEfetuarAgendamento);
             guna2ContainerControl1.Controls.Add(label8);
             guna2ContainerControl1.Controls.Add(txtPreco);
             guna2ContainerControl1.Controls.Add(label7);
             guna2ContainerControl1.Controls.Add(cmbTipoAgendamento);
-            guna2ContainerControl1.Controls.Add(mtxCpf);
-            guna2ContainerControl1.Controls.Add(txtClienteCpf);
             guna2ContainerControl1.Controls.Add(label6);
             guna2ContainerControl1.Controls.Add(sfCalendar1);
             guna2ContainerControl1.Controls.Add(label4);
@@ -105,11 +101,11 @@
             // guna2ContainerControl2
             // 
             guna2ContainerControl2.BorderRadius = 5;
-            guna2ContainerControl2.CustomizableEdges = customizableEdges1;
+            guna2ContainerControl2.CustomizableEdges = customizableEdges3;
             guna2ContainerControl2.FillColor = Color.Gainsboro;
             guna2ContainerControl2.Location = new Point(551, 125);
             guna2ContainerControl2.Name = "guna2ContainerControl2";
-            guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2ContainerControl2.Size = new Size(2, 448);
             guna2ContainerControl2.TabIndex = 57;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
@@ -118,7 +114,7 @@
             // 
             btnEfetuarAgendamento.BackColor = Color.Transparent;
             btnEfetuarAgendamento.BorderRadius = 10;
-            btnEfetuarAgendamento.CustomizableEdges = customizableEdges3;
+            btnEfetuarAgendamento.CustomizableEdges = customizableEdges5;
             btnEfetuarAgendamento.DisabledState.BorderColor = Color.DarkGray;
             btnEfetuarAgendamento.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEfetuarAgendamento.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -127,7 +123,7 @@
             btnEfetuarAgendamento.ForeColor = Color.White;
             btnEfetuarAgendamento.Location = new Point(841, 436);
             btnEfetuarAgendamento.Name = "btnEfetuarAgendamento";
-            btnEfetuarAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnEfetuarAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnEfetuarAgendamento.Size = new Size(144, 39);
             btnEfetuarAgendamento.TabIndex = 4;
             btnEfetuarAgendamento.Text = "Efetuar Agendamento";
@@ -149,7 +145,7 @@
             // 
             txtPreco.BackColor = Color.Transparent;
             txtPreco.BorderRadius = 15;
-            txtPreco.CustomizableEdges = customizableEdges5;
+            txtPreco.CustomizableEdges = customizableEdges7;
             txtPreco.DefaultText = "R$";
             txtPreco.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPreco.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -166,7 +162,7 @@
             txtPreco.PlaceholderText = "";
             txtPreco.ReadOnly = true;
             txtPreco.SelectedText = "";
-            txtPreco.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtPreco.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtPreco.Size = new Size(211, 36);
             txtPreco.TabIndex = 55;
             txtPreco.TextChanged += txtPreco_TextChanged;
@@ -187,7 +183,7 @@
             // 
             cmbTipoAgendamento.BackColor = Color.Transparent;
             cmbTipoAgendamento.BorderRadius = 15;
-            cmbTipoAgendamento.CustomizableEdges = customizableEdges7;
+            cmbTipoAgendamento.CustomizableEdges = customizableEdges9;
             cmbTipoAgendamento.DrawMode = DrawMode.OwnerDrawFixed;
             cmbTipoAgendamento.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipoAgendamento.FillColor = Color.WhiteSmoke;
@@ -198,7 +194,7 @@
             cmbTipoAgendamento.ItemHeight = 30;
             cmbTipoAgendamento.Location = new Point(611, 339);
             cmbTipoAgendamento.Name = "cmbTipoAgendamento";
-            cmbTipoAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            cmbTipoAgendamento.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cmbTipoAgendamento.Size = new Size(374, 36);
             cmbTipoAgendamento.TabIndex = 53;
             cmbTipoAgendamento.SelectedIndexChanged += cmbTipoAgendamento_SelectedIndexChanged;
@@ -208,35 +204,11 @@
             // 
             mtxCpf.BackColor = Color.WhiteSmoke;
             mtxCpf.BorderStyle = BorderStyle.None;
-            mtxCpf.Location = new Point(628, 248);
+            mtxCpf.Location = new Point(14, 11);
             mtxCpf.Mask = "000.000.000-00";
             mtxCpf.Name = "mtxCpf";
             mtxCpf.Size = new Size(100, 16);
             mtxCpf.TabIndex = 52;
-            // 
-            // txtClienteCpf
-            // 
-            txtClienteCpf.BackColor = Color.Transparent;
-            txtClienteCpf.BorderRadius = 15;
-            txtClienteCpf.CustomizableEdges = customizableEdges9;
-            txtClienteCpf.DefaultText = "";
-            txtClienteCpf.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtClienteCpf.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtClienteCpf.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtClienteCpf.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtClienteCpf.FillColor = Color.WhiteSmoke;
-            txtClienteCpf.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClienteCpf.Font = new Font("Segoe UI", 9F);
-            txtClienteCpf.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClienteCpf.Location = new Point(611, 237);
-            txtClienteCpf.Name = "txtClienteCpf";
-            txtClienteCpf.PasswordChar = '\0';
-            txtClienteCpf.PlaceholderText = "";
-            txtClienteCpf.ReadOnly = true;
-            txtClienteCpf.SelectedText = "";
-            txtClienteCpf.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtClienteCpf.Size = new Size(211, 36);
-            txtClienteCpf.TabIndex = 51;
             // 
             // label6
             // 
@@ -387,18 +359,23 @@
             btnConsultarProfissional.Text = "consultar";
             btnConsultarProfissional.Click += btnConsultarProfissional_Click;
             // 
-            // btnVoltar
+            // guna2ContainerControl3
             // 
-            btnVoltar.BackColor = Color.White;
-            btnVoltar.Cursor = Cursors.Hand;
-            btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(46, 53);
-            btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(50, 30);
-            btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
-            btnVoltar.TabIndex = 42;
-            btnVoltar.TabStop = false;
-            btnVoltar.Click += btnVoltar_Click;
+            guna2ContainerControl3.BackColor = Color.Transparent;
+            guna2ContainerControl3.BorderColor = Color.FromArgb(213, 218, 223);
+            guna2ContainerControl3.BorderRadius = 15;
+            guna2ContainerControl3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            guna2ContainerControl3.BorderThickness = 1;
+            guna2ContainerControl3.Controls.Add(mtxCpf);
+            guna2ContainerControl3.CustomizableEdges = customizableEdges1;
+            guna2ContainerControl3.FillColor = Color.WhiteSmoke;
+            guna2ContainerControl3.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2ContainerControl3.Location = new Point(611, 236);
+            guna2ContainerControl3.Name = "guna2ContainerControl3";
+            guna2ContainerControl3.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2ContainerControl3.Size = new Size(200, 36);
+            guna2ContainerControl3.TabIndex = 60;
+            guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
             // frmAgendamento
             // 
@@ -411,7 +388,8 @@
             Load += frmAgendamento_Load;
             guna2ContainerControl1.ResumeLayout(false);
             guna2ContainerControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)btnVoltar).EndInit();
+            guna2ContainerControl3.ResumeLayout(false);
+            guna2ContainerControl3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -428,7 +406,6 @@
         private Syncfusion.WinForms.Input.SfCalendar sfCalendar1;
         private Label label5;
         private Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox txtClienteCpf;
         private Label label7;
         private Guna.UI2.WinForms.Guna2ComboBox cmbTipoAgendamento;
         private MaskedTextBox mtxCpf;
@@ -436,6 +413,6 @@
         private Label label8;
         private Guna.UI2.WinForms.Guna2Button btnEfetuarAgendamento;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
-        private PictureBox btnVoltar;
+        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl3;
     }
 }

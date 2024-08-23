@@ -55,6 +55,13 @@ namespace Psicomind
             this.Close();
         }
 
-    
+        private void btnPagConsultarUsuario_Click(object sender, EventArgs e)
+        {
+
+            FrmAgendamentoConsulta frmAgendamentoConsulta = new();
+            frmAgendamentoConsulta.StartPosition = FormStartPosition.CenterScreen;
+            frmAgendamentoConsulta.Show();
+
+        }
     }
 }
