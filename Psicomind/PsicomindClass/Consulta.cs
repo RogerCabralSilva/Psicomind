@@ -21,7 +21,7 @@ namespace PsicomindClass
         public string Nome_cliente {  get; set; }
         public string Email { get; set; }
         public string data_nascimento_cliente { get; set; }
-        public string 
+        public string dia_escala { get; set; }
 
         public void Inserir ()
         {
