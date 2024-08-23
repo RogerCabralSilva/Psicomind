@@ -182,7 +182,7 @@ CREATE TABLE consultas (
     agendamento_id INT NOT NULL,
 	observacoes_consulta VARCHAR(200) NULL,
     status_pagamento CHAR(1) NOT NULL,
-    status_consulta ENUM("Concluída", "Não compareceu", "Em andamento"),
+    status_consulta ENUM("Concluída", "Não compareceu", "Agendada"),
     CONSTRAINT fk_consultas_agendamento_id FOREIGN KEY (agendamento_id) REFERENCES agendamentos(id)
 );
 
@@ -338,20 +338,19 @@ DELIMITER ;
 -- Inserir consulta
 DELIMITER $$
 CREATE PROCEDURE sp_consultas_insert(
+	spid INT,
     spagendamento_id INT,
-    sphora_consulta TIME,
-    spdata_consulta DATE,
-    spstatus_pagamento CHAR(1)
+    spobservacoes_consulta VARCHAR(200),
+    spstatus_pagamento CHAR(1),
+    spstatus_consulta ENUM('Concluída','Não compareceu','Em andamento')
 )
 BEGIN
     INSERT INTO consultas 
-    VALUES (0, spagendamento_id, sphora_consulta, spdata_consulta, spstatus_pagamento);
+    VALUES (0, spagendamento_id, spobservacoes_consulta, spstatus_pagamento, spstatus_consulta);
     
     SELECT LAST_INSERT_ID() AS id;
 END $$
 DELIMITER ;
-
--- CALL sp_consultas_insert(1,"14:30", "2025/01/19", "N")
 
 -- Inserir tipo_agendamento
 
@@ -730,9 +729,44 @@ INSERT INTO tipo_agendamento VALUES (0,'Acompanhamento Terapêutico',1);
 INSERT INTO tipo_agendamento VALUES (0,'Avaliação Psicológicao',2);
 INSERT INTO tipo_agendamento VALUES (0,'Orientação Vocacional',3);
 INSERT INTO tipo_agendamento VALUES (0,'Psicanálise',4);
-SELECT * FROM tipo_agendamento;
 
-SELECT id FROM clientes WHERE cpf = '46129420808';
+CREATE VIEW vw_consulta_informacoes_cliente AS
+SELECT 
+    consultas.id AS consulta_id,
+    consultas.agendamento_id,
+    agendamentos.profissionais_id,
+    profissionais.nome AS nome_profissional,
+    agendamentos.usuarios_id,
+    usuarios.nome AS nome_usuario,
+    agendamentos.cliente_id,
+    clientes.nome AS nome_cliente,
+    clientes.email AS email_cliente,
+    clientes.CPF AS cpf_cliente,
+    clientes.data_nasc AS data_nascimento_cliente,
+    clientes.data_cad AS data_cadastro_cliente,
+    clientes.ativo AS cliente_ativo,
+    consultas.observacoes_consulta,
+    consultas.status_pagamento,
+    consultas.status_consulta,
+    agendamentos.status_agendamento,
+    escala.dia AS dia_escala,
+    escala.horario AS horario_escala,
+    escala.disponivel AS disponibilidade_escala
+FROM 
+    consultas
+INNER JOIN 
+    agendamentos ON consultas.agendamento_id = agendamentos.id
+INNER JOIN 
+    clientes ON agendamentos.cliente_id = clientes.id
+INNER JOIN 
+    profissionais ON agendamentos.profissionais_id = profissionais.id
+INNER JOIN 
+    usuarios ON agendamentos.usuarios_id = usuarios.id
+INNER JOIN 
+    escala ON agendamentos.escala_id = escala.id;
+
+insert into consultas values(0, 1, "maior otário", 1, "Agendada");
+select nome_profissional, nome_cliente, email_cliente, data_nascimento_cliente, dia_escala, horario_escala, status_pagamento, status_consulta from vw_consulta_informacoes_cliente;
  
 -- drop procedure InserirHorariosSemana;
 -- drop table escala;
