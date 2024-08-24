@@ -338,11 +338,10 @@ DELIMITER ;
 -- Inserir consulta
 DELIMITER $$
 CREATE PROCEDURE sp_consultas_insert(
-	spid INT,
     spagendamento_id INT,
     spobservacoes_consulta VARCHAR(200),
     spstatus_pagamento CHAR(1),
-    spstatus_consulta ENUM('Concluída','Não compareceu','Em andamento')
+    spstatus_consulta ENUM('Concluída','Não compareceu','Agendada')
 )
 BEGIN
     INSERT INTO consultas 
@@ -353,6 +352,7 @@ END $$
 DELIMITER ;
 
 -- Inserir tipo_agendamento
+-- drop procedure sp_consultas_insert;
 
 DELIMITER $$
 CREATE PROCEDURE sp_tipo_agendamento_insert(
@@ -766,7 +766,11 @@ INNER JOIN
     escala ON agendamentos.escala_id = escala.id;
 
 insert into consultas values(0, 1, "maior otário", 1, "Agendada");
-select nome_profissional, nome_cliente, email_cliente, data_nascimento_cliente, dia_escala, horario_escala, status_pagamento, status_consulta from vw_consulta_informacoes_cliente;
+insert into agendamentos values(0, 1, 1, 1, 1, 1, "1");
+insert into clientes values(0, "Roger", "cabralroger15@gmail.com", "123", "45494123","2006/08/18", "2006/08/18",1, 1);
+SELECT nome_profissional, nome_cliente, email_cliente, data_nascimento_cliente, dia_escala, horario_escala, status_pagamento, status_consulta FROM vw_consulta_informacoes_cliente where 1=1 and horario_escala = "12:00";
+
+select * from consultas;
  
 -- drop procedure InserirHorariosSemana;
 -- drop table escala;
