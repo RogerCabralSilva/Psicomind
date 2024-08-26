@@ -159,7 +159,7 @@ namespace Psicomind
                 else if (dgvClientesDados.Columns[e.ColumnIndex].Name == "btnCancelar")
                 {
                     // Chama o método Editar passando o texto "Cancelar" e o ID da consulta
-                    Consulta.Atualizar("Não compareceu", id);
+                    Consulta.Atualizar("Cancelada", id);
                 }
             }
             else

@@ -112,6 +112,13 @@ namespace Psicomind
             {
                 MessageBox.Show("Erro ao cadastrar profissional", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            txtNomeProfissional.Clear();
+            txtEmailProfissional.Clear();
+            txtSenhaProfissional.Clear();
+            mtxCpfProfissional.Clear();
+            mtxTelefoneProfissional.Clear();
+
         }
 
         private void FrmProfissionalInserir_Load(object sender, EventArgs e)
