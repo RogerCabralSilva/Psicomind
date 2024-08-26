@@ -64,6 +64,7 @@
             txtNomeConsulta = new Guna.UI2.WinForms.Guna2TextBox();
             btnVoltar = new PictureBox();
             dgvClientesDados = new Guna.UI2.WinForms.Guna2DataGridView();
+            clnId = new DataGridViewTextBoxColumn();
             clnNomeProfissional = new DataGridViewTextBoxColumn();
             clnNomeCliente = new DataGridViewTextBoxColumn();
             clnEmailCliente = new DataGridViewTextBoxColumn();
@@ -323,7 +324,7 @@
             dgvClientesDados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvClientesDados.ColumnHeadersHeight = 50;
             dgvClientesDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvClientesDados.Columns.AddRange(new DataGridViewColumn[] { clnNomeProfissional, clnNomeCliente, clnEmailCliente, clnDataNascimentoCliente, clnDia, ClnHorario, clnStatus_pagamento, clnStatusConsulta, btnConcluir, btnCancelar });
+            dgvClientesDados.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNomeProfissional, clnNomeCliente, clnEmailCliente, clnDataNascimentoCliente, clnDia, ClnHorario, clnStatus_pagamento, clnStatusConsulta, btnConcluir, btnCancelar });
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = Color.White;
             dataGridViewCellStyle5.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -370,6 +371,13 @@
             dgvClientesDados.ThemeStyle.RowsStyle.Height = 30;
             dgvClientesDados.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(0, 0, 192);
             dgvClientesDados.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
+            dgvClientesDados.CellContentClick += dgvClientesDados_CellContentClick;
+            // 
+            // clnId
+            // 
+            clnId.HeaderText = "Id";
+            clnId.Name = "clnId";
+            clnId.ReadOnly = true;
             // 
             // clnNomeProfissional
             // 
@@ -476,6 +484,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmailConsulta;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl3;
         private MaskedTextBox mskHorarioConsulta;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDataConsulta;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbTipoAgendamento;
+        private Guna.UI2.WinForms.Guna2Button btnListaTudo;
+        private DataGridViewTextBoxColumn clnId;
         private DataGridViewTextBoxColumn clnNomeProfissional;
         private DataGridViewTextBoxColumn clnNomeCliente;
         private DataGridViewTextBoxColumn clnEmailCliente;
@@ -486,8 +498,5 @@
         private DataGridViewTextBoxColumn clnStatusConsulta;
         private DataGridViewButtonColumn btnConcluir;
         private DataGridViewButtonColumn btnCancelar;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDataConsulta;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbTipoAgendamento;
-        private Guna.UI2.WinForms.Guna2Button btnListaTudo;
     }
 }

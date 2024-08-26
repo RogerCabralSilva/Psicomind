@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Windows.Forms;
 
 namespace Psicomind
@@ -91,20 +93,24 @@ namespace Psicomind
             Preco_Consulta r = Preco_Consulta.ObterPorId(tipoAgendamento_id);
 
 
-            double preco = r.Preco;
-            string formatodo = "R$ " + r.Preco + ",00";
-            txtPreco.Text = Convert.ToString(formatodo);
+            decimal preco = 200m;
+            string valorFormatado = preco.ToString("N2");
+            txtPreco.Text = valorFormatado.ToString();
 
         }
 
         private void btnEfetuarAgendamento_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
-
                 DateTime dataSelecionada = sfCalendar1.SelectedDate.Value;
                 string dataFormatada = dataSelecionada.ToString("yyyy-MM-dd");
-                var codigo = Escala.ObterIdDataHorario(dataFormatada, Convert.ToString(cmbHorarios.Text), Convert.ToInt32(cmbProfissionais.SelectedValue));
+                string horario = Convert.ToString(cmbHorarios.Text);
+                string profissional = cmbProfissionais.Text; // Nome do profissional
+                string tipoAgendamento = cmbTipoAgendamento.Text; // Tipo de agendamento
+                decimal valorFormatado = Convert.ToDecimal(txtPreco.Text); // Preço do agendamento
+
+                var codigo = Escala.ObterIdDataHorario(dataFormatada, horario, Convert.ToInt32(cmbProfissionais.SelectedValue));
                 int tipoAgendamento_id = cmbTipoAgendamento.SelectedIndex + 1;
                 mtxCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
@@ -115,14 +121,20 @@ namespace Psicomind
                     Cliente.ObterPorCpf(mtxCpf.Text),
                     TipoAgendamento.ObterPorId(Convert.ToInt32(cmbTipoAgendamento.SelectedValue)),
                     true
-                    );
+                );
                 agendamento.Inserir();
-                Escala.DarBaixa(dataFormatada, Convert.ToString(cmbHorarios.Text), Convert.ToInt32(cmbProfissionais.SelectedValue));
+                Escala.DarBaixa(dataFormatada, horario, Convert.ToInt32(cmbProfissionais.SelectedValue));
 
                 Consulta consulta = new(agendamento.Id, "1", "Agendada");
                 consulta.Inserir();
 
+                // Envia o e-mail de confirmação
+
+                string dataFormatadaEmail = dataSelecionada.ToString("dd/MM/yyyy");
+                EnviarEmailConfirmacao(agendamento.Cliente.Email, dataFormatadaEmail, horario, valorFormatado, tipoAgendamento, profissional);
+
             }
+
             catch
             {
                 MessageBox.Show($"Erro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -134,7 +146,34 @@ namespace Psicomind
             cmbTipoAgendamento.SelectedIndex = -1;
             txtPreco.Clear();
             mtxCpf.Clear();
+        }
 
+        private void EnviarEmailConfirmacao(string emailCliente, string data, string horario, decimal preco, string tipoAgendamento, string profissional)
+        {
+            try
+            {
+
+
+                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+                client.EnableSsl = true;
+                client.UseDefaultCredentials = false;
+                client.Credentials = new NetworkCredential("cabralroger159@gmail.com", "bbpd akhw yngi fgyk");
+
+                MailMessage mailMessage = new MailMessage();
+                mailMessage.From = new MailAddress("cabralroger159@gmail.com");
+                mailMessage.To.Add("henrygabrielfiore@gmail.com");
+                mailMessage.Subject = "Confirmação de Agendamento";
+                mailMessage.Body = $"Olá, \n\nSeu agendamento foi confirmado com as seguintes informações:\n\n" +
+                                   $"Data: {data}\nHorário: {horario}\nPreço: R$ {preco}\nTipo: {tipoAgendamento}\nProfissional: {profissional}\n\n" +
+                                   "Aguardamos você no dia e horário agendado.\n\nAtenciosamente,\nSua Empresa";
+
+                client.Send(mailMessage);
+                MessageBox.Show("Agendamento realizado e e-mail de confirmação enviado com sucesso.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao enviar e-mail: " + ex.Message);
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

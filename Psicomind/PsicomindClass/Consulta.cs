@@ -38,8 +38,9 @@ namespace PsicomindClass
             Status_consulta = status_consulta;
         }
 
-        public Consulta(string nome_profissional, string nome_cliente, string email_cliente, DateTime data_nascimento_cliente, DateTime dia_escala, TimeSpan horario, string status_pagamento, string status_consulta)
+        public Consulta(int id,string nome_profissional, string nome_cliente, string email_cliente, DateTime data_nascimento_cliente, DateTime dia_escala, TimeSpan horario, string status_pagamento, string status_consulta)
         {
+            Id = id;
             Nome_profissional = nome_profissional;
             Nome_cliente = nome_cliente;
             Email_cliente = email_cliente;
@@ -77,7 +78,7 @@ namespace PsicomindClass
             cmd.CommandType = CommandType.Text;
 
             // Início da query básica
-            string query = "SELECT nome_profissional, nome_cliente, email_cliente, data_nascimento_cliente, dia_escala, horario_escala, status_pagamento, status_consulta FROM vw_consulta_informacoes_cliente WHERE 1=1 ";
+            string query = "SELECT consulta_id, nome_profissional, nome_cliente, email_cliente, data_nascimento_cliente, dia_escala, horario_escala, status_pagamento, status_consulta FROM vw_consulta_informacoes_cliente WHERE 1=1 ";
 
             // Adicionando filtros dinamicamente
             if (!string.IsNullOrEmpty(nome_cliente))
@@ -118,20 +119,28 @@ namespace PsicomindClass
             while (dr.Read())
             {
                 lista.Add(new Consulta(
-                    dr.GetString(0), // nome_profissional
-                    dr.GetString(1), // nome_cliente
-                    dr.GetString(2), // email_cliente
-                    dr.GetDateTime(3), // data_nascimento_cliente
-                    dr.GetDateTime(4), // dia_escala
-                    dr.GetTimeSpan(5), // horario_escala
-                    dr.GetString(6), // status_pagamento
-                    dr.GetString(7)  // status_consulta
-                ));
+                    dr.GetInt32(0),
+                    dr.GetString(1), // nome_profissional
+                    dr.GetString(2), // nome_cliente
+                    dr.GetString(3), // email_cliente
+                    dr.GetDateTime(4), // data_nascimento_cliente
+                    dr.GetDateTime(5), // dia_escala
+                    dr.GetTimeSpan(6), // horario_escala
+                    dr.GetString(7), // status_pagamento
+                    dr.GetString(8)  // status_consulta
+                )) ;
             }
 
             dr.Close();
             cmd.Connection.Close();
             return lista;
+        }
+
+        public static void Atualizar(string texto, int id) 
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandText = $"UPDATE consultas set status_consulta = '{texto}' WHERE id = {id}";
+            cmd.ExecuteReader();
         }
 
     }
