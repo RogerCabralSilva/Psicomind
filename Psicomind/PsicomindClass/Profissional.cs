@@ -15,100 +15,26 @@ namespace PsicomindClass
         public string Email { get; set; }
         public string Senha { get; set; }
         public string Cpf { get; set; }
-        public string Especializacao { get; set; }
-        public DateTime Data_contrato { get; set; }
         public DateTime Data_cad { get; set; }
         public DateTime Data_nasc { get; set; }
         public Genero Genero { get; set; }
-        public TelefoneProfissional TelefoneProfissional { get; set; }
         public Cargo Cargo { get; set; }
         public bool Ativo { get; set; }
+        public TelefoneProfissional TelefoneProfissional { get; set; }
+
 
         public Profissional()
         {
 
 
         }
-
-        public Profissional(int id, string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_cad, DateTime data_nasc, Genero genero, bool ativo)
-        {
-            Id = id;
-            Nome = nome;
-            Email = email;
-            Senha = senha;
-            Cpf = cpf;
-            Especializacao = especializacao;
-            Data_contrato = data_contrato;
-            Data_cad = data_cad;
-            Data_nasc = data_nasc;
-            Genero = genero;
-            Ativo = ativo;
-        }
-
-        public Profissional(int id, string nome, string senha, string especializacao, DateTime data_contrato, DateTime data_nasc, Genero genero, bool ativo)
+        public Profissional(int id, string nome, string senha, string especializacao, DateTime data_nasc, Genero genero, bool ativo)
         {
             Id = id;
             Nome = nome;
             Senha = senha;
-            Especializacao = especializacao;
-            Data_contrato = data_contrato;
             Data_nasc = data_nasc;
             Genero = genero;
-            Ativo = ativo;
-        }
-
-        public Profissional(string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_nasc, Genero genero, bool ativo)
-        {
-            Nome = nome;
-            Email = email;
-            Senha = senha;
-            Cpf = cpf;
-            Especializacao = especializacao;
-            Data_contrato = data_contrato;
-            Data_nasc = data_nasc;
-            Genero = genero;
-            Ativo = ativo;
-        }
-
-        public Profissional(string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_cad, DateTime data_nasc, Genero genero, bool ativo)
-        {
-            Nome = nome;
-            Email = email;
-            Senha = senha;
-            Cpf = cpf;
-            Especializacao = especializacao;
-            Data_contrato = data_contrato;
-            Data_cad = data_cad;
-            Data_nasc = data_nasc;
-            Genero = genero;
-            Ativo = ativo;
-        }
-
-        public Profissional(string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_nasc, Genero genero)
-        {
-            Nome = nome;
-            Email = email;
-            Senha = senha;
-            Cpf = cpf;
-            Especializacao = especializacao;
-            Data_contrato = data_contrato;
-            Data_nasc = data_nasc;
-            Genero = genero;
-        }
-
-        public Profissional(int id, string nome, string email, string senha, string cpf, string especializacao, DateTime data_contrato, DateTime data_cad, DateTime data_nasc, Genero genero, TelefoneProfissional telefoneProfissional, bool ativo)
-        {
-            Id = id;
-            Nome = nome;
-            Email = email;
-            Senha = senha;
-            Cpf = cpf;
-            Especializacao = especializacao;
-            Data_contrato = data_contrato;
-            Data_cad = data_cad;
-            Data_nasc = data_nasc;
-            Genero = genero;
-            TelefoneProfissional = telefoneProfissional;
             Ativo = ativo;
         }
 
@@ -117,6 +43,58 @@ namespace PsicomindClass
             Nome = nome;
         }
 
+        public Profissional(string nome, string email, string senha, string cpf, DateTime data_nasc, Cargo cargo, Genero genero)
+        {
+            Nome = nome;
+            Email = email;
+            Senha = senha;
+            Cpf = cpf;
+            Data_nasc = data_nasc;
+            Cargo = cargo;
+            Genero = genero;
+
+        }
+
+        public Profissional(int id,string nome, string senha, DateTime data_nasc, Genero genero, Cargo cargo, bool ativo)
+        {
+            Id = id;
+            Nome = nome;
+            Senha = senha;
+            Data_nasc = data_nasc;
+            Genero = genero;
+            Cargo = cargo;
+            Ativo = ativo;
+        }
+
+        public Profissional(int id, string nome, string email, string senha, string cpf, DateTime data_cad, DateTime data_nasc, Genero genero, TelefoneProfissional telefoneProfissional, Cargo cargo, bool ativo)
+        {
+            Id = id;
+            Nome = nome;
+            Email = email;
+            Senha = senha;
+            Cpf = cpf;
+            Data_cad = data_cad;
+            Data_nasc = data_nasc;
+            Genero = genero;
+            TelefoneProfissional = telefoneProfissional;
+            Cargo = cargo;
+            Ativo = ativo;
+        }
+
+        public Profissional(int id, string nome, string email, string senha, string cpf, DateTime data_cad, DateTime data_nasc, Genero genero, Cargo cargo, bool ativo, TelefoneProfissional telefoneProfissional)
+        {
+            Id = id;
+            Nome = nome;
+            Email = email;
+            Senha = senha;
+            Cpf = cpf;
+            Data_cad = data_cad;
+            Data_nasc = data_nasc;
+            Genero = genero;
+            Cargo = cargo;
+            Ativo = ativo;
+            TelefoneProfissional = telefoneProfissional;
+        }
 
         // Inserindo Profissional
 
@@ -130,11 +108,10 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spemail", Email);
             cmd.Parameters.AddWithValue("spsenha", Senha);
             cmd.Parameters.AddWithValue("spcpf", Cpf);
-            cmd.Parameters.AddWithValue("spespecializacao", Especializacao);
-            cmd.Parameters.AddWithValue("spdata_contrato", Data_contrato);
             cmd.Parameters.AddWithValue("spdata_nasc", Data_nasc);
-            cmd.Parameters.AddWithValue("spgenero_id", Genero.Id);
             cmd.Parameters.AddWithValue("spcargo_id", Cargo.Id);
+            cmd.Parameters.AddWithValue("spgenero_id", Genero.Id);
+
 
             Id = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -159,13 +136,12 @@ namespace PsicomindClass
                 dr.GetString(2),
                 dr.GetString(3),
                 dr.GetString(4),
-                dr.GetString(5),
+                dr.GetDateTime(5),
                 dr.GetDateTime(6),
-                dr.GetDateTime(7),
-                dr.GetDateTime(8),
-                Genero.ObterPorId(dr.GetInt32(9)),
-                TelefoneProfissional.ObterPorId(dr.GetInt32(10)),
-                dr.GetBoolean(11)
+                Genero.ObterPorId(dr.GetInt32(7)),
+                TelefoneProfissional.ObterPorId(dr.GetInt32(8)),
+                Cargo.ObterPorId(dr.GetInt32(9)),
+                dr.GetBoolean(10)
                 ));
             }
 
@@ -206,8 +182,6 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spsenha", Senha);
-            cmd.Parameters.AddWithValue("spespecializacao", Especializacao);
-            cmd.Parameters.AddWithValue("spdata_contrato", Data_contrato);
             cmd.Parameters.AddWithValue("spdata_nasc", Data_nasc);
             cmd.Parameters.AddWithValue("spgenero_id", Genero.Id);
             cmd.Parameters.AddWithValue("spcargo", Cargo.Id);
@@ -245,13 +219,12 @@ namespace PsicomindClass
                 dr.GetString(2),
                 dr.GetString(3),
                 dr.GetString(4),
-                dr.GetString(5),
+                dr.GetDateTime(5),
                 dr.GetDateTime(6),
-                dr.GetDateTime(7),
-                dr.GetDateTime(8),
-                Genero.ObterPorId(dr.GetInt32(9)),
-                TelefoneProfissional.ObterPorId(dr.GetInt32(10)),
-                dr.GetBoolean(11)
+                Genero.ObterPorId(dr.GetInt32(7)),
+                TelefoneProfissional.ObterPorId(dr.GetInt32(8)),
+                Cargo.ObterPorId(dr.GetInt32(9)),
+                dr.GetBoolean(10)
                 ));
 
             }

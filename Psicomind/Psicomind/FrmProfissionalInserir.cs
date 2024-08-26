@@ -61,20 +61,20 @@ namespace Psicomind
 
             // Inserindo Profissional
 
-            Profissional profissional = new(
-
+            Profissional profissional = new
+                (
                 txtNomeProfissional.Text,
                 txtEmailProfissional.Text,
                 txtSenhaProfissional.Text,
                 mtxCpfProfissional.Text,
-                txtEspecializaçãoProfissional.Text,
-                dptDataContrato.Value,
                 dptDataNascimentoProfissional.Value,
+                Cargo.ObterPorId(Convert.ToInt32(cmbCargos.SelectedValue)),
                 Genero.ObterPorId(Convert.ToInt32(cmbGeneroProfissional.SelectedValue))
+                );
 
             // Indicando os campos de coleta de dados e seguindo a ordem das respectivas propriedades da classe
 
-                );
+                
 
             profissional.Inserir();
 

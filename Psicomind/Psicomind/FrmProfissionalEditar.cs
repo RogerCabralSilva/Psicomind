@@ -30,10 +30,9 @@ namespace Psicomind
                 int.Parse(txtProfissionalId.Text),
                 txtNomeProfissional.Text,
                 txtSenhaProfissional.Text,
-                txtEspecializaçãoProfissional.Text,
-                dptDataContrato.Value,
                 dptDataNascimentoProfissional.Value,
                 Genero.ObterPorId(Convert.ToInt32(cmbGeneroProfissional.SelectedValue)),
+                Cargo.ObterPorId(Convert.ToInt32(cmbCargos.SelectedValue)),
                 chkAtivoProfissional.Checked
                 );
 
@@ -56,13 +55,12 @@ namespace Psicomind
                 txtProfissionalId.Clear();
                 txtNomeProfissional.Clear();
                 txtSenhaProfissional.Clear();
-                txtEspecializaçãoProfissional.Clear();
                 cmbGeneroProfissional.SelectedIndex = -1;
                 cmbTipoTelefoneProfissional.SelectedIndex = -1;
                 mtxTelefoneProfissional.Clear();
-                dptDataContrato.Value = DateTime.Today;
                 dptDataNascimentoProfissional.Value = DateTime.Today;
                 chkAtivoProfissional.Checked = false;
+                cmbCargos.SelectedValue = -1;
 
             }
             else
@@ -107,6 +105,11 @@ namespace Psicomind
             cmbTipoTelefoneProfissional.DisplayMember = "tipo";
             cmbTipoTelefoneProfissional.ValueMember = "id";
 
+            var cargo = Cargo.ObterLista();
+            cmbCargos.DataSource = cargo;
+            cmbCargos.DisplayMember = "nome";
+            cmbCargos.ValueMember = "id";
+
             // Preenchendo via ID
 
             if (txtProfissionalId.Text != string.Empty)
@@ -117,18 +120,15 @@ namespace Psicomind
                 var profissional = Profissional.ObterPorId(int.Parse(txtProfissionalId.Text)); ;
                 txtNomeProfissional.Text = profissional.Nome;
                 txtSenhaProfissional.Text = profissional.Senha;
-                txtEspecializaçãoProfissional.Text = profissional.Especializacao;
                 cmbGeneroProfissional.SelectedValue = profissional.Genero.Id;
                 chkAtivoProfissional.Checked = profissional.Ativo;
-                dptDataContrato.Value = profissional.Data_contrato;
                 dptDataNascimentoProfissional.Value = profissional.Data_nasc;
+                cmbCargos.SelectedValue = profissional.Cargo.Nome;
 
 
                 // Busca o Telefone
-
-                TelefoneProfissional telefoneProfissional = TelefoneProfissional.ObterPorId(int.Parse(txtProfissionalId.Text));
-                mtxTelefoneProfissional.Text = telefoneProfissional.Numero;
-                cmbTipoTelefoneProfissional.SelectedValue = telefoneProfissional.Telefonetipo_id.Id;
+                mtxTelefoneProfissional.Text = profissional.TelefoneProfissional.Numero;
+                cmbTipoTelefoneProfissional.SelectedValue = profissional.TelefoneProfissional.Id;
             }
         }
 
@@ -152,25 +152,14 @@ namespace Psicomind
                     txtNomeProfissional.Text = profissional.Nome;
                     //txtSenhaProfissional.PlaceholderText = "Insira sua nova senha";
                     txtSenhaProfissional.Text = profissional.Senha;
-                    txtEspecializaçãoProfissional.Text = profissional.Especializacao;
                     cmbGeneroProfissional.SelectedValue = profissional.Genero.Id;
                     chkAtivoProfissional.Checked = profissional.Ativo;
-                    dptDataContrato.Value = profissional.Data_contrato;
                     dptDataNascimentoProfissional.Value = profissional.Data_nasc;
+                    cmbCargos.SelectedValue = profissional.Cargo.Id;
+                    cmbTipoTelefoneProfissional.SelectedValue = profissional.TelefoneProfissional.Id;
+                    mtxTelefoneProfissional.Text = profissional.TelefoneProfissional.Numero;
+                    cmbTipoTelefoneProfissional.SelectedValue = profissional.TelefoneProfissional.Id;
 
-
-                    // Buscando telefone Profissional
-
-                    if (telefoneProfissional.Id != 0)
-                    {
-
-                        // Verificando se o cliente possui telefone
-
-                        mtxTelefoneProfissional.Text = telefoneProfissional.Numero;
-                        cmbTipoTelefoneProfissional.SelectedValue = telefoneProfissional.Telefonetipo_id.Id;
-
-
-                    }
 
                     btnEditar.Enabled = true;
 
@@ -186,13 +175,12 @@ namespace Psicomind
                     txtProfissionalId.Clear();
                     txtNomeProfissional.Clear();
                     txtSenhaProfissional.Clear();
-                    txtEspecializaçãoProfissional.Clear();
                     cmbGeneroProfissional.SelectedIndex = -1;
                     cmbTipoTelefoneProfissional.SelectedIndex = -1;
                     mtxTelefoneProfissional.Clear();
-                    dptDataContrato.Value = DateTime.Today;
                     dptDataNascimentoProfissional.Value = DateTime.Today;
                     chkAtivoProfissional.Checked = false;
+                    cmbCargos.SelectedValue = -1;
 
 
                 }
@@ -218,13 +206,12 @@ namespace Psicomind
             txtProfissionalId.Clear();
             txtNomeProfissional.Clear();
             txtSenhaProfissional.Clear();
-            txtEspecializaçãoProfissional.Clear();
             cmbGeneroProfissional.SelectedIndex = -1;
             cmbTipoTelefoneProfissional.SelectedIndex = -1;
             mtxTelefoneProfissional.Clear();
-            dptDataContrato.Value = DateTime.Today;
             dptDataNascimentoProfissional.Value = DateTime.Today;
             chkAtivoProfissional.Checked = false;
+            cmbCargos.SelectedValue = -1;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -236,11 +223,6 @@ namespace Psicomind
             FrmProfissionalMenu.Show();
 
             this.Close();
-        }
-
-        private void guna2ContainerControl2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
