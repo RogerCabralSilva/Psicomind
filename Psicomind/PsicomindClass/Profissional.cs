@@ -21,6 +21,7 @@ namespace PsicomindClass
         public DateTime Data_nasc { get; set; }
         public Genero Genero { get; set; }
         public TelefoneProfissional TelefoneProfissional { get; set; }
+        public Cargo Cargo { get; set; }
         public bool Ativo { get; set; }
 
         public Profissional()
@@ -133,6 +134,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spdata_contrato", Data_contrato);
             cmd.Parameters.AddWithValue("spdata_nasc", Data_nasc);
             cmd.Parameters.AddWithValue("spgenero_id", Genero.Id);
+            cmd.Parameters.AddWithValue("spcargo_id", Cargo.Id);
 
             Id = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -208,6 +210,7 @@ namespace PsicomindClass
             cmd.Parameters.AddWithValue("spdata_contrato", Data_contrato);
             cmd.Parameters.AddWithValue("spdata_nasc", Data_nasc);
             cmd.Parameters.AddWithValue("spgenero_id", Genero.Id);
+            cmd.Parameters.AddWithValue("spcargo", Cargo.Id);
             cmd.Parameters.AddWithValue("spativo", Ativo);
 
             return cmd.ExecuteNonQuery() > -1 ? true:false;
