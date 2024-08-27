@@ -161,7 +161,7 @@ namespace Psicomind
 
                 MailMessage mailMessage = new MailMessage();
                 mailMessage.From = new MailAddress("cabralroger159@gmail.com");
-                mailMessage.To.Add("henrygabrielfiore@gmail.com");
+                mailMessage.To.Add(emailCliente);
                 mailMessage.Subject = "Confirmação de Agendamento";
                 mailMessage.Body = $"Olá, \n\nSeu agendamento foi confirmado com as seguintes informações:\n\n" +
                                    $"Data: {data}\nHorário: {horario}\nPreço: R$ {preco}\nTipo: {tipoAgendamento}\nProfissional: {profissional}\n\n" +

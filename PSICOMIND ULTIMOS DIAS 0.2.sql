@@ -94,18 +94,20 @@ CREATE TABLE usuarios (
 
 
 -- Tabela profissionais
+
+-- Tabela profissionais
 CREATE TABLE profissionais (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(60) NOT NULL UNIQUE,
     senha CHAR(32) NOT NULL,
     CPF CHAR(11) NOT NULL UNIQUE,
-    especializacao VARCHAR(100) NOT NULL,
-    data_contrato DATE NULL,
     data_cad TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     data_nasc DATE NOT NULL,
+	cargo_id INT NOT NULL,
     genero_id INT NOT NULL,
     ativo BIT(1) NOT NULL,
+    CONSTRAINT fk_cargoProfissional_id FOREIGN KEY (cargo_id) REFERENCES cargos(id),
     CONSTRAINT fk_generoProfissional_id FOREIGN KEY (genero_id) 
     REFERENCES genero(id)
 );
@@ -280,19 +282,16 @@ CREATE PROCEDURE sp_profissionais_insert(
     spemail VARCHAR(60),
     spsenha VARCHAR(20),
     spcpf CHAR(11),
-    spespecializacao VARCHAR(100),
-    spdata_contrato DATE,
     spdata_nasc DATE,
+    spcargo_id INT,
     spgenero_id INT
 )
 BEGIN
     INSERT INTO profissionais
-    VALUES (0,spnome, spemail, MD5(spsenha), spcpf, spespecializacao, spdata_contrato, CURRENT_TIMESTAMP, spdata_nasc, spgenero_id,1);
+    VALUES (0,spnome, spemail, MD5(spsenha), spcpf, CURRENT_TIMESTAMP, spdata_nasc, spcargo_id, spgenero_id,1);
     SELECT LAST_INSERT_ID() FROM profissionais;
 END $$
 DELIMITER ;
-
-
 
 select * from genero
 -- drop procedure sp_profissionais_insert
@@ -528,15 +527,14 @@ CREATE PROCEDURE sp_profissionais_update(
     spid INT,
     spnome VARCHAR(100),
     spsenha VARCHAR(20),
-    spespecializacao VARCHAR(100),
-    spdata_contrato DATE,
     spdata_nasc DATE,
+    spcargo INT,
     spgenero_id INT,
     spativo BIT
 )
 BEGIN
     UPDATE profissionais
-    SET nome = spnome, senha = MD5(spsenha), especializacao = spespecializacao, data_contrato = spdata_contrato, data_nasc = spdata_nasc, genero_id = spgenero_id, ativo = spativo
+    SET nome = spnome, senha = MD5(spsenha), data_nasc = spdata_nasc, cargo_id = spcargo, genero_id = spgenero_id, ativo = spativo
     WHERE id = spid;
 END $$
 DELIMITER ;
@@ -595,17 +593,12 @@ INSERT INTO telefone_tipo (id, tipo) VALUES (0, 'Telefone');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Gerente', 'GRT');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Recepcionista', 'RCP');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Psicólogo', 'PSI');
-INSERT INTO cargos (id, nome, sigla) VALUES (0,'Cliente','CLI');
 
 -- Inserir tipos de endereço
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Residencial","RES");
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Comercial","COM");
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Postal","POS");
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Temporário","TEM");
-
--- Exemplo de chamada:
-CALL sp_profissionais_insert('Dr. Marcos', 'marcos@gmail.com', '123', '12345678901', 'Psicologia', '2024-01-01', "2024-01-01",1);
-CALL sp_telefone_profissional_insert("11969531140", 1, 1);
 
 CREATE VIEW cliente_info AS
 SELECT 
@@ -636,17 +629,19 @@ SELECT
     p.email, 
     p.senha, 
     p.CPF, 
-    p.especializacao, 
-    p.data_contrato, 
     p.data_cad,
     p.data_nasc,
     p.genero_id, 
-    tp.id as id_telefone_profissional,
-	p.ativo
+    tp.id as id_telefone,
+    c.id as cargo_id, -- Exemplo de coluna da tabela cargos que você pode querer incluir
+    p.ativo
 FROM 
     profissionais p
-LEFT JOIN 
-    telefone_profissional tp ON p.id = tp.profissional_id;
+INNER JOIN 
+    telefone_profissional tp ON p.id = tp.profissional_id
+INNER JOIN 
+    cargos c ON p.cargo_id = c.id;
+
 
 -- DROP VIEW profissional_info;
 
@@ -654,10 +649,8 @@ select * from profissional_info;
 
 USE psicominddb;
  
--- Criando a tabela calendario
+call sp_profissionais_insert("Roger", "123", "123","roger@gam", "2002/09/12", 3, 2);
 
-
- 
 -- Criando o procedimento armazenado para inserir horários personalizados
 
 DELIMITER $$
@@ -702,8 +695,6 @@ DELIMITER ;
 
  
 -- Chamando o procedimento para inserir horários de 19/08/2024 até 25/08/2024
-
-CALL InserirHorariosSemana('2024-08-26', '2024-08-27', '12:00:00', '18:00:00', 30, 1);
 
 CALL sp_usuarios_insert('Annie', 'annie@gmail.com', '123', 1);
 
@@ -764,14 +755,12 @@ INNER JOIN
     usuarios ON agendamentos.usuarios_id = usuarios.id
 INNER JOIN 
     escala ON agendamentos.escala_id = escala.id;
-    
+
+-- Inserts testes
+call sp_profissionais_insert("roger", "roger@h", "123", "42368523", "2004/08/20", 3, 2);
+call psicominddb.sp_telefone_profissional_insert('11955953', 2, 1);
+call psicominddb.InserirHorariosSemana('2024/08/29', '2024/08/30', '12:00', '14:00', 60, 2);
+
 insert into clientes values(0, "Roger", "cabralroger15@gmail.com", "123", "45494123","2006/08/18", "2006/08/18",1, 1);
 insert into agendamentos values(0, 1, 1, 1, 1, 1, "1");
 insert into consultas values(0, 1, "maior otário", 1, "Agendada");
-
-SELECT nome_profissional, nome_cliente, email_cliente, data_nascimento_cliente, dia_escala, horario_escala, status_pagamento, status_consulta FROM vw_consulta_informacoes_cliente where 1=1 and horario_escala = "12:00";
-
-select * from consultas;
- 
--- drop procedure InserirHorariosSemana;
--- drop table escala;
