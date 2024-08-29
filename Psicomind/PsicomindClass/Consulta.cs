@@ -23,7 +23,7 @@ namespace PsicomindClass
         public string Status_pagamento { get; set; }
         public string Status_consulta { get; set; }
 
-
+        public Consulta() { }
 
         public Consulta(int agendamento_id, string observacoes_consulta, string nome_profissional, string nome_cliente, string email_cliente, DateTime data_nascimento_cliente, DateTime dia_escala, string status_pagamento, string status_consulta)
         {
@@ -134,6 +134,32 @@ namespace PsicomindClass
             dr.Close();
             cmd.Connection.Close();
             return lista;
+        }
+
+        public static Consulta ObterPorId(int id)
+        {
+            Consulta consulta = new();
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"SELECT consulta_id, nome_profissional, nome_cliente, email_cliente, data_nascimento_cliente, dia_escala, horario_escala, status_pagamento, status_consulta FROM vw_consulta_informacoes_cliente WHERE consulta_id = {id}";
+            var dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                consulta = (new Consulta(
+                    dr.GetInt32(0),
+                    dr.GetString(1), // nome_profissional
+                    dr.GetString(2), // nome_cliente
+                    dr.GetString(3), // email_cliente
+                    dr.GetDateTime(4), // data_nascimento_cliente
+                    dr.GetDateTime(5), // dia_escala
+                    dr.GetTimeSpan(6), // horario_escala
+                    dr.GetString(7), // status_pagamento
+                    dr.GetString(8)  // status_consulta
+                    ));
+            }
+
+            return consulta;
         }
 
         public static void Atualizar(string texto, int id) 

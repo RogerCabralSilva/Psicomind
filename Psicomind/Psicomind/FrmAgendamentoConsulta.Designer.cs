@@ -294,7 +294,7 @@
             btnVoltar.BackColor = Color.White;
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(77, 51);
+            btnVoltar.Location = new Point(26, 52);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(50, 30);
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -458,7 +458,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1378, 815);
+            ClientSize = new Size(1370, 749);
             Controls.Add(guna2ContainerControl1);
             Name = "FrmAgendamentoConsulta";
             Text = "FrmAgendamentoConsulta";

@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Net.Mail;
+using System.Net;
 
 namespace Psicomind
 {
@@ -65,7 +67,7 @@ namespace Psicomind
                 int count = 0;
                 foreach (var consulta in consultas)
                 {
-                   
+
 
                     int rowIndex = dgvClientesDados.Rows.Add();
                     dgvClientesDados.Columns["clnDataNascimentoCliente"].DefaultCellStyle.Format = "dd/MM/yyyy";
@@ -158,8 +160,10 @@ namespace Psicomind
                 // Verifica se a célula clicada é um botão de "Cancelar"
                 else if (dgvClientesDados.Columns[e.ColumnIndex].Name == "btnCancelar")
                 {
+                    var agendamento = Consulta.ObterPorId(Convert.ToInt32(row.Cells["clnId"].Value));
                     // Chama o método Editar passando o texto "Cancelar" e o ID da consulta
                     Consulta.Atualizar("Cancelada", id);
+                    EnviarEmailCancelamento(agendamento.Email_cliente, agendamento.Dia_escala, agendamento.Horario, agendamento.Nome_profissional);
                 }
             }
             else
@@ -168,6 +172,34 @@ namespace Psicomind
             }
 
             FrmAgendamentoConsulta_Load(sender, e);
+        }
+
+        private void EnviarEmailCancelamento(string emailCliente, DateTime data, TimeSpan horario, string profissional)
+        {
+            try
+            {
+
+
+                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+                client.EnableSsl = true;
+                client.UseDefaultCredentials = false;
+                client.Credentials = new NetworkCredential("cabralroger159@gmail.com", "bbpd akhw yngi fgyk");
+
+                MailMessage mailMessage = new MailMessage();
+                mailMessage.From = new MailAddress("cabralroger159@gmail.com");
+                mailMessage.To.Add(emailCliente);
+                mailMessage.Subject = "Cancelamento de Agendamento";
+                mailMessage.Body = $"Olá, \n\nSeu agendamento foi cancelado com as seguintes informações:\n\n" +
+                                   $"Data: {data}\nHorário: {horario}\nProfissional: {profissional}\n\n" +
+                                   "PSICOMIND pede desculpas pelo ocorrido.\n\nAtenciosamente,\nPSICOMIND";
+
+                client.Send(mailMessage);
+                MessageBox.Show("Agendamento realizado e e-mail de confirmação enviado com sucesso.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao enviar e-mail: " + ex.Message);
+            }
         }
     }
 }

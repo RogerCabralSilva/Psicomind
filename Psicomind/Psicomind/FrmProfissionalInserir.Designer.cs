@@ -115,10 +115,10 @@
             guna2ContainerControl2.Controls.Add(txtSenhaProfissional);
             guna2ContainerControl2.Controls.Add(txtNomeProfissional);
             guna2ContainerControl2.CustomizableEdges = customizableEdges23;
-            guna2ContainerControl2.Location = new Point(146, 15);
+            guna2ContainerControl2.Location = new Point(159, 26);
             guna2ContainerControl2.Name = "guna2ContainerControl2";
             guna2ContainerControl2.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2ContainerControl2.Size = new Size(748, 624);
+            guna2ContainerControl2.Size = new Size(748, 576);
             guna2ContainerControl2.TabIndex = 29;
             guna2ContainerControl2.Text = "guna2ContainerControl2";
             guna2ContainerControl2.Click += guna2ContainerControl2_Click;
@@ -128,7 +128,7 @@
             btnVoltar.BackColor = Color.White;
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.Location = new Point(25, 38);
+            btnVoltar.Location = new Point(43, 55);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(50, 30);
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -144,7 +144,7 @@
             guna2ContainerControl3.Controls.Add(mtxCpfProfissional);
             guna2ContainerControl3.CustomizableEdges = customizableEdges1;
             guna2ContainerControl3.FillColor = Color.FromArgb(224, 224, 224);
-            guna2ContainerControl3.Location = new Point(426, 246);
+            guna2ContainerControl3.Location = new Point(418, 268);
             guna2ContainerControl3.Name = "guna2ContainerControl3";
             guna2ContainerControl3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ContainerControl3.Size = new Size(96, 25);
@@ -178,7 +178,7 @@
             guna2ContainerControl1.Controls.Add(mtxTelefoneProfissional);
             guna2ContainerControl1.CustomizableEdges = customizableEdges3;
             guna2ContainerControl1.FillColor = Color.FromArgb(224, 224, 224);
-            guna2ContainerControl1.Location = new Point(102, 301);
+            guna2ContainerControl1.Location = new Point(94, 323);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
             guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2ContainerControl1.Size = new Size(96, 25);
@@ -225,7 +225,7 @@
             btnLimpar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnLimpar.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLimpar.ForeColor = Color.White;
-            btnLimpar.Location = new Point(380, 434);
+            btnLimpar.Location = new Point(397, 456);
             btnLimpar.Name = "btnLimpar";
             btnLimpar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnLimpar.Size = new Size(126, 33);
@@ -245,7 +245,7 @@
             btnInserirProfissional.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnInserirProfissional.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInserirProfissional.ForeColor = Color.White;
-            btnInserirProfissional.Location = new Point(531, 434);
+            btnInserirProfissional.Location = new Point(548, 456);
             btnInserirProfissional.Name = "btnInserirProfissional";
             btnInserirProfissional.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnInserirProfissional.Size = new Size(103, 33);
@@ -263,7 +263,7 @@
             dptDataNascimentoProfissional.FocusedColor = Color.Gainsboro;
             dptDataNascimentoProfissional.Font = new Font("Segoe UI", 9F);
             dptDataNascimentoProfissional.Format = DateTimePickerFormat.Short;
-            dptDataNascimentoProfissional.Location = new Point(426, 358);
+            dptDataNascimentoProfissional.Location = new Point(418, 380);
             dptDataNascimentoProfissional.MaxDate = new DateTime(2040, 12, 31, 0, 0, 0, 0);
             dptDataNascimentoProfissional.MinDate = new DateTime(1920, 1, 1, 0, 0, 0, 0);
             dptDataNascimentoProfissional.Name = "dptDataNascimentoProfissional";
@@ -286,7 +286,7 @@
             cmbCargos.Font = new Font("Segoe UI", 10F);
             cmbCargos.ForeColor = Color.FromArgb(68, 88, 112);
             cmbCargos.ItemHeight = 20;
-            cmbCargos.Location = new Point(102, 434);
+            cmbCargos.Location = new Point(94, 456);
             cmbCargos.Name = "cmbCargos";
             cmbCargos.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cmbCargos.Size = new Size(233, 26);
@@ -306,7 +306,7 @@
             cmbTipoTelefoneProfissional.Font = new Font("Segoe UI", 10F);
             cmbTipoTelefoneProfissional.ForeColor = Color.FromArgb(68, 88, 112);
             cmbTipoTelefoneProfissional.ItemHeight = 20;
-            cmbTipoTelefoneProfissional.Location = new Point(426, 300);
+            cmbTipoTelefoneProfissional.Location = new Point(418, 322);
             cmbTipoTelefoneProfissional.Name = "cmbTipoTelefoneProfissional";
             cmbTipoTelefoneProfissional.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cmbTipoTelefoneProfissional.Size = new Size(119, 26);
@@ -328,7 +328,7 @@
             cmbGeneroProfissional.Font = new Font("Segoe UI", 10F);
             cmbGeneroProfissional.ForeColor = Color.FromArgb(68, 88, 112);
             cmbGeneroProfissional.ItemHeight = 20;
-            cmbGeneroProfissional.Location = new Point(102, 360);
+            cmbGeneroProfissional.Location = new Point(94, 382);
             cmbGeneroProfissional.Name = "cmbGeneroProfissional";
             cmbGeneroProfissional.ShadowDecoration.CustomizableEdges = customizableEdges16;
             cmbGeneroProfissional.Size = new Size(230, 26);
@@ -341,7 +341,7 @@
             label7.BackColor = Color.White;
             label7.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.Highlight;
-            label7.Location = new Point(426, 341);
+            label7.Location = new Point(418, 363);
             label7.Name = "label7";
             label7.Size = new Size(126, 16);
             label7.TabIndex = 31;
@@ -353,7 +353,7 @@
             label5.BackColor = Color.White;
             label5.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.Highlight;
-            label5.Location = new Point(426, 227);
+            label5.Location = new Point(418, 249);
             label5.Name = "label5";
             label5.Size = new Size(29, 16);
             label5.TabIndex = 31;
@@ -365,7 +365,7 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(426, 176);
+            label2.Location = new Point(418, 198);
             label2.Name = "label2";
             label2.Size = new Size(38, 16);
             label2.TabIndex = 31;
@@ -377,7 +377,7 @@
             label12.BackColor = Color.White;
             label12.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label12.ForeColor = SystemColors.Highlight;
-            label12.Location = new Point(102, 415);
+            label12.Location = new Point(94, 437);
             label12.Name = "label12";
             label12.Size = new Size(49, 16);
             label12.TabIndex = 29;
@@ -389,7 +389,7 @@
             label9.BackColor = Color.White;
             label9.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = SystemColors.Highlight;
-            label9.Location = new Point(426, 282);
+            label9.Location = new Point(418, 304);
             label9.Name = "label9";
             label9.Size = new Size(105, 16);
             label9.TabIndex = 29;
@@ -411,7 +411,7 @@
             txtEmailProfissional.Font = new Font("Segoe UI", 9F);
             txtEmailProfissional.ForeColor = Color.Black;
             txtEmailProfissional.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmailProfissional.Location = new Point(426, 195);
+            txtEmailProfissional.Location = new Point(418, 217);
             txtEmailProfissional.Name = "txtEmailProfissional";
             txtEmailProfissional.PasswordChar = '\0';
             txtEmailProfissional.PlaceholderForeColor = Color.Silver;
@@ -427,7 +427,7 @@
             label6.BackColor = Color.White;
             label6.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.Highlight;
-            label6.Location = new Point(102, 341);
+            label6.Location = new Point(94, 363);
             label6.Name = "label6";
             label6.Size = new Size(52, 16);
             label6.TabIndex = 29;
@@ -439,7 +439,7 @@
             label8.BackColor = Color.White;
             label8.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = SystemColors.Highlight;
-            label8.Location = new Point(102, 282);
+            label8.Location = new Point(94, 304);
             label8.Name = "label8";
             label8.Size = new Size(58, 16);
             label8.TabIndex = 29;
@@ -451,7 +451,7 @@
             label4.BackColor = Color.White;
             label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.Highlight;
-            label4.Location = new Point(102, 227);
+            label4.Location = new Point(94, 249);
             label4.Name = "label4";
             label4.Size = new Size(43, 16);
             label4.TabIndex = 29;
@@ -463,7 +463,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(102, 176);
+            label1.Location = new Point(94, 198);
             label1.Name = "label1";
             label1.Size = new Size(43, 16);
             label1.TabIndex = 29;
@@ -473,11 +473,11 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.White;
-            label3.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Arial", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(275, 102);
+            label3.Location = new Point(274, 103);
             label3.Name = "label3";
-            label3.Size = new Size(196, 29);
+            label3.Size = new Size(224, 32);
             label3.TabIndex = 28;
             label3.Text = "Dados Pessoais";
             // 
@@ -497,7 +497,7 @@
             txtSenhaProfissional.Font = new Font("Segoe UI", 9F);
             txtSenhaProfissional.ForeColor = Color.Black;
             txtSenhaProfissional.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenhaProfissional.Location = new Point(102, 246);
+            txtSenhaProfissional.Location = new Point(94, 268);
             txtSenhaProfissional.Name = "txtSenhaProfissional";
             txtSenhaProfissional.PasswordChar = '●';
             txtSenhaProfissional.PlaceholderForeColor = Color.Silver;
@@ -524,7 +524,7 @@
             txtNomeProfissional.Font = new Font("Segoe UI", 9F);
             txtNomeProfissional.ForeColor = Color.Black;
             txtNomeProfissional.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtNomeProfissional.Location = new Point(102, 195);
+            txtNomeProfissional.Location = new Point(94, 217);
             txtNomeProfissional.Name = "txtNomeProfissional";
             txtNomeProfissional.PasswordChar = '\0';
             txtNomeProfissional.PlaceholderForeColor = Color.Silver;

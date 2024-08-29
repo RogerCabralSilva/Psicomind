@@ -358,6 +358,7 @@
             dptDataNascimento.Size = new Size(190, 28);
             dptDataNascimento.TabIndex = 5;
             dptDataNascimento.Value = new DateTime(2024, 7, 3, 20, 8, 0, 460);
+            dptDataNascimento.ValueChanged += dptDataNascimento_ValueChanged;
             // 
             // cmbTipoEndereco
             // 
