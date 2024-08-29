@@ -158,8 +158,6 @@ CREATE TABLE escala (
 
 );
 
-
-
 -- Tabela agendamentos
 CREATE TABLE agendamentos (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -176,8 +174,6 @@ CREATE TABLE agendamentos (
     CONSTRAINT fk_tipoAgendamento_id FOREIGN KEY (tipo_agendamento_id) REFERENCES tipo_agendamento(id)
 );
 
-
-
 -- Tabela consultas
 CREATE TABLE consultas (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -187,10 +183,6 @@ CREATE TABLE consultas (
     status_consulta ENUM("Concluída", "Cancelada", "Agendada"),
     CONSTRAINT fk_consultas_agendamento_id FOREIGN KEY (agendamento_id) REFERENCES agendamentos(id)
 );
-
-
--- Inserir usuario ao cargo
--- INSERT INTO usuario_cargo (usuario_id, cargo_id) VALUES (1, 1);
 
 
 -- ========================================
@@ -576,8 +568,6 @@ DELIMITER ;
 -- Exemplo de chamada:
 -- CALL sp_consultas_update(1, '15:00:00', '2024-06-01', 'P');
 
-select * from clientes;
-
 -- Inserir generos
 INSERT INTO genero VALUES (0, "Feminino");
 INSERT INTO genero VALUES (0, "Masculino");
@@ -593,12 +583,25 @@ INSERT INTO telefone_tipo (id, tipo) VALUES (0, 'Telefone');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Gerente', 'GRT');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Recepcionista', 'RCP');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Psicólogo', 'PSI');
+INSERT INTO cargos (id, nome, sigla) VALUES(0, 'Cliente', 'CLI');
 
 -- Inserir tipos de endereço
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Residencial","RES");
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Comercial","COM");
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Postal","POS");
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Temporário","TEM");
+
+-- Preços
+INSERT INTO preco_consulta VALUES (0, '200.00');
+INSERT INTO preco_consulta VALUES (0, '450.00');
+INSERT INTO preco_consulta VALUES (0, '200.00');
+INSERT INTO preco_consulta VALUES (0, '150.00');
+
+-- Tipo de agendamentos
+INSERT INTO tipo_agendamento VALUES (0,'Acompanhamento Terapêutico',1);
+INSERT INTO tipo_agendamento VALUES (0,'Avaliação Psicológicao',2);
+INSERT INTO tipo_agendamento VALUES (0,'Orientação Vocacional',3);
+INSERT INTO tipo_agendamento VALUES (0,'Psicanálise',4);
 
 CREATE VIEW cliente_info AS
 SELECT 
@@ -619,8 +622,6 @@ LEFT JOIN
     telefone_cliente tc ON c.id = tc.cliente_id
 LEFT JOIN 
     enderecos e ON c.id = e.cliente_id;
-
--- DROP VIEW cliente_info;
 
 CREATE VIEW profissional_info AS
 SELECT 
@@ -643,13 +644,6 @@ INNER JOIN
     cargos c ON p.cargo_id = c.id;
 
 
--- DROP VIEW profissional_info;
-
-select * from profissional_info;
-
-USE psicominddb;
- 
-call sp_profissionais_insert("Roger", "123", "123","roger@gam", "2002/09/12", 3, 2);
 
 -- Criando o procedimento armazenado para inserir horários personalizados
 
@@ -693,29 +687,19 @@ END $$
 
 DELIMITER ;
 
- 
--- Chamando o procedimento para inserir horários de 19/08/2024 até 25/08/2024
-
-CALL sp_usuarios_insert('Annie', 'annie@gmail.com', '123', 1);
-
 SELECT * FROM escala;
 SELECT * FROM usuarios;
 select * from cargos;
 select * from agendamentos;
 select * from clientes;
 
--- select id from escala where dia = '2024-08-27' and horario = '18:00' and profissional_id = 1;
-
--- UPDATE escala SET disponivel = 0 WHERE dia = '2024-08-27' and horario = '18:00' and profissional_id = 1;
-
--- SELECT horario FROM escala where disponivel = 1 and dia = '2024-08-26' and profissional_id = 1;
-
+-- Preços
 INSERT INTO preco_consulta VALUES (0, '200.00');
 INSERT INTO preco_consulta VALUES (0, '450.00');
 INSERT INTO preco_consulta VALUES (0, '200.00');
 INSERT INTO preco_consulta VALUES (0, '150.00');
-select * from preco_consulta;
 
+-- Tipo de agendamentos
 INSERT INTO tipo_agendamento VALUES (0,'Acompanhamento Terapêutico',1);
 INSERT INTO tipo_agendamento VALUES (0,'Avaliação Psicológicao',2);
 INSERT INTO tipo_agendamento VALUES (0,'Orientação Vocacional',3);
@@ -742,7 +726,9 @@ SELECT
     agendamentos.status_agendamento,
     escala.dia AS dia_escala,
     escala.horario AS horario_escala,
-    escala.disponivel AS disponibilidade_escala
+    escala.disponivel AS disponibilidade_escala,
+    tipo_agendamento.tipo_agendamento,
+    preco_consulta.preco
 FROM 
     consultas
 INNER JOIN 
@@ -754,13 +740,33 @@ INNER JOIN
 INNER JOIN 
     usuarios ON agendamentos.usuarios_id = usuarios.id
 INNER JOIN 
-    escala ON agendamentos.escala_id = escala.id;
+    escala ON agendamentos.escala_id = escala.id
+INNER JOIN 
+	tipo_agendamento ON agendamentos.tipo_agendamento_id = tipo_agendamento.id
+INNER JOIN
+	preco_consulta on tipo_agendamento.preco_id = preco_consulta.id;
 
--- Inserts testes
-call sp_profissionais_insert("roger", "roger@h", "123", "42368523", "2004/08/20", 3, 2);
-call psicominddb.sp_telefone_profissional_insert('11955953', 2, 1);
-call psicominddb.InserirHorariosSemana('2024/08/29', '2024/08/30', '12:00', '14:00', 60, 2);
+-- inserindo profissional
+call sp_profissionais_insert("roger", "roger@gmail.com", "123", "42368523", "2004/08/20", 3, 2);
 
-insert into clientes values(0, "Roger", "cabralroger15@gmail.com", "123", "45494123","2006/08/18", "2006/08/18",1, 1);
+-- inserindo telefone do profissional
+call sp_telefone_profissional_insert('11955953', 1, 1);
+
+-- Inserindo Escala do profissional
+call InserirHorariosSemana('2024/08/29', '2024/08/30', '12:00', '14:00', 60, 1);
+
+-- Inserindo cliente
+call sp_clientes_insert('marcos', 'marcos@gmail.com', '123', '498409', '2004/05/20', 3);
+
+-- Inserindo usuário do cliente
+call sp_usuarios_insert('marco', 'marcos@gmail.com', '123', 4);
+
 insert into agendamentos values(0, 1, 1, 1, 1, 1, "1");
-insert into consultas values(0, 1, "maior otário", 1, "Agendada");
+insert into consultas values(0, 1, " ", 1, "Agendada");
+
+-- Inserindo Usuário do C#
+call sp_usuarios_insert("Annie", "Annie@gmail.com", "123", "1");
+
+SELECT * FROM usuarios;
+SELECT * FROM profissionais;
+SELECT * FROM cargos;

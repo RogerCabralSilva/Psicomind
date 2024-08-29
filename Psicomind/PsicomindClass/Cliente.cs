@@ -232,9 +232,8 @@ namespace PsicomindClass
             Cliente cliente = new();
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"Select * from clientes where id = {id}";
+            cmd.CommandText = $"Select * from cliente_info where id = {id}";
             var dr = cmd.ExecuteReader();
-
             while (dr.Read())
             {
                 cliente = (new Cliente(
