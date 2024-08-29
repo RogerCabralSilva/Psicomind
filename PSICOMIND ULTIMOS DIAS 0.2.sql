@@ -593,6 +593,7 @@ INSERT INTO telefone_tipo (id, tipo) VALUES (0, 'Telefone');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Gerente', 'GRT');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Recepcionista', 'RCP');
 INSERT INTO cargos (id, nome, sigla) VALUES (0, 'Psicólogo', 'PSI');
+INSERT INTO cargos (id, nome, sigla) VALUES(0, 'Cliente', 'CLI');
 
 -- Inserir tipos de endereço
 INSERT INTO tipo_endereco (id, nome, tipo_endereco) VALUES (0, "Residencial","RES");
@@ -742,7 +743,9 @@ SELECT
     agendamentos.status_agendamento,
     escala.dia AS dia_escala,
     escala.horario AS horario_escala,
-    escala.disponivel AS disponibilidade_escala
+    escala.disponivel AS disponibilidade_escala,
+    tipo_agendamento.tipo_agendamento,
+    preco_consulta.preco
 FROM 
     consultas
 INNER JOIN 
@@ -754,13 +757,25 @@ INNER JOIN
 INNER JOIN 
     usuarios ON agendamentos.usuarios_id = usuarios.id
 INNER JOIN 
-    escala ON agendamentos.escala_id = escala.id;
+    escala ON agendamentos.escala_id = escala.id
+INNER JOIN 
+	tipo_agendamento ON agendamentos.tipo_agendamento_id = tipo_agendamento.id
+INNER JOIN
+	preco_consulta on tipo_agendamento.preco_id = preco_consulta.id;
 
 -- Inserts testes
 call sp_profissionais_insert("roger", "roger@h", "123", "42368523", "2004/08/20", 3, 2);
 call psicominddb.sp_telefone_profissional_insert('11955953', 2, 1);
 call psicominddb.InserirHorariosSemana('2024/08/29', '2024/08/30', '12:00', '14:00', 60, 2);
 
+call psicominddb.sp_clientes_insert('marcos', 'marcos@gmail.com', '123', '498409', '2004/05/20', 3);
+call psicominddb.sp_usuarios_insert('marco', 'marcos@gmail.com', '123', 4);
+
+
 insert into clientes values(0, "Roger", "cabralroger15@gmail.com", "123", "45494123","2006/08/18", "2006/08/18",1, 1);
 insert into agendamentos values(0, 1, 1, 1, 1, 1, "1");
 insert into consultas values(0, 1, "maior otário", 1, "Agendada");
+
+select * from profissionais;
+
+select * from usuarios;
