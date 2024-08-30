@@ -54,6 +54,7 @@
             // 
             // btnVoltar
             // 
+            btnVoltar.Anchor = AnchorStyles.None;
             btnVoltar.BackColor = Color.Transparent;
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
@@ -67,6 +68,7 @@
             // 
             // txtPsicomind
             // 
+            txtPsicomind.Anchor = AnchorStyles.None;
             txtPsicomind.AutoSize = true;
             txtPsicomind.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPsicomind.ForeColor = SystemColors.Highlight;
@@ -78,6 +80,7 @@
             // 
             // txtTitulo
             // 
+            txtTitulo.Anchor = AnchorStyles.None;
             txtTitulo.AutoSize = true;
             txtTitulo.Font = new Font("Arial Black", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTitulo.ForeColor = Color.Black;
@@ -89,6 +92,7 @@
             // 
             // btnPagEditarUsuario
             // 
+            btnPagEditarUsuario.Anchor = AnchorStyles.None;
             btnPagEditarUsuario.BackColor = SystemColors.Control;
             btnPagEditarUsuario.BorderRadius = 40;
             btnPagEditarUsuario.Controls.Add(label2);
@@ -146,6 +150,7 @@
             // 
             // btnPagConsultarUsuario
             // 
+            btnPagConsultarUsuario.Anchor = AnchorStyles.None;
             btnPagConsultarUsuario.BackColor = SystemColors.Control;
             btnPagConsultarUsuario.BorderRadius = 40;
             btnPagConsultarUsuario.Controls.Add(label6);

@@ -293,11 +293,11 @@
             label5.Enabled = false;
             label5.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Silver;
-            label5.Location = new Point(49, 111);
+            label5.Location = new Point(48, 112);
             label5.Name = "label5";
-            label5.Size = new Size(105, 16);
+            label5.Size = new Size(75, 16);
             label5.TabIndex = 33;
-            label5.Text = "Inserir | Editar";
+            label5.Text = "Consultar";
             // 
             // label6
             // 

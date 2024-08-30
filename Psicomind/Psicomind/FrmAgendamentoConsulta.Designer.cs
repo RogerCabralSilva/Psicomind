@@ -83,6 +83,7 @@
             // 
             // guna2ContainerControl1
             // 
+            guna2ContainerControl1.Anchor = AnchorStyles.None;
             guna2ContainerControl1.BorderRadius = 15;
             guna2ContainerControl1.Controls.Add(cmbTipoAgendamento);
             guna2ContainerControl1.Controls.Add(guna2ContainerControl3);
